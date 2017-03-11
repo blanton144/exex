@@ -1,5 +1,5 @@
 ---
-title : Your Blog Title Here
+title : exex
 ---
 
 These pages contain exercises in extragalactic astronomy. 
