@@ -1,0 +1,264 @@
+\title{\bf Light I}
+
+\section{Basics \& Nomenclature}
+
+In astrophysical parlance, the {\it specific intensity} $I_\nu$ is the
+flux of electromagnetic energy across a surface from a particular
+direction, per unit area, per unit solid angle, per unit time, per
+unit frequency. The specific intensity can also be expressed per unit
+wavelength, and denoted in this case $I_\lambda$. For example, units
+may be erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$ arcsec$^{-2}$ or erg s$^{-1}$
+cm$^{-2}$ \AA$^{-1}$ arcsec$^{-2}$.  The term {\it surface brightness}
+is often also used to denote the specific intensity.
+
+The quantities $I_\nu$ and $I_\lambda$ are related:
+\begin{eqnarray}
+I_\nu(\nu) |{\rm d}\nu| &=& I_\lambda(\lambda = c/\nu) |{\rm
+  d}\lambda| \cr
+I_\nu(\nu) &=& \left|\frac{{\rm d}\lambda}{{\rm d}\nu}\right|
+I_\lambda = \frac{c}{\nu^2} I_\lambda(\lambda = c/\nu) \cr
+I_\lambda(\lambda) &=& \left|\frac{{\rm d}\nu}{{\rm d}\lambda}\right|
+I_\nu = \frac{c}{\lambda^2} I_\nu(\nu = c/\lambda).
+\end{eqnarray}
+
+A {\it flux density} $f_\nu$ or $f_\lambda$ is the integral of the
+specific intensity through the surface integrated over a range of
+directions:
+\begin{equation}
+f_\nu = \int {\rm d}\Omega I_\nu \cos\theta. 
+\end{equation}
+A special unit for flux density (mostly in use in radio astronomy) is
+the Jansky, which is $10^{-23}$ erg s$^{-1}$ cm$^{-2}$
+Hz$^{-1}$. Sometimes the flux density is also called the {\it spectral
+  energy distribution}.
+
+The electromagnetic wave can also be expressed in terms of
+photons. The energy of photons correspond to a wavelength of light:
+\begin{equation}
+E_\nu = h\nu
+\end{equation}
+
+If an emitting object is moving along the line-of-sight to the
+observer, the photon's wavelengths are shifted by a factor $(1+z)$
+where $z$ is the redshift:
+\begin{eqnarray}
+\lambda_{\rm obs}  &=& (1+z) \lambda_{\rm emit} \cr
+\nu_{\rm obs}  &=& \frac{\nu_{\rm emit}}{1+z}
+\end{eqnarray}
+The specific intensity and the flux is also altered by this
+motion. Under both special and general relativity, the photon density
+in phase space is conserved. From this it can be calculated that:
+\begin{equation}
+  \label{eq:sb_dimming}
+  I_{\lambda, {\rm obs}} = 
+  \frac{I_{\lambda, {\rm emit}}}{(1+z)^4}
+\end{equation}
+At small velocities, $z \approx v/c$, but at higher velocities
+relativistic corrections are important.
+
+A {\it luminosity} is defined as the total energy emitted from some
+source per unit time per unit frequency (or wavelength). It has
+typical units of erg s$^{-1}$ Hz$^{-1}$ or erg s$^{-1}$
+\AA$^{-1}$. For isotropically emitting sources, the total luminosity
+is related to the observed flux as:
+\begin{equation}
+\label{eq:luminosity_distance}
+f_\nu = \frac{L_\nu}{4\pi D^2}
+\end{equation}
+where $D$ is the distance to the source.
+
+In a cosmological context (relevant at 100s of Mpc distance or so
+depending on the required precision), there is not a single
+well-defined distance to a source. The directly observable quantity is
+the redshift $z$, associated with the Universe's expansion. In this
+case $D$ must be the ``luminosity distance,'' defined to satisfy
+Equation \ref{eq:luminosity_distance}; its relation to redshift
+depends on the cosmological parameters (see \citealt{hogg99cosm}). The
+flux dependence on distance in standard, general relativity-based
+cosmology is a combination of the dependence of the angular size on
+distance times the surface brightness dimming effect.
+
+The flux density or specific intensity can only be measured at some
+finite resolution in wavelength or frequency. In optical astronomical
+parlance, a common expression of resolution is:
+\begin{equation}
+R = \frac{\lambda}{\Delta \lambda}
+\end{equation}
+where $\Delta \lambda$ is the full-width half maximum (FWHM) of the
+line spread function (the Green's function response of the system to a
+point source).
+
+Optical and infrared instruments that measure the wavelength
+dependence of the flux density through dispersal of the light (with
+diffraction gratings or prisms in the optical) are typically known as
+spectrographs. Existing instruments range in resolution from $R\sim
+20$ to $R>100,000$.  At higher energies, in addition to dispersal
+techniques, X-ray detectors and position sensitive proportional
+counters also often have intrinsic energy sensitivity.  Radio
+receivers separate signals into frequencies electronically.
+
+Imaging instruments with wavelength-dependent sensitivity (either due
+to the detector or through a band pass filter) can also measure the
+wavelength dependence of the flux density or specific
+intensity. Typically, this is performed more coarsely $R\sim 5$ though
+narrow band systems reach $R\sim 50$ (typically though not quite
+always requiring one exposure per filter).
+
+In the optical and infrared the use of such coarse band pass filters
+means that the interpretation of the measurements at high precision
+requiring knowing the band pass very well. A full interpretation of
+the measurement involves also a model of the flux density. The
+observations are usually interpreted as the ratio between the signal
+received from the object to the signal that would have been received
+by some standard source.
+
+This quantity is termed a {\it maggie} and depends on the band
+pass. It can be expressed in terms of a model for $f_\nu$ or
+$f_\lambda$ of the object and $g_\nu$ or $g_\lambda$ of the standard
+source:
+\begin{eqnarray}
+  \mu_b &=&
+  \frac{\int {\rm d}\nu (f_\nu(\nu)/\nu) R_b(\nu)}
+       {\int {\rm d}\nu (g_\nu(\nu)/\nu) R_b(\nu)} \cr
+       &=&
+  \frac{\int {\rm d}\lambda f_\lambda(\lambda) \lambda R_b(\lambda) }
+       {\int {\rm d}\lambda g_\lambda(\lambda) \lambda R_b(\lambda)} 
+\end{eqnarray}
+where $R(\lambda)$ or $R(\nu)$ is the contribution of a photon
+entering Earth's atmosphere (or the aperture of a space telescope) to
+the output signal of the instrument in band $b$. This formula is the
+same for photon-counting and energy-counting devices, though note that
+for the latter instrumentalists typically report a different
+definition of $R(\lambda)$ or $R(\nu)$, that therefore needs to be
+transformed into the aforementioned form.
+
+Typical choices of $g_\nu$ are the spectrum of Vega (which is only
+known to a few percent accuracy in the optical and near-infrared) and
+the AB system of $g_\nu = 3631$ Jy (the flux density of Vega near 5500
+\AA).  All absolute measurements are based on standards whose flux
+densities are thought to be known, but only rarely by comparing
+directly to Vega (which is too bright) and never to an AB source (they
+don't exist). Relative measurements can be calibrated fairly precisely
+independently of absolute calibration, though for broad band passes
+the colors of the sources need to be accounted for.
+
+The classical astronomical {\it magnitude} is defined as:
+\begin{equation}
+m = -2.5 \log_{10} \mu
+\end{equation}
+The bright end of this system corresponds roughly to the original
+magnitude system developed by astronomers in the ancient world.
+
+The luminosity is often expressed as the {\it absolute magnitude},
+which is defined as the magnitude the object would have were it at
+rest with respect to us, at 10 pc distance. For non-cosmologically
+distant objects (within a few 10s of Mpc) this can be expressed as:
+\begin{equation}
+M = m - 5 \log_{10} \left(\frac{D}{10 {\rm ~pc}}\right) = m - {\rm DM}
+\end{equation}
+where DM is defined as the distance modulus. 
+
+At cosmological distances, two effects are important. First, $D$ must
+be the luminosity distance. Second, the observed band pass corresponds
+to a different part of the rest frame spectrum of the object for each
+different redshift $z$. This effect is known as the $K$-correction,
+defined as:
+\begin{equation}
+M = m - {\rm DM} - K(z; f_\lambda)
+\end{equation}
+Basically the $K$-correction accounts for the ratio of the observed to
+rest frame flux given the shape of the flux density
+$f_\lambda(\lambda)$ (it does not depend on the amplitude). It is
+common at low redshifts to $K$-correct from the observed bandpass to
+the same band pass in the rest frame. However, at higher redshift it
+can be more stable to $K$-correct to a bandpass with a closer
+effective wavelength to that observed. \citet{hogg02c} describes the
+mathematical definition of the $K$-correction in all such cases. 
+
+\section{Commentary}
+
+While the magnitude system was originally used for convenience in
+calibration over a large dynamic range in brightness, it retains its
+usefulness because of its encapsulation of the response function
+$R(\lambda)$.  Sometimes measurements of $\mu$ are expressed in terms
+of $f_{\lambda, {\rm eff}}$ at some choice of $\lambda_{\rm eff}$
+(e.g. by just multiplying an AB maggie by 3631 Jy and using some
+average effective wavelength of the filter), but for broad band passes
+either $f_{\lambda, {\rm eff}}$ or $\lambda_{\rm eff}$ is a strong
+function of the actual, often unknown $f_\lambda(\lambda)$. $\mu$ and
+$m$ do not suffer from this dependence (though interpreting them
+physically still can only be done by accounting for the filter curve
+and a model for $f_\lambda(\lambda)$).
+
+$K$-corrections depend on knowing the flux density itself, or at least
+its wavelength dependence. To estimate that wavelength dependence
+requires having a measurement or model. Thus, the $K$-correction is
+naturally an uncertain quantity.
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
+    {\it Allen's Astrophysical Quantities},
+      \citet{cox00a}}, Chapter 5
+  \item
+    \href{http://adsabs.harvard.edu/abs/1999astro.ph..5116H}{
+    {\it Distance measures in Cosmology},
+      \citet{hogg99cosm}}
+  \item
+    \href{http://adsabs.harvard.edu/abs/2002astro.ph.10394H}{
+    {\it The $K$-correction},
+      \citet{hogg02c}}
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item If Vega is about 8 parsecs away and has $m_V \sim 0$, how far
+  away would it be visible through the deepest images from the Hubble
+  Space Telescope ($m_V\sim 30$)?
+
+  \ifanswers \textcolor{blue}{ The magnitude difference of 30
+    corresponds to a factor of $10^{12}$ in luminosity. Using Equation
+    \ref{eq:luminosity_distance}, this translates to $10^6$ in
+    distance. So Vega-like stars are visible (in principle) to about 8
+    Mpc.  }
+  \fi
+
+\item Estimate the number of photons per second that enter your eye in
+  visible light (4000--7000 \AA) from a star with magnitude $\sim 6$
+  (about the faintest visible at a dark site). Assume a nighttime
+  pupil diameter of 5 mm. 
+
+  \ifanswers \textcolor{blue}{ The magnitude difference of 30
+    corresponds to a factor of $10^{12}$ in luminosity. Using Equation
+    \ref{eq:luminosity_distance}, this translates to $10^6$ in
+    distance. So Vega-like stars are visible (in principle) to about 8
+    Mpc.  }
+  \fi
+
+\item How much does surface brightness dimming change the magnitudes
+  per square arcsecond for a galaxy at redshift $z\sim 1$?
+\end{enumerate}   
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item For a Gaussian line spread function with a standard deviation
+  $\sigma$, what is the FWHM?
+\item Prove Equation \ref{eq:sb_dimming}, based on the fact that
+  photon density in phase space is conserved.
+\item Based on Equation \ref{eq:sb_dimming}, how is the angular
+  diameter distance related to the luminosity distance? 
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Retrieve a spectrum of a star, a quasar, and a galaxy from the
+  Sloan Digital Sky Survey, and plot each of them. 
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  
