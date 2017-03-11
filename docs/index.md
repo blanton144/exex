@@ -1,4 +1,5 @@
 ---
+layout: default
 title:  "Your Blog Title Here"
 ---
 
