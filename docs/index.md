@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Your Blog Title Here"
+title: Your Blog Title Here
 ---
 
 These pages contain exercises in extragalactic astronomy. 
