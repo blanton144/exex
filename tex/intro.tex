@@ -1,0 +1,120 @@
+\documentclass[11pt, preprint, maxnames=9]{aastex}
+\usepackage{hyperref}
+\usepackage{rotating}
+ 
+\setlength{\footnotesep}{9.6pt}
+
+\newcounter{thefigs}
+\newcommand{\fignum}{\arabic{thefigs}}
+
+\newcounter{thetabs}
+\newcommand{\tabnum}{\arabic{thetabs}}
+
+\newcounter{address}
+
+\begin{document}
+
+\title{\bf Introduction}
+~
+
+Extragalactic astrophysics is a broad and rapidly evolving field. It
+sits at the intersection of cosmology, stellar astrophysics, stellar
+dynamics, and nuclear astrophysics. Much of our knowledge depends on
+empirical observation or detailed numerical modeling, rather than
+being derivable from first principles. These facts make good graduate
+textbooks in the field extremely difficult to write. 
+
+There is a great, broad textbook by Schneider that yields very
+complete coverage of the field; because it is a textbook it is not
+quite up to date, but it does contain all of the important
+topics. There are a number of text books of somewhat narrower focus
+that contain both fundamental astrophysics and thorough literature
+reviews (particularly Binney \& Merrifield and Binney \& Tremaine).
+
+The approach of my text here is to use exercises to provide a
+practical introduction to the major aspects of theory and observation
+underlying extragalactic astrophysics. This yields not quite as broad
+a scope as Schneider, does not cover fundamentals as deeply as other
+texts, and of course is not quite at the frontier of the field.  This
+text necessarily relies on reference to a broader set of books that
+provide a more complete background on physics and astrophysics. But
+it does deliver essential information on experimental techniques,
+analysis techniques, and particularly on phenomenology, that is hard
+to deliver in any other form.
+
+Inspiration for this approach came from the {\it Problem Book in
+  Relativity and Gravitation}. However, in extragalactic astrophysics
+the problems must include numerical and data-oriented questions to
+introduce the subject and to demonstrate the empirical and
+phenomenological aspects of the subject.
+
+The activities in {\it Exercises in Extragalactic Astrophysics} fall
+into three categories:
+\begin{enumerate}
+\item {\it Order-of-magnitude exercises}: These exercises are
+  quantitative and meant to yield a sense of the units and
+  quantities. They just require pencil and paper and usually no more
+  information than is available in the material.
+\item {\it Analytic exercises}: These exercises usually require
+  physics and mathematics knowledge, in addition to the information
+  available in the material. They just require pencil and paper.
+\item {\it Numerics and Data Exercises}: These exercises require
+  either minor computational work (computing integrals or derivatives)
+  or minor analysis or plotting of astronomical data. 
+\end{enumerate}
+
+For the numerics and data exercises, in principle student can do these
+any way they want. However, we provide answers using Python, under
+Jupyter Notebooks. Some of the answers can be run on a laptop. Others
+need to use the SciServer Compute system.  These solutions often take
+a pedagogical approach, which is usually less efficient than the
+approach one would take in a research problem.  However, where
+convenient we illustrate the ``professional'' approach to solving the
+problem. Note that the convenience of Python and the professional
+approaches illustrated here will change over time, but hopefully the
+solutions will still yield insight.
+
+For solving the numerical and data problems, some students may need
+extra introduction. In order of increasing sophistication we recommend
+the following resources:
+\begin{itemize}
+\item If you need to get your feet wet in Python without actually
+  installing it on your laptop, go to SciServer
+  Compute\footnote{\tt \url{http://sciserver.org}} and learn how to
+  open a notebook and start a Python shell.
+\item Assuming you have some familiarity with some programming
+  language, but perhaps don't know Python, the official Python
+  tutorial\footnote{\tt \url{https://docs.python.org/3/tutorial/}} is as
+  good a place to start as any.
+\item You will definitely need the array functionality and other tools
+  from NumPy\footnote{\tt \url{
+    https://docs.scipy.org/doc/numpy-dev/user/quickstart.html}} and
+  SciPy\footnote{\tt \url{ 
+    https://docs.scipy.org/doc/scipy-0.18.1/reference/tutorial/index.html}}. You
+  may not want to go through all of those tutorials immediately but
+  they are available if needed. 
+\item The other major tool you need is AstroPy\footnote{\tt \url{
+  http://astropy.org}}, which also has documentation and tutorials of
+  use.
+\item You may want to use Python on your laptop. Chances are it is
+  installed with Python, but you will still want to use a distribution
+  that you can customize without administrative
+  privileges. Anaconda\footnote{\tt \url{https://www.continuum.io/}} is as
+  good a distribution as any, and good for scientific use. You can use
+  conda or pip to further customize it. To do this, if you are on Unix
+  or Mac OS X but not familiar with the Unix shell, do consult the
+  Unix shell tutorial at Software Carpentry\footnote{\tt \url{
+    https://software-carpentry.org/}}
+\end{itemize}
+The solutions in this book will provide some information on Python
+usage and capability. Note however that (at least partly by design for
+clarity) they are not always in the most ``Pythonic'' form or use the
+best software engineering practices.
+
+In the long term, the implementation used here will necessarily become
+dated as new observations and tools develop. I can only hope that it
+provides a useful set of exercises to students today and a durable
+model for future efforts in this direction.
+
+\end{document}
+
