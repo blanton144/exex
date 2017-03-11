@@ -1,3 +1,5 @@
+PDFDIR= ../docs/pdf
+
 ALL= \
 	toc.pdf \
 	intro.pdf \
@@ -5,13 +7,11 @@ ALL= \
 
 %.pdf : %.tex
 	pdflatex $*; bibtex $*; pdflatex $*; pdflatex $*
+	mv $*.pdf $(PDFDIR)
 
 all: $(ALL)
 
-final: 
-	cp $(ALL) ../pdf
-
 fullclean:
-	rm *.pdf *.log *.aux *.bbl *.blg *.out
+	rm *.log *.aux *.bbl *.blg *.out
 
 dummy:
