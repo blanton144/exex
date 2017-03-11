@@ -1,5 +1,5 @@
 ---
-title :
+title : exex2
 ---
 
 These pages contain exercises in extragalactic astronomy. 
