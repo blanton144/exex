@@ -8,6 +8,9 @@ ALL= \
 
 all: $(ALL)
 
+final: 
+	cp $(ALL) ../pdf
+
 fullclean:
 	rm *.pdf *.log *.aux *.bbl *.blg *.out
 
