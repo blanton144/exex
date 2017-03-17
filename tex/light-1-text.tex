@@ -1,4 +1,4 @@
-\title{\bf Light I}
+density \title{\bf Light I}
 
 \section{Basics \& Nomenclature}
 
@@ -31,6 +31,10 @@ A special unit for flux density (mostly in use in radio astronomy) is
 the Jansky, which is $10^{-23}$ erg s$^{-1}$ cm$^{-2}$
 Hz$^{-1}$. Sometimes the flux density is also called the {\it spectral
   energy distribution}.
+
+A {\it flux} $f$ is a flux density integrated over some wavelength or
+frequency range. We will see below how the flux is related to the
+astronomical magnitude. \todo{CHECK THIS NOMENCLATURE}
 
 The electromagnetic wave can also be expressed in terms of
 photons. The energy of photons correspond to a wavelength of light:
@@ -226,20 +230,53 @@ naturally an uncertain quantity.
     Mpc.  }
   \fi
 
-\item Estimate the number of photons per second that enter your eye in
-  visible light (4000--7000 \AA) from a star with magnitude $\sim 6$
-  (about the faintest visible at a dark site). Assume a nighttime
-  pupil diameter of 5 mm. 
+\item Estimate the number of photons per second that enter your eye
+    per second in visible light (4000--7000 \AA) from a star with
+  magnitude $\sim 6$ (about the faintest visible at a dark
+  site). Assume a nighttime pupil diameter of 5 mm.
 
-  \ifanswers \textcolor{blue}{ The magnitude difference of 30
-    corresponds to a factor of $10^{12}$ in luminosity. Using Equation
-    \ref{eq:luminosity_distance}, this translates to $10^6$ in
-    distance. So Vega-like stars are visible (in principle) to about 8
-    Mpc.  }
-  \fi
+  \ifanswers
+\textcolor{blue}{
+In this wavelength range, Vega and AB magnitudes are about the same at
+the precision necessary here, so we don't have to worry about which
+version we are dealing with. So:
+\begin{equation}
+f_\nu \sim (3631 \mathrm{~Jy}) 10^{-0.4 m} \sim 14 \mathrm{~Jy} = 1.4 \times
+10^{-22} \mathrm{~erg} \mathrm{~cm}^{-2} \mathrm{~s}^{-1} \mathrm{~Hz}^{-1}
+\end{equation}
+The flux density in the visible should be $f_\nu \Delta\nu$ where:
+\begin{equation}
+\Delta\nu = c \left(\frac{1}{4000 \mathrm{~\AA}} -
+\frac{1}{7000 \mathrm{~\AA}}\right) \sim 320 \mathrm{~THz}
+\end{equation}
+And thus $f \sim 4\times 10^{-8}$ erg cm$^{-2}$ s$^{-1}$. Each photon
+has an energy (assuming $\lambda = 5500$ \AA):
+\begin{equation}
+E = h\nu = (6.62\times
+10^{-27} \mathrm{~erg~Hz}^{-1})( \mathrm{550~THz}) \sim 4 \times
+10^{-12} \mathrm{~erg}
+\end{equation}
+So the flux of photons is:
+\begin{equation}
+\frac{\dot N}{A} = \frac{f_\nu \Delta\nu}{h\nu} \sim 
+10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}
+\end{equation}
+If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$. 
+}
+ \fi
 
 \item How much does surface brightness dimming change the magnitudes
   per square arcsecond for a galaxy at redshift $z\sim 1$?
+
+  \ifanswers
+\textcolor{blue}{
+The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
+\begin{equation}
+\Delta m = 2.5 \log_{10} (1+z)^4 = 10 \log_{10} (1+z) \sim
+3 \mathrm{~mag}
+\end{equation}
+}
+\fi
 \end{enumerate}   
 
 \section{Analytic Exercises}
@@ -257,7 +294,10 @@ naturally an uncertain quantity.
 
 \begin{enumerate}
 \item Retrieve a spectrum of a star, a quasar, and a galaxy from the
-  Sloan Digital Sky Survey, and plot each of them. 
+  Sloan Digital Sky Survey. Plot each of them. These spectra are given
+  in $f_\lambda$ (per-\AA) units; convert one them to $f_\nu$
+  (per-Hertz) and plot it.
+\item 
 \end{enumerate}
 
 \bibliographystyle{apj}

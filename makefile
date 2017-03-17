@@ -10,7 +10,7 @@ ALL= \
 	$(PDFDIR)/light-1-answers.pdf
 
 $(PDFDIR)/%.pdf $(PDFDIR)/%-answers.pdf: $(TEXDIR)/%.tex \
-	$(TEXDIR)/%-text.tex $(TEXDIR)/%-answers.tex
+	$(TEXDIR)/%-text.tex $(TEXDIR)/%-answers.tex $(TEXDIR)/exex_defs.tex
 	cd $(TEXDIR); pdflatex $(*F); bibtex $(*F); pdflatex $(*F); pdflatex $(*F)
 	cd $(TEXDIR); pdflatex $(*F)-answers; bibtex $(*F)-answers; pdflatex $(*F)-answers; pdflatex $(*F)-answers
 	mv $(TEXDIR)/$(*F).pdf $(PDFDIR)
