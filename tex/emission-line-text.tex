@@ -1,0 +1,120 @@
+\title{\bf Optical Emission Line Spectra}
+
+\section{Basics \& Nomenclature}
+
+Optical (and near ultraviolet and near infrared) emission lines of
+galaxies are predominantly associated with ionized gas. The emission
+lines are the result typically of {\it recombination radiation} or
+{\it collisionally excitation}. The physical conditions of ionized gas
+in galaxies varies by large orders of magnitude in density, from 0.3
+to $10^4$ cm$^{-3}$ but typically has temperatures around $10^4$ K.
+
+In astronomical spectroscopy, the ionization state is indicated by
+Roman numerals. XI indicates neutral ``X,'' XII indicates
+singly-ionized ``X,'' XIII indicates doubly ionized ``X,'' etc. 
+
+The ionization state of gas is determined by the balance among effects
+such as photoionization, collisional ionization, and recombination. In
+the interstellar medium, the radiation field is generally far from
+blackbody and statistical mechanical rules like the law of mass action
+that would otherwise govern the ionization state do not hold.
+
+\subsection{Photoionization}
+
+[photoionization]
+
+[other sources of ionization: collisional, etc]
+
+\subsection{Recombination radiation}
+
+[cross section]
+
+In ionized gas, hydrogen and other elements have electrons recombining
+at some rate that balances the ionization rate. Typically the
+recombination is to a high energy bound state. The electron will
+thereafter decay into successively lower states. For hydrogen, two
+limiting cases exist:
+\begin{itemize}
+\item Case A: optically thin to ionizing photons. The recombination
+  rate is the sum of the recombination rates to each energy level
+  indexed by quantum states $n$ and $l$:
+  \begin{equation}
+    \alpha_A(T) =
+    \sum_{n=1}^{\infty} 
+    \sum_{l=0}^{n-1} \alpha_{nl}(T)
+  \end{equation}
+\item Case B: optically thick to photons at energies just above the H
+  ionization limit (13.6 eV). The recombinations to $n=1$ do not
+  count, because they just result in an ionizing photon that is
+  immediately recaptured:
+  \begin{equation}
+    \alpha_B(T) = \alpha_A(T) - \alpha_{1s} (T)
+  \end{equation}
+\end{itemize}
+For most cases within the interstellar medium, Case B is appropriate
+because enough neutral H is available, even in HII regions. In such
+cases, the system is optically thick to all Lyman-series photons.
+
+The Case A recombination spectrum can be calculated by assuming the
+levels are populated by recombination as above, and then using the
+decay probabilities from each state. The Case B recombination spectrum
+is calculated the same way, but just taking all transitions to $n=1$
+out of the picture. The temperature enters the calculation weakly due
+to its effect on the recombination coefficients $\alpha$. The density
+enters the calculation even more weakly (until $n>10^6$ cm$^{-3}$),
+because collisions affect the high $n$ levels.
+
+In HII regions, where Case B holds, Lyman lines have a special
+fate. They undergo {\it resonant scattering}; every Lyman line emitted
+is very quickly reabsorbed. Since they undergo many scatterings, and
+also can decay to lower levels between scatterings, eventually they
+result in a Lyman-$\alpha$ photon. In HII regions, they can escape
+only through a rare two-photon decay to a continuum (when the state is
+2s) or by being Doppler scattered into a wing of the line. 
+
+Helium also contributes recombination radiation. For very hard
+photoionization sources, He III will predominate. This is a
+hydrogen-like system with an ionization energy four times as
+large. The emission lines are shifted in energy by that much, and the
+overall pattern of transitions in gas at temperature $T$ is the same
+as hydrogen for a gas with temperature $T/4$.
+
+[Other elements]
+
+\subsection{Collisional excitation}
+
+\subsection{Measurements of emission lines}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{http://}
+    {\it Physics of the Interstellar and Intergalactic Medium,
+      \citet{draine07a}}
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Dependence on temperature and resulting metallicity dependence
+  of Halpha 
+\end{enumerate}   
+
+\section{Analytic Exercises}
+
+\begin{itemize}
+\item alpha calculation
+
+\item Ly-alpha scattering
+\end{itemize}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Use of Balmer decrement for dust
+\item Running MAPPINGS or other
+\end{enumerate}`
+
+\bibliographystyle{apj}
+\bibliography{exex}  

@@ -1,0 +1,91 @@
+\title{\bf Gravitational Lensing}
+
+\section{Basics \& Nomenclature}
+
+Under general relativity, in the presence of mass light is bent by the
+curvature of spacetime. On astronomical scales this can cause the
+phenomenon of {\it gravitational lensing}. 
+
+Understanding lensing begins with the point mass case. It can be shown
+that a photon traveling by a point mass, with an impact parameter $r$,
+is in the small deflection limit deflected by an angle:
+\begin{equation}
+\theta_D = \frac{4GM}{rc^2} 
+\end{equation}
+This differs by a factor of two from the equivalent Newtonian
+calculation. An important feature of lensing is that it is achromatic;
+i.e., independent of wavelength.
+
+Figure \ref{fig:symmetric} describes the symmetric point lens case and
+defines the distances involved. In an analog to the optical thin lens
+approximation, we define the {\it source plane} and the {\it lens
+  plane}. In the perfectly aligned case the observer sees the source
+as a ring surrounding the lens; perfect alignment means an offset
+substantially than the source size.  A characteristic quantity of a
+lens is radius of this ring, which is the {\it Einstein angle}:
+\begin{equation}
+\theta_E =  \sqrt{\frac{4GM}{c^2}} \sqrt{\frac{D_{LS}}{D_L D_S}}
+\end{equation}
+which can be related to the {\it Einstein radius} in the lens plane
+$r_E = D_L \theta_E$.
+
+Figure \ref{fig:offset} describes the offset point lens case. If the
+source is a point source, this will result in two magnified (and one
+highly demagnified) images for the observer. The condition on the
+source angle:
+\begin{equation}
+\beta < \theta_E
+\end{equation}
+defines the {\it strong lensing} regime. In this regime, the two
+images appear near the Einstein ring location. If the source is
+extended instead of point-like, it can appear highly distorted in the
+strong lensing case.
+
+The opposite case is known as the {\it weak lensing} regime. 
+
+In either case, the distortion of lensing has an effect on the
+apparent brightness of the object. The total magnification can be
+defined as the increase in the solid angle of the image. This solid
+angle increase occurs even if our instrumentation still cannot detect
+the extended nature of the image. Because surface brightness (more
+technically specific intensity) is conserved in general relativity
+this magnification leads to an increase in total flux density.
+
+\section{Important numbers}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
+    {\it Binney \& Tremaine}
+      \citet{cox00a}}, Chapter 5
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Typical Einstein angles for stars, galaxies, clusters.
+\item Typical shear values
+\item Estimate probability of microlensing in galaxy
+\end{enumerate}   
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item GR calculation of lensing offset
+\item Show Einstein angle
+\item Calculate offset from Einstein angle for strong lensing
+\item Calculate offset from source angle for weak lensing
+\item Calculate magnification
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+
+\item Specific strong lenses
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

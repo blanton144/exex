@@ -1,0 +1,239 @@
+\title{\bf Stellar Dynamics}
+
+\section{Basics \& Nomenclature}
+
+Stellar dynamics is almost entirely collisionless, due to the low
+number density of stars relative to their radii. It is therefore
+governed by the collisionless Boltzmann equation (sometimes called the
+Vlasov equation) acting under gravity.
+
+In the continuum limit, we can express the distribution function of
+stars in phase space as $f(\vec{x}, \vec{v}, t)$, in units of per
+length-cubed per unit velocity-cubed. If we define the phase space
+vector $\vec{w} = \{\vec{x}, \vec{v}\}$ then we can write $f(\vec{w},
+t)$. The distribution in phase space can be arbitrarily
+complicated. It will not be thermalized as in a gas or fluid, or obey
+any particular equation of state.
+
+The continuum limit will be violated most rapidly by two-body
+interactions. We find in the exercises that the time for an $N$-body
+system to ``relax'' due to this effect is:
+\begin{equation}
+t_{\rm relax} \sim \frac{0.1 N}{\ln N} t_{\rm cross}
+\end{equation}
+where $t_{\rm cross}$ is the crossing time of the system. Globular
+clusters have relaxation times short compared to their ages.
+Galaxies, over most of their extent, have relaxation times high
+compared to their ages.
+
+In the continuum limit, the system obeys the collisionless Boltzmann
+equation under just gravity:
+\begin{equation}
+ \frac{\partial f}{\partial t} + \vec{v}\cdot\vec{\nabla} f -
+\vec{\nabla}\Phi\cdot\frac{\partial f}{\partial \vec{v}} = 0
+\end{equation}
+It can be shown that this equation obeys a special case of Liouville's
+Theorem:
+\begin{equation}
+\frac{{\rm d}f}{{\rm d}t} = 0
+\end{equation}
+where in this case the substantive derivative is:
+\begin{equation}
+\frac{\rm d}{{\rm d}t} = \frac{\partial}{\partial t}
++ \sum_\alpha \frac{\partial}{\partial w_\alpha}
+\end{equation}
+
+\section{Jeans Equations}
+
+The first few moments collisionless Boltzmann equation are instructive
+and can be useful. These equations are known as the Jeans Equations.
+
+The zeroth moment yields the equation of continuity:
+\begin{equation}
+\frac{\partial n}{\partial t}
++ \vec{\nabla} \cdot\left(n \left\langle\vec{v}\right\rangle\right) =
+0
+\end{equation}
+where $n(\vec{x})$ is the mean density per unit volume and
+$\langle\rangle$ indicates a density weighted-mean over all
+velocities.
+
+The first moment yields something akin to Euler's equations:
+\begin{equation}
+n \frac{\partial \langle\vec{v}\rangle}{\partial t}
+ + n \langle \vec{v} \rangle \cdot
+ \vec{\nabla} \langle\vec{v}\rangle
+  = -n \vec{\nabla}\Phi(\vec{x}, t) - \vec{\nabla} \cdot(n
+ {\mathbf{\sigma^2}})
+\end{equation}
+where ${\mathbf{\sigma^2}}$ is the tensor second moment of the velocity
+field, analogous to pressure. Each moment of the collisional Boltzman
+equation involves terms of higher order in this fashion; whereas in a
+collisional fluid the system would close with an equation of state, in
+a collisionless system the equations never close. 
+
+In steady state, where the density is not changing with time anywhere
+and therefore the mean velocity is zero everywhere, we find:
+\begin{equation}
+ \vec{\nabla} \cdot(n
+ {\mathbf{\sigma^2}}) = -n \vec{\nabla}\Phi(\vec{x}, t)
+\end{equation}
+Under spherical symmetry in configuration space, this can be
+rewritten:
+\begin{equation}
+\frac{\partial(n \sigma_{rr}^2)}{\partial r}
++ \frac{n}{r} \left[2 \sigma_{rr}^2
+- \left(\sigma_{\theta\theta}^2 + \sigma_{\phi\phi}^2\right)\right] =
+- n \frac{\partial \Phi}{\partial r}
+\end{equation}
+Although the spherical symmetry in configuration space means that $f$
+does not depend on $\theta$ or $\phi$, it can clearly depend on
+$v_\theta$ and $v_\phi$. Thus, $\sigma_{rr}^2$ does not have to equal
+$\sigma_{\theta\theta}^2$ pr $\sigma_{\phi\phi}^@$. The orbit
+distribution can be anisotropic, and the degree anisotropy affects the
+radial distribution $n(r)$. 
+
+\section{Virial Theorem}
+
+The virial equations establish the relationship between kinetic
+and potential energy in collisionless gravitating systems. They are
+obtained as a further moment of the Jeans Equation. Specifically, one
+takes the first moment of position over the analog of Euler's
+equation. For a time-independent system, in the center-of-mass frame,
+we can establish the {\it tensor virial theorem}:
+\begin{equation}
+2 K_{jk} + W_{jk} = 0
+\end{equation}
+where the internal {\it kinetic energy tensor} is:
+\begin{equation}
+K_{jk} = \frac{1}{2} \int \dd{}^3\vec{x}^3 \rho \sigma_{jk}^2
+\end{equation}
+(where $\rho$ is the mass density, so for particles of equal mass $m$,
+$\rho = nm$). The {\it potential energy tensor} is:
+\begin{equation}
+W_{jk} = - \frac{G}{2} \int \dd{}^3\vec{x}'
+\dd{}^3\vec{x} \rho(\vec{x}') \rho(\vec{x}) \frac{(x_j' - x_j)(x_k' -
+x_k)}{\left| \vec{x}' - \vec{x}\right|^3}
+\end{equation}
+
+The trace of the tensor virial theorem yields the {\it scalar virial
+theorem}:
+\begin{equation}
+2K + W = 0
+\end{equation}
+where $K$ is the total kinetic energy in the center of mass frame, and
+$W$ is the total potential energy. 
+
+\section{Jeans Theorem}
+
+Jeans Theorem yields an important tool for modeling equilibrium
+self-gravitating systems. These systems can be described by the set of
+orbits of the particles comprising them. The density field resulting
+from this distribution of orbits generates a potential. To remain in
+equilibrium, the orbit distribution needs to be stable in that
+potential. Jeans Theorem yields a way of generating orbit
+distributions that are self-consistent in this sense that they are in
+equilibrium.
+
+We showed earlier that $f$ is conserved along orbits in phase space:
+\begin{equation}
+\frac{\dd{f}}{\dd{t}} = 0
+\end{equation}
+Further, if $\Phi(\vec{x})$ is time-independent, there are six {\it
+constants of motion} $C(\vec{x}, \vec{v}, t)$ conserved along the
+orbit (there must be six because the orbit is fully defined by
+$\vec{w}(t=0)$).
+
+The {\it integrals of motion} are related. These are functions only of
+phase space position that are conserved along orbits:
+\begin{equation}
+\frac{\dd{I(\vec{x}, \vec{v})}}{\dd{t}} = 0 
+\end{equation}
+Each is also a constant of the motion; so there are at most six of
+them. The existence of these integrals of motion implies:
+\begin{equation}
+f(\vec{x}, \vec{v}) = f\left(I_1(\vec{x}, \vec{v}),
+I_2(\vec{x}, \vec{v}), \ldots, I_6(\vec{x}, \vec{v})\right)
+\end{equation}
+If this were not the case, then $f$ would be an independent integral
+of the motion itself!
+
+An integral of motion that always exists is total energy. It is
+conserved for each particle along its orbit. Under specific
+symmetries, other useful integrals of motion exist. For example, in
+spherical symmetry, the angular momentum $\vec{J}$ is conserved; note
+that only its amplitude is physically significant in spherical
+symmetry however. Therefore under spherical symmetry all equilibrium
+distribution functions can be written as $f(E, J)$. 
+
+A specific case of interest is the isothermal sphere. This
+distribution results from the choice $f\propto \exp(-E/\sigma^2)$. The
+resulting $f$ can be shown to have a velocity distribution that has a
+Gaussian width $\sigma$ in each dimension. Generically, at large
+radius $\rho \propto r^{-2}$ for an isothermal sphere. At these radii
+the circular velocity $v_c = \sqrt{2}\sigma$. 
+
+\section{Commentary}
+
+The fact that collisionless systems have a non-trivial phase space is
+of enormous significance. It provides another way that each objects'
+history may be encoded in its dynamics. It also means that the
+properties of a system have a full six-dimensional structure to their
+description. This complexifies accurate predictions of $N$-body
+gravitating systems when $N$ cannot be achieved computationally.
+
+The virial theorem is often spoken of in the casual terms that
+$v^2 \sim GM/r$ for the characteristic, $v$, $M$ and $r$ for the
+system. While this relation follows from dimensional analysis alone,
+the virial theorem goes further and is a precise relationship. It is
+clearest to think of the virial theorem establishing the relationship
+between $K$ and $U$ for a bound, equilibrium system.  However, as
+described in the problems, one can create definitions of
+``characteristic'' for $v$, $M$, and $r$ for which the equation $v^2 =
+GM/r$ holds strictly.
+
+\section{Important numbers}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
+    {\it Binney \& Tremaine}
+      \citet{cox00a}}, Chapter 5
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item What is the typical relaxation time for globular clusters?
+    Galaxies? Clusters of galaxies?
+\end{enumerate}   
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Show that Liouville's Theorem follows from the collisionless
+Boltzmann equation. 
+\item Verify the expressions for the Jeans Equations. 
+\item Verify the expressions for the Virial relation.
+\item Define the characteristic v, M, R for virial theorem
+\item Plummer model
+\item Isothermal sphere model
+\item Lowered isothermal sphere model
+\item Tidal radius
+\item Dynamical friction
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+
+\item $\Phi$, $n$ and $\beta$
+\item Dynamics estimates from Gaia
+\item Globular cluster radial profiles.
+\item Map Palomar 5 tidal tail
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

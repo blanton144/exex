@@ -1,0 +1,247 @@
+\title{\bf Telescopes}
+
+\section{Basics \& Nomenclature}
+
+Telescopes are the fundamental tool of astronomers, with a handful of
+exceptions ($\gamma$-ray detectors, cosmic ray detectors, neutrino
+detectors, and gravitational wave detectors). 
+
+Telescope optics are design to do two things: to collect a lot of
+light; arrange the collection process to separate the light according
+to its incoming direction. Detectability of objects depends on how
+many photons, or equivalently how much energy, is collected. This
+number is the product of $f_\nu A t \Delta\nu$, where $A$ is the
+telescope area, $t$ is the length of exposure, and $\Delta\nu$ is the
+width of detector bandpass.
+
+The two basic types of telescope are {\it refracting} and {\it
+reflecting} telescopes. Refractors transmit the light through
+transparent media with refractive indices different than air, bending
+it through Snell's Law. Reflectors are mirrored surfaces, in the
+optical typically aluminized, whose shapes manipulate beams of light
+in the desired fashion. Reflecting telescopes virtually always have
+some refracting elements inside of them.
+
+For astronomical telescopes, they always focus at infinity, meaning
+they are designed such that parallel rays of light are focused to a
+single point in the focus of the telescope.  Typically, there is some
+axis of symmetry to the telescope and rays parallel to this axis are
+{\it on-axis}, and it is typically here that the telescope is designed
+to have best focus. {\it Off-axis} rays may be well focused as well,
+but as the angle off-axis becomes larger the rays do not all
+converge. Off-axis rays can be obstructed by either parts of the
+optics or part of the telescope structure, and generally are more
+obstructed than on-axis rays; this effect is known as {\it
+vignetting}.  The usable {\it field of view} of the telescope is
+typically determined by the off-axis angle at which the beam is too
+vignetted or too badly focused to be usable for the desired purpose.
+
+Below is a picture of a lens diagram for a refracting telescope. The
+lens has a focal length, which is what determines how far beyond the
+lens a set of parallel, on-axis rays will come to focus. Physically,
+the lens is bending the light according to Snell's law, and the shape
+of the front and back surface of the lens as a function of its radius
+is what conspires to direct all the on-axis light to the focus.
+
+A key parameter in the optical design is the {\it focal ratio}, or
+{\it $f$-ratio}, the ratio of the focal distance $f$ to the aperture
+diameter $D$. This is usually expressed in the form ``$f/N$'' (which
+is not a division), where $N = f/D$. This ratio determines the angular
+size of the beam that converges on the focal point; in more complex
+optical configurations, it is this beam width that defines the
+$f$-ratio. The smaller the $f$-ratio the more the light is being bent;
+this means that off-axis rays will usually fall out of focus more
+quickly with off-axis angle without very careful design.
+
+Slightly off-axis light focuses to a slightly offset spot in the focal
+plane. The relationship between the off-axis angle and physical radius
+in the focal plane from the on-axis focus (sometimes known as the {\it
+plate scale}) is determined by the $f$-ratio. Specifically:
+\begin{equation}
+{\rm d}x \approx f {\rm d}\theta
+\end{equation}
+so:
+\begin{equation}
+\frac{{\rm d}x}{{\rm d}\theta} \approx f
+= \left(\frac{f}{D}\right) D
+\left(\frac{10^6~\mu{\rm m}}{{\rm m}}\right)v
+\left(\frac{\rm rad}{(180/\pi)(3600)~{\rm arcsec}}\right)
+= \left(\frac{f}{D}\right) \frac{D}{{\rm m}}
+\left(4.85 \frac{\mu{\rm m}}{\rm arcsec}\right)
+\end{equation}
+or inversely as 
+\begin{equation}
+\frac{{\rm d}x}{{\rm d}\theta} \approx 
+\left(\frac{f}{D}\right)^{-1} \frac{{\rm m}}{D}
+\left(0.206\frac{\rm arcsec}{\mu{\rm m}}\right)
+\end{equation}
+This equation holds given the final $f$-ratio of any of the optical
+systems we describe here. It means the smaller the $f$-ratio, or the
+smaller the telescope size, the more angular coverage per unit area
+there is.
+
+There are three major limitations of refracting telescopes:
+\begin{ditemize}
+\item The index of refraction of light in lens materials varies with
+wavelength. This means that the focal length depends on wavelength as
+well, and only one wavelength can be in perfect focus. This effect is
+known as {\it chromatic aberration} and is a limitation of refracting
+telescopes (and affects reflecting telescopes with refracting optics
+inside them). It is somewhat mitigated with large $f$-ratios, which
+minimize the angular deflections.
+\item Mitigating chromatic aberration and maintaining focus off-axis
+both drive the telescope design to reasonably high $f$-ratios. With a
+refractor, this inevitably lengthens the telescope structure in ways
+that can be avoided with reflecting telescope. A very long telescope
+necessitates a large dome, a more difficult engineering problem to
+manipulate the telescope, and more difficulty in minimizing flexure
+(bending) in the system.
+\item
+The practical size limit for refracting optical elements in the
+optical is about 1 meter. It is extremely hard to create precise
+optical elements larger than that size at finite cost.
+\end{ditemize}
+These considerations drove astronomers in the late 1800s and early
+1900s to move to reflecting telescopes for large telescope
+applications.
+
+The principles of reflecting telescopes to first order can be
+understood through the mathematics of conic sections: parabolae,
+ellipses, and hyperbolae. Reflecting surfaces in telescopes are close
+approximations to axisymmetric surfaces of revolution whose radial
+shape is defined by these conic sections. Conic section can be defined
+in terms of their two {\it foci}. One of their mathematical properties
+is that at any point on the curve, the normal to the curve bisects the
+directions to the foci. This mathematical property has the consequence
+that a ray of light emitted from the direction of one focus will be
+reflected from the surface along the direction defined by the other
+focus.
+
+Astronomical observations are almost invariably of extremely distant
+objects, the light rays from which are parallel to each other. This
+corresponds to a {\it focus at infinity}. A conic section with one
+focus at infinity and one at finite distance is a parabola. Therefore,
+if a parabolic mirror is aligned with these rays, they will be
+reflected towards the other focus of the parabola. A simple design for
+a telescope therefore is to put a detector at the focus of a parabolic
+mirror, referred to as the {\it primary}. A slight variant known as
+the Newtonian design is to direct this {\it prime focus} with a flat
+pickoff mirror.
+
+More complex designs are possible with multiple curved surfaces. The
+general principle behind these designs are to use the fact that conic
+sections like ellipsoids and hyperboloids have two foci. A {\it
+secondary mirror} is designed to have one focus coincide with the
+prime focus; the reflective surface then will refocus the light to its
+other focus. A third ({\it tertiary}) mirror is used in some designs
+(for example in the Large Synoptic Survey Telescope).
+
+There are multiple purposes of the extra surfaces. They allow the
+focus to be redirected to a mechanically more convenient spot than the
+primary. They allow freedom to manipulate the $f$-ratio of the
+beam. For wide-angle observations, the design of the primary,
+secondary, and other mirror shapes can be slightly perturbed from the
+conic section ideals to allow off-axis light to remain in better focus
+(at the cost of focus on-axis). In operation, that they are smaller
+than the primary makes them more easily adjustable in real time to
+perform focus changes and tip/tilt corrections for image motion.
+
+Many reflecting telescope systems have {\it correctors}, which are
+refractive elements near their focus used to reduce distortions across
+the field of view.
+
+The diffraction-limited point spread function of a telescope is
+related to its aperture. The ``pupil'' of the system is the image of
+the aperture including any obstructions in the optical path, for a
+plane wave arriving at the telescope aperture. In detail, optical
+imperfections will also lead to phase differences as a function of
+position in the pupil. Thus the ``complex pupil function'' $A
+e^{i\phi}$ gives the throughput $A$ and phase shift $\phi$ of each
+point in the aperture. Huygen's Principle of diffraction means the
+plane wave is focused onto a spot with an intensity function that is
+the real component of the Fourier transform of the complex pupil
+function.
+
+For the simplest aperture, a circular one with no phase shifts, the
+width of the diffraction-limited point spread function is related to
+the aperture diameter $D$. Specifically:
+\begin{equation}
+I(x) \propto \left(\frac{J_1(x)}{x}\right)^2,
+\end{equation}
+where $J_1$ is the first-order Bessel function and $x=\pi D \theta
+/\lambda$. Here $\theta$ is the equivalent angle from the center of
+the spot. 
+
+Most of these general considerations hold for telescopes outside the
+optical. However, the designs of these telescopes differ in
+detail. From the UV through the mid-infrared they are usually quite
+similar to the optical. High energy photons do not reflect easily off
+aluminized surfaces, or near the normal to the surface. X-ray
+observations therefore use gold-coated surfaces under ``grazing
+incidence,'' with nested annular hyperboloid surfaces. Radio
+telescopes simply require conductive surfaces and much lower
+tolerances due to their longer wavelength, meaning they can be built
+at fixed construction cost to much larger aperture than optical
+telescopes. To avoid interference, radio telescopes also typically use
+asymmetric sections of a paraboloid.
+
+\section{Commentary}
+
+Astrophysics and astronomy courses typically focus on the optical
+aspects of telescopes and the nature of their detectors.  The
+engineering aspects of telescopes, both in hardware and in software,
+are not well covered in the astrophysics or in the engineering
+disciplines.
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Design and Construction of Large Telescopes},
+      \citet{bely}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item The LSST telescope in Cerro Pachon has a diameter of $\sim 8$ m
+    and is $f/1.4$ at its focus. To roughly Nyquist sample the best
+    atmospheric seeing in Chile it might encounter, what must the
+    detector pixel size be?
+
+\item How accurate does the surface of a telescope mirror have to be
+    in: the $X$-rays? the optical? the radio?
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item The Cassegraine design and Gregorian design both involve a
+curved secondary redirecting the focus along the original primary
+focal axis. In the Cassegraine, the secondary is before the prime
+focus. In the Gregorian it is after. What are the shapes of each of
+these secondary choices: ellipsoid, paraboloid, or hyperboloid? Draw
+the mirrors and the paths for on-axis light in the two cases.
+\item In the two above cases, there usually needs to be a hole in the
+primary mirror (and the secondary would obstruct that area anyway).
+What is the analytic form of the diffraction limited point spread
+function for an aperture like this?
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Calculate the ideal point spread function for a Cassegraine-type
+design with four struts to hold the secondary creating an extra
+obstruction. Compare to an actual color image from the Hubble Space
+Telescope and comment on where the diffraction-related features in
+that image come from.
+\item Add random small scale phases shifts to your ideal
+aperture. What is the effect of this? How large do these shifts need
+to be before they strongly affect the point spread function?
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

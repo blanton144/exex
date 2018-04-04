@@ -199,6 +199,15 @@ its wavelength dependence. To estimate that wavelength dependence
 requires having a measurement or model. Thus, the $K$-correction is
 naturally an uncertain quantity.
 
+\section{Important numbers}
+
+\begin{itemize}
+\item $h\nu \sim 1$ eV for $\lambda \sim 1.2$ $\mu$m.
+\item $\nu \sim 300$ THz for $\lambda \sim 1$ $\mu$m.
+\item $\nu \sim 30$ GHz for $\lambda \sim 1$ cm.
+\item $\nu \sim 1$ GHz for $\lambda \sim 1$ m.
+\end{itemize}
+
 \section{Key References}
 
 \begin{itemize}
@@ -223,20 +232,20 @@ naturally an uncertain quantity.
   away would it be visible through the deepest images from the Hubble
   Space Telescope ($m_V\sim 30$)?
 
-  \ifanswers \textcolor{blue}{ The magnitude difference of 30
+\begin{answer}
+  The magnitude difference of 30
     corresponds to a factor of $10^{12}$ in luminosity. Using Equation
     \ref{eq:luminosity_distance}, this translates to $10^6$ in
     distance. So Vega-like stars are visible (in principle) to about 8
-    Mpc.  }
-  \fi
+    Mpc.  
+\end{answer}
 
 \item Estimate the number of photons per second that enter your eye
     per second in visible light (4000--7000 \AA) from a star with
   magnitude $\sim 6$ (about the faintest visible at a dark
   site). Assume a nighttime pupil diameter of 5 mm.
 
-  \ifanswers
-\textcolor{blue}{
+\begin{answer}
 In this wavelength range, Vega and AB magnitudes are about the same at
 the precision necessary here, so we don't have to worry about which
 version we are dealing with. So:
@@ -262,21 +271,18 @@ So the flux of photons is:
 10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}
 \end{equation}
 If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$. 
-}
- \fi
+\end{answer}
 
 \item How much does surface brightness dimming change the magnitudes
   per square arcsecond for a galaxy at redshift $z\sim 1$?
 
-  \ifanswers
-\textcolor{blue}{
+\begin{answer}
 The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
 \begin{equation}
 \Delta m = 2.5 \log_{10} (1+z)^4 = 10 \log_{10} (1+z) \sim
 3 \mathrm{~mag}
 \end{equation}
-}
-\fi
+\end{answer}
 \end{enumerate}   
 
 \section{Analytic Exercises}
@@ -284,6 +290,12 @@ The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
 \begin{enumerate}
 \item For a Gaussian line spread function with a standard deviation
   $\sigma$, what is the FWHM?
+\begin{answer}
+The FWHM is determined by:
+\begin{equation}
+\Delta\lambda = 2  \ln(0.5)
+\end{equation}
+\end{answer}
 \item Prove Equation \ref{eq:sb_dimming}, based on the fact that
   photon density in phase space is conserved.
 \item Based on Equation \ref{eq:sb_dimming}, how is the angular
@@ -295,9 +307,26 @@ The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
 \begin{enumerate}
 \item Retrieve a spectrum of a star, a quasar, and a galaxy from the
   Sloan Digital Sky Survey. Plot each of them. These spectra are given
-  in $f_\lambda$ (per-\AA) units; convert one them to $f_\nu$
-  (per-Hertz) and plot it.
-\item 
+  in $f_\lambda$ (per-\AA) units. Convert one them to $f_\nu$
+  (per-Hertz) and plot it. Smooth one of them in $f_\lambda$ with a
+  Gaussian corresponding to $R\sim 100$ and plot it.
+\item Plot $D_L$ versus $z$ based on the equations found
+  in \citet{hogg99cosm}, for a flat $\Lambda$CDM cosmology with
+  $\Omega_m = 0.3$ and $H_0 = 70$ km s$^{-1}$ Mpc$^{-1}$. Determine
+  where the difference in inferred luminosity of an object would reach
+  1\%. 
+\item Download the filter curve for the SDSS $g$ and $r$
+  bands. Calculate the observed $g$ and $r$ band magnitudes
+  corresponding to a galaxy spectrum (say for some galaxy with
+  $z<0.1$). Note that this won't necessarily be the same as the
+  magnitudes measured from the images, since the spectra are taken
+  through 2- or 3-arcsec diameter fibers. Calculate the rest-frame
+  $g-r$ color, and also what the $K$-correction would be for galaxies
+  with this SED in the $r$-band between about $z\sim 0$ and $z\sim
+  0.25$. Download a sample of galaxies between about $z\sim 0$ and
+  $0.25$. Plot their $g-r$ colors versus redshift, together with the
+  predicted colors of the galaxy you have a spectrum of.
+\item \todo{Would be nice to have radio, X-ray, other examples}
 \end{enumerate}
 
 \bibliographystyle{apj}

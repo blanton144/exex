@@ -1,0 +1,278 @@
+\title{\bf Light II: emission and propagation}
+
+\section{Basics \& Nomenclature}
+
+In thermal equilibrium, a photon distribution has the Planck spectrum,
+with a volume energy density per unit frequency as follows:
+\begin{equation}
+u_\nu = \frac{8\pi \nu^2}{c^3} \frac{h\nu}{\exp(-h\nu/kT)-1} 
+\end{equation}
+Typical units are erg Hz$^{-1}$ cm$^{-3}$. At low frequency this is a
+power-law distribution, the Rayleigh-Jeans tail:
+\begin{equation}
+u_\nu \approx  \frac{8\pi k T \nu^2 }{c^3}
+\end{equation}
+The peak of $u_\nu$ or $u_\lambda$ is simply related to $T$:
+\begin{equation}
+h\nu_{\rm max} = 2.8 kT \quad\quad
+\lambda_{\rm max} T = 2.9 {\rm ~mm} {\rm K} 
+\end{equation}
+This leads to a specific intensity of this radiation field:
+\begin{equation}
+I_\nu = \frac{u_\nu c}{4\pi} = \frac{2\nu^2}{c^2}
+\end{equation}
+The flux density through a flat surface is then:
+\begin{equation}
+f_\nu = \pi I_\nu 
+\end{equation}
+and the total flux is:
+\begin{equation}
+f = \frac{2\pi^5 k^4}{15 c^2 h^3} T^4 = \sigma T^4
+\end{equation}
+where this question uses the definition of the Stefan-Boltzmann
+constant $\sigma$.
+
+Under many conditions, the photon distribution is not in thermal
+equilibrium, and therefore differs from the Planck spectrum. Such
+spectra reveal details about the specific physical interactions the
+photons are undergoing that yield important clues about the conditions
+of the emitting material.
+
+{\it Lines}, or sharp features in the spectrum, can be created due to
+discrete energy level differences between atomic or molecular
+states. {\it Emission lines} occur when photons are released (and
+escape the medium) from a downwards transition. {\it Absorption lines}
+occur when photons coming toward the observer incite upwards
+transitions in intervening material. We usually speak of these lines
+as separate from the {\it continuum} spectrum, so that emission is in
+addition to the continuum and absorption is absorbing the continuum;
+however what we mean by ``continuum'' varies somewhat depending on
+context.  The interpretation of these features of spectra comprise a
+large portion of optical astrophysics, and in this section we discuss
+only a couple of examples to introduce nomenclature.
+
+Lines can be quantified in several ways:
+\begin{itemize}
+\item Both emission and absorption lines have some intrinsic width, which can
+be expressed as a full width half maximum (FWHM) or
+otherwise. Physically, this width can come from a combination of the
+intrinsic transition width, pressure-induced width, and Doppler
+velocity width (due to thermal or other motions).
+\item Emission lines have a total flux or luminosity that can be associated
+with them by subtracting an estimate of the continuum and integrating
+over wavelength or frequency (e.g., with units erg s$^{-1}$ for
+luminosity). There is an equivalent quantity for absorption lines (the
+flux or luminosity of the continuum that is absorbed) but this is
+rarely referred to.
+\item Both emission and absorption lines  have an {\it equivalent
+width} (EW), which is usually expressed in units of wavelength, and is
+the flux emitted or absorbed divided by a continuum flux density
+estimate (e.g. $f_\lambda$) at the location of the line. Sometimes we
+use the convention that positive EW indicates absorption and negative
+indicates emission; sometimes the opposite.
+\end{itemize}
+
+An illustrative example is the atomic transition sequences of
+Hydrogen. These transitions are determined by the well-known Bohr
+sequence:
+\begin{equation}
+E_n = - \frac{e^4m_e}{2\hbar^2} \frac{1}{n^2}
+\end{equation}
+The transitions between these states and important in stellar
+atmospheres (typically in absorption) and in interstellar medium
+emission (typically in emission). The lowest state is $E_0 = - 13.6$
+eV, which corresponds to a photon of 912 \AA; higher frequency photons
+will ionize H. The transitions between states are classified
+according to the lower state as follows:
+
+\begin{table}[htp]
+\caption{
+\label{table:hydrogen} Wavelengths (vacuum $\AA$) of hydrogen transitions between $n$ and $m$}
+\begin{tabular}{llllll}
+\hline\hline
+Series & Lower state ($n$) & $\alpha$ ($m = n+1$) & $\beta$ ($m=n+2$)
+& $\gamma$ ($m=n+3$) & $\delta$ ($m=n+4$) \\
+\hline
+Lyman (Ly) & 0 & 1216 & 1026	& 973	& 950 \\
+Balmer (H) & 1 & 1216 & 1026	& 973	& 950 \\
+Paschen (Pa) & 2 & 1216 & 1026	& 973	& 950 \\
+\hline
+\end{tabular}
+\end{table}
+
+Another important process, especially in the radio and X-ray domain,
+is {\it bremsstrahlung}, the radiation due to the acceleration of
+charges. An astrophysical plasma emits {\it thermal bremsstrahlung}
+due to Coulomb accelerations of the electrons against each
+other. Under most conditions, at wavelengths less than about 1 m
+(frequencies greater than 1 GHz), this emission occurs under optically
+thin conditions. At low enough frequencies this process is optically
+thick and thus thermal (since $h\nu \ll kT$ in practice,
+$f_\nu\propto \nu^2$). At higher frequency but still at $h\nu < kT$
+(typically in the cm-radio regime), the emission is optically
+thin. Free-free absorption at these wavelengths leads to
+$f_\nu\propto \nu^{-0.1}$. Above $h\nu> kT$, the Boltzmann cutoff
+leads to $f_\nu\propto \exp(-h\nu/kT)$. The calculation of thermal
+bremsstrahlung is somewhat complex.
+
+In plasmas with significant magnetic fields, electrons spiraling
+around the magnetic fields yield synchrotron radiation due to their
+acceleration. The distribution of electron energies determines the
+shape of the resulting spectrum, which can often be approximated as a
+power law $f_\nu \propto \nu^{-\alpha}$, where $\alpha$ can range from
+0 to over 2.
+
+A final highly significant effect in the propagation of light across
+space is due to the effect of interstellar dust. Interstellar dust
+typically consists of silica grains and some carbonaceous grains, plus
+a small admixture of organic molecules like polycyclic aromatic
+hydrocarbons. The grains are typically less than a few tenths of a
+micron in size. Because of this, radio and infrared frequencies are
+not affected by dust very much. In general, the amount of extinction
+is wavelength dependent, with bluer frequencies experiencing more
+absorption and scattering; the dependence varies depending on the
+nature of the dust but is very approximately $\sim \lambda^{-1}$. In
+the ultraviolet through near infrared this causes ``reddening'' of the
+light. Meanwhile, at the very highest frequencies (X-ray and
+$\gamma$-ray) the photons pass through the dust (in fact, extreme UV
+and X-ray radiation can destroy dust).
+
+As light from cosmic sources comes toward us, it can be scattered or
+absorbed in a number of ways other than atomic and molecular
+transitions, for example by interstellar dust, by plasma, by
+intervening radiation fields, or through other processes. We will
+discuss these as appropriate later.
+  
+% \section{Commentary}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
+    {\it Allen's Astrophysical Quantities},
+      \citet{cox00a}}, Chapter 5
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item As you can see when looking outside during the day, the Sun is
+    neither very blue nor very red. Assuming it emits approximately as
+    a blackbody, estimate the temperature of its surface.
+
+\item Estimate the approximate temperature of a radiation field that
+    will provide a substantial flux of photons to ionize hydrogen.
+
+\item If you have a spectrograph with $R\sim 4000$, for what
+line-of-sight velocity dispersion is the intrinsic width of the line
+equal to the width due to the resolution? [We will learn later that
+depending on signal-to-noise ratio, velocities much smaller than the
+resolution are hard to measure.]
+
+\item Galaxy clusters emit thermal bremstrahlung at energies $\nu > 1$
+keV. What is the temperature necessary to do this? 
+
+\item The center of the Milky Way is very heavily extincted: by about
+    30 magnitudes in the $V$ band. Approximately how much is that in
+    the near-infrared $K$ band?
+
+  \begin{answer}
+  The magnitude difference of 30
+    corresponds to a factor of $10^{12}$ in luminosity. Using Equation
+    \ref{eq:luminosity_distance}, this translates to $10^6$ in
+    distance. So Vega-like stars are visible (in principle) to about 8
+    Mpc.  
+  \end{answer}
+
+\item Estimate the number of photons per second that enter your eye
+    per second in visible light (4000--7000 \AA) from a star with
+  magnitude $\sim 6$ (about the faintest visible at a dark
+  site). Assume a nighttime pupil diameter of 5 mm.
+
+\begin{answer}
+In this wavelength range, Vega and AB magnitudes are about the same at
+the precision necessary here, so we don't have to worry about which
+version we are dealing with. So:
+\begin{equation}
+f_\nu \sim (3631 \mathrm{~Jy}) 10^{-0.4 m} \sim 14 \mathrm{~Jy} = 1.4 \times
+10^{-22} \mathrm{~erg} \mathrm{~cm}^{-2} \mathrm{~s}^{-1} \mathrm{~Hz}^{-1}
+\end{equation}
+The flux density in the visible should be $f_\nu \Delta\nu$ where:
+\begin{equation}
+\Delta\nu = c \left(\frac{1}{4000 \mathrm{~\AA}} -
+\frac{1}{7000 \mathrm{~\AA}}\right) \sim 320 \mathrm{~THz}
+\end{equation}
+And thus $f \sim 4\times 10^{-8}$ erg cm$^{-2}$ s$^{-1}$. Each photon
+has an energy (assuming $\lambda = 5500$ \AA):
+\begin{equation}
+E = h\nu = (6.62\times
+10^{-27} \mathrm{~erg~Hz}^{-1})( \mathrm{550~THz}) \sim 4 \times
+10^{-12} \mathrm{~erg}
+\end{equation}
+So the flux of photons is:
+\begin{equation}
+\frac{\dot N}{A} = \frac{f_\nu \Delta\nu}{h\nu} \sim 
+10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}
+\end{equation}
+If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$. 
+\end{answer}
+
+\item How much does surface brightness dimming change the magnitudes
+  per square arcsecond for a galaxy at redshift $z\sim 1$?
+
+\begin{answer}
+The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
+\begin{equation}
+\Delta m = 2.5 \log_{10} (1+z)^4 = 10 \log_{10} (1+z) \sim
+3 \mathrm{~mag}
+\end{equation}
+\end{answer}
+\end{enumerate}   
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item For a Gaussian line spread function with a standard deviation
+  $\sigma$, what is the FWHM?
+  \begin{answer}
+The FWHM is determined by:
+\begin{equation}
+\Delta\lambda = 2  \ln(0.5)
+\end{equation}
+\end{answer}
+\item Prove Equation \ref{eq:sb_dimming}, based on the fact that
+  photon density in phase space is conserved.
+\item Based on Equation \ref{eq:sb_dimming}, how is the angular
+  diameter distance related to the luminosity distance? 
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Retrieve a spectrum of a star, a quasar, and a galaxy from the
+  Sloan Digital Sky Survey. Plot each of them. These spectra are given
+  in $f_\lambda$ (per-\AA) units. Convert one them to $f_\nu$
+  (per-Hertz) and plot it. Smooth one of them in $f_\lambda$ with a
+  Gaussian corresponding to $R\sim 100$ and plot it.
+\item Plot $D_L$ versus $z$ based on the equations found
+  in \citet{hogg99cosm}, for a flat $\Lambda$CDM cosmology with
+  $\Omega_m = 0.3$ and $H_0 = 70$ km s$^{-1}$ Mpc$^{-1}$. Determine
+  where the difference in inferred luminosity of an object would reach
+  1\%. 
+\item Download the filter curve for the SDSS $g$ and $r$
+  bands. Calculate the observed $g$ and $r$ band magnitudes
+  corresponding to a galaxy spectrum (say for some galaxy with
+  $z<0.1$). Note that this won't necessarily be the same as the
+  magnitudes measured from the images, since the spectra are taken
+  through 2- or 3-arcsec diameter fibers. Calculate the rest-frame
+  $g-r$ color, and also what the $K$-correction would be for galaxies
+  with this SED in the $r$-band between about $z\sim 0$ and $z\sim
+  0.25$. Download a sample of galaxies between about $z\sim 0$ and
+  $0.25$. Plot their $g-r$ colors versus redshift, together with the
+  predicted colors of the galaxy you have a spectrum of.
+\item \todo{Would be nice to have radio, X-ray, other examples}
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  
