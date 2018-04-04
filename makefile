@@ -6,8 +6,20 @@ vpath %.tex $(TEXDIR)
 ALL= \
 	$(PDFDIR)/toc.pdf \
 	$(PDFDIR)/intro.pdf \
+	$(PDFDIR)/telescopes.pdf \
+	$(PDFDIR)/telescopes-answers.pdf \
+	$(PDFDIR)/ism.pdf \
+	$(PDFDIR)/ism-answers.pdf \
+	$(PDFDIR)/emission-line.pdf \
+	$(PDFDIR)/emission-line-answers.pdf \
+	$(PDFDIR)/dynamics.pdf \
+	$(PDFDIR)/dynamics-answers.pdf \
+	$(PDFDIR)/lensing.pdf \
+	$(PDFDIR)/lensing-answers.pdf \
 	$(PDFDIR)/light-1.pdf \
-	$(PDFDIR)/light-1-answers.pdf
+	$(PDFDIR)/light-1-answers.pdf \
+	$(PDFDIR)/light-2.pdf \
+	$(PDFDIR)/light-2-answers.pdf
 
 $(PDFDIR)/%.pdf $(PDFDIR)/%-answers.pdf: $(TEXDIR)/%.tex \
 	$(TEXDIR)/%-text.tex $(TEXDIR)/%-answers.tex $(TEXDIR)/exex_defs.tex
