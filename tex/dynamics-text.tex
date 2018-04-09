@@ -166,12 +166,40 @@ that only its amplitude is physically significant in spherical
 symmetry however. Therefore under spherical symmetry all equilibrium
 distribution functions can be written as $f(E, J)$. 
 
-A specific case of interest is the isothermal sphere. This
+A specific case of interest is the {\it isothermal sphere}. This
 distribution results from the choice $f\propto \exp(-E/\sigma^2)$. The
 resulting $f$ can be shown to have a velocity distribution that has a
 Gaussian width $\sigma$ in each dimension. Generically, at large
 radius $\rho \propto r^{-2}$ for an isothermal sphere. At these radii
-the circular velocity $v_c = \sqrt{2}\sigma$. 
+the circular velocity $v_c = \sqrt{2}\sigma$. The case in which
+$r^{-2}$ at all radii is known as the {\it singular isothermal
+sphere}.
+
+\section{Chandrasekhar Dynamical Friction}
+
+Collisionless, gravitating, dynamical systems exhibit an effect known
+as {\it dynamical friction} that converts ``bulk'' kinetic energy into
+``internal'' kinetic energy, even in systems with long two-body
+relaxation times. This effect is calculated in the exercises below,
+where it is shown that for a mass $M$ moving through a system with
+density $\rho$ with an isothermal distribution function of velocity
+distribution $\sigma$ there is a drag force:
+\begin{equation}
+\frac{\dd{\vec{v}_M}}{\dd{t}} = - \frac{4\pi \ln\Lambda
+G^2M\rho}{v_M^3} \left[\erf X
+-  \frac{2X}{\sqrt{\pi}} \exp\left(-X^2\right) \right] \vec{v}_M
+\end{equation}
+where $X = v_M /\sqrt{2} \sigma$ and $\Lambda \sim M_{\rm total} / M$.
+For an initial circular orbit of radius $r_i$, this drag leads to a
+dynamical friction time scale:
+\begin{equation}
+t_{f} = \frac{2.6 \times
+10^{11} \mathrm{~yr}}{\ln \Lambda} \left[\frac{r_i}{2\mathrm{~kpc}}\right]^2
+\left[\frac{v_c}{250\mathrm{~km~s}^{-1}} \right]
+\left[\frac{10^6 M_\odot}{M}\right]
+\end{equation}
+
+
 
 \section{Commentary}
 

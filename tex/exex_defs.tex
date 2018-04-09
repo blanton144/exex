@@ -1,4 +1,5 @@
 \usepackage{environ}
+\usepackage{amsmath}
 
 \newcommand{\todo}[1]{{\bf #1}}
 \newcommand{\dd}[1]{\ensuremath{{\rm d}#1}}
@@ -7,6 +8,7 @@
 \newif\ifanswers
 
 \NewEnviron{answer}{\ifanswers\color{blue}\expandafter\BODY\fi}
+\DeclareMathOperator\erf{erf}
 
 \newenvironment{ditemize}
 { \begin{list}{}{%
