@@ -83,9 +83,36 @@ of turbulent mixing between atmospheric layers with different indices
 of refraction, which cause fluctuations in the wave fronts. These
 distortions are known generically as {\it seeing}.
 
-Under good conditions, the seeing is dominated by a surface layer near
-the telescope and a handful of thin turbulent layers within a few
-kilometers of the surface.
+Under good conditions, the seeing is dominated by a turbulent surface
+layer near the telescope and a handful of thin turbulent layers within
+a few kilometers of the surface. The index of refraction varies over
+short length scales in these turbulent layers. The variation of this
+index leads the electromagnetic plane waves to become wrinkled in a
+time-dependent fashion. The coherence length of the waves $r_0$
+depends on conditions, but under reasonably good conditions is about
+20~cm and because of the variation of the index of refraction with
+wavelength scales as $\lambda^{6/5}$.
+
+This coherence length sets the diffraction limit for ground-based
+telescopes. This means that optical observations are typically limited
+to $\sim$ 1 arcsec FWHM resolution, and that telescopes above a
+diameter of about 20 cm do not continue to benefit from better
+diffraction limits.  
+
+Because the distortion of the wavefronts on larger scales than the
+telescope diameter varies over time, it contributes to image motion
+over time; that is, the diffraction limited spot changes location. For
+long enough exposures this effect will also contribute to the
+effective resolution of the image. This effect is more severe the
+smaller the telescope.
+
+Adaptive optics systems seek to mitigate the atmospheric diffraction
+effects by correcting the wavefront of the incoming light to make it
+coherent across the pupil and restore the full aperture's diffraction
+limit. These systems monitor one or more bright stars in the field of
+view, or artificial stars creating by using a laser to excite sodium
+atoms in a sodium-rich atmospheric layer about 90 km height, above
+most of the atmospheric turbulence. 
 
 \section{Commentary}
 
@@ -108,27 +135,24 @@ We will discuss spectra later.
 \begin{enumerate} 
 \item Brightness of sky vs objects.
 \item Estimate of chromatic refraction 
+\item PSF FWHM vs wavelength
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item The Cassegraine design and Gregorian design both involve a
-curved secondary redirecting the focus along the original primary
-focal axis. In the Cassegraine, the secondary is before the prime
-focus. In the Gregorian it is after. What are the shapes of each of
-these secondary choices: ellipsoid, paraboloid, or hyperboloid? Draw
-the mirrors and the paths for on-axis light in the two cases.
-\item In the two above cases, there usually needs to be a hole in the
-primary mirror (and the secondary would obstruct that area anyway).
-What is the analytic form of the diffraction limited point spread
-function for an aperture like this?
+\item Calculate the parallactic angle for a field at a given alt, az,
+    latitude.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item 
+\item Sky brightness vs airmass during SDSS drift scan
+\item OH variations during SDSS drift scan
+\item Plot sky spectrum vs moon phase from SDSS
+\item OH variations across SDSS fields
+\item Find extreme airmass SDSS images, see refraction
 \end{enumerate}
 
 \bibliographystyle{apj}

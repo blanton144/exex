@@ -6,6 +6,12 @@ vpath %.tex $(TEXDIR)
 ALL= \
 	$(PDFDIR)/toc.pdf \
 	$(PDFDIR)/intro.pdf \
+	$(PDFDIR)/inventory.pdf \
+	$(PDFDIR)/inventory-answers.pdf \
+	$(PDFDIR)/detectors.pdf \
+	$(PDFDIR)/detectors-answers.pdf \
+	$(PDFDIR)/atmosphere.pdf \
+	$(PDFDIR)/atmosphere-answers.pdf \
 	$(PDFDIR)/telescopes.pdf \
 	$(PDFDIR)/telescopes-answers.pdf \
 	$(PDFDIR)/ism.pdf \
