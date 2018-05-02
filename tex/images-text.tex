@@ -1,0 +1,62 @@
+\title{\bf Images}
+
+\section{Basics \& Nomenclature}
+
+Two-dimensional array-based detectors at the focal planes of
+telescopes produce images. These images can be thought of as noisy
+samplings of an {\it image function} which is the convolution of the
+image coming from space with a response function known as the {\it
+  point spread function} (PSF). The PSF can have contributions from
+the Earth's atmosphere, the telescope's physical and geometric optics,
+and the detector.
+
+The width of the PSF is usually characterized by its full-width
+half-maximum (FWHM). An important property of an imaging system is its
+sampling density relative to the FWHM. If this density is high enough,
+typically greater than 2 pixels per FWHM, the PSF will be close to
+{\it Nyquist sampled}, meaning that if the image were noiseless it
+would preserve all of the information in the image function.
+
+
+
+\section{Commentary}
+
+We will discuss spectra later. 
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Design and Construction of Large Telescopes},
+      \citet{bely}
+  \item
+    {\it Kitchin}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Typical read noise in IR arrays vs optical and sampling
+\item X-ray background
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Nyquist
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Sky brightness vs airmass during SDSS drift scan
+\item OH variations during SDSS drift scan
+\item Plot sky spectrum vs moon phase from SDSS
+\item OH variations across SDSS fields
+\item Find extreme airmass SDSS images, see refraction
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

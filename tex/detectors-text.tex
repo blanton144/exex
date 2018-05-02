@@ -1,0 +1,145 @@
+\title{\bf Detectors}
+
+\section{Basics \& Nomenclature}
+
+Modern astronomical detectors come in several varieties depending on
+wavelength and use case. The traditional detector introduced in the
+1800s, the photographic plate, is too inefficient ($\sim$ 5\%) and too
+inconvenient to convert into digital form to be of use today, though
+it continued to be used until about 2000. Here, we will not review the
+physics behind modern detectors except insofar as necessary to explain
+how to interpret data taken with them.
+
+In the optical, out to about a micron, the most common detector in use
+is the {\it charge-coupled device} (CCD). Out to about 28 $\mu$m, the
+most common detectors are infrared detector arrays. Although CCD and
+infrared arrays are different technologies, both are
+semiconductor-based detectors that detect photons of energy higher
+than their band gap between their bound valence electron energies and
+their conduction band. Silicon is the best-developed CCD technology
+and has a band gap of 1.1 $\mu$m.  Germanium CCDs could in principle
+extend this sensitivity to $1.8$ $\mu$m, but their technology is not
+cost-effective today. HgCdTe (``MER-CAH-TEL'') infrared detectors have
+a band gap of that can be designed anywhere between 0.4--12
+$\mu$m. Si:As detectors can extend to 28 $\mu$m. {\bf check what WISE
+is}.
+
+Each pixel of a CCD detects individual photons that hit it, each of
+which usually contributes one electron to the overall signal. For most
+hardware, the charge is ``read out'' at amplifiers along the side of
+the CCD, by transferring the charge from pixel to pixel to the edge of
+the CCD. At the last pixel the charge is converted to a digital signal
+by the amplifiers. CCDs may be readout by various numbers of
+amplifiers. Because of the finite temperature of the devices, some
+number of electrons are released even when there are no photons
+entering the device; this phenomenon is known as the {\it dark
+current}. To reduce the dark current, CCD detectors need to be cooled;
+variations in temperature can cause variations in the dark current.
+
+Infrared detector arrays operate similarly, but the infrared-sensitive
+materials cannot today be used to support the circuits necessary for
+CCD operation. Insted, the infrared sensitive material is bonded to a
+silicon detector on which the read out occurs. These detectors are not
+CCDs but multiplexers, which are read directly out on each pixel. The
+charge can be read out nondestructively, allowing many reads on the
+same pixel. However, the read out is intrinsically noisier.
+
+From this basic understanding, there results an interpretation of the
+digital numbers reported by a semiconductor device:
+\begin{equation}
+\mathrm{DN} =
+\mathrm{Gain~} n_e =
+\mathrm{Gain~} \left[\times n_p + \mathrm{Dark} \right]
+\end{equation}
+where $n_e$ is the number of electrons recorded by the device, $n_p$
+is the number of photons actually detected, i.e. which are converted
+to electrons (which will include all background photon sources),
+``Gain'' represents the conversion of photons to the DN reported by
+the electronics, and ``Dark'' represents the dark current in units.
+
+The noise in the DN is due primarily to two sources: Poisson noise
+around the mean $n_e$ and {\it read noise} associated with the
+electronics. The read noise does not usually depend on the
+signal. Therefore:
+\begin{equation}
+\sigma_{\rm DN}^2 = \mathrm{Gain}^2 n_e + \mathrm{Read~Noise}^2
+\end{equation}
+The Poisson noise includes the ``object'' signal, the background
+signal, and the dark current contributions to the expected number of
+electrons $n_e$.
+
+Over their usuable dynamic range in number of electrons, CCD devices
+are remarkably but not perfectly linear.  CCD devices are limited in
+their dynamic range by the number of electrons each pixel can
+store. If the number of electron approaches or exceed this limit,
+those electrons typically bleed to neighboring pixels; since the
+electronics is not isotropic, they typically bleed along the same
+direction the device is read out. They also may be limited by the
+dynamic range of their analog-to-digital converter, which is often
+16-bits.
+
+CCDs are also sensitive to cosmic rays and these will release
+electrons that contribute to the signal. A characteristic feature of a
+cosmic ray is that it will be a sharper feature than the atmosphere
+and optics allow. The exact nature of the cosmic ray distribution
+depends on altitude (with more reaching higher altitude and space
+detectors) and orientation of the detector relative to vertical (since
+underneath the atmosphere the cosmic rays will be directed
+preferentially downwards).
+
+In the ultraviolet, other detectors are still in use. For example,
+GALEX uses a position dependent proportional counter. These devices
+are essentially a crossed grid of wires under voltage inside a chamber
+filled with an inert gas that can be ionized by UV photons. When a UV
+photon causes a charge track, the voltage change is detected and
+recorded. Unlike CCDs, these detectors can detect individual photons.
+
+In the X-rays, CCD detectors are now used. CCDs lose sensitivity in
+the UV due to absorption on their surfaces, but at energies $> 120$ eV
+($<100$ \AA) they are sensitive again. Unlike in the UV and optical,
+X-ray photons can release many electrons. This fact, and that the
+photons much rarer, allows X-ray CCDs to be energy sensitive. At high
+count rates, they become complicated to analyze due to .
+
+\section{Commentary}
+
+We will discuss spectra later. 
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Design and Construction of Large Telescopes},
+      \citet{bely}
+  \item
+    {\it Kitchin}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Typical read noise in IR arrays vs optical and sampling
+\item X-ray background
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Noise as a function of object and background 
+\item Bias in estimating noise from data
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Sky brightness vs airmass during SDSS drift scan
+\item OH variations during SDSS drift scan
+\item Plot sky spectrum vs moon phase from SDSS
+\item OH variations across SDSS fields
+\item Find extreme airmass SDSS images, see refraction
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  
