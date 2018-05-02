@@ -1,4 +1,4 @@
-[Introduction](pdf/intro.pdf)
+Please read the [introduction](pdf/intro.pdf) and [table of contents](pdf/toc.pdf).
 
 | Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) | |
 | Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-1.ipynb) | 
