@@ -1,0 +1,278 @@
+\title{\bf Galaxies}
+
+\section{Basics \& Nomenclature}
+
+The basic phenomenology of galaxies is necessary to understand before
+embarking on their detailed study. In the broadest terms, galaxies are
+gravitationally bound collections of stars, gas, and dark
+matter. Their masses range from extremely small, a few $10^6$
+$M_\odot$ in dark matter, up to around $10^{13}$ $M_\odot$ in dark
+matter. Baryonic mass in the form of stars and cold gas is only about
+5\% of the dark matter mass, smaller than the cosmic mean
+fraction. The extent of stars and gas ranges from a few tenths of a
+kpc to 10s of kpc; the extent of the dark matter appears to be much
+larger. Galaxies the size of the Milky Way have number densities such
+that their mean separation is about 5 Mpc.
+
+Theoretically, it appears that galaxies form near the centers of dark
+matter halos and subhalos that form as dark matter collapses
+gravitationally from the initial density perturbations. To zeroth
+order galaxy phenomenology can be explained by the relationship of
+galaxies to their host halos and subhalos.
+
+In the optical, a critical quantity characterizing a galaxy is its
+luminosity. The luminosity is typically measured from light in an
+image associated with the galaxy, either by summing light with a
+circular or elliptical aperture or by fitting the amplitude of a
+model. Aperture fluxes can be defined in multiple ways. The most
+robust is the Petrosian definition used by the Sloan Digital Sky
+Survey. Most aperture fluxes need to be corrected for the effect of
+the point spread function, especially at small galaxy sizes. At faint
+fluxes, aperture fluxes defined to contain most of the expected light
+tend to be noisy.
+
+Model fluxes are higher signal-to-noise and can be constructed to
+account for the point spread function and any inherent ellipticity in
+the model. Inaccuracy in the model can on the other hand result in
+systematic errors in the flux.
+
+The {\it luminosity function} $\Phi(L)$ of galaxies characterize their
+luminosity distribution.  A simple approximation to this function is
+the Schechter function:
+\begin{equation}
+\Phi(L) \dd{L} = \left(\frac{\phi_0}{L_\ast}\right)
+\left(\frac{L}{L_\ast}\right)^\alpha \exp\left(L / L_\ast\right)
+\dd{L}
+\end{equation}
+where $L_\ast$ is similar to the Milky Way luminosity and $\alpha \sim
+-1.3$ is the {\it faint end slope}. A better approximation is a broken
+power law at the faint end, which gets steeper at lower
+luminosities. The luminosity function depends on band pass, because
+the colors of galaxies depend on luminosity. A similar function
+characterizes the stellar mass function.
+
+The {\it stellar mass function} $\Phi(M_\ast)$ characterizes their
+distribution in total stellar mass. Estimates of stellar mass depend
+on broad-band observations and/or spectroscopic observations combined
+with models of the underlying stellar population. Broadly speaking,
+the stellar mass is proportional to the light multiplied by a
+mass-to-light ratio. The mass-to-light ratio depends on the age,
+metallicity, dust content, and other properties of the stellar
+population, with the trend in all cases for the redder populations to
+have higher mass-to-light ratios. Stellar mass is defined as the
+current stellar mass in objects above the hydrogen burning limit,
+including remnants such as white dwarfs and neutron stars, but not
+including any mass returned through winds or supernovae to the
+interstellar medium.
+
+As a function of redshift, the luminosity function and stellar mass
+function change. The stellar mass function in general needs to grow
+with cosmic time, since star formation proceeds within galaxies over
+time. The luminosity function however tends to decrease with cosmic
+time, since the rate of star formation decreases and the mass-to-light
+ratio tends to grow.
+
+The spectral energy distributions of galaxies depend on their
+luminosity. The simplest characterization of these spectral energy
+distributions are from the broad-band color. At the highest
+luminosities, low redshift galaxies tend to be uniformly red,
+indicating an old stellar population. At the lowest luminosities, they
+tend to be primarily blue, indicating a young stellar popation, except
+in those cases where they are satellites of a larger galaxy. At
+intermediate luminosities (around $L_\ast$) both populations exist and
+the color distribution is said to be {\it bimodal}.
+
+The internal structure of galaxies also varies. Very broadly speaking,
+the stellar components of galaxies are:
+\begin{itemize}
+ \item {\it disks}: an extended, flattened, rotating distribution of
+ stars and (usually) gas. Disks often have spiral structure through
+ them, with star formation concentrated on the spiral arms.
+ \item {\it bulges}: generally puffy, velocity dispersion supported
+  collections of stars near the centers of galaxies, thought to arise
+  through the destruction of merging galaxies. 
+ \item {\it pseudobulges}: generally flatter, more exponential
+   collections of stars near the centers of galaxies, thought to arise
+   through internal processes within disks. 
+ \item {\it bars}: elongated structures near the centers of galaxies,
+   thought to arise through dynamical instabilities of bulges or
+   pseudobulges. 
+\end{itemize}
+
+Disks tend to have an exponential radial profile when azimuthally
+averaged:
+\begin{equation}
+I(r) = I_0 \exp\left(- r / r_e\right)
+\end{equation}
+where for the Milky Way $r_e \sim 3$ kpc. When observed at an {\it
+inclination} that is $i<90^\circ$, the two-dimensional image is
+projected into an ellipse on the sky that can be characterized by an
+{\it axis ratio}, which if the disk were transparent and infinitely
+thin would have a straightforward relationship with the inclination.
+
+Bulges have a range range of radial profiles that can be characterized
+by the \Sersic\ profile:
+\begin{equation}
+I(r) = I_0 \exp\left[- \left(r / r_e\right)^{1/n}\right]
+\end{equation}
+where $n \sim 1--4$ but can be larger than that. $n=1$ is the same as
+an exponential profile, and $n=4$ is a special profile known as the
+{\it de Vaucouleurs} profile. Bulges are typically ellipsoidal or
+triaxial systems, seen at some angle, so that their axis ratios do not
+simply translate into an inclination.
+
+The size of a galaxy is often quantified by the {\it half-light
+radius} or {\it effective radius}, which is the radius containing 50\%
+of the estimated total light within a circular or elliptical
+annulus. Another common measure of size is $D_{25}$, which is the
+radius of the isophote as which the surface brightness in $B$ becomes
+25 mag arcsec$^{-2}$; this definition is not suitable at high redshift
+because surface brightness is not conserved.
+
+A related measurement is the surface brightness. For example, the {\it
+half-light surface brightness} is the mean surface brightness within
+the half-light radius. The {\it central surface brightness} is the
+surface brightness at the center, only measurable if the center is
+smooth relative to the resolution of the image.
+
+Internal structure has traditionally been characterized by a measure
+of morphology. Definitions of galaxy morphology vary among
+investigators, but the broad classifications of elliptical (or E),
+lenticular (or S0), or spiral (ranging from Sa through Sd) are common.
+
+Elliptical galaxies are red, puffy, and generally velocity dispersion
+supported. They lie on the red sequence in color space (but S0 and Sa
+galaxies are there as well). They are very much like bulges
+unencumbered by disks. They contain small amounts of cold gas,
+typically about 1\% of the stellar mass, and also warm and hot
+gas. Their \Sersic\ indices $n$ vary from around 1 at low luminosities
+({\it dwarf ellipticals}, or {\it dE} galaxies) up to 4 or more for
+higher luminosities ({\it giant ellipticals}, sometimes {\it gE}
+galaxies).  There is a rare class of low luminosity elliptical with
+$n\sim 4$, known as {\it compact elliptical}, or {\it cE}, galaxies.
+
+Lenticular galaxies are red but disk like, though not as thin as true
+disks. They can be hard to distinguish from ellipticals when seen face
+on, but commonly have bars or rings, and their stellar distribution
+commonly has a distinct dropoff in its outer parts (i.e. the
+exponential profile effectively stops). They also have little gas. 
+
+Disk galaxies can be blue or red, but generally consist of thin disks
+of gas and stars (a few 100 pc thick). The gas is typically a mix of
+ionized, neutral, and molecular gas, the latter occurring in molecular
+clouds. Much ionized gas surrounds star forming regions that are often
+embedded in the molecular clouds, while warm ionized gas does exist
+elsewhere in the disks.
+
+The centers of disk galaxies can consist of a range of interesting
+structures, including bars, bulges, and pseudobulges. High luminosity
+galaxies tend to have large bulges, and low luminosity galaxies weak
+ones. Spirals have a morphology classication that ranges from Sa to
+Sd, but there are different choices in different catalogs as to what
+the classification indicates. They generally are meant to capture the
+pitch angle of the spiral arms, their organizational structure, and
+the prominence of the bulge.  The Reference Catalog classifications of
+de Vaucouleurs tend to emphasize the bulge, whereas the Revised
+Shapley-Ames Catalog of Sandage and Tammann depends more strongly on
+the spiral arms.
+
+A common quantitative measure of morphology is the bulge-to-total
+ratio $B/T$, which is the result of fitting a bulge and disk model to
+a galaxy. By definition, this quantity ranges from zero to one, and
+pure disk galaxies lie at zero and elliptical galaxies lie at one. A
+model independent, related quantity is the {\it concentration},
+defined by $r_{90}/r_{50}$, the 90\% to 50\% radius ratio.
+
+The dark matter content of galaxies is revealed by their dynamics and
+in some cases by gravitational lensing. Elliptical galaxies are
+supported by a combination of rotation and velocity dispersion;
+interpreting the dynamical masses of elliptical galaxies is complex
+but achievable. The best evidence to date suggests that massive
+elliptical galaxies have high mass-to-light ratios, which indicates
+either a non-standard IMF that changes with stellar mass, or the
+presence of dark matter.  Disk galaxies are primarily supported by
+rotation. Particularly in their outer parts, the gas dynamics is
+relatively straightforward to interpret and unambiguous signatures of
+dark matter are present.
+
+Two major scaling relations quantify the relationship between
+luminosity and dynamics: The {\it fundamental plane} of giant
+elliptical galaxies, the relationship between size, luminosity, and
+velocity dispersion, which takes the approximate form:
+\begin{equation}
+r_e \propto \sigma^\alpha I_e^{-\beta}
+\end{equation}
+which implies a plane in the three-dimensional space of the logarithms
+of these quantities. The exercises below explore the implications of
+this relationship.
+
+The {\it Tully-Fisher law} disk galaxies near $L_\ast$ relates their
+luminosities and their peak circular velocities, as measured with
+optical or radio observations. Since the colors of disk galaxies
+depend on luminosity, the slope of this relationship depends on the
+band that the luminosity is measured in. In the $I$-band, the
+relationship is equivalent to $L\propto v^{3.1}$. At low luminosities,
+the velocity is independent of $L$ (but is dependent on the total
+baryonic mass). 
+
+Luminous galaxies all seem to have a supermassive black holes at their
+centers, with evidence for the black holes from active galactic
+nucleus emission (called {\it Seyfert galaxies}) but also from
+dynamical signatures through stellar dynamics, reverberation mapping,
+and central masers.
+
+{\bf spectra?}
+
+\section{Commentary}
+
+The description here relies on our best understanding of underlying
+physical properties, but these properties are imperfectly measured.
+
+Unusual galaxies exist: ellipticals with gas disks, polar ring
+galaxies, etc. central star bursts. ULSBs. UCDs.
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Blanton \& Moustakas}
+  \item
+    {\it Graham paper on Sersic}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Using the numbers in the text, estimate $\Omega_b$ and
+    $\Omega_m$. 
+\item Estimate the stellar mass surface density for a Milky Way like
+disk galaxy.
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Petrosian quantities for Sersic galaxies
+\item $\kappa$ space
+\item Tully-Fisher
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Luminosity function vs Press-Schechter
+\item Looking at galaxy images across color magnitude space
+\item Spectra and colors
+\item Measurement of bulge and disk 
+\item Axis ratios of disk galaxies and elliptical galaxies
+\item Dust reddening vs. axis ratio
+\item Velocity dispersion
+\item Rotation curves
+\item Tully Fisher
+\item FP
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

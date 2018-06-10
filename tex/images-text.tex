@@ -3,25 +3,161 @@
 \section{Basics \& Nomenclature}
 
 Two-dimensional array-based detectors at the focal planes of
-telescopes produce images. These images can be thought of as noisy
-samplings of an {\it image function} which is the convolution of the
-image coming from space with a response function known as the {\it
-  point spread function} (PSF). The PSF can have contributions from
-the Earth's atmosphere, the telescope's physical and geometric optics,
-and the detector.
+telescopes produce images --- two-dimension rasters of values.  Here
+we consider the basic properties such images with an emphasis on the
+sorts of issues affecting ultraviolet, optical, and infrared imaging
+instruments. Many of the principles hold for other sorts of data sets.
+
+These images can be thought of as noisy samplings of an {\it image
+function} which is the convolution of the image coming from space with
+a response function known as the {\it point spread function}
+(PSF). The PSF can have contributions from the Earth's atmosphere, the
+telescope's physical and geometric optics, and the detector.
 
 The width of the PSF is usually characterized by its full-width
 half-maximum (FWHM). An important property of an imaging system is its
 sampling density relative to the FWHM. If this density is high enough,
 typically greater than 2 pixels per FWHM, the PSF will be close to
 {\it Nyquist sampled}, meaning that if the image were noiseless it
-would preserve all of the information in the image function.
+would preserve all of the information in the image function. The
+exercises describe the origin of this criterion, which is related to
+the true Nyquist sampling criterion of a particular band-limited
+function (one with constant Fourier amplitudes out to some
+wavenumber). Typically instruments do not truly Nyquist sample the
+image function, but in certain circumstances it can be possible.
 
+Images taken outside the Galactic Plane which are not extraordinarily
+deep usually allow one to separate the flux into individual objects,
+which are generally classifiable as ``point sources'' or ``extended
+sources.'' The point sources are those whose images are consistent
+with the PSF. With ordinary imaging capability, stars are point
+sources. Galaxies are often extended sources, with FWHM larger than
+the PSF FWHM. High redshift, luminous quasars usually appear as point
+sources, though with high contrast imaging from space their extended
+host galaxies can be detected.
 
+The image locations can be quantified by their $x$ and $y$ pixel
+values. The center of each object is typically determined by the mode
+of the light distribution, or sometimes by a weighted centroid of the
+flux distribution (which is less precise but for extended sources may
+be more desirable at times). The relationship between these $x$ and
+$y$ pixel values and the RA and Dec locations they correspond to is
+called the {\it astrometric solution}. Usually the astrometric
+solution is expressed in terms of a World Coordinate System
+description of the image, which provides the metadata encoding an
+approximate projection of the image and distortions in that
+projection.
+
+The raw image is usually obtained in some uncalibrated form. In terms
+of the specific intensity of the image $I_\nu(\alpha, \delta)$ coming
+from outside the Earth's atmosphere convolved with the instrumental
+resolution, the raw image in DN$(x,y)$ in pixel coordinates may be
+written:
+\begin{equation}
+\mathrm{DN}(x, y, t) = \mathrm{DN}_{\mathrm{back}}(x, y, t) + 
+\int \frac{\dd{\nu}}{\nu} Q(\nu, {\rm alt}, {\rm az}, x, y, t)
+\left[I_\nu(\nu, \alpha, \delta) + S_{\nu}(\nu, {\rm alt}, {\rm az},
+t)\right]
+\end{equation}
+$Q$ is a general response function written to depend on the pixels
+detecting the objects, the local sky coordinates (though it might have
+a more general form in some cases), frequency, and time. $S_{\nu}$ is
+background, generally due to sky emission, and written in terms of
+altitude and azimuth, to suggest the important axes, but also in terms
+of time (e.g. where the Moon is). DN$_{\mathrm{back}}$ is the
+instrumental background.
+
+Often the response $Q$ is at least roughly separable as follows
+\begin{equation}
+Q(\nu) = R(\nu) A({\rm alt}, {\rm az}, \nu) F(x, y)
+\end{equation}
+where $R(\nu)$ is the instrumental bandpass, $A$ is the atmospheric
+throughput, and $F$ is the flat-field. $R$ is often defined to
+incorporate most of the dependence of the atmosphere on wavelength, so
+that $A$ would express only the residuals. $F$ is often defined to
+include the determinant of the Jacobian between $(\alpha, \delta)$ and
+$(x, y)$ which would otherwise need to appear and which primarily
+depends on the instrument. It also is usually defined to have a mean
+around unity.
+
+A final common approximation is that the functions are sufficiently
+separable or the dependence on angle is sufficient small over the
+field of view of the image that we can write:
+\begin{equation}
+\mathrm{DN}(x, y, t) = \mathrm{DN}_{\mathrm{back}}(x, y, t) + 
+\bar{A} F(x, y) \left(\mu(\alpha, \delta) + \mu_S({\rm alt}, {\rm az},
+t)\right)
+\end{equation}
+We separate DN$_{\rm back}$ and $\mu_S$ because they are from
+different physical sources. For example, in a CCD, DN$_{\rm back}$ is
+due to dark current and and bias in the device, whereas $\mu_S$ is
+emission from the sky itself.
+
+The process of {\it photometric calibration} is the conversion of the
+observed DN to $\mu$. In its most basic form, calibration requires
+subtracting the instrumental background, scaling the remaining flux by
+the overall factor $1/\bar{A}$, dividing by the flat field, and then
+subtracting the sky. Typically, the instrumental background is
+determined through bias frames taken with the shutter shut.  The flat
+field is determined by observing either the sky in twilight or by
+observing a screen (sometimes just the dome wall) illuminated such
+that it mimics light uniformly entering the telescope aperture.
+
+It is somewhat less standard how $\mu_S$ and $\bar{A}$ are
+determined. In most cases, determining either one requires some
+detection and measurement of objects in the image to occur, and their
+determination is usually somewhat iterative.
+
+For $\mu_s$, usually one takes an initial stab at the background level
+(e.g. just a median), detecting the bright objects, and then
+redetermining the background and its variation across the image when
+excluding ``detected'' pixels; one can then iterate this
+procedure. Typically this procedure subtracts not just the atmospheric
+sky emission, but also other sources such as zodiacal light, and also
+light from stars and galaxies. Whether these other sources should or
+should not be subtracted depends on what is wanted out of the image.
+
+For $\bar{A}$, the concept is to use detected objects in the field
+whose $\mu$ is known from a catalog of standards to calibrate the
+entire image. Sometimes the objects used for calibration are not in
+the same field but are objects observed close in time to the field of
+interest with the same instrument; in such cases the difference in
+airmass of the field and the standard field needs to be accounted
+for. Often in these cases the standards are not known in exactly the
+same filters as the observations, and these color-dependent effects
+must be taken into account. Sometimes there are no standards as such,
+but instead a suite of overlapping observations can be calibrated onto
+a self-consistent scale.
+
+Once an image is calibrated, the stars, galaxies, or other objects may
+be measured for their fluxes and other properties. The fluxes may be
+measured through fixed apertures, or one may fit models to the data
+and infer fluxes from those models.
 
 \section{Commentary}
 
-We will discuss spectra later. 
+The description above of calibration procedures is roughly accurate,
+but is more illustrative than anything. There are many different
+techniques in use, driven by the nature of the instrument and
+observations as well as individual tastes. In part because each
+individual experiment is so different, astronomers (including myself)
+tend to learn about this subject in the context of a particular set of
+observations rather than from a generalized perspective. Keep that in
+mind when people (including me!) are telling you how this process
+works!
+
+At the highest precision, the calibration effects described above are
+not truly separable. For example, the astrometric solution depends on
+the definition of the PSF, because that determines what exactly you
+consider the location of each object, and the flat-fielding, which can
+also affect the centroiding.
+
+A more subtle example is that the flux definitions cannot truly be
+separated from the calibration. The calibration must assume some
+effective aperture for the fluxes of the calibrating sources, but some
+flux will leak outside the aperture, in ways that can vary across the
+images used in the calibration. These aperture effects need to be
+accounted for for percent level calibration accuracy.
 
 \section{Key References}
 
@@ -38,24 +174,72 @@ We will discuss spectra later.
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Typical read noise in IR arrays vs optical and sampling
-\item X-ray background
+\item Proper motion of galaxies 
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Nyquist
+\item {\it Origin of the Nyquist criterion}. The Nyquist
+    sampling criterion is based on the concept of a ``band
+    limit.''
+    \begin{enumerate}
+    \item Show that if the 2D Fourier
+    transform $f(\vec{k})$ of the point spread function has zero power
+    higher than the band limit $k_{\rm max}$, then it can be perfectly
+    described using a discrete Fourier transform that extends only up
+    to that $k_{\rm max}$. What is the necessary configuration-space
+    sampling for the discrete Fourier transform?
+    \item Assume $f(\vec{k}) = {\rm constant}$
+    below the band limit, and zero above it. What is the resulting PSF
+    $f(\vec{x})$?
+    \item Under what circumstances might the criterion in part (b)
+    hold, given what you know about how telescopes work?
+    \item What is the FWHM of $f(\vec{x})$ in units of the sampling?
+    This sets the Nyquist criterion for sampling.
+    \end{enumerate}
+\item {\it Interpolation}. Imagine starting with an image sampled on a
+    rectangular grid. Interpolation is the process of inferring
+    the value of an image in between the given sampled points of the
+    image. The case of Nyquist sampled, band limited images motivates
+    a particular method of interpolation.
+    \begin{enumerate}
+    \item Explain how linear interpolation can be recast as
+    constructing a model of the image using a set of basis functions,
+    or ``kernels,'' centered on the original grid points.
+    \item Explain why a (noiseless) Nyquist sampled, band limited
+    image contains all the information necessary for perfect
+    interpolation.
+    \item If you interpolate perfectly in that situation, what is the
+    effective kernel you are using? Note that this is called {\it
+    sinc interpolation}.
+    \item Explain why using exactly that interpolation kernel might be
+    problematic.
+    \end{enumerate}
+\item Centroiding accuracy
+\item Noise models
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Sky brightness vs airmass during SDSS drift scan
-\item OH variations during SDSS drift scan
-\item Plot sky spectrum vs moon phase from SDSS
-\item OH variations across SDSS fields
-\item Find extreme airmass SDSS images, see refraction
+\item {\it Interpolation}. Create an image of a critically sampled
+    Gaussian PSF. Create another image of the same PSF, but with an
+    offset that is some fraction of a pixel. We will test how well
+    different types of interpolation work by trying to generate the
+    offset by interpolating the first image and comparing it to the
+    second image.
+    \begin{enumerate}
+     \item Test linear interpolation. 
+     \item Test sinc interpolation.
+     \item Test a ``damped'' version sinc interpolation, which
+    multiplies the kernel by a broad Gaussian.
+    \end{enumerate}
+\item SDSS Calibration model
+\item WCS headers
+\item Centroiding method
+\item Bias from using data as the noise estimate
+\item Quick and dirty sky noise estimates
 \end{enumerate}
 
 \bibliographystyle{apj}

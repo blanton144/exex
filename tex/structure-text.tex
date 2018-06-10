@@ -1,0 +1,267 @@
+\title{\bf Structure Formation}
+
+\section{Basics \& Nomenclature}
+
+Within the overall cosmological growth, fluctuations grow through
+gravitation. Inflationary theory predicts that these fluctuations
+originate from quantum fluctuations frozen in as progressively larger
+scales become causally disconnected in inflation. Cosmic microwave
+background observations of temperature fluctuations find that at
+recombination ($z\sim 1100$) the density fluctuations were
+fractionally of order $10^{-5}$. These fluctuations grow first
+linearly and then nonlinearly to form bound structures known as {\it
+  dark matter haloes}. It is within these bound structures that
+galaxies form.
+
+At lower redshifts, we can define the matter fluctuations around the
+homogenous density $\rho_0$:
+\begin{equation}
+\frac{\rho}{\rho_0} = 1+ \delta
+\end{equation}
+When it is considered in configuration space, $\delta$ is often
+filtered on some scale $\gg 1$ kpc.  However, we often quantify the
+two point statistics of this field using the power spectrum $P(k)$ of
+$\delta$ and a corresponding correlation function $\xi(r)$. The
+inflationary $\Lambda$CDM prediction for $P(k)$ is that during the era
+of linear gravitational growth, on large scales (low $k$) its power
+law slope is $n\sim 1$ and on small scales (high $k$) its power law
+slope is $n\sim -3$. The turnover scale is associated with the horizon
+size at matter-radiation equality, for reasons explored in the
+exercises. We can characterize the overall second-order amplitude
+fluctuations on any scale as:
+\begin{equation}
+\Delta(k) \sim k^3 P(k)
+\end{equation}
+which makes it clear that the strongest fluctuations are on the
+smallest scales, a characteristic known as {\it hierarchical
+clustering}. As shown below, $\Delta(k)$ will undergo a linear growth
+phase at early times.  When $\Delta(k) \sim 1$, fluctuations on that
+scale go nonlinear, and in general the growth rate of fluctuations
+accelerates. Because smaller scales clearly go nonlinear first, this
+process leads to a nonlinear power spectrum flatter than the linear
+spectrum.
+
+The overall amplitude is often quantified by $\sigma_8$, which is the
+standard deviation of fluctuations in 8 $h^{-1}$ Mpc radius spheres,
+which can also be expressed as an integral of $P(k)$. When the
+equivalent quantity $\sigma_{8,g}$ for galaxies is measured in the
+galaxy distribution, this quantity is expressed as the observed level
+of fluctuations, consequently includes the nonlinear effects present
+in the real universe. When $\sigma_8$ of the matter is inferred from
+cosmological observations (the cosmic microwave background, or
+gravitational lensing, or redshift space distortions) it is usually
+defined as the primordial $\sigma_8$ linearly evolved to $z=0$ or the
+redshift in question.
+
+In galaxy surveys, $\delta$ is not directly observable, but the
+overdensity $\delta_g$ of some particular class of galaxies can be. On
+large scales, where $\delta\ll 1$, often it is sufficient to
+approximate the relationship between the two with a {\it linear, local
+galaxy bias}:
+\begin{equation}
+\delta_g(\vec{x}) \approx b \delta(\vec{x})
+\end{equation}
+On small scales this relationship cannot remain linear and in general
+cannot be local either. Bias can alternatively be defined as
+$\sigma_{8,g} / \sigma_8$ (or equivalent statistical quantities on
+larger scales). In general the halo occupation distribution model is a
+more accurate description of the relationship between galaxies and
+matter, but the concept of galaxy bias as defined here is still
+useful, especially on linear scales.
+
+To understand the linear growth, we start with the equations of motion
+for a pressureless, gravitating fluid:
+\begin{eqnarray}
+\frac{\mathrm{D}\vec{v}}{\mathrm{D}t} &=& - \vec\nabla\phi
+\mathrm{\quad (Euler's~equation)}\cr
+\frac{\mathrm{D}\rho}{\mathrm{D}t} &=& - \rho \vec\nabla\cdot \vec{v}
+\mathrm{\quad (Continuity~equation)}\cr
+\nabla^2\phi &=& 4\pi G \rho 
+\mathrm{\quad (Poisson's~equation)}
+\end{eqnarray}
+where the convective derivative is:
+\begin{equation}
+\frac{\mathrm{D}}{\mathrm{D}t} = \frac{\partial}{\partial t} +
+\vec{v}\cdot\vec{\nabla}
+\end{equation}
+
+For the $\Omega_m = 1$ case, we can show that:
+\begin{equation}
+a(t) = \left(\frac{t}{t_0}\right)^{2/3}
+\end{equation} 
+which if we use to construct a homogeneous solution to the above
+equations, we can perturb the density around the homogenous density
+$\rho_0(a) \propto a^{-3}$:
+\begin{equation}
+\frac{\rho}{\rho_0} = 1+ \delta
+\end{equation}
+and find the continuity equation holds for peculiar velocities:
+\begin{equation}
+\label{eq:continuity}
+\frac{\mathrm{d}\delta}{\mathrm{d}t} =  
+- \vec\nabla\cdot\vec{v}_p
+\end{equation}
+In the perturbed quantities we find:
+\begin{eqnarray}
+\frac{\mathrm{d}\vec{v}_p}{\mathrm{d}t} &=&
+- \vec\nabla(\delta\phi)
+- H(t) \vec{v}_p \cr
+\nabla^2\left(\delta\phi\right)&=& 4\pi G \rho_0 \delta \cr
+\frac{\mathrm{d}}{\mathrm{d}t} \left[ \vec\nabla\cdot\vec{v}_p \right]
+&=& 
+\vec\nabla\cdot
+\left[\frac{\mathrm{d}\vec{v}_p}{\mathrm{d}t} \right]
++ H(t) \frac{\mathrm{d}\delta}{\mathrm{d}t} 
+\end{eqnarray}
+which can be combined into a second-order equation for the density:
+\begin{equation}
+\frac{\mathrm{d}^2\delta}{\mathrm{d}t^2} + 2 \frac{\dot a}{a} 
+\frac{\mathrm{d}\delta}{\mathrm{d}t} - 4 \pi G \rho_0 \delta = 0 
+\end{equation}
+This linear set of equations is separable, so that whatever spatial
+pattern exists simply changes in amplitude over time:
+\begin{equation}
+\delta(x, t) = \delta(x, t_0) \frac{D(t)}{D(t_0)}
+\end{equation}
+  The general solution is:
+\begin{equation}
+D(t) = A t^{-1} + B t^{2/3}
+\end{equation}
+The first mode is decaying, and thus not important to the growth
+of structure.  The second mode is the one that contributes to the
+growth of structure.
+
+This set of solutions is appropriate for the zero-energy, or ``flat''
+Universe, without a cosmological constant. At early times (but after
+recombination), while deceleration dominates the dynamics, it is a
+very good description of the Universe.  However, at later times it
+becomes less good. In particular, in our Universe, which appears to be
+accelerating, the growth is slowed down considerably by the
+acceleration. 
+
+The continuity equation (\ref{eq:continuity}) and linear growth imply
+a relationship between the peculiar velocity field and the growth
+rate:
+\begin{equation}
+\vec\nabla\cdot\vec{v}_p = - a \delta(\vec{x}) \frac{\dot
+D(t)}{D(t_0)}
+\end{equation}
+where:
+\begin{equation}
+f = \frac{\dot D}{D} \approx \Omega_m^{0.6}
+\end{equation}
+This peculiar velocity field distorts redshift-based maps of the
+universe in a specific way on large scales, that can be measured to
+constrain $f$. Since $\delta$ is not directly observable, the directly
+observable quantity on linear scales is $\beta = f/b$. Since the
+fluctuations in the galaxy sample can be observed, we can recast
+$\beta = f \sigma_8 / \sigma_{8,g}$ and the observable is
+$\beta \sigma_{8,g}$, from which we infer $f\sigma_8$.
+
+As small scales go nonlinear, gravitationally bound objects will
+form. This process can be approximated in the spherical case. If we
+situate our coordinate system on the center of a spherical system with
+a constant overdensity $\bar\delta > 0$ and size $R$, the system can
+be considered completely analogous to a universe with matter density
+of $\Omega_m(1+\bar\delta)$. Therefore, if this quantity is greater
+than unity, than the sphere will expand for some time, then turn
+around at $t=t_{\rm TA}$, and then collapse on itself; this process
+can be followed exactly. It can be shown that the mean density of the
+sphere at turn-around is about 5.5 times the mean density of the
+universe, and collapse occurs in twice the turn-around time. The
+virial theorem and energy conservation lead to a typical overdensity
+of the collapsed object within its virial radius of $18\pi^2 \approx
+178$. Meanwhile, the linearly extrapolated overdensity at that time is
+only about $\delta_{\rm linear}\approx 1.7$.
+
+The mass spectrum of collapsed halos can be predicted approximately
+using {\it excursion set theory}, or the {\it Press-Schechter}
+approach. Imagine a patch of mass $M$ at early times; it will have
+some specific radius $R$ depending on the mean density. We can predict
+when it will collapse to a virialized object when $\delta_{\rm
+linear} \approx 1.7$ within radius $R$. At any given time, we can ask
+what fraction of the universe's volume, when smoothed on radius $R$,
+has $\delta_{\rm linear} > 1.7$. For simplicity, we will smooth by a
+top-hat in $k$-space (in configuration space this is smothing by the
+first order spherical Bessel function $j_1$). Calculating this
+fraction tells us for any mass (that is, smoothing scale), what
+fraction of the volume ends up in dark matter halos greater than that
+mass. This function can be differentiated to yield the halo mass
+function:
+\begin{equation}
+\Phi(M) \dd M
+= \frac{1}{\sqrt{2\pi}} \frac{\bar \rho}{M} \frac{\delta_c}{\sigma^2(M)} \left[
+- \frac{\dd \sigma^2}{\dd
+M}\right] \exp\left[-\frac{\delta_c^2}{2\sigma^2}\right] \dd M
+\end{equation}
+For $P(k)\propto k^n$, one can show:
+\begin{equation}
+\Phi(M) = \frac{\bar\rho}{2\pi
+M} \left(\frac{M}{M_\ast}\right)^{(n+3)/6}
+\left(\frac{n+3}{3}\right)
+\exp\left[-\frac{1}{2}\left(\frac{M}{M_\ast}\right)^{(n+3)/3}\right] \frac{\dd
+M}{M}
+\end{equation}
+Where the nonlinear mass $M_\ast$ is defined by the relation:
+\begin{equation}
+\sigma^2 = \left(\frac{M}{M_\ast}\right)^{-(n+3)/3} \delta_c^2.
+\end{equation}
+Because $n>-3$ always, as $\sigma^2$ grows with time, the nonlinear
+mass scale grows.  In the standard cosmology, at low small scales (and
+thus low masses) $n$ slowly approaches $-3$ from above and
+$\Phi(M) \propto M^{-2 + \epsilon}$, where $\epsilon = (n+3) /3$, and
+thus is almost divergent.
+
+The detailed prediction of nonlinear growth and collapse to dark
+matter halos requires the use of simulations. Because the dark matter
+is collisionless, fluid simulations are not sufficient. The universal
+approach is to model the dark matter statistically using a large
+number of collisionless particles; the $N$-body approximation. An {\it
+N-body simulation} is understood to model only the dark matter. These
+simulations use some variant of particle-mesh techniques on large
+scales, often with an adaptive component on small scales that may use
+direct calculations of mutual forms. They invariably employ some
+softening length that is reported as the resolution. {\it
+Hydrodynamic} simulations include baryonic fluids in the modeling, and
+often their cooling and collapse to stellar systems. They may also
+include feedback of supernovae, winds, and active galactic nuclei on
+the fluid; this {\it subgrid physics} is typically parameterized in a
+simple way.
+
+\section{Commentary}
+
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Les Houches}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item a
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Origin of turnover in $P(k)$
+\item Linear growth solutions
+\item Spherical collapse solutions
+\item Press-Schechter
+\item Bias from PS
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item $P(k)$ estimates from CAMB, etc
+\item Simple PM
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

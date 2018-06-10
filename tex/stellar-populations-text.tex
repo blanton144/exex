@@ -1,0 +1,187 @@
+\title{\bf Stellar Population Synthesis}
+
+\section{Basics \& Nomenclature}
+
+The theory of stellar structure and evolution predicts how the
+luminosity, temperature, and other key parameters defining stars
+change over time, and how a population of such stars will change over
+time. The theory of stellar atmospheres and observations of stellar
+spectra, then tie the stellar parameters to observable spectra and
+colors of the stellar population. This overall project of {\it stellar
+  population synthesis} connects a star formation history to its
+observable results, and can in principle allow observations to be used
+to infer quantities such as the total stellar mass, mean stellar age,
+metallicity, and other more detailed parameters.
+
+The ingredients of a stellar population synthesis model start with the
+stellar initial mass function. The IMF can in principle range from
+Salpeter (very ``bottom-heavy'') through to a very ``bottom light''
+distribution. There is little evidence that the IMF is constant in all
+environments, and some evidence that it does differ in different
+environments.
+
+Stellar structure and evolution models yield stellar parameters like
+luminosity and effective surface temperature of the population as a
+function of time. These results are usually expressed as a series of
+{\it isochrones} showing the position of stars in the population as a
+function of time. Uncertainties in these models arise particularly for
+post main sequence phases, such as thermally-pulsating asymptotic
+giant branch stars or the temperature distribution of the horizontal
+branch population.
+
+Stellar atmospheres and stellar libraries yield spectra as a function
+of these parameters. Again, the major uncertainties arise for rare
+populations, and particularly post main sequence populations, but also
+metal poor and/or $\alpha$-rich populations.
+
+To produce a spectrum one assumes a star formation history and a
+chemical evolution history (sometimes using the post main sequence
+evolution in the models to self-consistently predict the chemical
+enrichment of the ISM). Each age and metallicity corresponds to a {\it
+  simple stellar population}.  The the resulting spectrum is just a
+sum of the simple stellar population models, over the distribution of
+ages and metallicities.
+
+In many galaxies, the effects of dust on the spectrum cannot be
+ignored. Dust is mixed into the interstellar medium gas and it
+attenuates the light in a wavelength dependent manner, preferentially
+scattering blue light and transmitting red light. In modeling emergent
+spectra from galaxies, it appears necessary to account for the dust's
+distribution, which is preferentially around star forming, gas-rich
+regions. 
+
+Broad trends from stellar population synthesis are:
+\begin{itemize}
+\item Stellar populations start blue, with spectra that do not
+have features useful for measuring metallicity.
+\item Stellar populations evolve redward after the cessation of star
+formation, during which time their Balmer absorption features become
+weaker (on time scales of a few 100 million years) and their 4000 \AA\
+break grows stronger (on about a billion year time scale).
+\item When they are red, their spectra are similar to $K$ stars, since
+they are dominated by $K$ giants; these spectra are
+metallicity-sensitive.
+\item At early times, the populations have low mass to light ratios;
+as the stellar population ages, it fades and the mass to light ratio
+increases up to higher than solar values.
+\end{itemize}
+
+Stellar population synthesis methods are commonly used to infer
+galactic star formation histories and other physical properties.
+In broad strokes, the galactic properties are parametrized, and then
+parameters are varied to fit some set of observable quantities. There
+is considerable variation among investigators as to the quantities
+used and the parametrizations. 
+
+The most ambitious approaches attempt constraints on the full star
+formation history and fit to a detailed observed spectrum. A proper
+analysis must marginalize over stellar population uncertainties and
+dust effects and over spectrophotometric calibration uncertainties. In
+addition, the presence of interstellar and AGN emission lines needs to
+be accounted for, either by excluding their wavelengths from the fit
+or including the lines explicitly.
+
+Other approaches simplify the problem, usually in an attempt to
+regularize the model space in ways thought to be reasonable, or in an
+attempt to mitigate observational uncertainties (without performing an
+explicit marginalization).
+
+The classic {\it Lick index} analysis technique, commonly used for
+elliptical galaxies, employs both approaches. Lick indices are a form
+of {\it equivalent width}. Equivalent widths measure:
+\begin{equation}
+{\rm EW} = \frac{f_{\rm feature}}{f_{\lambda, {\rm continuum}}},
+\end{equation}
+the total absorption or emission of a feature ($f_{\rm feature}$, in
+units of flux) relative to some local definition of the continuum upon
+which the feature is imprinted ($f_{\rm continuum}$, in units of flux
+density). Usually, the flux density in question is in $f_\lambda$
+units and the equivalent width is expressed in units of Angstroms
+(thus the terminology ``width,'' which does not in all cases imply a
+measure of actual width in wavelength space). Often, the continuum
+level is measured using side bands slightly blueward and redward of
+the feature.
+
+Equivalent widths, and specifically Lick indices, have some attractive
+qualities. Because they are relatively local measurements in
+wavelength, they are insensitive to dust and to spectrophotometric
+error. In the case of Lick indices, the index measurements were
+performed on stars with well-calibrated properties, allowing the
+corresponding measurements in galaxies to be tied directly to the
+stellar models.
+
+However, equivalent widths involve defining a continuum, which can be
+ambiguous in regions with other features.  In addition, for Lick
+indices specifically, the stellar observations were taken at
+relatively low resolution, which needs to be accounted for in studying
+low velocity dispersion galaxies and higher resolution spectra. 
+
+The Lick index analysis proceeds by measuring a set of indices
+associated with the Balmer absorption features (measuring the fraction
+of young stars), Fe features (which arise in a complex suite of
+lines), and Mg features (which are more distinct. The Balmer and Fe
+features require some correction for emission line contamination. The
+indices are then compared to a simple stellar population model
+characterized by its age, metallicity, and $\alpha$-enhancement. Since
+galaxies do not have simple stellar populations, the resulting
+parameters at best express some weighted average of the underlying
+star formation history; in the case of the standard analysis, they are
+said to {\it light-weighted} estimates, which tend to weight the
+average towards younger ages.
+
+\section{Commentary}
+
+In principle, to do so precisely requires marginalization over all of
+the uncertain parameters that characterize the stellar population
+modeling. This margin
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Conroy}
+  \item
+    {\it Kennicutt on star formation}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Important numbers}
+
+\begin{itemize}
+\item $M_{\odot} = 1.989 \times 10^{30} {\rm ~kg} $
+\item $R_{\odot} = 6.955 \times 10^{8} {\rm ~m} $
+\item $T_{\odot}{\rm (surface)} = 5500 {\rm ~K} $
+\item $T_{\odot}{\rm (core)} = 1.5 \ times 10^7 {\rm ~K} $
+\item $L_{\odot} = 3.828 \times 10^{33} {\rm ~erg} {\rm ~s}^{-1}$
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Argue why higher mass stars produce more of their energy through
+    the CNO cycle than lower mass stars do.
+\item Detailed stellar evolution calculations predict a main sequence
+    lifetime for the Sun of 10 billion years. What fraction of the
+    total hydrogen in the Sun needs to be converted to helium to
+    provide this lifetime?
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Under Salpeter, calculate luminosity as a function of time
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item HR diagram for an open cluster
+\item HR diagram for a globular cluster 
+\item HR diagram locally
+\item Compare K spectrum to E spectrum
+\item Compare O/B spectrum to blue galaxy
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

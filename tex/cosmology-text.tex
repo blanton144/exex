@@ -1,0 +1,306 @@
+\title{\bf Cosmology}
+
+\section{Basics \& Nomenclature}
+
+The universe is expanding. What that means is that at some point all
+of the known universe was previously in a tiny space. Since that time
+it has expanded dramatically. This expansion can be seen today in the
+fact that more distant galaxies are moving faster away from us, the
+{\it Hubble Law}.
+
+Consider the gravitational dynamics of such a universe, assuming it is
+homogeneous. The general relativistic version of this picture can be
+derived from the Einstein equations. This approach is necessary to
+understand how light travels through the resulting curved space-time
+of the universe.
+
+However, to just understand the dynamics of the expansion a
+straightforward Newtonian approach suffices.  Assume a homogeneous,
+expanding universe, and pick some center.  Consider some particle a
+distance $r$ from the center today. Since the universe has to remain
+homogeneous, it doesn't matter which direction it is in.  The particle
+will be moving radially from the center. In fact, at one point it must
+have been at radius zero. Let us express its distance as a function of
+time as $a(t)r$ where $a(t_0 = {\rm now}) = 1$. Newton's laws mean
+that the gravitational force is just due to the mass interior to $r$;
+alternatively, the motion of the % particle is driven by the energy
+equation, where the potential is given by the Keplerian potential due
+to the mass interior:
+\begin{equation}
+E = \frac{1}{2} m v^2 + m \phi(a(t) r) = \frac{1}{2} m v^2 -
+\frac{GM(<a(t) r)m}{a(t) r} - \frac{m\Lambda}{6} a^2(t) r^2 =
+\mathrm{~constant}
+\end{equation}
+The $\Lambda$ accounts for the cosmological constant (in general
+relatively, introducing $\Lambda$ is fairly harmless, which we do not
+demonstrate here). The equations here are only valid when the universe
+is matter-dominated; the earlier phase when the universe was
+radiation-dominated requires some relativity to understand. But this
+simplistic approach demonstrates the differences between $E<0$ (closed
+universe), $E=0$ (``flat'' universe), and $E>0$ (open universe).
+
+We define $H=v/a(t)r$. Note that $v={\dot a}(t) r$, so the {\it Hubble
+  parameter} $H(z)$ is:
+\begin{equation}
+  H(t) = \frac{\dot a}{a}
+\end{equation}
+
+We define also:
+\begin{eqnarray}
+\Omega_k &=& \frac{2Ea^2(t) r^2}{mH^2} \cr
+\Omega_m &=& \frac{8\pi G\rho}{3H^2}\cr
+\Omega_\Lambda &=& \frac{\Lambda}{3H^2} 
+\end{eqnarray}
+$\Omega_m$ is the scaled matter density, $\Omega_\Lambda$ is the
+contribution of the matter density, and for reasons that become clear
+in the general relativistic picture, 
+
+Under these definitions:
+\begin{equation}
+\Omega_k + \Omega_m + \Omega_\Lambda = 1
+\end{equation}
+at all times.
+  
+The parameters $\Omega_{m0}$ and $\Omega_{\Lambda 0}$ are the present
+time values of the matter density and the cosmological constant, and
+they are roughly $0.25$--$0.30$ and $0.70$--$0.75$ respectively.  The
+curvature $\Omega_k$ is consistent with zero within $0.02$ or so.
+The Hubble parameter today is $H_0 \sim 65$--$75$ km/s/Mpc. 
+
+For the majority of galaxies whose distances we have an estimate of,
+it comes from the Doppler shift inference of velocity and the Hubble
+Law. Two common choices of units are as follows:
+\begin{equation}
+r {\rm ~in~}h^{-1}{\rm ~Mpc} {\rm ~where~} h = \frac{H_0}{100 {\rm
+    ~km/s/Mpc}} 
+\end{equation}
+and 
+\begin{equation}
+r {\rm ~in~}h_{70}^{-1}{\rm ~Mpc} {\rm ~where~} h_{70} = \frac{H_0}{70
+  {\rm ~km/s/Mpc}}
+\end{equation}
+The latter is becoming far more standard these days but the former
+still abounds.
+
+In homogeneous expansion, the universe just scales overall by the
+factor $a(t)$. We can define a {\it comoving coordinate system} that
+expands with the universe --- $r$ as used above is the radius in that
+coordinate system. In contrast {\it physical} units express a fixed
+size.
+
+In the general relativistic picture, the metric for this expanding
+universe is:
+\begin{equation}
+{\rm d}s^2 = c^2 {\rm d}t^2 - a^2(t) \left[ \frac{{\rm d}q^2}{1-Kq^2}
+  + q^2\left({\rm d}\theta^2+ \sin^2\theta{\rm d}\phi^2\right) \right] 
+\end{equation}
+This is the {\it Friemann-Lemaitre-Robertson-Walker metric}.  $K$
+determines the curvature of space and can be $K=1$, $-1$, or $0$.
+$K=0$ corresponds to the $E=0$ and is the ``flat'' case, because the
+spatial term is Euclidean (though spacetime is not flat even in this
+case).  The FLRW metric is necessary for determining light paths
+through the universe.
+
+At low redshift, the expansion velocity translates into a
+nonrelativistic Doppler redshift:
+\begin{equation} 
+\frac{\lambda_o}{\lambda_e} = 1+z  \approx 1 + \frac{v}{c} \approx 1
++ \frac{H_0 d}{c}
+\end{equation} 
+and so
+\begin{equation}
+d \approx \frac{cz}{H_0}
+\end{equation}
+and sometimes the cosmological redshift is expressed in terms of
+$v\approx cz$. At high redshift (e.g. above unity), the relationship
+between $d$ and $z$ is ambiguous. 
+
+Within the FLRW metric, there is at least a relationship between the
+expansion factor $a(t)$ and the redshift that that time is observed at
+today:
+\begin{equation}
+a(t) = \frac{1}{1+z(t)}
+\end{equation}
+Heuristically, the photons are stretched by the same factor that the
+universe has expanded. The exercises derive this more rigorously. 
+
+The FLRW metric allows us to relate intrinsic luminosities and sizes
+to observed fluxes and angular sizes of objects at a given
+redshift. The focusing theorem in general relativity states that
+matter makes light converge. For a flat, matter-dominated universe:
+\begin{equation}
+D_C= 
+\frac{c}{H_0} \int_0^z \frac{{\rm d}z}{E(z)}
+= 
+\frac{c}{H_0} \int_0^z \frac{{\rm d}z}{\sqrt{\Omega_{\Lambda0} +
+    \Omega_{m0}(1+z)^3}}
+\end{equation}
+This can be derived from the energy equation quite simply. In a flat
+universe, the luminosity distance is simply:
+\begin{equation}
+D_L = D_C (1+z)
+\end{equation}
+and the angular diameter distance is:
+\begin{equation}
+D_A = \frac{D_C}{1+z}
+\end{equation}
+In non-flat universes things are a bit more complicated
+mathematically.
+
+The universe has perturbations and is not quite homogeneous, inducing
+motions with respect to the Hubble flow, called {\it peculiar
+velocities}.  The observed redshift is due to both effects combined:
+\begin{equation}
+1+z_{\rm obs} = (1+z_{\rm cosmo})(1+z_{\rm pec})
+\end{equation}
+Peculiar velocities are typically a few hundred km/s, and are at most
+a few thousand, or $\Delta z \sim 0.01$ at the most, but we map the
+universe out to much larger redshift. So usually it is adequate to
+express this expression as follows:
+\begin{equation}
+z_{\rm obs} = z_{\rm cosmo}+z_{\rm pec} + z_{\rm cosmo}z_{\rm pec}
+\approx z_{\rm cosmo} + \frac{v_{\rm pec}}{c} (1+z_{\rm cosmo})
+\end{equation}
+
+The universe does not only contain matter, but contains radiation and
+neutrinos and potentially other ingredients. The cosmic microwave
+background is observed today as a 2.7 K bath of photons with a nearly
+perfect blackbody spectrum.  There is also a bath of neutrinos
+surrounding us, of roughly the same density. Together these
+relativistic particles have $\Omega_{r0} \sim 4\times 10^{-5}$
+$h^{-2}$.
+
+The density of non-relativistic matter scales as $a^{-3}$ but due to
+redshift the energy density of relativistic particles scales as
+$a^{-4}$. Therefore, sufficiently far into the past (a redshift of
+order $\Omega_{m0}/Omega_{r0} \sim 10^4$) the radiation
+dominates. This is called the epoch of ``matter-radiation equality.''
+
+The cosmic microwave radiation temperature was higher in the past by a
+factor that scales as $1+z$.
+
+The very early universe was very hot. At some point protons, neutrons,
+electrons, and photons formed a baryon-photon fluid tightly bound held
+in equilibrium by the electromagnetic and weak forces. During big bang
+nucleosynthesis, the protons and the neutrons fell out of equilibrium,
+and deuterium, ${}^3He$, ${}^4He$ formed, along with some Li. Later,
+at recombination, the electrons became bound to the hydrogen
+atoms. Since that time, at some point between $z\sim 7$ and 20, the
+first stars ionized the gas again. 
+
+\section{Commentary}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{http://adsabs.harvard.edu/abs/1999astro.ph..5116H}{
+    {\it Distance measures in Cosmology},
+      \citet{hogg99cosm}}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Mean density physically
+\item Error contribution of peculiar velocities
+\item why recombination at $z\sim 1000$
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Energy equation
+\begin{eqnarray}
+\frac{E}{m} &=& \frac{v^2}{2}-\frac{GM}{r} - \frac{\Lambda}{6}a^2(t)r^2 \cr
+1 &=& \frac{2E}{mv^2} + \frac{2GM}{a(t) rv^2} -
+\frac{\Lambda}{3}\frac{a^2(t) r^2}{v^2} 
+\end{eqnarray}
+Let us define $H=v/a(t)r$. Note that $v={\dot a}(t) r$, so:
+\begin{equation}
+H(t) = \frac{\dot a}{a}
+\end{equation}
+This is the time-dependent Hubble parameter. Also let us express the
+mass $M$ in terms of the density: $M=4\pi r^3\rho/3$. Then:
+\begin{eqnarray}
+\frac{2Ea^2(t) r^2}{mH^2} + \frac{8\pi
+  G\rho}{3H^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
+\Omega_k + \Omega_m + \Omega_\Lambda &=& 1
+\end{eqnarray}
+Note that the $E=0$ case is just the $\Omega_k=0$ case, where the
+spatial curvature is zero. It can be useful to recast this in yet
+another way:
+\begin{eqnarray}
+\frac{2Ea^2(t_0) r^2}{mH_0^2} + \frac{8\pi
+  G\rho(t_0)}{3H_0^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
+\end{eqnarray}
+\item Relate expansion to redshift
+A good example of this is getting a general expression for what the
+``redshift'' means. In the picture above, clearly the $v$ ought to be
+measureable with a Doppler shift. But for large distances it becomes
+complicated: the velocities can become close to the speed of light,
+how does relativity apply here? the time of emission was actually deep
+in the past, how does that affect the perceived velocity? The GR
+approach actually clarifies this nicely.
+
+The photons travel along null geodesics. Also, if I am observing
+something at some cosmological distance, the photon I actually see has
+been traveling radially in the FRW coordinate system center on me
+(other photons are going other directions, but I don't see those
+ones). So:
+\begin{equation}
+{\rm d}s^2 = c^2 {\rm d}t^2 - a^2(t) \frac{{\rm d}q^2}{1-Kq^2} = 0
+\end{equation}
+and therefore:
+\begin{equation}
+\frac{{\rm d}t^2}{a^2(t)} = \frac{{\rm d}q^2}{c(1-Kq^2)} 
+\end{equation}
+Now conceive of a wave peak leaving some radius $q$ at some
+time $t_e$, and the next one leaving at $t_e+\delta t_e$. Let me
+integrate the square root of the above equation over the path taken by
+the first:
+\begin{equation}
+\int_{t_e}^{t_o} \frac{{\rm d}t'}{a(t')} = 
+\int_q^0 {\rm d}q' 
+\frac{1}{c\sqrt{1-Kq^2}} 
+\end{equation}
+Note that for both wave peaks, the right hand side is the same,
+because they leave from the same radius $q$. Therefore:
+\begin{equation}
+\int_{t_e}^{t_o} \frac{{\rm d}t'}{a(t')} = 
+\int_{t_e+\delta t_e}^{t_o+\delta t_o} \frac{{\rm d}t'}{a(t')} = 
+\int_{t_e}^{t_o} \frac{{\rm d}t'}{a(t')} + \frac{\delta t_o}{a(t_o)} -
+\frac{\delta t_e}{a(t_e)}
+\end{equation}
+where the last equation is just from the way integrals are defined.
+Then clearly:
+\begin{equation}
+\frac{\delta t_e}{\delta t_o} = \frac{a(t_e)}{a(t_o)}
+\end{equation}
+This means that the period of the wave is increasing, so the
+wavelength is increasing and the frequency is decreasing. Assuming we
+observe at $t_o=t_0$, we can write:
+\begin{equation}
+a(t_e) = \frac{\nu_o}{\nu_e} = \frac{\lambda_e}{\lambda_o} =
+\frac{1}{1+z} 
+\end{equation}
+where the last equality comes from the definition of redshift $z$:
+\begin{equation}
+\frac{\lambda_o}{\lambda_e} = 1+z 
+\end{equation}
+You can think of this as the fact that the photons are being stretched
+in precisely the same way that the universe is being expanded.
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Calculations of DL
+\item Omegas over time
+\item Gunn-Peterson
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

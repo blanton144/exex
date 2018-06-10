@@ -1,0 +1,161 @@
+\title{\bf Images}
+
+\section{Basics \& Nomenclature}
+
+Spectra of objects can be determined in a number of ways, through
+refraction, diffraction, or through energy-sensitive devices (most
+commonly in the X-rays). Here we concentrate on the issues most
+relevant to diffraction grating spectra, though many of these issues
+are also relevant in other contexts.
+
+Diffraction gratings consist of optical elements ruled in some manner
+with a set of closely spaced apertures. At any given wavelength, light
+coming through the grating will be diffracted. The majority of energy
+passes straight through in the 0th order mode, but diffraction causes
+additional modes at angles perpendicular to the ruling. The location
+of the 1st and greater order modes depends on wavelength, meaning the
+higher-order modes yield spectra, with larger dispersion but a smaller
+fraction of the incoming energy at higher order modes. Traditional
+diffraction gratings were usually ruled metal or mirrors, often mated
+to a prism (a configuration known as a {\it grism}) to reorient the
+desired mode along a convenient path. Modern gratings are usually
+volume-phase holographic gratings, created within a substrate through
+holographic techniques. With greater control over the grating
+geometry, these gratings typically result in optics with higher
+throughput by avoiding occlusion along the geometric optics light
+path.
+
+Typically, spectra are obtained by putting a dispersive element in the
+collimated beam. Although prisms can and have been used at the
+objective pupil, more typically the dispersing element is at a pupil
+beyond the focus. In addition to providing a smaller area for the
+dispersing element to cover, this allows the focal plane to be used to
+remove light not associated with the object or object of
+interest. Slit spectrographs put a slit (or many slits) in this focal
+plane, recollimate the diverging beam, disperse it, and then refocus
+it on a new focal plane. Fiber spectrographs use optical fibers in the
+focal plane and then align the fiber outputs in a convenient manner
+with respect to the detectors.
+
+As for images, spectra can be described as having a characteristic
+resolution. The raw spectrum is usually detected on in a
+two-dimensional image, and the spectrum appears along a somewhat
+curved line, known as the {\it trace}, traversing the image along the
+dispersion direction. The resolution parallel to the dispersion
+direction is known as the {\it line spread function}, whereas the
+resolution perpendicular to the dispersion direction is known as the
+{\it point spread function}, in analog to an image.
+
+For slit spectra, the point spread function is determined largely by
+the seeing and telescope PSF; the actual profile of the spectrum
+perpendicular to the trace is the image of the object convolved with
+the PSF. For fiber spectra, the light is usually sufficiently
+scrambled that the width of the PSF is determined by the size of the
+fiber, as reimaged by the camera.
+
+The line spread function is charactered by the resolution $R= \lambda
+/ \Delta \lambda$, where $\Delta\lambda$ is usually the FWHM of the
+LSF (but not always). It is determined by the size of the fiber and
+the dispersion power of the grating. For exposures more than a few
+minutes, any flexure of the spectrograph over the course of the
+exposure may also cause blurring in the LSF (or PSF).
+
+The raw spectra need to be extracted and calibrated. The {\it
+extraction} involves inferring a signal as a function of position on
+the trace, to create a one-dimensional spectrum. The position in
+pixels needs to be converted to wavelength; the relationship between
+the two is usually inferred by injecting a signal into the
+spectrograph, often sourced by an {\it arc lamp} which emits light at
+discrete lines associated with ionized inert gases (He, Ne, Ar,
+etc).
+
+The signal needs to be converted to flux units. If we assume the
+detector is bias-subtracted as if it were an image, the signal in the
+trace can be modeled as:
+\begin{equation}
+{\rm DN}(x) = \left[f(\lambda(x)) + f_{\rm
+sky}(\lambda(x))\right] \times F(x) \times T(\lambda)
+\end{equation}
+The quantity $F(x)$, the {\it flat}, characterizes the effects of the
+detector response and is typically determined by injecting light from
+a flat-field lamp, which has a broad spectrum; in fact, only
+small-scale features are usually retained from the flat-field for
+reasons that will soon be clear.
+
+The quantity $T(\lambda)$ characterizes the throughput as a function
+of wavelength, and is affected by the atmospheric transmission, how
+much of the light enters the spectroscopic aperture at any given
+wavelength, and the throughput of the optics, as well as any remaining
+dependence of efficiency on wavelength on scales larger than those
+probed by the flat. It must be determined in part by observing
+standard stars whose true spectra are assumed, either through
+additional slits or fibers at the same time as the objects of
+interest, or through the same slits or fibers at slightly different
+times. Either approach requires accounting for the resulting slight
+differences in the observations. 
+
+The sky signal $f_{\rm sky}(\lambda)$ also needs to be removed. In the
+case of slit observations, the sky can be estimated from the outer
+parts of the slit, which contain little object flux. In the case of
+fiber observations, the sky needs to be estimated from other nearby
+fibers. Because the fiber varies with position and time on the sky,
+this can be uncertain.
+
+\section{Commentary}
+
+In ground-based spectroscopy it is extremely important to pay
+attention to the chromatic atmospheric refraction. This effect can
+lead to different amounts of light getting through fiber or slit as a
+function of wavelength, because the image in the telescope focal plane
+is a function of wavelength. These differences lead to both a
+variation in throughput and potential loss of signal-to-noise, and
+also may make the spectrum hard to calibrate (if the standards used
+are not under the same conditions). Slit spectra are often arranged so
+that the slit is parallel to the parallactic direction to minimize
+this effect, but there is no such mitigation for fibers. Atmospheric
+dispersion correctors consisting of crossed prisms can be used to
+reduce this effect, but they need to act in a pupil so are large and
+expensive.
+
+In practice, the difficulty in sky subtraction is almost entirely due
+to the LSF modeling. Typically the issue arises because there are
+strong lines that need to be subtracted, and so the LSF model needs to
+be very good to be accurate enough. In addition, the sky can have a
+different LSF than the object, since there are slit-filling
+issues or due to imperfections in the extraction method.
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Design and Construction of Large Telescopes},
+      \citet{bely}
+  \item
+    {\it Kitchin}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Redshift error and resolution and S/N
+\item Nyquist and spectra
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Diffraction
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item SDSS raw frames
+\item Estimating LSF from arcs and sky lines
+\item Comparing model star to SDSS star spectrum
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  
