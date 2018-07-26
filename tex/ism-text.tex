@@ -166,10 +166,26 @@ the cooling rate rises slowly until $10^4$ K, when Lyman-$\alpha$
 cooling rapidly becomes important. Under typical conditions, a stable
 thermal equilibrium is available at both 100--200 K (where [CII] 158
 $\mu$m has a stronger flux) and at 5,000--6,000 K (where [OI] 63
-$\mu$m has a stronger flux).  The neutral gas can best be traced
-through the 21 cm emission due to the hyperfine transition of H.
+$\mu$m has a stronger flux).
 
-{\bf neutral gas in ALFALFA / GASS}
+The neutral gas can best be traced through the 21 cm emission due to
+the hyperfine transition of H, between misaligned and aligned spins of
+the electron and proton. The energy of the system is lower by an
+amount equivalent to a 21 cm photon when the magnetic moments are
+aligned, and thus when the spins are mis-aligned. The Einstein A
+coefficient for the radiative transition from aligned to mis-aligned
+is $2.85\times 10^{-15}$ s$^{-1}$. In the exercises, we will show that
+under interstellar conditions without self-shielding these transitions
+lead to a 21-cm line luminosity directly proportional to the hydrogen
+mass of:
+\begin{equation}
+\label{eq:hi}
+L = \left[ \frac{3}{4} \frac{A hc} {\lambda m_p} \right] M_H
+\end{equation}
+Commonly the gas is sufficiently dense that self-shielding is
+important; this effect depends on the geometry and conditions of the
+gas but can easily be 20--30\% overall for a galaxy.
+
 
 \subsection{Molecular gas}
 
@@ -194,7 +210,7 @@ regions lead to the dissociation and ionizing of the gas surrounding
 them (creating HII regions), as well as to supernovae which can shock
 heat the interstellar medium to create coronal phase gas.
 
-{\bf molecular gas in COLDGASS}
+{\bf molecular gas in THINGS, COLDGASS}
 
 \subsection{Dust}
 
@@ -213,6 +229,8 @@ emission lines indicate the presence of polyaromatic hydrocarbons. A
 broad absorption band at 2250 \AA may also be due to aromatic carbon
 of some variety. A large number of diffuse interstellar bands are
 detectable whose origin is unknown.
+
+{\bf definition of RV}
 
 \subsection{Cosmic Rays}
 
@@ -247,6 +265,7 @@ to keep this dependence in mind.
     {\it Physics of the Interstellar and Intergalactic Medium,
       \citet{draine07a}}
 \item CHIANTI
+\item Leroy ARAA
 \end{itemize}
 
       \citet{gunn06a}
@@ -274,12 +293,59 @@ the neutral and molecular gas?
 an approximately thermal distribution. What temperature is the dust?
 \end{enumerate}   
 
-%\section{Analytic Exercises}
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Derive Equation \ref{eq:hi} for the luminosity of the HI 21-cm
+line, a hyperfine transition between $n=1$ ground states of neutral
+hydrogen, the upper one with spins of the electron and proton aligned
+and the lower one with them misaligned.
+
+\begin{answer}
+We proceed first by showing that the population levels of the
+hyperfine states are set entirely by the statistical weights of the
+states, and not by the details of the gas temperature and
+density. This is because collisions are far more common than radiative
+transitions, and the energy of collision is far greater than the
+hyperfine transition energy.
+
+Interstellar gas conditions vary, but it is sufficient for our
+purposes here to assume $n\sim 1$ cm$^{-3}$ and $T\sim 10^4$ K.  The
+rate of collisions between neutral atoms is:
+\begin{equation}
+C = v \sigma n \sim 3\times 10^{-10} {\rm ~s}^{-1}
+\end{equation}
+where $\sigma \sim 10^{-16}$ cm$^{2}$ and $v\sim \sqrt{kT/m_p}$. This
+rate $C\gg A$.
+
+The 21-cm line corresponds to $\Delta E = hc / \lambda = $. Each
+collision correponds to $E_c \sim kT =$. The Boltzmann factor
+$\exp(-\Delta E/kT)$ is therefore extremely close to unity for these
+two states.
+
+Together, these results imply that at any time the population of the
+two hyperfine states are simply their statistical weight. Spin-aligned
+states have a total angular momentum number $l=1$, so the upper state
+has $g=3$ ($m=-1$, 0, 1); spin-misaligned states have $l=0$, so the
+lower state has $g=0$ ($m=0$). Thus $3/4$ of the hydrogren is in the
+upper state. 
+
+Putting this together we find that the luminosity is the number of
+hydrogen atoms $N_H$, times the fraction in the upper state $3/4$,
+times the rate each upper state decays at, times the energy it emits
+when it does:
+\begin{equation}
+\label{eq:hi}
+L = \frac{3}{4} N_H \Delta E A =  \left[ \frac{3}{4} \frac{A hc}
+{\lambda m_p} \right] M_H. 
+\end{equation}
+\end{answer}
+\end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item [Something with CHIANTI database and chiantipy]
+\item Something with CHIANTI database and chiantipy
 \item Calculating $\phi$
 For the process
 \begin{equation}

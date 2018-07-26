@@ -7,11 +7,21 @@ galaxies are predominantly associated with ionized gas. The emission
 lines are the result typically of {\it recombination radiation} or
 {\it collisionally excitation}. The physical conditions of ionized gas
 in galaxies varies by large orders of magnitude in density, from 0.3
-to $10^4$ cm$^{-3}$ but typically has temperatures around $10^4$ K.
+to $10^4$ cm$^{-3}$ (up to $10^{10}$ cm$^{-3}$ or more in quasars) but
+typically has temperatures around $10^4$ K.
 
 In astronomical spectroscopy, the ionization state is indicated by
 Roman numerals. XI indicates neutral ``X,'' XII indicates
-singly-ionized ``X,'' XIII indicates doubly ionized ``X,'' etc. 
+singly-ionized ``X,'' XIII indicates doubly ionized ``X,'' etc.
+
+The electronic states can be classified by their spin, orbital, and
+total angular momentum, and is typically labeled ${}^{2S+1}L_J$, where $S$
+is the total spin, $L=S, P, D, F, G, \ldots$ is the total orbital
+angular momentum (corresponding to $L=0,1,\ldots$), and $J$ is the
+total sum. So ${}^3P_0$ indicates an atom with $S=1$, $P=1$, and
+$J=0$.
+
+\subsection{Ionization processes}
 
 The ionization state of gas is determined by the balance among effects
 such as photoionization, collisional ionization, and recombination. In
@@ -19,21 +29,55 @@ the interstellar medium, the radiation field is generally far from
 blackbody and statistical mechanical rules like the law of mass action
 that would otherwise govern the ionization state do not hold.
 
-\subsection{Photoionization}
+In many applications in extragalactic astrophysics we are concerned
+with photoionized gas, in which photons of sufficient energy liberate
+electrons. The cross-section for photoionization is maximum at the
+ionization energy; it declines as $E^{-3}$ (or equivalently
+$\nu^{-3}$) at higher energy, so photoionization for most ionizing
+spectra is dominated by photons near the threshold.
 
-[photoionization]
+For hydrogen in the electronic ground state, the {\it ionization
+potential} is 13.6 eV, corresponding to a photon of wavelength
+912 \AA. The ionization of other atoms is strongly affected by their
+ionization energy. Helium has an ionization potential of 24.6 eV, and
+HeII (He$^+$) has an ionization potential of 54.4 eV. For single
+ionization, carbon, nitrogen, and oxygen have similar ionization
+potentials to hydrogen, whereas neon has a slightly deeper potential,
+and silicon and sulfur have slightly shallower potentials. For more
+highly ionized species, the ionization potential becomes deeper in
+general. 
 
-[other sources of ionization: collisional, etc]
+The electron temperatures in the interstellar medium ($\sim 10^4$ K)
+usually correspond to energies $kT$ far below these ionization
+potentials (which require temperatures $\sim 10^5$ K). Therefore
+collisional ionization is usually not important. However, in shock
+heated gas (for example in supernova remnants) or in some regions of
+active galactic nuclei these high temperatures can be achieved.
 
-\subsection{Recombination radiation}
+\subsection{Recombination}
 
-[cross section]
+In ionized gas at equilibrium, hydrogen and other elements have
+electrons recombining at some rate that balances the ionization rate.
 
-In ionized gas, hydrogen and other elements have electrons recombining
-at some rate that balances the ionization rate. Typically the
-recombination is to a high energy bound state. The electron will
-thereafter decay into successively lower states. For hydrogen, two
-limiting cases exist:
+The recombination rate for hydrogen can be written:
+\begin{equation}
+R = n_e n_p \alpha(T)
+\end{equation}
+The recombination coefficient $\alpha_{nl}$ (usually in units
+cm$^{3}$ s$^{-1}$) for a hydrogen atom to some energy level $n$ and
+orbital angular momentum state $l$ can be expressed in terms of the
+cross-section to recombination $\sigma_{nl}$:
+\begin{equation}
+\label{eq:alpha}
+\alpha_{nl}(T) = \int_0^\infty \dd{u}\, u f(u) \sigma_{nl}(u)
+\end{equation}
+where $f(u)$ is the Maxwell-Boltzmann distribution. Approximately,
+$\sigma \propto u^{-2}$, so $\alpha\propto \langle 1/u\rangle \propto
+T^{-1/2}$.
+
+Typically the recombination is to a high energy bound state. The
+electron will thereafter decay into successively lower states. For
+hydrogen, two limiting cases exist:
 \begin{itemize}
 \item Case A: optically thin to ionizing photons. The recombination
   rate is the sum of the recombination rates to each energy level
@@ -79,11 +123,134 @@ large. The emission lines are shifted in energy by that much, and the
 overall pattern of transitions in gas at temperature $T$ is the same
 as hydrogen for a gas with temperature $T/4$.
 
-[Other elements]
-
 \subsection{Collisional excitation}
 
+Heavier elements than hydrogen tend to be incompletely ionized in gas
+nebulae. For such elements, the remaining electrons can be excited by
+collisions, and then decay radiatively. The excitation potential for
+He$+$ is too deep for most nebular temperatures, but O$+$, O$++$,
+N$+$, and many other species have excited states within reach of
+collisions in $10^4$ K gas. Meanwhile, these excited states can have
+short enough radiative decay times that at the density of nebular gas
+they can decay radiatively prior to collisional deexcitation. The
+resulting lines are called {\it collisionally excited lines}. Since
+under terrestrial conditions collisional deexcitation so greatly
+dominates, they are also called {\it forbidden lines}.
+
+Among the collisionally excited lines, depending on the radiative
+decay times, there are both {\it strong lines} that are bright and
+easy to measure, and other lines sometimes referred to as {\it auroral
+lines} (particularly [OIII] 4363) that tend to be fainter.
+
 \subsection{Measurements of emission lines}
+
+We can measure recombination lines and collisionally excited lines in
+spectra of galaxies.  These measurements can constrain properties of
+the ionized gas, such as its temperature, density, ionization source,
+and metallicity.
+
+A critical issue for measurement is determination and subtraction of
+the {\it continuum} underneath the line, which is primarily due to
+stars in the galaxies. The stellar continuum is not smooth, which
+means that subtracting a low order fit near the emission line location
+is not sufficient. Modern measurements of emission lines use stellar
+population models to fit the continuum (most often, excluding the
+wavelengths very close to any emission lines from the fit), or
+sometimes empirically based models.  This process is especially
+important for Balmer lines, where there is underlying Balmer
+absorption in the stellar continuum, but affects all lines at some
+level.
+
+Once the continuum is subtracted, the line can be measured in multiple
+ways, either by integrating over some fixed wavelength aperture or
+fitting a Gaussian or other profile to the line. Because lines can
+vary in their width due to different Doppler shifts, usually the
+latter route is taken to avoid wavelength aperture effects and to
+maximize signal-to-noise ratio. The flux of the line can be then
+inferred from the fit.
+
+The Doppler widths are typically 10--20 km s$^{-1}$ locally within
+star forming regions, a few hundred km s$^{-1}$ in narrow line regions
+of AGN, and a few thousaid km s$^{-1}$ in broad line regions. For
+spectra that integrate over substantial parts of galaxies, the line
+widths may be larger because of large scale motions such as rotation.
+
+Emission line strengths can be quantified also by their equivalent
+width, which is their flux divided by the local flux density of the
+continuum. The equivalent width is handy in cases that the
+spectrophotometry is not well understood, but fundamentally it is a
+combination of the emission line properties and the stellar continuum
+properties so can be more difficult to interpret in terms of physical
+parameters.
+
+\subsection{Temperature diagnostics}
+
+A standard use for emission line measurements is to determine the
+electron temperature within the ionized gas. The temperature is
+interesting because it is set by the physical conditions of the nebula
+and it also is an important parameter to know to interpret the line
+emission in terms of metallicity and ionization source.
+
+Emission lines from OIII, NII, NeIII, and SIII can used to determine
+temperature, because they have excited states that are low enough to
+be well populated in $10^4$ K gas but well enough separated to have
+significantly different Boltzmann factors, and in addition decay
+through channels that release optical emission lines. The first
+excited electronic state ${}^{1}D_2$ can decay to several nearly
+degenerate ground state levels ${}^3P_0$, ${}^3P_1$, or ${}^3P_2$; the
+transition to the first requires a quadrupole transition so has a slow
+rate. The other two correspond to the [OIII] 4959 and 5007 lines and
+the [NII] 6583 and 6548 lines.
+
+A second excited electronic state ${}^1S_0$ can decay to the ground
+states ([OIII] 2321 or [NII] 3063) but in the optical also emits the
+so-called auroral line to ${}^1D_2$ ([OIII] 4363 or [NII] 5755). These
+lines are weak both because the higher state has a larger Boltzmann
+factor and because the decay probability to the intermediate state is
+lower. 
+
+At low enough densities ($n<10^5$ cm$^{-3}$), the populations are not
+in equilibrium with the electrons; every collision is followed by a
+radiative transition.  The ratio of the collisional excitation rates
+to the ${}^{1}D_2$ and ${}^1S_0$ populations is equal to:
+\begin{equation}
+\frac{\Upsilon({}^3P, {}^{1}D_2)}
+{\Upsilon({}^3P, {}^1S_0)} \exp\left(\Delta E / kT \right)
+\end{equation}
+where $\Delta E$ is the energy difference between the ${}^{1}D_2$ and
+${}^1S_0$ levels, and $\Upsilon$ is the collision strength (which is
+itself a function of temperature). Therefore, if the ratio of the
+auroral lines and the strong lines can be measured, and the atomic
+data on transition probabilities and collision strengths is known,
+then the temperature can be measured.
+
+At higher densities, collisional deexcitation tends to lower the
+ populations in ${}^{1}D_2$ and weaken the pair of strong lines. The
+ collision rate scales as $n_e/T^{1/2}$ and it therefore turns out
+ that the weakening of the line ratio is proportional to:
+ \begin{equation}
+\frac{1}{1 + \alpha n_e / T^{1/2}}
+ \end{equation}
+where $\alpha \sim 10^{-5}$--$10^{-3}$ depending on the species.
+
+\subsection{Density diagnostics}
+
+Like temperature, electron density within the ionized gas can be
+determined from line ratios and knowledge of it helps determine the
+gas metallicity and ionization source. The line ratios of interest are
+between lines with nearly the same excitation energy, but different
+radiative transition probabilities or collisional deexcitation rates.
+
+At low density, every collisional excitation is followed by a
+radiative transition, so the fluxes of the lines are proportional to
+the excitation rates (often just the statistical weights of the
+levels). 
+
+At high density, the population levels are in equilibrium so that the 
+
+\subsection{BPT diagrams}
+
+\subsection{Metallicity diagnostics for star-forming galaxies}
 
 \section{Key References}
 
@@ -99,13 +266,20 @@ as hydrogen for a gas with temperature $T/4$.
 \begin{enumerate} 
 \item Dependence on temperature and resulting metallicity dependence
   of Halpha 
+\item Using typical mass-to-light ratios in the $i$-band, and star
+formation rate normalizations for H$\alpha$, approximately relate a
+H$\alpha$ equivalent width to the equivalent specific star formation
+rate.
 \end{enumerate}   
 
 \section{Analytic Exercises}
 
 \begin{itemize}
+\item Show explicitly from Equation \ref{eq:alpha} that the
+recombination coefficients should scale
+as $\alpha\propto T^{-1/2}$.
 \item alpha calculation
-
+\item Calculating line ratios vs. temperature
 \item Ly-alpha scattering
 \end{itemize}
 

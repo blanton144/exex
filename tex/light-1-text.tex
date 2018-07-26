@@ -32,10 +32,6 @@ the Jansky, which is $10^{-23}$ erg s$^{-1}$ cm$^{-2}$
 Hz$^{-1}$. Sometimes the flux density is also called the {\it spectral
   energy distribution}.
 
-A {\it flux} $f$ is a flux density integrated over some wavelength or
-frequency range. We will see below how the flux is related to the
-astronomical magnitude. \todo{CHECK THIS NOMENCLATURE}
-
 The electromagnetic wave can also be expressed in terms of
 photons. The energy of photons correspond to a wavelength of light:
 \begin{equation}
@@ -75,12 +71,21 @@ In a cosmological context (relevant at 100s of Mpc distance or so
 depending on the required precision), there is not a single
 well-defined distance to a source. The directly observable quantity is
 the redshift $z$, associated with the Universe's expansion. In this
-case $D$ must be the ``luminosity distance,'' defined to satisfy
-Equation \ref{eq:luminosity_distance}; its relation to redshift
-depends on the cosmological parameters (see \citealt{hogg99cosm}). The
-flux dependence on distance in standard, general relativity-based
-cosmology is a combination of the dependence of the angular size on
-distance times the surface brightness dimming effect.
+case $D$ must be the {\it luminosity distance}, sometimes denoted
+$D_L$, defined to satisfy Equation \ref{eq:luminosity_distance}; its
+relation to redshift depends on the cosmological parameters
+(see \citealt{hogg99cosm}). The flux dependence on distance in
+standard, general relativity-based cosmology is a combination of the
+dependence of the angular size on distance times the surface
+brightness dimming effect.
+
+An analogous quantity, the {\it angular diameter distance} $D_A(z)$,
+can be defined that satisfies the relation for small angles:
+\begin{equation}
+\theta = \frac{s}{D_A}
+\end{equation}
+where $s$ is a physical size of an object and $\theta$ is the angular
+size of that object when observed at redshift $z$.
 
 The flux density or specific intensity can only be measured at some
 finite resolution in wavelength or frequency. In optical astronomical
@@ -104,9 +109,9 @@ receivers separate signals into frequencies electronically.
 Imaging instruments with wavelength-dependent sensitivity (either due
 to the detector or through a band pass filter) can also measure the
 wavelength dependence of the flux density or specific
-intensity. Typically, this is performed more coarsely $R\sim 5$ though
-narrow band systems reach $R\sim 50$ (typically though not quite
-always requiring one exposure per filter).
+intensity. Typically, this is performed more coarsely at about $R\sim
+5$, though narrow band systems reach $R\sim 50$ or more (typically
+though not quite always requiring one exposure per filter).
 
 In the optical and infrared the use of such coarse band pass filters
 means that the interpretation of the measurements at high precision
@@ -237,7 +242,10 @@ naturally an uncertain quantity.
     corresponds to a factor of $10^{12}$ in luminosity. Using Equation
     \ref{eq:luminosity_distance}, this translates to $10^6$ in
     distance. So Vega-like stars are visible (in principle) to about 8
-    Mpc.  
+    Mpc. In practice, if such stars were in another galaxy, it is very
+    difficult to resolve them from the other stars in the galaxy; if
+    they were free-floating between galaxies there are still a high
+    density of 30th magnitude galaxies causing confusion in the image.
 \end{answer}
 
 \item Estimate the number of photons per second that enter your eye
@@ -290,16 +298,46 @@ The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
 \begin{enumerate}
 \item For a Gaussian line spread function with a standard deviation
   $\sigma$, what is the FWHM?
+
 \begin{answer}
-The FWHM is determined by:
+The FWHM is twice the distance from the peak to the point halfway down
+the peak, so it is determined by:
 \begin{equation}
-\Delta\lambda = 2  \ln(0.5)
+\exp\left(- ({\rm FWHM} / 2)^2 / 2 \sigma^2\right) = 0.5.
+\end{equation}
+Solving for the FWHM yields: 
+\begin{equation}
+{\rm FWHM} = 2 \sqrt{2\ln 2} \sigma \approx 2.35 \sigma
 \end{equation}
 \end{answer}
 \item Prove Equation \ref{eq:sb_dimming}, based on the fact that
   photon density in phase space is conserved.
+
 \item Based on Equation \ref{eq:sb_dimming}, how is the angular
   diameter distance related to the luminosity distance? 
+
+\begin{answer}
+The angular diameter distance must satisfy:
+\begin{equation}
+\label{eq:da}
+D_A = \frac{s}{\theta}
+\end{equation}
+Take a uniform surface brightness sphere of radius $s$. The flux
+density must satisfy two equalities:
+\begin{equation}
+f_\nu = \frac{L_\nu}{4\pi D_L^2} = I_\nu \pi \theta^2.
+\end{equation}
+Using Equation \ref{eq:sb_dimming} and \ref{eq:da}, the second equality
+implies:
+\begin{equation}
+\frac{L_\nu}{4\pi D_L^2} = I_\nu \pi \theta^2 = \frac{I_{\nu, 0} \pi
+s^2}{(1+z)^4 D_A^2}.
+\end{equation}
+Then using $L=4\pi s^2 I_{\nu, 0}$ we find:
+\begin{equation}
+D_L = (1+z)^2 D_A
+\end{equation}
+\end{answer}
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
@@ -309,7 +347,7 @@ The FWHM is determined by:
   Sloan Digital Sky Survey. Plot each of them. These spectra are given
   in $f_\lambda$ (per-\AA) units. Convert one them to $f_\nu$
   (per-Hertz) and plot it. Smooth one of them in $f_\lambda$ with a
-  Gaussian corresponding to $R\sim 100$ and plot it.
+  Gaussian corresponding to $R\sim 1000$ and plot it.
 \item Plot $D_L$ versus $z$ based on the equations found
   in \citet{hogg99cosm}, for a flat $\Lambda$CDM cosmology with
   $\Omega_m = 0.3$ and $H_0 = 70$ km s$^{-1}$ Mpc$^{-1}$. Determine

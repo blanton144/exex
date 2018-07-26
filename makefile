@@ -6,6 +6,8 @@ vpath %.tex $(TEXDIR)
 ALL= \
 	$(PDFDIR)/toc.pdf \
 	$(PDFDIR)/intro.pdf \
+	$(PDFDIR)/agn.pdf \
+	$(PDFDIR)/agn-answers.pdf \
 	$(PDFDIR)/inventory.pdf \
 	$(PDFDIR)/inventory-answers.pdf \
 	$(PDFDIR)/detectors.pdf \
@@ -26,16 +28,26 @@ ALL= \
 	$(PDFDIR)/dynamics-answers.pdf \
 	$(PDFDIR)/lensing.pdf \
 	$(PDFDIR)/lensing-answers.pdf \
+	$(PDFDIR)/groups.pdf \
+	$(PDFDIR)/groups-answers.pdf \
 	$(PDFDIR)/galaxies.pdf \
 	$(PDFDIR)/galaxies-answers.pdf \
 	$(PDFDIR)/stellar-evolution.pdf \
 	$(PDFDIR)/stellar-evolution-answers.pdf \
+	$(PDFDIR)/stellar-populations.pdf \
+	$(PDFDIR)/stellar-populations-answers.pdf \
+	$(PDFDIR)/distance-ladder.pdf \
+	$(PDFDIR)/distance-ladder-answers.pdf \
+	$(PDFDIR)/chemical-evolution.pdf \
+	$(PDFDIR)/chemical-evolution-answers.pdf \
 	$(PDFDIR)/stellar-clusters.pdf \
 	$(PDFDIR)/stellar-clusters-answers.pdf \
 	$(PDFDIR)/cosmology.pdf \
 	$(PDFDIR)/cosmology-answers.pdf \
 	$(PDFDIR)/structure.pdf \
 	$(PDFDIR)/structure-answers.pdf \
+	$(PDFDIR)/nucleosynthesis.pdf \
+	$(PDFDIR)/nucleosynthesis-answers.pdf \
 	$(PDFDIR)/light-1.pdf \
 	$(PDFDIR)/light-1-answers.pdf \
 	$(PDFDIR)/light-2.pdf \

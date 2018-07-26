@@ -1,10 +1,12 @@
 \title{\bf Gravitational Lensing}
 
-\section{Basics \& Nomenclature}
+\section{Basics}
 
 Under general relativity, in the presence of mass light is bent by the
 curvature of spacetime. On astronomical scales this can cause the
 phenomenon of {\it gravitational lensing}. 
+
+\subsection{Point mass lensing}
 
 Understanding lensing begins with the point mass case. It can be shown
 that a photon traveling by a point mass, with an impact parameter $r$,
@@ -51,6 +53,124 @@ the extended nature of the image. Because surface brightness (more
 technically specific intensity) is conserved in general relativity
 this magnification leads to an increase in total flux density.
 
+For multiply imaged sources, the images formed follow different paths
+of different distances. This fact leads to a relative delay between
+photons that travel different paths. In addition, a different general
+relativistic delay is associated with each path, known as the {\it
+Shapiro delay}. Fluctuations in the source will appear to the observer
+at different times. A measured delay yields a measurement of physical
+distance that can in principle be used to determine the distances of
+the source and lens.
+
+\subsection{Lensing from extended mass sheets}
+
+On cosmological scales, weak lensing outside the Einstein radius of
+individual groups and clusters occurs, but is not well described by
+single point mass lensing. We will instead here describe the lensing
+as due to a sheet of mass in the lens plane of varying surface
+density. 
+
+Let us consider a point in the source plane that (undeflected) would
+be at angle $\vec{\beta}$. Let $\vec{x}$ represent the physical
+position in the lens plane that the undeflected ray would have passed
+through.  The deflection angle is the sum of the contributions of all
+the mass in the lens plans:
+\begin{equation}
+\vec{\theta_D}\left(\vec{x}\right) = \frac{4G}{c^2
+D_L}  \int \dd^2 \vec{x}' \Sigma\left(\vec{x}\right) \frac{\vec{x}
+- \vec{x}'}{\left|\vec{x} - \vec{x}'\right|^2}
+\end{equation}
+We can relate the source plane position $\vec{\beta}$ to the observed
+angle $\theta$ with the {\it lens equation}:
+\begin{equation}
+\vec{\beta} = \vec{\theta}
+- \frac{D_{LS}}{D_S} \vec{\theta_D}\left(D_L \vec{\theta}\right)
+  = \vec{\theta} - \vec{\alpha}
+\end{equation}
+We can use the above relations to show:
+\begin{equation}
+\vec{\alpha}
+= \frac{1}{\pi} \int \dd^2\vec{\theta}' \kappa\left(\vec{\theta}'\right)
+\frac{\vec{\theta} - \vec{\theta}'}
+{\left|\vec{\theta} - \vec{\theta}'\right|^2}.
+\end{equation}
+where we define:
+\begin{equation}
+\kappa = \frac{\Sigma}{\Sigma_{\rm cr}},
+\end{equation}
+and:
+\begin{equation}
+\Sigma_{\rm cr} = \frac{c^2 D_S}{4\pi G D_{LS} D_L}
+\end{equation}
+The condition $\kappa>1$ leads to multiply imaged sources.
+
+The form of $\vec{\alpha}$ suggests that it can be written as the
+gradient of a potential,
+\begin{equation}
+\vec{\beta} = \vec{\theta} - \vec{\nabla}\psi,
+\end{equation}
+where
+\begin{equation}
+\psi
+= \frac{1}{\pi} \int \dd^2\vec{\theta}' \kappa\left(\vec{\theta}'\right)
+\ln \left|\vec{\theta} - \vec{\theta}'\right|.
+\end{equation}
+We can also show:
+\begin{equation}
+\nabla^2\psi = 2 \kappa
+\end{equation}
+We can define the Fermat time delay potential as
+\begin{equation}
+\tau\left(\vec{\theta}; \vec{\beta}\right) =
+\frac{1}{2} \left(\vec{\theta} - \vec{\beta}\right)^2
+- \psi\left(\vec{\theta}\right),
+\end{equation}
+and the lens equation can be rewritten as.
+\begin{equation}
+\vec{\nabla}\tau = 0.
+\end{equation}
+This result is an expression of the general relativistic version of
+Fermat's principle.
+
+\subsection{Weak lensing}
+
+The lens equation can be locally linearized  around $\vec{\beta_0}$:
+\begin{equation}
+\vec{\beta} = \vec{\beta}_0
++ \frac{\partial \vec{\beta}}{\partial \vec{\theta}} \cdot \left(\vec{\theta}
+- \vec{\theta_D} \right), 
+\end{equation}
+where the Jacobian can be written in index form:
+\begin{equation}
+{\bf A}\left(\vec{\theta}\right) = 
+\frac{\partial \vec{\beta}}{\partial \vec{\theta}} = \left(\delta_{ij}
+- \frac{\partial^2 \psi}{\partial\theta_i \partial\theta_j}\right)
+{\hat e}_i {\hat e}_j
+\end{equation}
+
+{\bf NEED TO FINISH THIS}
+
+\subsection{Microlensing}
+
+A phenomenon called {\it microlensing} occurs when the lensing mass
+and background source have a relative angular motion. The background
+source increases as it moves through the Einstein radius of the
+lens. This increase has a distinctive, achromatic signature, that can
+be seen for individual stars in our Galaxy through monitoring.
+
+A related phenomenon also known as microlensing occurs when viewing a
+background source through a galactic system. The stars create a
+lensing potential surface with distinct cusps that cause fluctuations
+in the flux of the background source.
+
+These phenomena can only occur if the background source is physically
+smaller than the Einstein radius. Otherwise even if the center of the
+source is aligned with the lens, most of the light is well outside the
+Einstein radius in the lens plane and is not deflected. This fact
+makes it possible to constrain the relative sizes of the background
+source in different wavelengths (e.g. radio vs. optical) through
+observations of its lensing.
+
 \section{Important numbers}
 
 \section{Key References}
@@ -66,6 +186,7 @@ this magnification leads to an increase in total flux density.
 
 \begin{enumerate} 
 \item Typical Einstein angles for stars, galaxies, clusters.
+\item Typical delay time
 \item Typical shear values
 \item Estimate probability of microlensing in galaxy
 \end{enumerate}   
@@ -78,13 +199,16 @@ this magnification leads to an increase in total flux density.
 \item Calculate offset from Einstein angle for strong lensing
 \item Calculate offset from source angle for weak lensing
 \item Calculate magnification
+\item Critical surface density case
+\item Derive shear and magnification properties
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-
+\item Modeling of lens system
 \item Specific strong lenses
+\item Measurements of shear
 \end{enumerate}
 
 \bibliographystyle{apj}

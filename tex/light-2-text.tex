@@ -12,8 +12,10 @@ power-law distribution, the Rayleigh-Jeans tail:
 \begin{equation}
 u_\nu \approx  \frac{8\pi k T \nu^2 }{c^3}
 \end{equation}
-The peak of $u_\nu$ or $u_\lambda$ is simply related to $T$:
+The peak of $u_\nu$ or $u_\lambda$ is simply related to $T$ according
+to Wien's Law:
 \begin{equation}
+\label{eq:wiens}
 h\nu_{\rm max} = 2.8 kT \quad\quad
 \lambda_{\rm max} T = 2.9 {\rm ~mm} {\rm K} 
 \end{equation}
@@ -132,10 +134,13 @@ not affected by dust very much. In general, the amount of extinction
 is wavelength dependent, with bluer frequencies experiencing more
 absorption and scattering; the dependence varies depending on the
 nature of the dust but is very approximately $\sim \lambda^{-1}$. In
-the ultraviolet through near infrared this causes ``reddening'' of the
+the ultraviolet through near infrared this causes {\it reddening} of the
 light. Meanwhile, at the very highest frequencies (X-ray and
 $\gamma$-ray) the photons pass through the dust (in fact, extreme UV
-and X-ray radiation can destroy dust).
+and X-ray radiation can destroy dust). The Milky Way dust imposes a
+screen of extinction and reddening that must be corrected for all
+extragalactic observations, and for most observations within the
+Galaxy. 
 
 As light from cosmic sources comes toward us, it can be scattered or
 absorbed in a number of ways other than atomic and molecular
@@ -152,6 +157,7 @@ discuss these as appropriate later.
     \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
     {\it Allen's Astrophysical Quantities},
       \citet{cox00a}}, Chapter 5
+  \item SFD
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
@@ -161,14 +167,25 @@ discuss these as appropriate later.
     neither very blue nor very red. Assuming it emits approximately as
     a blackbody, estimate the temperature of its surface.
 
+\begin{answer}
+If we assume its peak output is near the middle of our eye's
+sensitivity range, around $\lambda \sim 5500$ \AA, we can use Wien's
+Law to show that the temperature of the emitting surface is:
+\begin{equation}
+T \sim \frac{2.9 {\rm ~mm~K}}{5.5 \times 10^{-4} {\rm ~mm}} \sim 5300
+{\rm ~K},
+\end{equation}
+which is surprisingly close to the right answer.
+\end{answer}
+
 \item Estimate the approximate temperature of a radiation field that
     will provide a substantial flux of photons to ionize hydrogen.
 
 \item If you have a spectrograph with $R\sim 4000$, for what
 line-of-sight velocity dispersion is the intrinsic width of the line
-equal to the width due to the resolution? [We will learn later that
+equal to the width due to the resolution?  We will learn later that
 depending on signal-to-noise ratio, velocities much smaller than the
-resolution are hard to measure.]
+resolution are hard to measure.
 
 \item Galaxy clusters emit thermal bremstrahlung at energies $\nu > 1$
 keV. What is the temperature necessary to do this? 
@@ -177,31 +194,64 @@ keV. What is the temperature necessary to do this?
     30 magnitudes in the $V$ band. Approximately how much is that in
     the near-infrared $K$ band?
 
-  \begin{answer}
-  The magnitude difference of 30
-    corresponds to a factor of $10^{12}$ in luminosity. Using Equation
-    \ref{eq:luminosity_distance}, this translates to $10^6$ in
-    distance. So Vega-like stars are visible (in principle) to about 8
-    Mpc.  
-  \end{answer}
+\begin{answer}
+The effective wavelength of $V$ is 5500 {\AA}, and of $K$ is about 2.2
+  $\mu$m, or about 4 times longer. If the extinction curve scales as
+  $\lambda^{-1}$, then the magnitude difference will be around 7.5
+  magnitudes. This fact means that observations of the Galactic
+  center, completely impossible in the optical, are possible in the
+  infrared.  In fact, the extinction curve is somewhat steeper so the
+  benefit is even larger than we estimate here.
+\end{answer}
 
 \end{enumerate}   
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Prove Wien's law
-\item How does the spectrum of deuterium differ from that of hydrogen
+\item Prove Wien's law, Equation \ref{eq:wiens}.
+\item The Bohr sequence is a consequence of Schroedinger's equation
+  applied to the electron. However, the original Bohr model was based
+  on the classical picture of an electron orbiting the proton due to
+  Coulomb attraction. In this context, the electron is actually
+  orbiting the center of mass of the proton-electron system, but this
+  two-body problem can be reduced to a central force problem, with the
+  true electron mass being replaced by the {\it reduced mass}. Given
+  this understanding, how should the spectrum of deuterium compare to
+  the spectrum of hydrogen?
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Balmer series in emission, absorption
-\item Lyman-alpha
-\item Dusty spectra of stars
-\item Dusty spectra of galaxies
-\item PAH emission
+\item Download an optical spectrum of an A star. Identify 
+  all Balmer absorption lines that are apparent in that spectrum.
+\item Download an optical spectrum of a star forming galaxy. Identify
+all Balmer emission lines that are apparent in the spectrum. Zooming
+in on H$\alpha$ or $H\beta$, visually compare the Balmer absorption
+(in the stellar continuum) to the emission.
+\item Download an optical spectrum of a luminous quasar at redshift $z\sim
+2.5$. Identify the Ly$\alpha$ emission line and estimate its full
+width half maximum in \AA. Assuming the width is dominated by Doppler
+motions, what is that width in km s$^{-1}$. You should also be able to
+see absorption lines blueward of Ly$\alpha$; this is Ly$\alpha$
+absorption by intervening gas that is therefore less redshifted.
+\item \citet{schlegel98a} published an estimate of Galactic dust
+extinction in our galaxy. Download four stars with similar
+temperatures and metallicities over a range of Galactic reddening
+values. Utilize the extinction model of {\bf CCM} and try to explain
+the broad-band differences between stellar spectra. Can you explain
+any discrepancies with the SFD prediction?
+\item Access the dust map of \citet{schlegel98a} and plot the $E(B-V)$
+    reddening as a function of Galactic Coordinates. 
+\item Find the SDSS optical spectra and images for the two galaxies
+UGC 10227 (a typical-looking disk galaxy observed at high inclination)
+and MCG -01-53-020 (a typical-looking disk galaxy observed at low
+inclination). A major difference in observing galaxies at these
+inclinations is the resulting amount of dust extinction. For a
+standard reddening law, how much extinction due you need to explain
+the first galaxy spectrum as a reddened version of the second?
+\item PAH emission                                     
 \item Brehmstrahlung
 \item Synchrotron
 \end{enumerate}

@@ -1,160 +1,192 @@
-\title{\bf Interstellar Medium}
+\title{\bf Star formation}
 
-\section{Basics \& Nomenclature}
+\section{Basics}
 
-The {\it interstellar medium} is the medium between stars in
-galaxies. Here we will include the {\it circumgalactic medium} in our
-discussion, though usually that refers to diffuse gas which may be
-bound to the galaxy but is not intermixed with its main population of
+Star formation is a fundamental process in forming galaxies. It
+proceeds through the cooling and gravitational collapse of gas within
+gas {\it clouds}. Based on molecular gas measurements, the mass
+function of clouds has a slope of about $\alpha\sim 1.5$--2
+($\dd{N}/\dd{M} = M^{-\alpha}$) between $10^3$ and $10^6$ $M_\odot$.
+During the collapse process, the gas becomes cold enough for molecules
+to form, and stars form always within molecular clouds. Individual
+stars form in a range of masses. Light from the most massive forming
+stars tends to disassociate and then ionize the surrounding gas
+cloud. Dust in the cloud absorbs and is heated by ultraviolet light
+from the stars. The {\it star clusters} that result seem to have a
+similar mass distribution to the gas clouds (though it is thought that
+clusters form within isolated {\it clumps} within the clouds).
+
+\subsection{Initial mass function}
+
+The stars within the clusters form over a large range of masses. The
+initial mass function estimated within the Milky Way appears to peak
+between 0.1 and 0.3 $M_\odot$, and at higher masses decline with a
+slope close to $-2.35$ (the {\it Salpeter} slope). This initial mass
+function may depend on environment in various ways.  Estimates of star
+formation rate integrate the mass of stars extending down to the
+hydrogen burning limit ($0.08$ $M_\odot$) even though the star
+formation indicators are only directly sensitive to much more massive
 stars.
 
-The contents of the interstellar medium are: gas (ions, atoms,
-molecules); dust (small solid particles, mostly $< 1\mu$m; cosmic rays
-(ions and electrons, distinguished from the ``gas'' by its nonthermal
-energy distribution extending to as high as $10^{21}$ eV); radiation
-(from many sources); and dark matter.  The interstellar medium is also
-threaded by magnetic fields.
+\subsection{Color-magnitude diagram}
 
-[phases of ISM] 
+For systems whose stars can be resolved from each other, we can
+estimate the star formation rate by modeling the color-magnitude
+diagram, sometimes using all the stars or sometimes only the most
+massive O-type or Wolf-Rayet stars. This method can estimate the star
+formation rate over the past 100 million years or so. Systems like the
+Orion Nebula Cluster can be studied in this way, and with Hubble
+Space Telescope observations nearby galaxies can be mapped in their
+star formation rate.
 
-[signatures in emission]
+\subsection{Ultraviolet light}
 
-[signatures in absorption]
+More useful for most galaxies is the integrated ultraviolet continuum
+light, which (depending on the IMF) traces stars of a few solar
+masses, and consequently star formation over the past 100 million
+years.
 
-% \section{Commentary}
+However, dust attenuates the ultraviolet light strongly. In principle,
+the slope of the ultraviolet continuum constrains the dust
+attenuation. Because the dust re-emits in the infrared, this leads to
+a relationship between the ultraviolet spectral slope $\beta$ and the
+ratio of the infrared to ultraviolet light (``IRX''). However, in
+practice there appears to be too much scatter in the dust attenuation
+as a function of reddening for this correction to be sufficient. 
+
+\subsection{Emission lines}
+
+The most massive young stars ($>15$ $M_\odot$) produce large ionized
+{\it HII regions} surrounding them. Recombination in these regions
+produces a sequence of Balmer lines (and also higher wavelength
+Paschen and Brackett lines) with line ratios that are only a weak
+function of the gas conditions. To a good approximation, there is one
+Balmer line produced for every ionized photon. Therefore, Balmer lines
+can be used to determine the total ionizing flux, which is related to
+the number of massive stars, which due to their short lifetimes is
+related to the star formation rate within the past 10 million
+years. H$\alpha$ is the usual Balmer line of choice as the brightest
+and reddest, to minimize dust extinction. The Paschen and Brackett
+lines are more robust but less accessible with ground-based
+instruments.
+
+The H$\alpha$ emission needs to be corrected for dust as well.
+Typically, we use the {\it Balmer decrement}, the ratio of the Balmer
+lines compared to the (unextincted) theoretical expectation. With an
+assumed extinction curve, the Balmer decrement yields an extinction
+correction. For low attenuation levels (up to about 1 magnitude at
+H$\alpha$), this method is sufficient but it becomes uncertain when
+there is large small scale variation in the extinction, which is
+typical at high extinction.
+
+\subsection{Infrared light}
+
+Dust extinction of the ultraviolet light leads to reemission at
+infrared wavelengths. This emission is a mix of lines from polycyclic
+aromatic hydrocarbons (PAHs) and thermal emission from dust grains at
+a mix of temperatures. PAHs are typically only $\sim 1$\% of the dust
+map but dominate the emission between 5--20 $\mu$m. Longward of 20
+$\mu$m thermal emission from dust grains dominates, though note there
+are some atomic lines from the gas.
+
+The total infrared luminosity plus the total ultraviolet light traces
+the total star formation, in principle. However, evolved stars older
+than a few hundred million years can heat the dust as well. This
+heating typically occurs more diffusely throughout the galaxy and is
+less concentrated in star forming regions; it can contribute to up to
+half the infrared signal for low specific star formation rate
+systems.
+
+A number of calibrations have been performed that are useful if one
+only has infrared observations or only PAH measurements (e.g. for
+higher redshift systems).
+
+\subsection{Radio continuum}
+
+The radio continuum of galaxies correlates with other measures of star
+formation. There are two components, a thermal free-free component
+which at cm wavelengths is in the optically thin limit so relatively
+flat, and a synchrotron component with a steeper spectrum. The
+free-free component should correlate with the ionizing luminosity that
+heats the plasma. The synchrotron component correlates with other star
+formation indicators for sufficiently luminous galaxies, but the
+physical reasons behind this correlation are unknown.
+
+The synchrotron component dominates, so high enough signal-to-noise
+ratio multifrequency data is necessary to measure the free-free
+emission. Most radio measurements of star formation are based on 20 cm
+(1.4 GHz) continuum measurements of the synchrotron.
+
+\subsection{Kennicutt-Schmidt Law}
+
+The Kennicutt-Schmidt law relates the surface density of atomic and
+molecular gas to the surface density of star formation, averaged over
+the galactic disk. Above $\Sigma_{\rm gas} = 10$ $M_\odot$ pc$^{-2}$,
+galaxies obey $\Sigma_{\rm SF} \propto \Sigma_{\rm gas}^n$ with $n\sim
+1.4$, with a scatter of about 0.3 dex. At lower densities, there is
+less star formation and more scatter than the power law predicts. Note
+that star formation surface density is linearly related to the total
+dense molecular gas (as traced by HCN for example). When comparing
+the star formation locally within galaxies, similar trends are seen,
+with a similar threshold density.
+
+The physical causes of the Kennicutt-Schmidt law are unclear. The
+scaling can be derived if the star formation rate is driven by large
+scale instabilities in the gas, leading the rate to be proportional to
+the free fall time $t_{\rm ff}$ in the disk, with the depletion time
+$M_\ast/\dot M_\ast \sim 100 t_{\rm ff}$. However, there are many
+intermediate processes between the large scale gravitational collapse
+of the gas and the production of stars. The Kennicutt-Schmidt law
+could be explained by an appropriate variation of the fraction of
+molecular gas as a function of density and a constant conversion rate
+of molecular gas into stars.
+
+The cause of the threshold at 10 $M_\odot$ pc$^{-2}$ is also not
+clear. If star formation is initiated by large scale instabilities,
+then the {\it Toomre instability criterion} must be satisfied
+(\citealt{toomre64a}). A thin gas disk is unstable to large scale
+perturbations when:
+\begin{equation}
+Q_{\rm gas} = \frac{\sigma_g \kappa}{\pi G \Sigma_{\rm gas}} < 1
+\end{equation}
+where $\kappa$ is the epicyclic frequency of the disk, and $\sigma_g$
+is the velocity dispersion of the gas. For higher $Q$, the Coriolis
+forces in the disk prevent large scale collapse even above the Jeans
+mass. In the $Q$ value in disks tends to correlate with many other
+parameters and it is difficult to disentangle whether the observed
+threshold is due to the Toomre criterion or a different one
+(\citealt{leroy08a}).
 
 \section{Key References}
 
 \begin{itemize}
-  \item
-    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
-    {\it Allen's Astrophysical Quantities},
-      \citet{cox00a}}, Chapter 5
+  \item \citet{kennicutt12a}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item As you can see when looking outside during the day, the Sun is
-    neither very blue nor very red. Assuming it emits approximately as
-    a blackbody, estimate the temperature of its surface.
-
-\item Estimate the approximate temperature of a radiation field that
-    will provide a substantial flux of photons to ionize hydrogen.
-
-\item If you have a spectrograph with $R\sim 4000$, for what
-line-of-sight velocity dispersion is the intrinsic width of the line
-equal to the width due to the resolution? [We will learn later that
-depending on signal-to-noise ratio, velocities much smaller than the
-resolution are hard to measure.]
-
-\item Galaxy clusters emit thermal bremstrahlung at energies $\nu > 1$
-keV. What is the temperature necessary to do this? 
-
-\item The center of the Milky Way is very heavily extincted: by about
-    30 magnitudes in the $V$ band. Approximately how much is that in
-    the near-infrared $K$ band?
-
-  \ifanswers \textcolor{blue}{ The magnitude difference of 30
-    corresponds to a factor of $10^{12}$ in luminosity. Using Equation
-    \ref{eq:luminosity_distance}, this translates to $10^6$ in
-    distance. So Vega-like stars are visible (in principle) to about 8
-    Mpc.  }
-  \fi
-
-\item Estimate the number of photons per second that enter your eye
-    per second in visible light (4000--7000 \AA) from a star with
-  magnitude $\sim 6$ (about the faintest visible at a dark
-  site). Assume a nighttime pupil diameter of 5 mm.
-
-  \ifanswers
-\textcolor{blue}{
-In this wavelength range, Vega and AB magnitudes are about the same at
-the precision necessary here, so we don't have to worry about which
-version we are dealing with. So:
-\begin{equation}
-f_\nu \sim (3631 \mathrm{~Jy}) 10^{-0.4 m} \sim 14 \mathrm{~Jy} = 1.4 \times
-10^{-22} \mathrm{~erg} \mathrm{~cm}^{-2} \mathrm{~s}^{-1} \mathrm{~Hz}^{-1}
-\end{equation}
-The flux density in the visible should be $f_\nu \Delta\nu$ where:
-\begin{equation}
-\Delta\nu = c \left(\frac{1}{4000 \mathrm{~\AA}} -
-\frac{1}{7000 \mathrm{~\AA}}\right) \sim 320 \mathrm{~THz}
-\end{equation}
-And thus $f \sim 4\times 10^{-8}$ erg cm$^{-2}$ s$^{-1}$. Each photon
-has an energy (assuming $\lambda = 5500$ \AA):
-\begin{equation}
-E = h\nu = (6.62\times
-10^{-27} \mathrm{~erg~Hz}^{-1})( \mathrm{550~THz}) \sim 4 \times
-10^{-12} \mathrm{~erg}
-\end{equation}
-So the flux of photons is:
-\begin{equation}
-\frac{\dot N}{A} = \frac{f_\nu \Delta\nu}{h\nu} \sim 
-10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}
-\end{equation}
-If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$. 
-}
- \fi
-
-\item How much does surface brightness dimming change the magnitudes
-  per square arcsecond for a galaxy at redshift $z\sim 1$?
-
-  \ifanswers
-\textcolor{blue}{
-The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
-\begin{equation}
-\Delta m = 2.5 \log_{10} (1+z)^4 = 10 \log_{10} (1+z) \sim
-3 \mathrm{~mag}
-\end{equation}
-}
-\fi
+\item Assuming that the observables are unchanged, what is the
+difference in inferred star formation rate between assuming a Salpeter
+function all the way to the hydrogen burning limit, and one that turns
+over to a constant below 0.5 $M_\odot$?
 \end{enumerate}   
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item For a Gaussian line spread function with a standard deviation
-  $\sigma$, what is the FWHM?
-  \ifanswers
-\textcolor{blue}{
-The FWHM is determined by:
-\begin{equation}
-\Delta\lambda = 2  \ln(0.5)
-\end{equation}
-}
-\fi
-\item Prove Equation \ref{eq:sb_dimming}, based on the fact that
-  photon density in phase space is conserved.
-\item Based on Equation \ref{eq:sb_dimming}, how is the angular
-  diameter distance related to the luminosity distance? 
+\item Derive KS law
+\item Toomre criterion
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Retrieve a spectrum of a star, a quasar, and a galaxy from the
-  Sloan Digital Sky Survey. Plot each of them. These spectra are given
-  in $f_\lambda$ (per-\AA) units. Convert one them to $f_\nu$
-  (per-Hertz) and plot it. Smooth one of them in $f_\lambda$ with a
-  Gaussian corresponding to $R\sim 100$ and plot it.
-\item Plot $D_L$ versus $z$ based on the equations found
-  in \citet{hogg99cosm}, for a flat $\Lambda$CDM cosmology with
-  $\Omega_m = 0.3$ and $H_0 = 70$ km s$^{-1}$ Mpc$^{-1}$. Determine
-  where the difference in inferred luminosity of an object would reach
-  1\%. 
-\item Download the filter curve for the SDSS $g$ and $r$
-  bands. Calculate the observed $g$ and $r$ band magnitudes
-  corresponding to a galaxy spectrum (say for some galaxy with
-  $z<0.1$). Note that this won't necessarily be the same as the
-  magnitudes measured from the images, since the spectra are taken
-  through 2- or 3-arcsec diameter fibers. Calculate the rest-frame
-  $g-r$ color, and also what the $K$-correction would be for galaxies
-  with this SED in the $r$-band between about $z\sim 0$ and $z\sim
-  0.25$. Download a sample of galaxies between about $z\sim 0$ and
-  $0.25$. Plot their $g-r$ colors versus redshift, together with the
-  predicted colors of the galaxy you have a spectrum of.
-\item \todo{Would be nice to have radio, X-ray, other examples}
+\item SP models and UV star formation rate
+\item Comparing SFRs for a single galaxy from UV, Halpha, IR.
+\item Balmer decrement
+\item Strongest star formers
+\item XUV disks
 \end{enumerate}
 
 \bibliographystyle{apj}

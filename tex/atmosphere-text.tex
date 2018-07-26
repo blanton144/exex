@@ -15,8 +15,8 @@ is a critical factor. In the plane-parallel approximation, which
 virtually always holds, the column density of atmosphere at $z$ scales
 as the {\it airmass}, $a = 1 / \cos z$. 
 
-Figure \ref{fig:absorption} shows the atmospheric transmission
-$t(z=0^\circ)$ as a function of wavelength at sea level. The
+Figure \ref{fig:absorption} shows the atmospheric transmission at
+zenith $t(z=0^\circ)$ as a function of wavelength at sea level. The
 transmission at other airmasses is:
 \begin{equation}
 t(z) = [t(z=0^\circ)]^a,
@@ -26,7 +26,7 @@ The sharp absorption features are known as {\it telluric lines}.
 
 The ultraviolet and higher energy photons are essentially entirely
 absorbed below $3500$ $\AA$. Starting in the near-infrared, the
-atmosphere has strong absorption bands associated with {\bf WHAT}.
+atmosphere has strong absorption bands associated with \todo{WHAT}.
 The exact level of absorption depends on the humidity and
 conditions. This means the transmission spectra depends on time and
 the average conditions vary considerably between different
@@ -39,12 +39,12 @@ light component. This scattered light comes primarily from ground
 sources and the Moon. When the Moon is out it tends to dominate the
 continuum regions of the sky spectra; this spectrum then resembles the
 solar spectrum. Other scattered light yields a spectrum that reflects
-the light sourc: {\bf lamps}. The scattered light emission is
+the light source: \todo{lamps}. The scattered light emission is
 dependent on Moon phase and angle to the Moon (or to other sources)
 and is fairly smoothly varying in time and angle.
 
-Emission also originates from the atmosphere itself. {\bf
-describe}. In the optical and near-infrared, this emission is
+Emission also originates from the atmosphere itself. \todo{describe}
+In the optical and near-infrared, this emission is
 dominated by fluorescence due to excitation of atoms and molecules,
 known as {\it airglow}. Neutral oxygen has several important lines,
 and OH$^{-}$ exhibits a suite of rotation-vibrational modes. The
@@ -97,7 +97,7 @@ This coherence length sets the diffraction limit for ground-based
 telescopes. This means that optical observations are typically limited
 to $\sim$ 1 arcsec FWHM resolution, and that telescopes above a
 diameter of about 20 cm do not continue to benefit from better
-diffraction limits.  
+diffraction limits.
 
 Because the distortion of the wavefronts on larger scales than the
 telescope diameter varies over time, it contributes to image motion
@@ -105,6 +105,20 @@ over time; that is, the diffraction limited spot changes location. For
 long enough exposures this effect will also contribute to the
 effective resolution of the image. This effect is more severe the
 smaller the telescope.
+
+The shape of the atmospheric point spread function within a few times
+the FWHM can be predicted from a study of turbulence. The power
+spectrum of effect of Kolmogorov turbulence on the atmospheric
+wavefront can be translated into the PSF, as described
+by \citet{fried66a} and \citet{johnson73a}. The resulting shape of the
+PSF is well-approximated by a Moffat function:
+\begin{equation}
+I(\theta) = \frac{I_0}{\left[1 + \left(\theta /
+R\right)^2\right]^\beta}
+\end{equation}
+with $\beta \approx 4$. Beyond 5--10 FWHM, the profile flattens and is
+proportional to $\theta^{-2}$ called the {\it aureole}, whose source
+is unclear.
 
 Adaptive optics systems seek to mitigate the atmospheric diffraction
 effects by correcting the wavefront of the incoming light to make it
@@ -114,10 +128,6 @@ view, or artificial stars creating by using a laser to excite sodium
 atoms in a sodium-rich atmospheric layer about 90 km height, above
 most of the atmospheric turbulence. 
 
-\section{Commentary}
-
-We will discuss spectra later. 
-
 \section{Key References}
 
 \begin{itemize}
@@ -126,6 +136,8 @@ We will discuss spectra later.
       \citet{bely}
   \item
     {\it SkyCorr}
+  \item \citet{fried66a}
+  \item \citet{johnson73a}
 \end{itemize}
 
 \citet{gunn06a}
@@ -133,7 +145,11 @@ We will discuss spectra later.
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Brightness of sky vs objects.
+\item A typical specific intensity  for the sky continuum in the
+    optical is \todo{XXX}. Convert this to magnitudes per square
+    arcsecond. In 1 arcsec FWHM seeing, for a point source, at what
+    magnitude is there as much light within the FWHM from the sky as
+    from the source?
 \item Estimate of chromatic refraction 
 \item PSF FWHM vs wavelength
 \end{enumerate} 

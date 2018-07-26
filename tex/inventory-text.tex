@@ -33,6 +33,17 @@ be about 10 billion years old. Orbiting the Milky Way are about 150
 globular clusters, which are roughly spherical, very old, bound
 stellar systems.
 
+The Milky Way is filled with dust consisting of particles of up to a
+fraction of a micron in size. This dust reddens and extincts light
+passing through it. Using infrared satellite observations of 100
+$\mu$m emission from this cold dust, we have estimates of the amount
+of dust in front of any object outside of our galaxy. All
+extragalactic observations must be corrected for this effect. Near the
+Galactic Plane, the dust extinction is extremely high, causing the
+{\it Zone of Avoidance} for galaxy maps. The dust greatly hinders
+study of the Milky Way disk in the optical, making objects fainter and
+very difficult to correct.
+
 The galaxy exists within the deep potential well of a {\it dark
   matter} halo, which is only detectable today through its
 gravitational influence. The rotation velocity stays close to flat at
@@ -89,8 +100,8 @@ v^2 \sim \frac{GM}{R}
 \end{equation}
 for characteristic velocity $v$, mass $M$, and radius $R$. Stellar
 dynamics theory yields a {\it virial theorem}, which define more
-precisely what we mean by these characteristic quanties. This
-relationship can be quantified as $U = -2 K$, where $U$ is the total
+precisely what we mean by these characteristic quanties. The virial
+theorem can be quantified as $U = -2 K$, where $U$ is the total
 potential energy and $K$ is the total kinetic energy.
 
 As one looks at galaxies of greater and greater distance, one finds
@@ -200,7 +211,30 @@ another is very small. Even accounting for the fact that there
 $10^{10}$ in the Milky Way indicates that the total rate of encounters
 is of order unity per 10 billion years.
 \end{answer}
-\item Use dimensional analysis to show the virial relation.
+\item Use dimensional analysis to derive the virial relationship
+between size and mass in an equilibrium gravitating system.
+
+\begin{answer}
+A gravitating system has a characteristic radius $R$, mass $M$, and
+velocity $v$ of its orbiters.  Newton's laws introduce the constant
+$G$, with units m$^3$ kg$^{-1}$ s$^{-2}$. The relationship between the
+four relevant quantities can be expressed as:
+\begin{equation}
+v \propto G^\alpha M^\beta R^\gamma
+\end{equation}
+To match the mass, length, and time units respectively:
+\begin{eqnarray}
+0 &=& -\alpha + \beta \cr
+1 &=& 3\alpha + \gamma \cr
+- 1 &=& -2 \alpha
+\end{eqnarray}
+Therefore, $\alpha = 1/2$, and therefore $\gamma = - 1/2$ and
+$\beta=1/2$. If we square both sides of the relationship we find:
+\begin{equation}
+v^2 \propto \frac{G M}{R},
+\end{equation}
+which up to a factor of order unity is the virial relation. 
+\end{answer}
 \item Estimate the approximate dynamical mass interior to the Sun. 
 
 \begin{answer}
@@ -216,7 +250,7 @@ is of order unity per 10 billion years.
    {6.7 \times 10^{-11} {\rm ~m}^3 {\rm ~kg}^{-1} {\rm s}^{-2}} \cr
    &\sim& 2\times 10^{41} {\rm ~kg} \sim 10^{11} M_\odot 
   \end{eqnarray}
-  This is somewhat more than the total mass inferred in stars, the
+  This is only somewhat more than the total mass inferred in stars. The
   real evidence for  dark matter comes when you consider that the
   rotation curve remains constant (``flat'') to much larger radii,
   continuing to add to the discrepancy.
@@ -246,6 +280,11 @@ is of order unity per 10 billion years.
     estimate of the universe's age is correct to better than 5\%.
   \end{answer}
 \end{enumerate}   
+
+%\section{Numerical and Data Exercises}
+
+%\begin{enumerate}   
+%\end{enumerate}   
 
 \bibliographystyle{apj}
 \bibliography{exex}  

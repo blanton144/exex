@@ -24,23 +24,46 @@ Stellar structure and evolution models yield stellar parameters like
 luminosity and effective surface temperature of the population as a
 function of time. These results are usually expressed as a series of
 {\it isochrones} showing the position of stars in the population as a
-function of time. Uncertainties in these models arise particularly for
-post main sequence phases, such as thermally-pulsating asymptotic
-giant branch stars or the temperature distribution of the horizontal
-branch population.
+function of time. Uncertainties in these models arise. Even on the
+main sequence, three-dimensional effects on stellar evolution, such as
+convection, rotation, and stellar binarity, are at best approximately
+included in isochrone modeling.  Post main sequence phases suffer from
+this problem even more greatly. Mass-loss due to winds is uncertain
+and affects the final fate of the stars.  Modeling of
+thermally-pulsating asymptotic giant branch (TP-AGB) stars is very
+uncertain (partly due to winds but also modeling uncertainties and a
+paucity of individual stars for calibration). The TP-AGB stars cause
+particular uncertainty for NIR observations of intermediate age
+populations. The dependence of the temperatures of horizontal branch
+stars on stellar parameters is also uncertain (again likely due to
+winds).
 
-Stellar atmospheres and stellar libraries yield spectra as a function
-of these parameters. Again, the major uncertainties arise for rare
+Stellar atmosphere theory and stellar libraries yield spectra as a
+function of these parameters. The theoretical models can be computed
+for any stellar parameters in a uniform fashion, but do not always
+include all the relevant atomic and molecular lines, or correct
+consideration of microturbulent velocities, convection, departures
+from local thermodynamic equilibrium, or the spherical
+geometry. Empirical libraries, on the other hand, tend to be
+heterogeneous in their observational properties, suffer from
+spectrophotometric calibration issues, and sparsely cover the
+necessary space of temperature, surface gravity, metallicity, and
+abundance space.  Again, the major uncertainties arise for rare
 populations, and particularly post main sequence populations, but also
 metal poor and/or $\alpha$-rich populations.
 
-To produce a spectrum one assumes a star formation history and a
-chemical evolution history (sometimes using the post main sequence
-evolution in the models to self-consistently predict the chemical
-enrichment of the ISM). Each age and metallicity corresponds to a {\it
-  simple stellar population}.  The the resulting spectrum is just a
-sum of the simple stellar population models, over the distribution of
-ages and metallicities.
+A population with a single age and abundance is known as a {\it simple
+stellar population} (SSP). Its spectrum can be expressed as:
+\begin{equation}
+f(t, Z) \int_{m_{\rm low}}^{m_{\rm high}(t)} \dd M \Phi(M) f_{\rm
+star}(t, M, Z)
+\end{equation}
+We often need to model a more complicated star formation and chemical
+evolution history (sometimes using the post main sequence evolution in
+the models to self-consistently predict the chemical enrichment of the
+ISM). Any such history may be written as a sum of SSPs, and the
+resulting spectrum is the corresponding sum of the individual SSP
+spectra.
 
 In many galaxies, the effects of dust on the spectrum cannot be
 ignored. Dust is mixed into the interstellar medium gas and it
@@ -60,10 +83,15 @@ weaker (on time scales of a few 100 million years) and their 4000 \AA\
 break grows stronger (on about a billion year time scale).
 \item When they are red, their spectra are similar to $K$ stars, since
 they are dominated by $K$ giants; these spectra are
-metallicity-sensitive.
+metallicity-sensitive, but with a degeneracy with age.
 \item At early times, the populations have low mass to light ratios;
 as the stellar population ages, it fades and the mass to light ratio
 increases up to higher than solar values.
+\item Low mass stars contribute a large fraction of the mass but a
+small fraction of the light, which means that considerable mass can
+reside in old stellar populations (if there is a younger population to
+mask them) or in low mass stars in the IMF (if there are massive stars
+to mask them).
 \end{itemize}
 
 Stellar population synthesis methods are commonly used to infer
@@ -71,7 +99,13 @@ galactic star formation histories and other physical properties.
 In broad strokes, the galactic properties are parametrized, and then
 parameters are varied to fit some set of observable quantities. There
 is considerable variation among investigators as to the quantities
-used and the parametrizations. 
+used and the parametrizations.
+
+The {\it stellar mass} is almost always a quantity of interest. It is
+defined as the mass currently in stars and stellar remnants. Of the
+total mass in stars that have formed, only of order half the mass will
+remain as stars or remnants after a few billion years, and about a
+quarter of that is in the (extremely low luminosity) remnants.
 
 The most ambitious approaches attempt constraints on the full star
 formation history and fit to a detailed observed spectrum. A proper
@@ -87,8 +121,9 @@ attempt to mitigate observational uncertainties (without performing an
 explicit marginalization).
 
 The classic {\it Lick index} analysis technique, commonly used for
-elliptical galaxies, employs both approaches. Lick indices are a form
-of {\it equivalent width}. Equivalent widths measure:
+elliptical galaxies since the 1980s, employs both approaches. Lick
+indices are defined for 21 features between 4000--6500 \AA. They are a
+form of {\it equivalent width}. Equivalent widths measure:
 \begin{equation}
 {\rm EW} = \frac{f_{\rm feature}}{f_{\lambda, {\rm continuum}}},
 \end{equation}
@@ -116,28 +151,125 @@ indices specifically, the stellar observations were taken at
 relatively low resolution, which needs to be accounted for in studying
 low velocity dispersion galaxies and higher resolution spectra. 
 
-The Lick index analysis proceeds by measuring a set of indices
-associated with the Balmer absorption features (measuring the fraction
-of young stars), Fe features (which arise in a complex suite of
-lines), and Mg features (which are more distinct. The Balmer and Fe
+The Lick indices were chosen by hand for their sensitivity to specific
+atomic features. They are in the blue regime (between 4000 and 5300
+Angstroms), due to the technology available at the time of their
+original definition.  The Lick index analysis proceeds by measuring a
+set of indices associated with the Balmer absorption features
+(measuring the fraction of young stars), Fe features (which arise in a
+complex suite of lines), and the Mg $b$ feature. The Balmer and Fe
 features require some correction for emission line contamination. The
 indices are then compared to a simple stellar population model
 characterized by its age, metallicity, and $\alpha$-enhancement. Since
 galaxies do not have simple stellar populations, the resulting
 parameters at best express some weighted average of the underlying
-star formation history; in the case of the standard analysis, they are
-said to {\it light-weighted} estimates, which tend to weight the
-average towards younger ages.
+star formation history; in the case of the standard Lick analysis, the
+ages are always smaller than the mass-weighted age estimate.  Other
+uncertainties are known to affect the existing Lick analyses, to do
+with the stellar population modeling accuracy; most significantly, old
+stellar populations contain an uncertain number of blue horizontal
+branch stars, which confuse the interpretation of the Balmer
+absorption features.
+
+Between full spectral analysis and Lick index analysis lies a large
+space of possible analyses that has been explored by many
+investigators. Some important facts revealed by these analyses are as
+follows:
+\begin{itemize}
+\item Age and metallicity both have similar effects on spectral
+features, both broad band and for individual lines. Older ages lead to
+a greater dominance of the red giant branch, and thus redder colors
+and stronger absorption features. High metallicity leads to lower
+effective temperatures of stars, and also strong absorption at fixed
+temperature, both effects also producing redder colors and stronger
+absorption features.
+\item Stellar mass-to-light ratios depend to a surprising degree just
+on the color of the stellar population; greater age, greater
+metallicity, and greater dust all affect the broad band flux by making
+it redder and fainter (relative to mass), in similar proportions to
+each other.
+\item A definition $D_n(4000)$ for the 4000 \AA break is informative
+as to stellar population age (though it carries metallicity dependence
+as well).  
+\end{itemize}
+
+Beyond metallicity, stellar population analyses can be sensitive to
+individual abundances as well. Most commonly, these are expressed in
+term of [$\alpha$/Fe], the $\alpha$-element abundance relative to
+iron. In contrast to observations of the interstellar medium, typical
+observations of stellar populations are most sensitive to Mg rather
+than the more abundant oxygen, due to the lack of atomic oxygen lines
+in stars in the optical. In the Milky Way, it is known that oxygen and
+magnesium do not, however, always vary together, so Mg as a proxy for
+other $\alpha$ elements is not perfect. 
+
+A special case for the use of stellar populations is the inference of
+recent star formation, as directly traced by O and B
+stars. Ultraviolet emission can be used to trace the star formation
+rate, preferably far UV ($\sim$ 1500 \AA), though near near UV ($\sim$
+2500 \AA) or even $u$-band is occasionally used. Such measures need to
+be dust-corrected. In the UV, this is often done using the FUV to NUV
+ratio (since in principle this ratio is fixed for hot stars). If
+optical imaging is available, one can estimate reddening using stellar
+population analysis of the optical bands. If infrared imaging is
+available, the IR flux directly traces the extincted light, modulo the
+geometric anisotropy of the UV extinction. In this last case, a
+weighted sum of the UV and infrared luminosity can yield a reliable
+star formation rate estimate. The mid-IR is thought to be more
+reliable in this regard, since the colder dust in the far-IR can be
+heater by old stellar populations.
+
+With spectra, star formation averaged over longer time scales is
+possible. For example, star formation over a few hundred million year
+time scales is traced by the Balmer lines.  A very special cases
+arises for K$+$A, sometimes called E$+$A, or post-starburst,
+galaxies. Such galaxies show few traces of star formation on million
+year time scales (as traced usually by H$\alpha$ interstellar
+emission), but do show strong star formation on a few hundred million
+year timescales (as traced by Balmer absorption). These galaxies
+likely experienced a large burst of star formation a few hundred
+million years ago, which is now over.
+
+Interpretation of star formation rates, especially but not only at low
+values, requires care.  Old stellar populations do emit some UV light,
+depending on their population of horizontal branch stars; in practice,
+measuring specific star formation rates below about $10^{-11}$
+yr$^{-1}$ is not possible.  Both ultraviolet and near-infrared
+emission can be powered by AGN as well, which near the centers of
+galaxies can be a confusing factor as well.
+
+There are a handful of cases for which stellar population histories
+can be derived directly from resolved stellar populations. Stellar
+clusters in the Milky Way are one case. To a certain extent, the
+population of stars with parallaxes in the Milky Way can also be used
+in this way. Some nearby galaxies (M31, M33, and others) have resolved
+stellar populations from space, and these cases can be studied from
+the isochrones. Since they also have broad band and spectroscopic
+measurements similar to more distant galaxies, they can provide a
+calibration between the two approaches.
 
 \section{Commentary}
 
-In principle, to do so precisely requires marginalization over all of
-the uncertain parameters that characterize the stellar population
-modeling. This margin
+In principle, stellar population analysis requires marginalization
+over all of the uncertain parameters that characterize the stellar
+population modeling. These uncertainties are:
+\begin{itemize}
+\item Stellar IMF
+\item TP-AGB phases
+\item Blue stragglers
+\item Extreme horizontal branch stars
+\item Effects of convection on evolution
+\item Mass-loss through winds
+\item Effects of binarity on evolution
+\item Stellar atmospheres models \& libraries
+\item Dust and dust geometry
+\end{itemize}
 
 \section{Key References}
 
 \begin{itemize}
+  \item
+    {\it Worthey}
   \item
     {\it Conroy}
   \item
@@ -159,28 +291,29 @@ modeling. This margin
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Argue why higher mass stars produce more of their energy through
-    the CNO cycle than lower mass stars do.
-\item Detailed stellar evolution calculations predict a main sequence
-    lifetime for the Sun of 10 billion years. What fraction of the
-    total hydrogen in the Sun needs to be converted to helium to
-    provide this lifetime?
+\item Estimate the ratio between star formation rate and FUV flux. 
+\item Estimate the difference in mass-to-light ratio between a 10
+    million year old and 10 billion year old stellar population.
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Under Salpeter, calculate luminosity as a function of time
+\item Under Salpeter, calculate luminosity as a function of time.
+\item What is difference between mass-to-light in Salpeter vs IMF.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item HR diagram for an open cluster
-\item HR diagram for a globular cluster 
-\item HR diagram locally
-\item Compare K spectrum to E spectrum
-\item Compare O/B spectrum to blue galaxy
+\item Create spectrum at different times, metallicities, etc.
+\item M/L ratio and color vs. band and age
+\item Reproduce Lick analysis
+\item DN4000
+\item Age-metallicity
+\item Star formation rates
+\item UV emission in ellipticals
+\item Maximal disk
 \end{enumerate}
 
 \bibliographystyle{apj}

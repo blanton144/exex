@@ -1,0 +1,338 @@
+\title{\bf Chemical Evolution}
+
+\section{Basics}
+
+Chemical evolution models attempt to track the metallicity (or in the
+more general case, abundance) enrichment over time. They rely on
+nucleosynthetic yield predictions and in some cases inflow, outflow,
+and mixing scenarios. In the most sophisticated cases, they are
+incorporated into full hydrodynamic models for galaxy
+formation. However, the simplest forms of chemical evolution models
+can also be edifying.
+
+\subsection{One-zone model}
+
+The simplest version of chemical evolution is a {\it one-zone} model
+of metal enrichment. Start with a mass $M_g$ in gas and form stars at
+a rate $\dot{M_\ast}$. Define $m_Z$ as the {\it yield}; the mass in
+metals created for each mass of star formation. Define the {\it
+recycling rate} $r$ where $r\sim 0.5$, the fraction of gas that is
+returned to the ISM. Define $M_\ast$ as the actual mass of stars
+(accounting for the fact that some of the mass gets recycled).  Define
+$M_Z$ as the mass in metals in the gas.  Now you assume instantaneous
+and well-mixed recycling inside the one zone in the model, and that no
+gas or stars enter or leave your zone (this last approximation is what
+is meant by {\it closed box}).
+
+Then the changes of these variables over some time ${\rm d}t$ are:
+\begin{eqnarray}
+{\rm d}M_\ast &=& (1-r) \dot{M_\ast} {\rm d}t \cr
+{\rm d}M_g &=& - {\rm d}M_\ast = (1-r) \dot{M_\ast} {\rm d}t \cr
+{\rm d}M_Z &=& m_Z \dot{M_\ast} {\rm d}t - Z {\rm d}M_\ast \cr
+&=& \left(\frac{m_Z}{1-r} - Z\right) {\rm d}M_\ast
+\end{eqnarray}
+We can show from these equations that
+\begin{equation}
+\label{eq:closedz}
+Z(t) = - \frac{m_Z}{1-r} \ln f_{\rm gas}.
+\end{equation}
+$m_Z$ is typically known as the {\it net yield},
+and is the metals produced per unit of stars formed. The more common
+quoted quantity is the {\it absolute yield}:
+\begin{equation}
+p = \frac{m_Z}{1-r}
+\end{equation}
+which is the metals produced per unit star/stellar remnant mass.
+Finally, the quantity:
+\begin{equation}
+y = -\frac{Z(t)}{\ln f_{\rm gas}}
+\end{equation}
+is actually an observable, sometimes known as the {\it effective
+yield}. It is equal to the yield in the closed box case. 
+
+The gas is increasing in metallicity monotonically, so the metallicity
+and time map to each other.  This means we can determine the fraction
+of stars of a particular metallicity as:
+\begin{equation}
+M_\ast(<Z(t)) = M_\ast(t) = M_g(0) - M_g(t) = M_g(0)
+\left[1-\exp\left(-Z(t)/p\right)\right]
+\end{equation}
+We can show that as $f_g \rightarrow 0$, the mean metallicity of the
+stars $\langle Z\rangle\rightarrow p$.
+
+You can also calculate the fraction of stars with some
+factor $\alpha$ fewer metals than the current gas:  
+\begin{equation}
+  \frac{M_\ast(<\alpha Z)}{M_\ast(< Z)}=
+  \frac{1- \exp(-\alpha Z/p)} {1- \exp(-Z/p)} =
+  \frac{1-f_g^{\alpha}}{1-f_g}
+\end{equation}
+For $\alpha \sim 0.3$ and (appropriate to the solar radius) $f_g \sim
+0.1$, this fraction is 50\%. So you expect {\it many} low metallicity
+stars in the solar neighborhood with a closed box model. However, in
+reality the number of low metallicity stars is rather small --- the
+metallicity distribution is quite narrow. Because this was determined
+early from metallicity distributions of G dwarfs, this issue is known
+as the {\it G-dwarf problem}.  There are numerous potential solutions
+to this problem, which involve breaking the closed box assumption of
+course.
+
+We can consider the differential distribution:
+\begin{equation}
+\frac{{\rm d}F}{{\rm d}\log\alpha Z} = \alpha \ln 10 \frac{-
+ f_g^{\alpha -1 }}{1-f_g}
+\end{equation}
+
+\subsection{Extreme infall one-zone model}
+
+Another interesting case can be easily done analytically, one in which
+inflowing primordial abundance gas exactly replaces the gas lost due
+to star formation. The set of relevant equations is:
+\begin{eqnarray}
+{\rm d}M_\ast &=& (1-r) \dot{M_\ast} {\rm d}t \cr
+{\rm d}M_g &=& 0 \cr
+{\rm d}M_Z &=& m_Z \dot{M_\ast} {\rm d}t - Z {\rm d}M_\ast \cr
+&=& \left(\frac{m_Z}{1-r} - Z\right) {\rm d}M_\ast
+\end{eqnarray}
+In this case, the metallicity of the gas  approaches the absolute
+yield $p$. The mean metallicity of the stars will remain below the
+metallicity of the gas but also approach the yield $p$.      
+
+We can calculate the metallicity distribution of the stars at a given
+time $t$:
+\begin{equation}
+  F=  \frac{M_\ast(<\alpha Z(t))}{M_\ast(<Z(t))}
+  = -\frac{M_g}{M_\ast} \ln\left[1- \alpha (1- \exp\left(-M_\ast /
+    M_g)\right) \right]
+\end{equation}
+Taken the logarithmic derivative we find:
+\begin{equation}
+  \frac{{\rm d}F}{{\rm d} \log\alpha Z}
+  = \alpha \ln(10) \frac{1}{s} \frac{1-\exp(-s)}{1-
+      \alpha\left(1-\exp(-s)\right) }
+\end{equation}
+where $s = M_\ast/M_g$. As $s$ increases, we see the distribution
+become extremely peaked at the maximum metallicity.
+
+This case is a pretty extreme. We expect over time for the inflowing
+gas to be declining.  But it shows how a constant inflow of {\it
+pristine} gas can generate a very peaked distribution in stellar
+metallicity, more similar to what is observed locally.
+
+\subsection{Outflows}
+
+Another basic process is outflow. Outflows have been observed through
+absorption studies, wherein metals in the outflowing gas absorb and
+yield clear indicators of the outflow. Outflows can be characterized
+by a {\it mass-loading parameter} $\eta$ as the ratio of the outflow
+rate to the increase in stellar mass.
+
+If the outflowing gas has the current mean gas metallicity then we can
+show:
+\begin{equation}
+Z(t) = - \frac{1}{1+\eta} \frac{m_Z}{1-r} \ln f_{\rm gas}
+\end{equation}
+This case thus behaves like a closed box but with a lower effective
+yield.
+
+The outflows actually can be metal-enhanced, since much of the metals
+are produced by or near the same stars and supernovae that are
+producing the wind. This enhancement will reduce the amount of outflow
+necessary to reach a particular effective yield.
+
+\subsection{More realistic models}
+
+These illustrative models are not realistic enough to compare with
+real data, or to extract the full set of information available in the
+observations. Multizone models are necessary because we now recognize
+radial migration of stars and winds of gas which may fall back down
+onto the galaxy, mixing the enrichment within a single
+galaxy. Obviously more realistic models of infall and outflow are
+necessary. These two issues are in principle most realistically
+addressed in the context of a full hydrodynamic simulations.
+
+Non-instantaneous recycling is an important issue, most notably
+because of the differing delays between the $\alpha$-rich enrichment
+of core-collapse supernovae and the iron-peak-rich  enrichment of Type
+Ia supernovae. The core collapse supernovae occur within a few million
+years, but the Type Ia supernovae are spread out over a broad delay
+period. 
+
+{\bf discuss Weinberg results}
+
+\subsection{Typical yield values}
+
+\subsection{Observational results}
+
+{\bf mass-metallicity, effective yield}
+
+{\bf alpha and ellipticals}
+
+{\bf within MW}
+
+%\section{Important numbers}
+
+\section{Key References}
+
+\begin{itemize}
+  \item Weinberg paper
+  \item Pagel
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item The overall metallicity of baryons in the universe is
+ about $Z=0.01$.  What does that imply for the total production of
+ stars?
+\end{enumerate}   
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Prove Equation (\ref{eq:closedz}), the gas metallicity as a
+  function of time for the closed box model, for constant net yield
+  $m_Z$ and recycling rate $r$.
+
+\begin{answer}
+The change in $Z$ is:
+\begin{eqnarray}
+  {\rm d}Z &=& {\rm d}\left(\frac{M_Z}{M_g}\right) =
+  \frac{1}{M_g} {\rm d}M_Z - \frac{M_Z}{M_g^2} {\rm d}M_g \cr
+&=& \frac{1}{M_g} \left(\frac{m_Z}{1-r}  - Z {\rm d}M_\ast -
+  \frac{M_Z}{M_g} {\rm d}M_g\right) \cr
+&=& \frac{1}{M_g} \left(\frac{m_Z}{1-r} {\rm d}M_\ast - Z {\rm d}M_\ast -
+  \frac{M_Z}{M_g} {\rm d}M_g\right) \cr
+&=& - \frac{{\rm d}M_g}{M_g} \left(\frac{m_Z}{1-r}\right)
+\end{eqnarray}
+For constant $m_Z$ and $r$, and if the gas starts out with $Z=0$,
+then:
+\begin{equation}
+Z(t) = - \frac{m_Z}{1-r} \ln\left(\frac{M_g(t)}{M_g(t=0)}\right)
+\end{equation}
+Since no gas is added or subtracted this can be written as:
+\begin{equation}
+Z(t) = - \frac{m_Z}{1-r} \ln f_{\rm gas}
+\end{equation}
+\end{answer}
+
+\item Show that for the closed box model, 
+the mean metallicity of the stars $\langle Z\rangle$ approaches the
+effectve yield $p$.
+
+\begin{answer}
+We write:
+\begin{eqnarray}
+  \langle Z\rangle &=&
+  \frac{1}{M_\ast} \int_0^{M_\ast} {\rm d}M_\ast' Z(M_\ast') \cr
+&=&
+  \frac{1}{M_\ast} \int_0^{M_\ast} {\rm d}M_\ast' 
+  \frac{m_Z}{1-r} \ln \left[\frac{M_\ast'+ M_g}{M_g}\right] 
+\end{eqnarray}
+We can replace ${\rm d}M_\ast'$ with $-{\rm d}M_g = - {\rm d}f_g
+(M_\ast + M_g)$ and find:
+\begin{eqnarray}
+  \langle Z\rangle
+  &=&
+  \frac{M_\ast + M_g}{M_\ast} \int_1^{f_g} {\rm d}f_g'
+  \frac{m_Z}{1-r} \ln f_g \cr
+  &=&
+  \frac{M_\ast + M_g}{M_\ast}
+  \frac{m_Z}{1-r}
+  \left[
+    f_g' \ln f_g' - f_g'
+    \right]_1^{f_g} \cr
+  &=&
+  \frac{1}{1-f_g}
+  \frac{m_Z}{1-r}
+  \left[
+    f_g \ln f_g - f_g + 1
+    \right] \cr
+  &=&
+  \frac{m_Z}{1-r}
+  \left[
+    1 + \frac{f_g \ln f_g}{1-f_g}
+    \right]
+\end{eqnarray}
+As $f_g\rightarrow 0$, $\langle Z\rangle \rightarrow p$. So the mean
+metallicity of the stars becomes just the absolute yield.
+\end{answer}
+
+\item Show that for the extreme infall model, the gas metallicity and
+the mean stellar metallicity approach the absolute yield.
+
+\begin{answer}
+The change in $Z$ is:
+\begin{eqnarray}
+  {\rm d}Z &=& {\rm d}\left(\frac{M_Z}{M_g}\right) =
+  \frac{1}{M_g} {\rm d}M_Z \cr
+  &=& \frac{1}{M_g} \left(\frac{m_Z}{1-r} - Z\right) {\rm d}M_\ast \cr
+  \frac{{\rm d}Z}{{\rm d}M_\ast} &=&
+  \frac{1}{M_g} \left(\frac{m_Z}{1-r} - Z\right) 
+\end{eqnarray}
+If the initial $Z$ is zero, this is solved by:
+\begin{equation}
+Z = \frac{m_Z}{1-r} \left[1 - \exp(-M_\ast/ M_g)\right]
+\end{equation}
+because
+\begin{eqnarray}
+  \frac{{\rm d}Z}{{\rm d}M_\ast} &=&
+  \frac{1}{M_g} \frac{m_Z}{1-r} \exp(-M_\ast/ M_g) \cr
+  &=&
+  \frac{1}{M_g} \frac{m_Z}{1-r} \exp(-M_\ast/ M_g) - \frac{Z}{M_g} +
+  \frac{1}{M_g} \frac{m_Z}{1-r} \left[1 - \exp(-M_\ast/ M_g)\right]\cr
+  &=&
+  \frac{1}{M_g} \frac{m_Z}{1-r} 
+  - \frac{Z}{M_g} = \frac{1}{M_g} \left(\frac{m_Z}{1-r} - Z\right) 
+\end{eqnarray}
+So the gas metallicity approaches the yield.
+
+The mean metallicity of the stars will be below this. We can calculate
+it as:
+\begin{eqnarray}
+  \frac{\langle Z\rangle}{p} &=& \frac{1}{M_\ast} \int_0^{M_\ast}
+       {\rm d}M_\ast' \left[ 1 - \exp(-M_\ast' / M_g) \right] \cr
+       &=& \frac{1}{M_\ast} \left[M_\ast' + M_g
+         \exp(-M_\ast'/M_g\right]_0^{M_\ast} \cr
+       &=& \frac{1}{M_\ast} \left[ M_\ast + \exp(-M_\ast/M_g) -
+         M_g\right] \cr
+       &=& 1 + \frac{M_g}{M_\ast} \left[\exp(-M_\ast/M_g) - 1\right]
+\end{eqnarray}
+At small $M_\ast/M_g$ this tends towards 0, as it should. At large
+$M_\ast/M_g$ it tends toward unity, approaching it from below.
+\end{answer}
+
+\item For the unenriched outflow case, show that the gas metallicity
+increases in the same manner as for a closed box but with a lower
+effective yield.
+
+\begin{answer}
+We can write:
+\begin{eqnarray}
+{\rm d}M_\ast &=& (1-r) \dot{M_\ast} {\rm d}t \cr
+{\rm d}M_g &=& - {\rm d}M_\ast - \eta {\rm d}M_\ast \cr
+{\rm d}M_Z &=& m_Z \dot{M_\ast} {\rm d}t - Z {\rm d}M_\ast - Z \eta
+{\rm d}M_\ast
+\cr
+&=& \left(\frac{m_Z}{1-r} - (1+\eta) Z\right) {\rm d}M_\ast
+\end{eqnarray}
+In this case I get to just replace $Z \rightarrow (1+\eta) Z$ in the
+solutions for the simple closed box:
+\begin{eqnarray}
+(1+\eta) Z(t) &=& - \frac{m_Z}{1-r} \ln f_{\rm gas} \cr
+Z(t) &=& - \frac{1}{1+\eta} \frac{m_Z}{1-r} \ln f_{\rm gas}
+\end{eqnarray}
+This means this case behaves just like a closed box, except with a
+lower effective yield. 
+\end{answer}
+
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Mass-metallicity in SDSS
+\item Effective yield in SDSS
+\item Model alpha enrichment vs duration of SF
+\end{enumerate}
+

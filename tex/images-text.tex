@@ -224,17 +224,20 @@ accounted for for percent level calibration accuracy.
 
 \begin{enumerate}
 \item {\it Interpolation}. Create an image of a critically sampled
-    Gaussian PSF. Create another image of the same PSF, but with an
-    offset that is some fraction of a pixel. We will test how well
-    different types of interpolation work by trying to generate the
-    offset by interpolating the first image and comparing it to the
-    second image.
-    \begin{enumerate}
-     \item Test linear interpolation. 
-     \item Test sinc interpolation.
-     \item Test a ``damped'' version sinc interpolation, which
-    multiplies the kernel by a broad Gaussian.
-    \end{enumerate}
+    Gaussian PSF centered at the middle of a pixel. Create another
+    image of the same PSF, but with its center offset some fraction of
+    a pixel from the first case. We will test how well different types
+    of interpolation work by trying to shift the first image using
+    interpolation and comparing it to the second image.
+\begin{enumerate}
+\item First, use linear interpolation to generate the shifted
+    image. Compare the absolute and fractional differences between
+    first image shifted and the second image.
+
+\item
+    Test sinc interpolation.  \item Test a ``damped'' version sinc
+    interpolation, which multiplies the kernel by a broad
+    Gaussian.  \end{enumerate}
 \item SDSS Calibration model
 \item WCS headers
 \item Centroiding method

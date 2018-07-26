@@ -8,7 +8,9 @@
 
 \newif\ifanswers
 
-\NewEnviron{answer}{\ifanswers\color{blue}\expandafter\BODY\fi}
+\NewEnviron{answer}[1][]{\ifanswers\color{blue}\expandafter\BODY
+{\it #1}\fi}
+
 \DeclareMathOperator\erf{erf}
 
 \newenvironment{ditemize}

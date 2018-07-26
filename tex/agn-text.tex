@@ -1,0 +1,271 @@
+\title{\bf Active Galactic Nuclei \& Quasars}
+
+\section{Basics}
+
+Every massive galaxy contains supermassive black hole ($M> 10^5$
+$M_\odot$) at its center. In cases that gas is accreting onto the
+black hole, these can emit copious luminosity and are referred to as
+{\it active galactic nuclei}. Their total luminosities can be from
+$10^{40}$ to $10^{47}$ erg s$^{-1}$, in the brighter cases outshining
+the rest of the galaxy. An accretion disk a few hundred Schwarschild
+radii in size emits a thermal {\it continuum} in the UV and optical,
+as well as in the X-rays. The accretion can power an outflowing {\it
+  jet} visible in synchroton in the radio. Surrounding the accretion
+disk is a {\it broad line region} a few pc in size, consisting of
+dense clouds ($n>10^4$ cm$^{-3}$); the Doppler broadening of these
+clouds orbiting the center of the galaxy is 1000s of km
+s$^{-1}$. Outside that region is a {\it narrow line region} a few
+hundred pc in size, also consisting of clouds but of lower density,
+and with a Doppler broadening of 100s of km s$^{-1}$. In between is a
+dusty region, possibly toroidal in shape, but in any case causing some
+the broad line region to be heavily extincted along at least some
+lines of sight. This picture, known as the {\it unification model} is
+designed to explain the various observational classes of active
+galactic nuclei, as explained below.
+
+There is an array of nomenclature associated with quasars. Below
+luminosities of around $10^{44}$ erg s$^{-1}$ they are known as {\it
+  Seyfert galaxies}. If broad line emission is visible, they are known
+as {\it Type 1}, and if it is not they are known as {\it Type 2};
+there are also intermediate types occasionally defined. Depending on
+their radio flux, Seyfers and quasars can be {\it radio-loud} or not.
+
+\subsection{Black hole accretion}
+
+Active galactic nuclei are powered by accretion. Matter accreting
+loses energy (and necessarily angular momentum) through some form of
+viscosity. This orbital energy loss heats the gas and the energy is
+emitted radiatively. This process can proceed until the material
+reaches the innermost stable circular orbit, at $3r_S$, at which point
+the material does not need to lose energy to fall directly into the
+black hole. We quantify the efficiency of this process as a fraction
+$\epsilon$ of the rest mass energy ($mc^2$). The luminosity of the
+active galactic nucleus is then $\epsilon \dot M$, if $\dot M$ is the
+mass accretion rate. As shown in the exercises, the maximum efficiency
+of this process for a non-spinning black hole is about $\epsilon \sim
+0.06$; it may be up to about 0.29 for a spinning black hole.
+
+Regardless of the mass accretion rate, the luminosity is limited by
+the fact that if the luminosity is too high, outward radiation
+pressure on the surrounding material will prevent inward flow due to
+gravitational accelerations. The exercises derive this {\it Eddington
+  limit}:
+\begin{equation}
+L_{\rm Edd} = \frac{4\pi G c m_p}{\sigma_T} \approx 1.26 \times
+10^{38} \left(\frac{M_{\rm BH}}{M_\odot}\right) \mathrm{~erg~s}^{-1}
+\end{equation}
+This limit implies that to reach $L\sim 10^{44}$ erg s$^{-1}$ requires
+a black hole with a mass at least $10^6$ $m_\odot$. Although this
+limit only strictly applies in spherical symmetry, estimates of black
+hole masses imply luminosities of $0.01$--$0.1 L_{\rm Edd}$. Sometimes
+the Eddington limit is expressed as a mass accretion limit assuming
+some $\epsilon$, but of course for low $\epsilon$ the mass accretion
+is not prevented from being very high.
+
+If accreting gas has angular momentum, it will naturally form a disk
+of gas. The gas will experience viscosity. If the disk is Keplerian,
+this viscosity will naturally transport angular moment outward. The
+loss of angular momentum and the conversion of energy to heat allows
+the accretion. If the disk is optically thick, and geometrically thin,
+it can be shown that the temperature profile will be:
+\begin{equation}
+  T(r) = \left(\frac{3 c^6}{64\pi G^2 \sigma_{SB}}\right)^{1/4}
+    \left(\frac{r}{r_S}\right)^{-3/4} {\dot m}^{1/4} M^{-1/2}
+\end{equation}
+The global resulting spectrum is the sum of the blackbody spectrum
+from all the radii. Generally, the spectrum will be hotter for lower
+mass black holes, or for more rapidly accreting black holes.
+
+However, a thin disk is not the only conceivable outcome for the
+accretion. An alternative possibility is that the disk (or some part
+of it) does not efficiently radiate the energy dissipated, in which
+case the disk can thicken. The resulting {\it advection dominated
+  accretion flow} transports the thermal energy produced directly into
+the black hole through accretion, and thus is less efficient at
+turning gravitational energy into radiation. Theoretical models favor
+the creation of jets in this scenario, collimated by the inner edge of
+the thick disk formed. 
+
+X-rays arise from the accretion disk. In AGN, the thermal continuum
+only provides substantial X-rays in the soft regime ($<2$ keV). The
+higher energy X-rays are thought to arise from a coronal layer
+surrounding a thin accretion disk, similar to the solar corona. This
+hot corona can in principle be as hot as the virial
+temperature. Through inverse Compton scattering, it converts the disk
+continuum radiation into hard X-rays, extending in a power law
+spectrum $f_\nu \propto \nu^{-2}$ up to 100 keV.
+
+\subsection{Jet}
+
+In many systems, the accretion drives a jet of ionized gas outwards,
+in some cases hundreds of kpc in length.  The jets often end in lobed
+structures.  This jet is visible in the radio through synchrotron
+radiation with a power law spectrum. The radiating electrons are
+highly relativistic. The synchrotron radiation can be visible at
+higher frequencies, up through the optical. X-ray emission can be
+visible as well, which may be related to synchrotron processes as
+well. The radio spectra have a variety of shapes depending on the
+level of self-absorption.
+
+The jets are typically moving at a high fraction of the speed of
+light, based on observed motions of features in the jets when resolved
+in the radio and optical. This causes the radiation to be beamed
+strongly along the jet axis; this effect on the surface brightness
+causes the jet toward us to be detectable more often than the jet away
+from us.
+
+The beaming can cause the inferred luminosity of the source to be
+extremely high if it is observed along the beam. This phenomenon is
+known as a {\it blazar}. The beamed synchrotron emission can overwhelm
+the ultraviolet-optical line and continuum emission, resulting in a
+pure power law continuum in the optical. This phenomenon is referred
+to as a {\it BL Lac} after the archetypal case. These sources are
+typically highly variable. If some line emission remains, the galaxy
+is known as an {\it optically violent variable (OVV)} star.
+
+\subsection{Broad line region}
+
+Many quasars and AGN exhibit broad emission lines {\bf what fraction}
+with Doppler widths of order $10^4$ km s$^{-1}$. These velocities
+imply a distance of a few hundred Schwarzschild radii from the central
+black hole, which translates into {\bf what} for a $10^8$ $M_\odot$
+black hole. Forbidden lines are not seen in these regions, which
+implies a high electron density, and from the presence of
+semiforbidden lines we infer $n_e \sim 10^{10}$ cm$^{-3}$. The
+ionization stages present imply temperatures of $2\times 10^4$ K. With
+the density, temperature, and volume implied by these numbers, total
+emission from the gas then can be used to infer the filling factor,
+which is at the very most $f\sim 0.1$. From the total actual
+luminosity compared to the ionizing continuum flux, it can be inferred
+that the solid angle covered by the clouds is about 10\%. These
+considerations lead to the picture of the broad line region as a large
+number of dense clouds surrounding the central black hole and its
+accretion disk.
+
+\subsection{Narrow line region}
+
+Essentially all quasars and AGN exhibit narrow optical emission lines,
+with widths of hundreds of km s$^{-1}$, indicating a region of a few
+hundred pc. The narrow line region can be resolved in many cases, and
+often has a biconical shape. The emitting lines include forbidden
+lines, with line ratios indicating densities of $n\sim 10^4$ cm$^{-3}$
+and temperatures of around 15,000 K. Like the broad line region, the
+filling factor can be shown to be low ($\sim 0.01$) by comparing the
+density, temperature, and volume to the total emission.
+
+Narrow forbidden lines are also excited in gas ionized by
+star-formation, hot evolved stars, and (more rarely) shocks. Emission
+line ratios can be used to distinguish the nature of the ionization
+source. The classic set of ratios are those published by Baldwin,
+Phillips, \& Terlevich (BPT), the most commonly used of which is
+considering [NII]/H$\alpha$ versus [OIII]/H$\beta$. The choices of
+emission line ratios are partly motivated by the desire to combine
+lines near the same wavelength, whose spectrophotometric and internal
+reddening correction errors will partly or mostly cancel. Seyfert
+galaxies have relatively high [NII]/H$\alpha$ and very high
+[OIII]/H$\beta$. As shown in the exercises, the [OIII]/H$\beta$ ratio
+is a good indicator of the ionization parameter.
+
+A separate class of galaxies in the BPT diagram are low ionization
+galaxies, sometimes called LINERs, which have high [NII]/H$\alpha$ but
+lower [OIII]/H$\beta$. Although some of these galaxies have active
+galactic nuclei, their emission is considerably more extended than
+that of the Seyferts and appears inconsistent with being ionized by a
+central source. 
+
+\subsection{Dusty torus}
+
+Many galaxies exhibit narrow line AGN emission but no broad line or
+continuum emission in the optical and ultraviolet. However, the narrow
+line region must be ionized by some continuum. Furthermore, some
+galaxies have strong nuclear infrared emission. We believe that in
+these cases, the broad line and continuum regions are obscured by dust
+along our line of sight, which is in some anisotropic distribution
+such that along other lines of sight they would be visible. Usually
+this is described as a torus, but that specific geometry isn't
+necessary. To explain the observations, the dusty region should be
+larger that the broad line region, but smaller than the narrow line
+region. The most direct evidence for this hypothesis is the
+observation of broad lines in the polarization spectrum of narrow line
+AGN. The broad line region light is being scattered and polarized by
+gas in the narrow line region. These observations demonstrate that the
+dusty region does not obscure in all directions.
+
+\subsection{Variability}
+
+Quasars and active galactic nuclei are variable on time scales of a
+few weeks and above. Typically, the variability is anticorrelated with
+luminosity, with larger amplitude variability for less luminous
+objects. The variability in the continuum, which is likely due to
+accretion disk activity, typically occurs on shorter time scales for
+higher wavelengths, likely reflecting the dynamical time scale of the
+location of the emission.  The line emission variability can be shown
+to lag the continuum, and the delay can be used to determine the
+radius of emission of the lines, and combined with their Doppler
+shifts, an estimate of the black hole mass; this technique is known as
+{\it reverberation mapping}. Occasionally even on a year-to-decade
+time scale active galactic nuclei and quasars have been known to turn
+off rapidly; the continuum and broad line emission disappears, but the
+narrow line emission (which extends for hundreds of lightyears)
+remains. This phenomenon is known as {\it changing look}.
+
+From the demographics and clustering of optically-bright quasars it is
+known that they are not in that state all of the time. From these
+considerations, {\it duty cycle} of quasars is estimated to be about
+{\bf 10 percent??}. Thus over long time scales (likely tens of
+millions of years) all quasars must turn on and off.
+
+\subsection{Luminosity function and evolution}
+
+
+
+\section{Commentary}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    {\it Netzer}
+  \item
+    {\it AGN Book}
+\end{itemize}
+
+\citet{gunn06a}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Compare maximum efficiency to stellar
+\item Estimate efficiency of accretion
+\item Estimate hottest gas in continuum
+\item What is virial tempereature near disk
+\item Doppler velocities to sizes
+\item Critical density of CIII] and OIII
+\item Estimate filling factor of BLR, NLR
+\item Estimate duty cycle
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Eddington luminosity
+\item Temperature profile of accretion disk
+\item Relationship between energy distribution and synchrotron
+\item Superluminal motion
+\item Relativistic Beaming
+\item Polarization
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Quasar SEDs
+\item Quasar variability
+\item Densities from line ratios
+\item Temperatures from line ratios
+\item OIII/Hbeta and ionization parameter
+\item resolved spectroscopy of AGN
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  
