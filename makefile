@@ -4,6 +4,7 @@ TEXDIR= tex
 vpath %.tex $(TEXDIR)
 
 ALL= \
+	$(PDFDIR)/syllabus.pdf \
 	$(PDFDIR)/toc.pdf \
 	$(PDFDIR)/intro.pdf \
 	$(PDFDIR)/agn.pdf \
@@ -53,14 +54,14 @@ ALL= \
 	$(PDFDIR)/light-2.pdf \
 	$(PDFDIR)/light-2-answers.pdf
 
-$(PDFDIR)/%.pdf $(PDFDIR)/%-answers.pdf: $(TEXDIR)/%.tex \
+$(PDFDIR)/%.pdf $(PDFDIR)/%-answers.pdf: $(TEXDIR)/%.tex $(TEXDIR)/exex.bib \
 	$(TEXDIR)/%-text.tex $(TEXDIR)/%-answers.tex $(TEXDIR)/exex_defs.tex
 	cd $(TEXDIR); pdflatex $(*F); bibtex $(*F); pdflatex $(*F); pdflatex $(*F)
 	cd $(TEXDIR); pdflatex $(*F)-answers; bibtex $(*F)-answers; pdflatex $(*F)-answers; pdflatex $(*F)-answers
 	mv $(TEXDIR)/$(*F).pdf $(PDFDIR)
 	mv $(TEXDIR)/$(*F)-answers.pdf $(PDFDIR)
 
-$(PDFDIR)/%.pdf: $(TEXDIR)/%.tex
+$(PDFDIR)/%.pdf: $(TEXDIR)/%.tex $(TEXDIR)/exex.bib 
 	cd $(TEXDIR); pdflatex $(*F); bibtex $(*F); pdflatex $(*F); pdflatex $(*F)
 	mv $(TEXDIR)/$(*F).pdf $(PDFDIR)
 

@@ -21,6 +21,10 @@ angular momentum (corresponding to $L=0,1,\ldots$), and $J$ is the
 total sum. So ${}^3P_0$ indicates an atom with $S=1$, $P=1$, and
 $J=0$.
 
+A critical number for any radiative transition is the transition
+probability $A$, sometimes known as the {\it Einstein A coefficient},
+and typically expressed in units of s$^{-1}$.
+
 \subsection{Ionization processes}
 
 The ionization state of gas is determined by the balance among effects
@@ -230,8 +234,8 @@ At higher densities, collisional deexcitation tends to lower the
  that the weakening of the line ratio is proportional to:
  \begin{equation}
 \frac{1}{1 + \alpha n_e / T^{1/2}}
- \end{equation}
-where $\alpha \sim 10^{-5}$--$10^{-3}$ depending on the species.
+ \end{equation} where $\alpha \sim 10^{-5}$--$10^{-3}$ cm$^{3}$
+K$^{1/2}$, depending on the species.
 
 \subsection{Density diagnostics}
 
@@ -244,13 +248,76 @@ radiative transition probabilities or collisional deexcitation rates.
 At low density, every collisional excitation is followed by a
 radiative transition, so the fluxes of the lines are proportional to
 the excitation rates (often just the statistical weights of the
-levels). 
+levels).
 
-At high density, the population levels are in equilibrium so that the 
+At high density, the population levels are in thermal equilibrium so
+that their relative abundance is just their statistical weight
+(because their energies are nearly identical). The line strength
+ratios then are just the statistical weights times the transition
+probabilities. 
+
+The transition between the two regimes is defined by the {\it critical
+density}, at which the radiative transition rates are equal to the
+collisional transition rates. At $T\sim 10^4$ K these critical
+densities are $\sim 10^3$--$10^5$ for many of the species of
+interest. The radiative transition rates are constant, whereas the
+collisional rates have a dependence of $n_e T^{-1/2}$, so the
+line ratio dependence on density shifts to higher density as
+temperature increases. 
+
+The relevant lines for this measurement are usually [OII] 3729 and
+3726 or SII 6731 and 6716 (from the ${}^2D$ levels of each
+singly-ionized atom).
+
+\subsection{Ionization spectrum indicators}
+
+The ionization spectrum can also be constrained with line ratios. In
+the context of galactic observations, indicators exist for both the
+total flux of ionizing photons, and the hardness of the ionizing
+spectrum.
+
+The ionizing flux can be quantified by the ionization parameter,
+usually quantified as:
+\begin{equation}
+U = \frac{Q_{H}}{n_H c},
+\end{equation}
+where $Q_H$ is the flux (for example, in units cm$^{-2}$ s$^{-1}$) of
+hydrogen-ionizing photons and $n_H$ is the number density of hydrogen
+atoms. Sometimes the quantity $q=U c$ is used instead. In addition,
+there is some ambiguity to the definition in the context of
+models. For plane-parallel photoionization models, it is evaluated at
+the point that the ionization flux impinges on the gas, but for
+spherical models an inner radius of the region must be defined.
+
+An important indicator of ionizing parameter is the [OIII] line. A
+higher flux of photons will allow the gas to maintain a larger
+population of doubly-ionized oxygen atoms. The line ratio [OIII]/[OII]
+is typically used, though it is also somewhat metallicity
+dependence. The [OIII]/[SII] also can be used, though it too has some
+sensitivity to metallicity.  .
+
+The hardness of the radiation field can be measured, somewhat
+counterintuitively, by the low-ionization lines of NII and
+SII. Because the photoionization cross-section declines strongly with
+frequency above the ionization threshold, the mean free path for these
+photons are longer. This mean free path sets the size of the partially
+ionized portion at the edge of the ionized region. These regions
+contain considerable OI, NII, and SII, and therefore hard radiation
+fields tend to emit these lines strongly.
 
 \subsection{BPT diagrams}
 
 \subsection{Metallicity diagnostics for star-forming galaxies}
+
+\section{Commentary}
+
+An entire course may be given on the astrophysics of nebulae. This
+description is extremely simplified. It ignores the detailed
+derivation of the equilibrium populations as a function of density and
+temperature in the idealized cases, as well the effects of realistic
+issues such as fluctuations in density and temperature in the ionized
+gas. It also ignores many diagnostics, particularly those outside the
+optical.
 
 \section{Key References}
 
@@ -259,6 +326,14 @@ At high density, the population levels are in equilibrium so that the
     \href{http://}
     {\it Physics of the Interstellar and Intergalactic Medium,
       \citet{draine07a}}
+  \item
+    \href{http://}
+    {\it Osterbrock
+      \citet{osterbrock06a}}
+  \item
+    \href{http://}
+    {\it Blanc
+      \citet{blanc15a}}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
