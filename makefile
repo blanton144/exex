@@ -25,6 +25,8 @@ ALL= \
 	$(PDFDIR)/spectra-answers.pdf \
 	$(PDFDIR)/emission-line.pdf \
 	$(PDFDIR)/emission-line-answers.pdf \
+	$(PDFDIR)/black-holes.pdf \
+	$(PDFDIR)/black-holes-answers.pdf \
 	$(PDFDIR)/dynamics.pdf \
 	$(PDFDIR)/dynamics-answers.pdf \
 	$(PDFDIR)/lensing.pdf \
