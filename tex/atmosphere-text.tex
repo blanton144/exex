@@ -118,14 +118,17 @@ the FWHM can be predicted from a study of turbulence. The power
 spectrum of effect of Kolmogorov turbulence on the atmospheric
 wavefront can be translated into the PSF, as described
 by \citet{fried66a} and \citet{johnson73a}. The resulting shape of the
-PSF is well-approximated by a Moffat function:
+PSF within a few FWHM is well-approximated by a Moffat function:
 \begin{equation}
 I(\theta) = \frac{I_0}{\left[1 + \left(\theta /
 R\right)^2\right]^\beta}
 \end{equation}
-with $\beta \approx 4$. Beyond 5--10 FWHM, the profile flattens and is
-proportional to $\theta^{-2}$ called the {\it aureole}, whose source
-is unclear.
+with $\beta \approx 4$. This region of the PSF is often also
+approximated by a double Gaussian. Beyond 5--10 FWHM, the profile
+flattens and is proportional to $\theta^{-2}$ and is called the {\it
+aureole}; its source is unclear, and may not be due to the atmosphere
+and instead due to small-scale variations in the mirror around its
+ideal shape.
 
 Adaptive optics systems seek to mitigate the atmospheric diffraction
 effects by correcting the wavefront of the incoming light to make it
@@ -138,13 +141,9 @@ most of the atmospheric turbulence.
 \section{Key References}
 
 \begin{itemize}
-  \item
-    {\it Design and Construction of Large Telescopes},
-      \citet{bely}
-  \item
-    {\it SkyCorr}
-  \item \citet{fried66a}
-  \item \citet{johnson73a}
+  \item {\it Design and Construction of Large Telescopes},
+      \citet{bely03a}
+  \item {\it SkyCorr model of sky emission}, \citet{noll14a}
 \end{itemize}
 
 \citet{gunn06a}
@@ -153,30 +152,61 @@ most of the atmospheric turbulence.
 
 \begin{enumerate} 
 \item A typical specific intensity  for the sky continuum in the
-    optical is \todo{XXX}. Convert this to magnitudes per square
-    arcsecond. In 1 arcsec FWHM seeing, for a point source, at what
-    magnitude is there as much light within the FWHM from the sky as
-    from the source?
-\item Estimate of chromatic refraction 
-\item PSF FWHM vs wavelength
+    optical is $f_\nu \sim 10$ $\mu$Jy arcsec$^{-2}$. Convert this to
+    AB magnitudes per square arcsecond. In 1 arcsec FWHM seeing, for a
+    point source, at what magnitude is there as much light within the
+    FWHM from the sky as from the source?
+\item For a source observed at airmass of around 1.2, what is the
+    angular difference due to chromatic atmospheric differential
+    refraction of its image center location at wavelength 4000 \AA and
+    that at wavelength 9000 \AA.
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Calculate the parallactic angle for a field at a given alt, az,
-    latitude.
+\item Derive the dependence of the parallactic angle for a field on
+    its altitude, azimuth, and the latitude of the observatory.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Sky brightness vs airmass during SDSS drift scan
-\item OH variations during SDSS drift scan
-\item Plot sky spectrum vs moon phase from SDSS
-\item OH variations across SDSS fields
-\item Find extreme airmass SDSS images, see refraction
+\item The SDSS imaging camera worked by taking long continuous drift
+scans, often hours in length. These drift scans were broken up
+artificially in fields. In the SDSS CasJobs database, you can find all
+the information for each field, including the estimate of its sky
+brightness, in the Field table. Find one of the runs which has at
+least 200 fields, and retrieve the information for one of its {\tt
+camcol}s (say, number 3). Plot the $g$-band sky brightness as a
+function of field number and as a function of airmass for these
+observations. Plot the $i$-band sky brightness. 
+\item Take ten random plates from the BOSS spectroscopic survey in
+SDSS. Determine the phase and altitude of the Moon for the time of
+each observation, and sort by the Moon illumination. If the Moon
+altitude is below the horizon, treat the illumination as zero. Plot
+the mean sky spectrum from the sky fibers for each plate on the same
+plot, labeled according to Moon illumination, and comment on what you
+find.
+\item Take a single random plate from the BOSS spectroscopic
+survey. Plot several sky fiber spectra, concentrating on the regions
+of OH emission, and comment on what you find.
 \end{enumerate}
 
 \bibliographystyle{apj}
 \bibliography{exex}  
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{figures/modtran.jpg}
+\caption{\label{fig:absorption} Transmittance of atmosphere, as
+reported at
+\href{http://what-when-how.com/remote-sensing-from-air-and-space/atmospheric-absorption-scattering-and-turbulence-visible-imagery-remote-sensing/}{this
+web site} and based on the \href{http://modtran.spectral.com/}{MODTRAN
+software}. The broad band pattern is due to scattering by molecules
+and aerosols.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{figures/massey00a.png}
+\caption{\label{fig:emission} Sky spectrum from \citet{massey00a}.}
+\end{figure}
