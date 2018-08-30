@@ -21,12 +21,12 @@ and has a band gap of 1.1 $\mu$m.  Germanium CCDs could in principle
 extend this sensitivity to $1.8$ $\mu$m, but their technology is not
 cost-effective today. HgCdTe (``MER-CAH-TEL'') infrared detectors have
 a band gap of that can be designed anywhere between 0.4--12
-$\mu$m. Si:As detectors can extend to 28 $\mu$m. {\bf check what WISE
-is}.
+$\mu$m. Si:As detectors can extend to 28 $\mu$m (and are for example
+used in the two redder WISE bands).
 
 Each pixel of a CCD detects individual photons that hit it, each of
 which usually contributes one electron to the overall signal. For most
-hardware, the charge is ``read out'' at amplifiers along the side of
+hardware, the charge is {\it read out} at amplifiers along the side of
 the CCD, by transferring the charge from pixel to pixel to the edge of
 the CCD. At the last pixel the charge is converted to a digital signal
 by the amplifiers. CCDs may be readout by various numbers of
@@ -38,7 +38,7 @@ variations in temperature can cause variations in the dark current.
 
 Infrared detector arrays operate similarly, but the infrared-sensitive
 materials cannot today be used to support the circuits necessary for
-CCD operation. Insted, the infrared sensitive material is bonded to a
+CCD operation. Instead, the infrared sensitive material is bonded to a
 silicon detector on which the read out occurs. These detectors are not
 CCDs but multiplexers, which are read directly out on each pixel. The
 charge can be read out nondestructively, allowing many reads on the
@@ -48,21 +48,23 @@ From this basic understanding, there results an interpretation of the
 digital numbers reported by a semiconductor device:
 \begin{equation}
 \mathrm{DN} =
-\mathrm{Gain~} n_e =
-\mathrm{Gain~} \left[\times n_p + \mathrm{Dark} \right]
+\frac{n_e}{\mathrm{Gain~}} = 
+\frac{n_p + \mathrm{Dark}}
+{\mathrm{Gain~}}
 \end{equation}
 where $n_e$ is the number of electrons recorded by the device, $n_p$
 is the number of photons actually detected, i.e. which are converted
-to electrons (which will include all background photon sources),
-``Gain'' represents the conversion of photons to the DN reported by
-the electronics, and ``Dark'' represents the dark current in units.
+to electrons (which will include all background photon sources). Gain
+represents the {\it gain}, the number of electrons per DN reported by
+the electronics. Dark represents the dark current in units of
+electrons.
 
 The noise in the DN is due primarily to two sources: Poisson noise
 around the mean $n_e$ and {\it read noise} associated with the
 electronics. The read noise does not usually depend on the
 signal. Therefore:
 \begin{equation}
-\sigma_{\rm DN}^2 = \mathrm{Gain}^2 n_e + \mathrm{Read~Noise}^2
+\sigma_{\rm DN}^2 = \frac{n_e}{\mathrm{Gain}^2} + \mathrm{Read~Noise}^2
 \end{equation}
 The Poisson noise includes the ``object'' signal, the background
 signal, and the dark current contributions to the expected number of
@@ -88,31 +90,51 @@ underneath the atmosphere the cosmic rays will be directed
 preferentially downwards).
 
 In the ultraviolet, other detectors are still in use. For example,
-GALEX uses a position dependent proportional counter. These devices
+GALEX uses a position sensitive proportional counter. These devices
 are essentially a crossed grid of wires under voltage inside a chamber
 filled with an inert gas that can be ionized by UV photons. When a UV
 photon causes a charge track, the voltage change is detected and
 recorded. Unlike CCDs, these detectors can detect individual photons.
 
-In the X-rays, CCD detectors are now used. CCDs lose sensitivity in
-the UV due to absorption on their surfaces, but at energies $> 120$ eV
-($<100$ \AA) they are sensitive again. Unlike in the UV and optical,
-X-ray photons can release many electrons. This fact, and that the
-photons much rarer, allows X-ray CCDs to be energy sensitive. At high
-count rates, they become complicated to analyze due to .
+In the X-rays, CCD detectors are now typically used. CCDs lose
+sensitivity in the UV due to absorption on their surfaces, but at
+energies $> 120$ eV ($<100$ \AA) they become sensitive again. Unlike
+in the UV and optical, X-ray photons can release many electrons. This
+fact, and that the photons much rarer, allows X-ray CCDs to be energy
+sensitive. At high count rates, they become complicated to analyze due
+to latency effects; for some period of time after a photon is detected
+subsequent photons cannot be.
+
+In the radio, antennae of various sorts are generally used as
+detectors, and the signal is read out as a changing voltage. Feedhorns
+in the focal plane of the telescope are often used to match the focal
+plane to the antennae.  In some configurations antennae are used in
+arrays without any focusing element, and images are reconstructed
+through cross-correlating in the resulting signals.
+
+No detectors capture all of the photons hitting each pixel. The
+fraction of photons detected is known as the {\it quantum efficiency}
+of the device. It is a function of wavelength (most notably near the
+band gap). CCD and infrared devices have quantum efficiencies that are
+typically quite high, e.g. up to 95\%.
 
 \section{Commentary}
 
-We will discuss spectra later. 
+CCDs only became widely used in astronomy until the mid-1990s. Prior
+to that time most imaging and spectroscopy was performed with
+photographic plates. Photographic plates have only $\sim 5$\% quantum
+efficiency typically, and obviously are harder to translate into
+digital results. However, they remained competitive for wide field
+imaging surprisingly long, because the high cost of CCDs kept them
+from being used to completely cover the focal planes of wide field
+telescopes.
 
 \section{Key References}
 
 \begin{itemize}
   \item
     {\it Design and Construction of Large Telescopes},
-      \citet{bely}
-  \item
-    {\it Kitchin}
+      \citet{bely03a}
 \end{itemize}
 
 \citet{gunn06a}
@@ -120,25 +142,48 @@ We will discuss spectra later.
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Typical read noise in IR arrays vs optical and sampling
-\item X-ray background
+\item Modern CCDs have read noise can be as low as 2 electrons,
+    whereas infrared detectors often have read noise of $\sim 20$
+    electrons. How many independent reads would have to be performed
+    of an infrared detector to beat down the read noise to compete
+    with CCD read noise?
+\item The cosmic X-ray background at 1 keV is about $3\times 10^{-11}$
+    W m$^{-2}$ sr$^{-1}$ (\citealt{fabian92a}). The Chandra X-ray
+    telescope often takes exposures of $\sim 10^4$ s, and has a
+    resolution of order an arcsec. What is the expected number of
+    background photons within the a FWHM of a source that are
+    contributed by this background for such an exposure?
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Noise as a function of object and background 
-\item Bias in estimating noise from data
+\item The detected electrons contributing to the noise include the
+object, background, and dark current signal. Write the fractional
+error in the counts, separating out the object signal dependent term
+from all of the object signal independent terms. For low object
+signal, how does the fractional error depend on signal? For high
+object signal, how does the fractional error depend on signal?
+\item The noise in a data set is determined by the Poisson noise in
+the expectation value of the signal. However, observationally we often
+only have access to one realization of the signal. This leads to a
+bias in our estimate of the noise. Estimate this bias as a function of
+$n_e$.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Sky brightness vs airmass during SDSS drift scan
-\item OH variations during SDSS drift scan
-\item Plot sky spectrum vs moon phase from SDSS
-\item OH variations across SDSS fields
-\item Find extreme airmass SDSS images, see refraction
+\item CCD images from SDSS are available
+as \href{https://www.sdss.org/dr14/imaging/images/#corr}{corrected
+frames}. Those images are calibrated in physical units, and have the
+sky background subtracted. Read the documentation there, including the
+data model. Use the formulae there to translate the image into
+uncalibrated DN units with the sky background reinstated (the files
+have all the information necessary to do that). Is it all integers?
+Use the result to estimate the noise per pixel in a region without
+stars or galaxies. Can you independently estimate that noise from the
+distribution of flux values themselves, and do the estimates agree?
 \end{enumerate}
 
 \bibliographystyle{apj}
