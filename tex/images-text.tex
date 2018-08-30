@@ -28,13 +28,13 @@ image function, but in certain circumstances it can be possible.
 
 Images taken outside the Galactic Plane which are not extraordinarily
 deep usually allow one to separate the flux into individual objects,
-which are generally classifiable as ``point sources'' or ``extended
-sources.'' The point sources are those whose images are consistent
-with the PSF. With ordinary imaging capability, stars are point
-sources. Galaxies are often extended sources, with FWHM larger than
-the PSF FWHM. High redshift, luminous quasars usually appear as point
-sources, though with high contrast imaging from space their extended
-host galaxies can be detected.
+which are generally classifiable as {\it point sources} or {\it
+extended sources}. The point sources are those whose images are
+consistent with the PSF. With ordinary imaging capability, stars are
+point sources. Galaxies are often extended sources, with FWHM larger
+than the PSF FWHM. High redshift, luminous quasars usually appear as
+point sources, though with high contrast imaging from space their
+extended host galaxies can be detected.
 
 The image locations can be quantified by their $x$ and $y$ pixel
 values. The center of each object is typically determined by the mode
@@ -44,9 +44,9 @@ be more desirable at times). The relationship between these $x$ and
 $y$ pixel values and the RA and Dec locations they correspond to is
 called the {\it astrometric solution}. Usually the astrometric
 solution is expressed in terms of a World Coordinate System
-description of the image, which provides the metadata encoding an
-approximate projection of the image and distortions in that
-projection.
+(\citealt{wcs}) description of the image, which provides the metadata
+encoding an approximate projection of the image and distortions in
+that projection.
 
 The raw image is usually obtained in some uncalibrated form. In terms
 of the specific intensity of the image $I_\nu(\alpha, \delta)$ coming
@@ -73,25 +73,26 @@ Q(\nu) = R(\nu) A({\rm alt}, {\rm az}, \nu) F(x, y)
 \end{equation}
 where $R(\nu)$ is the instrumental bandpass, $A$ is the atmospheric
 throughput, and $F$ is the flat-field. $R$ is often defined to
-incorporate most of the dependence of the atmosphere on wavelength, so
-that $A$ would express only the residuals. $F$ is often defined to
-include the determinant of the Jacobian between $(\alpha, \delta)$ and
-$(x, y)$ which would otherwise need to appear and which primarily
-depends on the instrument. It also is usually defined to have a mean
-around unity.
+incorporate the dependence of the atmosphere on wavelength at some
+nominal altitude, so that $A$ would express only the differences from
+that. $F$ is often defined to include the determinant of the Jacobian
+between $(\alpha, \delta)$ and $(x, y)$ which would otherwise need to
+appear and which primarily depends on the instrument. $F$ is usually
+defined to have a mean around unity.
 
 A final common approximation is that the functions are sufficiently
 separable or the dependence on angle is sufficient small over the
 field of view of the image that we can write:
 \begin{equation}
 \mathrm{DN}(x, y, t) = \mathrm{DN}_{\mathrm{back}}(x, y, t) + 
-\bar{A} F(x, y) \left(\mu(\alpha, \delta) + \mu_S({\rm alt}, {\rm az},
-t)\right)
+\bar{A} F(x, y) \left[\mu(\alpha, \delta) + \mu_S({\rm alt}, {\rm az},
+t)\right]
 \end{equation}
-We separate DN$_{\rm back}$ and $\mu_S$ because they are from
-different physical sources. For example, in a CCD, DN$_{\rm back}$ is
-due to dark current and and bias in the device, whereas $\mu_S$ is
-emission from the sky itself.
+Here, $\bar{A}$ is the throughput of the instrument and atmosphere
+averaged over wavelength.  We separate DN$_{\rm back}$ and $\mu_S$
+because they are from different physical sources. For example, in a
+CCD, DN$_{\rm back}$ is due to dark current and and bias in the
+device, whereas $\mu_S$ is emission from the sky itself.
 
 The process of {\it photometric calibration} is the conversion of the
 observed DN to $\mu$. In its most basic form, calibration requires
@@ -114,8 +115,9 @@ redetermining the background and its variation across the image when
 excluding ``detected'' pixels; one can then iterate this
 procedure. Typically this procedure subtracts not just the atmospheric
 sky emission, but also other sources such as zodiacal light, and also
-light from stars and galaxies. Whether these other sources should or
-should not be subtracted depends on what is wanted out of the image.
+some fraction of the light from detected stars and galaxies. Whether
+these other sources should or should not be subtracted depends on what
+is wanted out of the image.
 
 For $\bar{A}$, the concept is to use detected objects in the field
 whose $\mu$ is known from a catalog of standards to calibrate the
@@ -171,11 +173,11 @@ accounted for for percent level calibration accuracy.
 
 \citet{gunn06a}
 
-\section{Order-of-magnitude Exercises}
-
-\begin{enumerate} 
-\item Proper motion of galaxies 
-\end{enumerate} 
+%\section{Order-of-magnitude Exercises}
+%%
+%\begin{enumerate} 
+%\item Proper motion of galaxies 
+%\end{enumerate} 
 
 \section{Analytic Exercises}
 
