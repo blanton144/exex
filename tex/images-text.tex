@@ -218,8 +218,10 @@ accounted for for percent level calibration accuracy.
     \item Explain why using exactly that interpolation kernel might be
     problematic.
     \end{enumerate}
-\item Centroiding accuracy
-\item Noise models
+\item Following the methods of Section 2 of \citet{vakili16a}, show
+    how the best possible centroiding accuracy depends on the FWHM and
+    on the total signal-to-noise ratio ($S/N$) of a Gaussian point
+    source.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
@@ -235,14 +237,21 @@ accounted for for percent level calibration accuracy.
 \item First, use linear interpolation to generate the shifted
     image. Compare the absolute and fractional differences between
     first image shifted and the second image.
-
 \item
     Test sinc interpolation.  \item Test a ``damped'' version sinc
     interpolation, which multiplies the kernel by a broad
-    Gaussian.  \end{enumerate}
-\item SDSS Calibration model
-\item WCS headers
-\item Centroiding method
+    Gaussian.
+\end{enumerate}
+\item CCD images from SDSS are available
+as \href{https://www.sdss.org/dr14/imaging/images/#corr}{corrected
+frames}. Those images have valid WCS headers associated with
+them. Using the tools from {\tt astropy}, take RA and Dec values from
+objects in a randomly chosen field (get these from the {\tt photoObj}
+table in CAS) and overplot their locations on the CCD $r$-band image.
+\item This problem tests the measurement of image centroids.
+\begin{enumerate}
+\item Generate a fake, critically-sampled image of a Gaussian. 
+\end{enumerate}
 \item Bias from using data as the noise estimate
 \item Quick and dirty sky noise estimates
 \end{enumerate}
