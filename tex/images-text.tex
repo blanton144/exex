@@ -129,7 +129,7 @@ for. Often in these cases the standards are not known in exactly the
 same filters as the observations, and these color-dependent effects
 must be taken into account. Sometimes there are no standards as such,
 but instead a suite of overlapping observations can be calibrated onto
-a self-consistent scale.
+a self-consistent scale (e.g., \citealt{finkbeiner15a}).
 
 Once an image is calibrated, the stars, galaxies, or other objects may
 be measured for their fluxes and other properties. The fluxes may be
@@ -166,12 +166,10 @@ accounted for for percent level calibration accuracy.
 \begin{itemize}
   \item
     {\it Design and Construction of Large Telescopes},
-      \citet{bely}
+      \citet{bely03a}
   \item
-    {\it Kitchin}
+    {\it Astrophysical Techniques}, \citet{kitchin09a}
 \end{itemize}
-
-\citet{gunn06a}
 
 %\section{Order-of-magnitude Exercises}
 %%
@@ -234,13 +232,15 @@ accounted for for percent level calibration accuracy.
     of interpolation work by trying to shift the first image using
     interpolation and comparing it to the second image.
 \begin{enumerate}
-\item First, use linear interpolation to generate the shifted
-    image. Compare the absolute and fractional differences between
-    first image shifted and the second image.
+\item Use linear interpolation to try to shift the first image
+    so the PSF has the same center as in the second image. Compare the
+    absolute and fractional differences (pixel-by-pixel) between first
+    image shifted and the second image.
 \item
-    Test sinc interpolation.  \item Test a ``damped'' version sinc
-    interpolation, which multiplies the kernel by a broad
-    Gaussian.
+    Perform the same test with sinc interpolation.
+\item Perform the same test with a ``damped'' version of sinc
+    interpolation, which multiplies the kernel by a broad Gaussian
+    (say, a few FWHM broad).
 \end{enumerate}
 \item CCD images from SDSS are available
 as \href{https://www.sdss.org/dr14/imaging/images/#corr}{corrected
@@ -250,10 +250,27 @@ objects in a randomly chosen field (get these from the {\tt photoObj}
 table in CAS) and overplot their locations on the CCD $r$-band image.
 \item This problem tests the measurement of image centroids.
 \begin{enumerate}
-\item Generate a fake, critically-sampled image of a Gaussian. 
+\item Write a piece of code to generate a fake, critically-sampled
+image of a double Gaussian, with a center that isn't necessarily at
+the center of a pixel. For the second Gaussian, use $A_2 = 0.1 A_1$
+and $\sigma_2 = 2.47\sigma_1$, where $A$ indicates the value at the
+center of the Gaussian. This choice is an approximate description of
+the atmospheric PSF (Jim Gunn, private communication).
+\item Write a routine to find the light-weighted centroid of the
+image. Start by using the maximum pixel value, and use your knowledge
+of the PSF FWHM to calculate the center based on the light within 3
+FWHM, and iterate to convergence.
+\item Write a routine to find the mode of the image. Start by using
+the maximum pixel value, but then use the 3$\times$3 grid of pixels in
+the center to perform a quadratic interpolation to find the peak. 
+\item Now add noise to the images, and use a Monte Carlo test to
+evaluate how the precision of each estimate depends on the total $S/N$
+within 3 FWHM.
 \end{enumerate}
-\item Bias from using data as the noise estimate
-\item Quick and dirty sky noise estimates
+\item It is common to use the measured signal from a Poisson process
+to estimate the noise. Use a Monte Carlo technique to estimate the
+bias that this causes as a function of the expectation value $\bar N$
+for the Poisson process.
 \end{enumerate}
 
 \bibliographystyle{apj}

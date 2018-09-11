@@ -105,12 +105,20 @@ sensitive. At high count rates, they become complicated to analyze due
 to latency effects; for some period of time after a photon is detected
 subsequent photons cannot be.
 
-In the radio, antennae of various sorts are generally used as
-detectors, and the signal is read out as a changing voltage. Feedhorns
-in the focal plane of the telescope are often used to match the focal
-plane to the antennae.  In some configurations antennae are used in
-arrays without any focusing element, and images are reconstructed
-through cross-correlating in the resulting signals.
+In the low frequency radio, antennae of various sorts are generally
+used as detectors, and the signal is read out as a changing
+voltage. Radio detectors therefore preserve the phase information in
+the electromagnetic signal, unlike higher frequency instruments. This
+allows interoferometry on very wide baselines to achieve very high
+angular resolution (low $\lambda/D$). In the higher frequency radio
+(sub-mm), superconductor-insulator-superconductor (SIS) devices are
+used, which are photon-sensing and so do not preserve the phase.  In
+both regimes, feedhorns in the focal plane of the telescope are often
+used to match the focal plane to the antennae. In some configurations,
+antennae are used in arrays without any focusing element, and images
+are reconstructed through cross-correlating in the resulting
+signals. Noise in radio instruments is often dominated by thermal
+noise due to the finite temperature of the receiver electronics.
 
 No detectors capture all of the photons hitting each pixel. The
 fraction of photons detected is known as the {\it quantum efficiency}
@@ -135,9 +143,10 @@ telescopes.
   \item
     {\it Design and Construction of Large Telescopes},
       \citet{bely03a}
+  \item
+    {\it Astrophysical Techniques},
+      \citet{kitchin09a}
 \end{itemize}
-
-\citet{gunn06a}
 
 \section{Order-of-magnitude Exercises}
 
@@ -153,6 +162,8 @@ telescopes.
     resolution of order an arcsec. What is the expected number of
     background photons within the a FWHM of a source that are
     contributed by this background for such an exposure?
+\item What is the highest angular resolution that can be achieved by a
+    ground-based interferometric radio experiment at $\sim 1.6$ GHz?
 \end{enumerate} 
 
 \section{Analytic Exercises}
@@ -178,11 +189,12 @@ $n_e$.
 as \href{https://www.sdss.org/dr14/imaging/images/#corr}{corrected
 frames}. Those images are calibrated in physical units, and have the
 sky background subtracted. Read the documentation there, including the
-data model. Use the formulae there to translate the image into
-uncalibrated DN units with the sky background reinstated (the files
-have all the information necessary to do that). Is it all integers?
-Use the result to estimate the noise per pixel in a region without
-stars or galaxies. Can you independently estimate that noise from the
+data model. Download a corrected frame in the $r$-band. Use the
+formulae in the documentation to translate the image into uncalibrated
+DN units with the sky background reinstated (the files have all the
+information necessary to do that). Is it all integers?  Use the result
+to estimate the noise per pixel in a region without stars or
+galaxies. Can you independently estimate that noise from the
 distribution of flux values themselves, and do the estimates agree?
 \end{enumerate}
 
