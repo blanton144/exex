@@ -6,13 +6,26 @@ The universe is expanding. What that means is that at some point all
 of the known universe was previously in a tiny space. Since that time
 it has expanded dramatically. This expansion can be seen today in the
 fact that more distant galaxies are moving faster away from us, the
-{\it Hubble Law}.
+{\it Hubble Law}. The density of the universe appears homogeneous and
+the expansion appears isotropic.
 
-Consider the gravitational dynamics of such a universe, assuming it is
-homogeneous. The general relativistic version of this picture can be
-derived from the Einstein equations. This approach is necessary to
-understand how light travels through the resulting curved space-time
-of the universe.
+Our best evidence today suggests that at the earliest times we can
+hope to constraint the Universe was expanding exponentially with time,
+during a phase called {\it inflation}. Inflation explains how widely
+separated regions of the universe have similar density, by supposing
+that they were close enough to come to thermal equilibrium at
+extremely early times, but during inflation were ripped apart.
+Inflation also explains the small fluctuations in density that form
+structure in the universe, as quantum fluctuations. After inflation,
+the expansion of the universe was controlled by the amount of matter
+and radiation within it.
+
+To understand the expansion, consider the gravitational dynamics of a
+universe with just matter (no radiation), which is a good enough
+approximation at $z<30$. The general relativistic version of this
+picture can be derived from the Einstein equations. This approach is
+necessary to understand how light travels through the resulting curved
+space-time of the universe.
 
 However, to just understand the dynamics of the expansion a
 straightforward Newtonian approach suffices.  Assume a homogeneous,
@@ -27,23 +40,27 @@ alternatively, the motion of the % particle is driven by the energy
 equation, where the potential is given by the Keplerian potential due
 to the mass interior:
 \begin{equation}
+\label{eq:energy}
 E = \frac{1}{2} m v^2 + m \phi(a(t) r) = \frac{1}{2} m v^2 -
 \frac{GM(<a(t) r)m}{a(t) r} - \frac{m\Lambda}{6} a^2(t) r^2 =
 \mathrm{~constant}
 \end{equation}
 The $\Lambda$ accounts for the cosmological constant (in general
-relatively, introducing $\Lambda$ is fairly harmless, which we do not
-demonstrate here). The equations here are only valid when the universe
-is matter-dominated; the earlier phase when the universe was
-radiation-dominated requires some relativity to understand. But this
-simplistic approach demonstrates the differences between $E<0$ (closed
-universe), $E=0$ (``flat'' universe), and $E>0$ (open universe).
+relativity, introducing $\Lambda$ retains some essential properties of
+the theory, which we do not demonstrate here). The equations here are
+only valid when the universe is matter-dominated; the earlier phase
+when the universe was radiation-dominated requires some relativity to
+understand. But this simplistic approach demonstrates the differences
+between $E<0$ (closed universe), $E=0$ (``flat'' universe), and $E>0$
+(open universe).
 
 We define $H=v/a(t)r$. Note that $v={\dot a}(t) r$, so the {\it Hubble
   parameter} $H(z)$ is:
 \begin{equation}
   H(t) = \frac{\dot a}{a}
 \end{equation}
+At redshift zero, the Hubble parameter is equal to the Hubble
+Constant.
 
 We define also:
 \begin{eqnarray}
@@ -53,7 +70,8 @@ We define also:
 \end{eqnarray}
 $\Omega_m$ is the scaled matter density, $\Omega_\Lambda$ is the
 contribution of the matter density, and for reasons that become clear
-in the general relativistic picture, 
+in the general relativistic picture, $\Omega_k$ is the term related to
+the curvature of space-time.
 
 Under these definitions:
 \begin{equation}
@@ -115,9 +133,8 @@ and sometimes the cosmological redshift is expressed in terms of
 $v\approx cz$. At high redshift (e.g. above unity), the relationship
 between $d$ and $z$ is ambiguous. 
 
-Within the FLRW metric, there is at least a relationship between the
-expansion factor $a(t)$ and the redshift that that time is observed at
-today:
+Within the FLRW metric, there is a relationship between the expansion
+factor $a(t)$ and the redshift that that time is observed at today:
 \begin{equation}
 a(t) = \frac{1}{1+z(t)}
 \end{equation}
@@ -173,22 +190,25 @@ $h^{-2}$.
 The density of non-relativistic matter scales as $a^{-3}$ but due to
 redshift the energy density of relativistic particles scales as
 $a^{-4}$. Therefore, sufficiently far into the past (a redshift of
-order $\Omega_{m0}/Omega_{r0} \sim 10^4$) the radiation
+order $\Omega_{m0}/\Omega_{r0} \sim 10^4$) the radiation
 dominates. This is called the epoch of ``matter-radiation equality.''
 
-The cosmic microwave radiation temperature was higher in the past by a
-factor that scales as $1+z$.
+As the radiation is shifted in wavelength, a Planck spectrum is
+maintained. The energy density in a Planck spectrum is proportional to
+$T^4$. Therefore the $a^{-4}$ dependence of the radiation density
+implies that the cosmic microwave radiation temperature was higher in
+the past by a factor that scales as $1+z$.
 
 The very early universe was very hot. At some point protons, neutrons,
 electrons, and photons formed a baryon-photon fluid tightly bound held
 in equilibrium by the electromagnetic and weak forces. During big bang
 nucleosynthesis, the protons and the neutrons fell out of equilibrium,
 and deuterium, ${}^3He$, ${}^4He$ formed, along with some Li. Later,
-at recombination, the electrons became bound to the hydrogen
-atoms. Since that time, at some point between $z\sim 7$ and 20, the
-first stars ionized the gas again. 
-
-\section{Commentary}
+at the recombination redshift of $z\sim 1100$, the electrons became
+bound to the hydrogen atoms; the temperature of the gas at that
+redshift was $T\sim 3000$ K. Since that time, at some point between
+$z\sim 7$ and 20, the first stars and quasars ionized the vast
+majority of the gas again.
 
 \section{Key References}
 
@@ -199,26 +219,32 @@ first stars ionized the gas again.
       \citet{hogg99cosm}}
 \end{itemize}
 
-\citet{gunn06a}
-
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Mean density physically
-\item Error contribution of peculiar velocities
-\item why recombination at $z\sim 1000$
+\item What does the mean density of the universe correspond to in
+    particles per cm$^3$?
+\item Approximately, why does recombination occur at $z\sim 1000$?
+\item How many ionizing photons per cubic Mpc are necessary to
+reionize the Universe?
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Energy equation
+\item Demonstrate that:
+\begin{equation}
+\Omega_k + \Omega_m + \Omega_\Lambda = 1
+\end{equation}
+\begin{answer}
+We start by rearranging Equation (\ref{eq:energy}) expressing the
+energy considerations:
 \begin{eqnarray}
 \frac{E}{m} &=& \frac{v^2}{2}-\frac{GM}{r} - \frac{\Lambda}{6}a^2(t)r^2 \cr
 1 &=& \frac{2E}{mv^2} + \frac{2GM}{a(t) rv^2} -
 \frac{\Lambda}{3}\frac{a^2(t) r^2}{v^2} 
 \end{eqnarray}
-Let us define $H=v/a(t)r$. Note that $v={\dot a}(t) r$, so:
+Now use $H=v/a(t)r$. Note that $v={\dot a}(t) r$, so:
 \begin{equation}
 H(t) = \frac{\dot a}{a}
 \end{equation}
@@ -236,6 +262,7 @@ another way:
 \frac{2Ea^2(t_0) r^2}{mH_0^2} + \frac{8\pi
   G\rho(t_0)}{3H_0^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
 \end{eqnarray}
+\end{answer}
 \item Relate expansion to redshift
 A good example of this is getting a general expression for what the
 ``redshift'' means. In the picture above, clearly the $v$ ought to be

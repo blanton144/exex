@@ -39,6 +39,16 @@ The most prominent standard candles are:
   luminous.  They also vary due to the $\kappa$ mechanism but have
   longer periods. Historically, they have provided one of the most
   direct links between local distance scales and distant galaxies.
+\item {\it Tip of the Red Giant Branch} stars. The red giant branch is
+  commences when core hydrogen burning ends; at this point, shell
+  hydrogen burning commences and the star becomes rapidly brighter and
+  much larger. At a certain point the helium ash at the core ignites,
+  moving the star to its next phase, the smaller and less luminous
+  horizontal branch. The core ignites rapidly at a specific stage in
+  evolution, so that at a given metallicity red giant stars all end
+  this stage at the same luminosity. This leads to a rapid fall-off in
+  the luminosity distribution of RGB stars and a clear tip of the red
+  giant branch that can be used as a standard candle.
 \item {\it Type Ia supernovae}. These supernovae result from the
   nuclear detonation of white dwarfs, probably due to accretion from
   or collision with a binary companion. The Phillips relation connects
@@ -57,17 +67,33 @@ implementing these methods in a way that is free of systematic errors
 generally has led to the use of supernovae for the most recent
 measurements of the distance ladder.
 
-Several standard candle techniques on the horizon may prove useful in
-the coming years. I will discuss masers and gravitational waves:
+Several standard candle techniques prove useful, or may soon do so. I
+will discuss eclipsing binaries, masers, and gravitational waves:
 \begin{itemize}
+\item Some binary stars, like Algol, eclipse each other during their
+orbit. Their light curve alone yields a period $P$ and their radii
+relative to the orbit size, $r_1/a$ and $r_2/a$ for any given
+eccentricity and phase of eclipse. If both their spectra can also be
+measured, this can yield velocities, which yields enough information
+to determine their total mass $M$, eccentricity $e$, and the
+line-of-sight semimajor axis of the orbit $a \sin i$. The mass and
+semimajor axis are related by:
+\begin{equation}
+M = \frac{4\pi^2 a^3}{GP^2}.
+\end{equation}
+For eclipsing binaries $i\approx 90^\circ$.  Thus, from gravitational
+and geometric considerations, you can determine the sizes of the
+stars. Spectra can yield constraints on their surface
+temperatures. The sizes and temperatures determines the luminosities,
+which combined with fluxes determines the distance.
 \item Under certain conditions the supermassive
 black holes at the centers of galaxies may contain H$_2$O
-masers. Under certain conditions, these systems can be sufficiently
-clean that one may measure angular velocities of circular orbits and
-angular sizes, which yields a period. Combined with a Doppler
-velocity, this combination yields the mass of the black hole and the
-distance. Only one clean enough system is known, about 8 Mpc away in
-NGC 4258.
+masers. Under even more special conditions, these systems can be
+sufficiently clean that one may measure velocities and accelerations
+over time of clouds in circular orbits, which yields a physical
+distance. Combined , this combination yields
+the mass of the black hole and the distance. Only one clean enough
+system is known, about 8 Mpc away in NGC 4258.
 \item Colliding compact objects whose gravitational waves are detected can
 yield constraints on distance from the gravitational waveform, because
 the total mass of the system is related to both the waveform frequency
@@ -101,9 +127,10 @@ compared to galactic distances.
 
 \section{Commentary}
 
-Briefly, the best current estimates of the local Hubble constant come
-from the Riess et al. papers. These use a number of Milky Way Cepheids
-with parallax distances to anchor extragalactic Cepheids in galaxies
+Briefly, the most precise current estimates of the local Hubble
+constant come from the \citet{riess16a} group. These use a number of
+Milky Way Cepheids with parallax distances, along with eclipsing
+binaries and NGC 4258, to anchor extragalactic Cepheids in galaxies
 with SNe Ia, and use those to anchor a much larger SN Ia data set. As
 of 2018, the results for $H_0$ from these analyses tend to be
 considerably higher (several sigma) than those inferred from cosmic
@@ -111,13 +138,37 @@ microwave background and large scale structure measurements, using
 standard cosmological models to extrapolate to $z=0$. The cause of
 this discrepancy is not known.
 
+The current ladder to a precise $H_0$ is strongly dependent on the
+Cepheid step. There are several important issues with the
+interpretation of the Cepheid distance scale, the most prominent of
+which is that the period-luminosity relation is metallicity
+dependent. The LMC has a much lower metallicity than the other
+galaxies in the analysis, and so if improperly modelled the
+metallicity dependence can cause a bias.
+
+\citet{beaton16a} present an alternative path using different
+indicators (RR Lyrae and TRGB) to calibrate the SN Ia, both of which
+tend to trace an older, more metal poor population even within metal
+rich galaxies. This path may soon become competitive. This second
+indepedent measurement will be critical in assessing the existing
+discrepancy.
+
+The detection of much more distant masing systems suitable for an
+analysis similar to that of NGC 4258, or a sufficient number of
+gravitational wave sources, could provide a ``one step'' alternative
+to the distance ladder for the purpose of determining the cosmological
+constant.
+
 \section{Key References}
 
 \begin{itemize}
   \item
-    {\it Riess et al}
+    {\it A 2.4\% Determination of the Local Value of the Hubble
+    Constant}, \citet{riess16a}
   \item
-    {\it Kitchin}
+    {\it The Carnegie-Chicago Hubble Program. I. An Independent
+    Approach to the Extragalactic Distance Scale Using Only Population
+    II Distance Indicators}, \citet{beaton16a} 
 \end{itemize}
 
 \citet{gunn06a}
@@ -125,11 +176,15 @@ this discrepancy is not known.
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Typical parallax at 1pc, 10pc, 1kpc, 1 Mpc; diffraction limit necessary
-  to determine them.
-\item Translation between error of individual object to error in
-Hubble
-\item Estimate age of the universe from the Hubble constant
+\item Estimate age of the universe from the Hubble constant assuming
+    constant expansion.
+\item What is the maximum parallax at 1pc, 10pc, 1kpc, and 1 Mpc?
+    Assuming you can get good positions to with a few hundredths of a
+    FWHM, what size telescopes do you need so that you can measure
+    parallax at these distances?
+\item If the typical peculiar velocity of a galaxy is $\sim 300$ km
+    s$^{-1}$, at what redshift does its contribution to the distance
+   error drop below 5\%?
 \end{enumerate} 
 
 \section{Analytic Exercises}
