@@ -9,7 +9,7 @@
 \newif\ifanswers
 
 \NewEnviron{answer}[1][]{\ifanswers\color{blue}\expandafter\BODY
-{\it #1}\fi}
+{\par \it #1}\fi}
 
 \DeclareMathOperator\erf{erf}
 

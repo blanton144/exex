@@ -50,8 +50,8 @@ motion. Under both special and general relativity, the photon density
 in phase space is conserved. From this it can be calculated that:
 \begin{equation}
   \label{eq:sb_dimming}
-  I_{\lambda, {\rm obs}} = 
-  \frac{I_{\lambda, {\rm emit}}}{(1+z)^4}
+  I_{\lambda, {\rm obs}} \dd\lambda_{\rm obs} = 
+  \frac{I_{\lambda, {\rm emit}} \dd\lambda_{\rm emit}}{(1+z)^4}
 \end{equation}
 At small velocities, $z \approx v/c$, but at higher velocities
 relativistic corrections are important.
@@ -264,19 +264,19 @@ f_\nu \sim (3631 \mathrm{~Jy}) 10^{-0.4 m} \sim 14 \mathrm{~Jy} = 1.4 \times
 The flux density in the visible should be $f_\nu \Delta\nu$ where:
 \begin{equation}
 \Delta\nu = c \left(\frac{1}{4000 \mathrm{~\AA}} -
-\frac{1}{7000 \mathrm{~\AA}}\right) \sim 320 \mathrm{~THz}
+\frac{1}{7000 \mathrm{~\AA}}\right) \sim 320 \mathrm{~THz},
 \end{equation}
-And thus $f \sim 4\times 10^{-8}$ erg cm$^{-2}$ s$^{-1}$. Each photon
+and thus $f \sim 4\times 10^{-8}$ erg cm$^{-2}$ s$^{-1}$. Each photon
 has an energy (assuming $\lambda = 5500$ \AA):
 \begin{equation}
 E = h\nu = (6.62\times
 10^{-27} \mathrm{~erg~Hz}^{-1})( \mathrm{550~THz}) \sim 4 \times
-10^{-12} \mathrm{~erg}
+10^{-12} \mathrm{~erg}.
 \end{equation}
 So the flux of photons is:
 \begin{equation}
 \frac{\dot N}{A} = \frac{f_\nu \Delta\nu}{h\nu} \sim 
-10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}
+10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}.
 \end{equation}
 If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$. 
 \end{answer}
@@ -285,7 +285,8 @@ If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$.
   per square arcsecond for a galaxy at redshift $z\sim 1$?
 
 \begin{answer}
-The specific intensity is reduced by $(1+z)^4$. In magnitudes this is:
+The specific intensity integrated over all wavelengths is reduced by
+$(1+z)^4$. In magnitudes this is:
 \begin{equation}
 \Delta m = 2.5 \log_{10} (1+z)^4 = 10 \log_{10} (1+z) \sim
 3 \mathrm{~mag}
@@ -312,6 +313,45 @@ Solving for the FWHM yields:
 \end{answer}
 \item Prove Equation \ref{eq:sb_dimming}, based on the fact that
   photon density in phase space is conserved.
+
+\begin{answer}[Author: Trey Jensen]
+Beginning with the photon particle distribution, $f(x,p,t)$, we know
+that subject only to cosmic expansion, the number of photons will be
+conserved,
+\begin{equation}
+\dd N =f(x,p,t)\dd V \dd^3 p.
+\end{equation}
+If we rewrite the right hand side in the suggestive manner,
+\begin{equation}
+f(x,p,t)p^2\dd x \dd A \dd p \dd \Omega,
+\end{equation}
+where $\dd A$ is the area element, $\dd \Omega$ the solid angle
+element of momenta (direction of propagation), then we see this can be
+written with the specfic intensity in mind. The specific intensity is
+the flux of energy through a surface per area, per solid angle, per
+time, per frequency. We can get an infinitesimal number of photons
+via,
+\begin{equation}
+ \dd N =\frac{I_\nu}{E} \dd A \dd \Omega  \dd t \dd \nu.
+\end{equation}
+Equating these two equations of $\dd N$, and because we have massless
+particles, $p=E=h\nu$, then using the fact that $\dd x / \dd t = c$:
+\begin{equation}
+    I_\nu=f(x,p,t)h^{4} \nu^3
+\end{equation}
+In the FRW metric, frequency $\nu$ scales inversely with $a(t)$ (this
+can also be derived from the geodesic equation of a photon). Thus,
+inspecting the above equation,
+\begin{equation}
+    I_\nu\propto a(t)^{3} = \frac{1}{(1+z)^3}.
+\end{equation}
+Then if we consider the integral of $I_\nu$:
+\begin{equation}
+    I_{\nu, \rm obs} \dd\nu_{\rm obs}  =
+    \frac{1}{(1+z)^4} I_{\nu, \rm emit} \dd\nu_{\rm emit}
+\end{equation}
+and similar for $I_\lambda$.
+\end{answer}
 
 \item Based on Equation \ref{eq:sb_dimming}, how is the angular
   diameter distance related to the luminosity distance? 

@@ -156,9 +156,17 @@ issues or due to imperfections in the extraction method.
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Find an SDSS spectrum of a galaxy from the BOSS survey. Plot the
-    sky and the object spectrum. 
-\item Estimating LSF from arcs and sky lines
+\item Find an SDSS spectrum of a galaxy and sky fiber from the same
+    plate of the BOSS survey. Plot the sky and the object spectrum.
+\item Find an arc spectrum from the BOSS survey, and a corresponding sky
+spectrum taken during the same calibration-exposure sequence. You will
+need to use
+the \href{https://data.sdss.org/datamodel/files/SPECTRO_REDUX/RUN2D/PLATE4/spPlan2d.html}{\tt
+spPlan2d} files to figure out which
+\href{https://data.sdss.org/datamodel/files/BOSS_SPECTRO_REDUX/RUN2D/PLATE4/spCFrame.html}{\tt
+spCframe} files to use. Find at least one pair of sky and arc lines,
+each of which is bright and isolated from other lines. Estimate the
+FWHM of the LSF from each and compare them.
 \item Comparing model star to SDSS star spectrum
 \end{enumerate}
 
