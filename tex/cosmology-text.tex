@@ -20,12 +20,23 @@ structure in the universe, as quantum fluctuations. After inflation,
 the expansion of the universe was controlled by the amount of matter
 and radiation within it.
 
-To understand the expansion, consider the gravitational dynamics of a
-universe with just matter (no radiation), which is a good enough
-approximation at $z<30$. The general relativistic version of this
-picture can be derived from the Einstein equations. This approach is
-necessary to understand how light travels through the resulting curved
-space-time of the universe.
+At this phase the universe was very hot. At some point protons,
+neutrons, electrons, and photons formed a baryon-photon fluid tightly
+bound held in equilibrium by the electromagnetic and weak
+forces. During big bang nucleosynthesis, the protons and the neutrons
+fell out of equilibrium, and deuterium, ${}^3$He, ${}^4$He formed,
+along with some Li. Later, at the recombination redshift of $z\sim
+1100$, the electrons became bound to the hydrogen atoms; the
+temperature of the gas at that redshift was $T\sim 3000$ K. Since that
+time, at some point between $z\sim 7$ and 20, the first stars and
+quasars ionized the vast majority of the gas again.
+
+To understand the expansion itself, consider the gravitational
+dynamics of a universe with just matter (no radiation), which is a
+good enough approximation at $z<30$. The general relativistic version
+of this picture can be derived from the Einstein equations. This
+approach is necessary to understand how light travels through the
+resulting curved space-time of the universe.
 
 However, to just understand the dynamics of the expansion a
 straightforward Newtonian approach suffices.  Assume a homogeneous,
@@ -150,10 +161,12 @@ D_C=
 \frac{c}{H_0} \int_0^z \frac{{\rm d}z}{E(z)}
 = 
 \frac{c}{H_0} \int_0^z \frac{{\rm d}z}{\sqrt{\Omega_{\Lambda0} +
-    \Omega_{m0}(1+z)^3}}
+    \Omega_{m0}(1+z)^3}},
 \end{equation}
-This can be derived from the energy equation quite simply. In a flat
-universe, the luminosity distance is simply:
+where here we use the expression for the Hubble parameter as a
+function of redshift $H(z) = H_0 E(z)$.  This expression can be
+derived from the energy equation. In a flat universe, the luminosity
+distance is simply:
 \begin{equation}
 D_L = D_C (1+z)
 \end{equation}
@@ -180,35 +193,22 @@ z_{\rm obs} = z_{\rm cosmo}+z_{\rm pec} + z_{\rm cosmo}z_{\rm pec}
 \end{equation}
 
 The universe does not only contain matter, but contains radiation and
-neutrinos and potentially other ingredients. The cosmic microwave
-background is observed today as a 2.7 K bath of photons with a nearly
-perfect blackbody spectrum.  There is also a bath of neutrinos
-surrounding us, of roughly the same density. Together these
-relativistic particles have $\Omega_{r0} \sim 4\times 10^{-5}$
-$h^{-2}$.
+neutrinos and potentially other ingredients.  The density of
+non-relativistic matter scales as $a^{-3}$ but due to redshift the
+energy density of relativistic particles scales as
+$a^{-4}$. Therefore, sufficiently far into the past the radiation
+dominates. This is called the epoch of {\it matter-radiation
+equality}.
 
-The density of non-relativistic matter scales as $a^{-3}$ but due to
-redshift the energy density of relativistic particles scales as
-$a^{-4}$. Therefore, sufficiently far into the past (a redshift of
-order $\Omega_{m0}/\Omega_{r0} \sim 10^4$) the radiation
-dominates. This is called the epoch of ``matter-radiation equality.''
-
-As the radiation is shifted in wavelength, a Planck spectrum is
-maintained. The energy density in a Planck spectrum is proportional to
-$T^4$. Therefore the $a^{-4}$ dependence of the radiation density
-implies that the cosmic microwave radiation temperature was higher in
-the past by a factor that scales as $1+z$.
-
-The very early universe was very hot. At some point protons, neutrons,
-electrons, and photons formed a baryon-photon fluid tightly bound held
-in equilibrium by the electromagnetic and weak forces. During big bang
-nucleosynthesis, the protons and the neutrons fell out of equilibrium,
-and deuterium, ${}^3He$, ${}^4He$ formed, along with some Li. Later,
-at the recombination redshift of $z\sim 1100$, the electrons became
-bound to the hydrogen atoms; the temperature of the gas at that
-redshift was $T\sim 3000$ K. Since that time, at some point between
-$z\sim 7$ and 20, the first stars and quasars ionized the vast
-majority of the gas again.
+The cosmic microwave background is observed today as a 2.7 K bath of
+photons with a nearly perfect blackbody spectrum.  There is also a
+bath of neutrinos surrounding us, of roughly the same
+density. Together these relativistic particles have $\Omega_{r0} \sim
+4\times 10^{-5}$ $h^{-2}$.  Therefore matter-radiation equality occurs
+at a redshift of order $\Omega_{m0}/\Omega_{r0} \sim 10^4$. Note that
+the relativistic contribution of radiation still needs to be accounted
+for in equations for the expansion at redshifts down to about $z\sim
+30$.
 
 \section{Key References}
 
@@ -263,20 +263,22 @@ another way:
   G\rho(t_0)}{3H_0^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
 \end{eqnarray}
 \end{answer}
-\item Relate expansion to redshift
-A good example of this is getting a general expression for what the
-``redshift'' means. In the picture above, clearly the $v$ ought to be
-measureable with a Doppler shift. But for large distances it becomes
-complicated: the velocities can become close to the speed of light,
-how does relativity apply here? the time of emission was actually deep
-in the past, how does that affect the perceived velocity? The GR
-approach actually clarifies this nicely.
+\item Derive the expansion $a(t)$ as a function of $t$ in the matter
+dominated case and the radiation-dominated case.
+\item 
+In the local universe, clearly the redshift $z$ can be interpreted as
+a recession velocity $v$.  However, on non-local scales in general
+relativity, there is no unambiguous definition of relative
+velocity. Instead, the redshift $z$ needs to be interpreted as
+resulting from the expansion of the universe over the path of the
+photon.  How does the expansion scale $a(t)$ of the universe at the
+time of emission $t$ relate to the redshift $z$?
 
-The photons travel along null geodesics. Also, if I am observing
-something at some cosmological distance, the photon I actually see has
-been traveling radially in the FRW coordinate system center on me
-(other photons are going other directions, but I don't see those
-ones). So:
+\begin{answer}
+The photons travel along null geodesics. If photons reach an observer,
+then they have been traveling radially in the FRW coordinate system
+centered on the observer (other photons are going other directions,
+but they don't reach the observer). So:
 \begin{equation}
 {\rm d}s^2 = c^2 {\rm d}t^2 - a^2(t) \frac{{\rm d}q^2}{1-Kq^2} = 0
 \end{equation}
@@ -284,10 +286,9 @@ and therefore:
 \begin{equation}
 \frac{{\rm d}t^2}{a^2(t)} = \frac{{\rm d}q^2}{c(1-Kq^2)} 
 \end{equation}
-Now conceive of a wave peak leaving some radius $q$ at some
-time $t_e$, and the next one leaving at $t_e+\delta t_e$. Let me
-integrate the square root of the above equation over the path taken by
-the first:
+Now conceive of a wave peak leaving some radius $q$ at some time
+$t_e$, and the next one leaving at $t_e+\delta t_e$.  Integrate the
+square root of the above equation over the path taken by the first:
 \begin{equation}
 \int_{t_e}^{t_o} \frac{{\rm d}t'}{a(t')} = 
 \int_q^0 {\rm d}q' 
@@ -319,14 +320,21 @@ where the last equality comes from the definition of redshift $z$:
 \end{equation}
 You can think of this as the fact that the photons are being stretched
 in precisely the same way that the universe is being expanded.
+\end{answer}
+\item If we measure a peak rotation velocity $v_{\rm  max}$ for a
+galaxy at redshift $z$, what is the inferred rotation velocity in that
+galaxy's rest frame?
+\item The blackbody radiation leftover after recombination is redshifted over
+time. Assuming that the radiation is only affected by the redshift,
+show how the energy density and temperature of this radiation depends
+on redshift.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Calculations of DL
-\item Omegas over time
-\item Gunn-Peterson
+\item Plot $\Omega_m(z)$ and $\Omega_\Lambda(z)$ between $z=0$ and 5,
+for a flat Universe.
 \end{enumerate}
 
 \bibliographystyle{apj}
