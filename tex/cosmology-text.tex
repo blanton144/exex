@@ -89,6 +89,13 @@ Under these definitions:
 \Omega_k + \Omega_m + \Omega_\Lambda = 1
 \end{equation}
 at all times.
+
+Under the equations above with $\Omega_m = 1$, we can show that:
+\begin{equation}
+a(t) \propto t^{2/3}
+\end{equation}
+From Equation \ref{eq:energy}, $\Omega_m = 1$ will be a good
+approximation at sufficiently early times.
   
 The parameters $\Omega_{m0}$ and $\Omega_{\Lambda 0}$ are the present
 time values of the matter density and the cosmological constant, and
@@ -195,10 +202,23 @@ z_{\rm obs} = z_{\rm cosmo}+z_{\rm pec} + z_{\rm cosmo}z_{\rm pec}
 The universe does not only contain matter, but contains radiation and
 neutrinos and potentially other ingredients.  The density of
 non-relativistic matter scales as $a^{-3}$ but due to redshift the
-energy density of relativistic particles scales as
-$a^{-4}$. Therefore, sufficiently far into the past the radiation
-dominates. This is called the epoch of {\it matter-radiation
-equality}.
+energy density of relativistic particles scales as $a^{-4}$. At these
+times, $a(t)\propto t^{1/2}$. Therefore, sufficiently far into the
+past the radiation dominates. This is called the epoch of {\it
+matter-radiation equality}.
+
+A significant quantity to compute is the {\it particle horizon} at any
+given time. This is the distance that any particle can travel between
+$t=0$ and some later time; it defines the scale on which causal
+communication could have happened at any given time. It is given by
+integrating the distance a photon can travel in comoving coordinates
+at each interval $\dd t$:
+\begin{equation}
+r_H = a \int_0^t \frac{c \dd t}{a(t)}
+= \frac{1}{1+z} \int_{1+z}^\infty \frac{c}{H(z)}.
+\end{equation}
+During the matter dominated epoch, $r_H\propto a^{3/2}$. During the
+radiation dominated epoch $r_H\propto a^2$.
 
 The cosmic microwave background is observed today as a 2.7 K bath of
 photons with a nearly perfect blackbody spectrum.  There is also a
@@ -224,9 +244,12 @@ for in equations for the expansion at redshifts down to about $z\sim
 \begin{enumerate} 
 \item What does the mean density of the universe correspond to in
     particles per cm$^3$?
-\item Approximately, why does recombination occur at $z\sim 1000$?
+\item Approximately, why does recombination occur at $z\sim 1100$?
 \item How many ionizing photons per cubic Mpc are necessary to
 reionize the Universe?
+\item Estimate the particle horizon size at $z\sim 1100$, assuming
+either the universe is radiation-dominated, or it is matter-dominated,
+above that redshift.
 \end{enumerate} 
 
 \section{Analytic Exercises}
@@ -321,6 +344,7 @@ where the last equality comes from the definition of redshift $z$:
 You can think of this as the fact that the photons are being stretched
 in precisely the same way that the universe is being expanded.
 \end{answer}
+\item Show that for a matter-dominated universe, $a\propto t^{2/3}$.
 \item If we measure a peak rotation velocity $v_{\rm  max}$ for a
 galaxy at redshift $z$, what is the inferred rotation velocity in that
 galaxy's rest frame?
@@ -328,6 +352,9 @@ galaxy's rest frame?
 time. Assuming that the radiation is only affected by the redshift,
 show how the energy density and temperature of this radiation depends
 on redshift.
+\item Show that for a radiation-dominated universe, $a\propto
+t^{1/3}$. Use the fact that the gravitating energy density
+$\rho \propto a^{-4}$ because of the effect of redshift.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
