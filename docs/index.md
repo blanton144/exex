@@ -8,7 +8,7 @@ Please read the following documents related to this class:
 | Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-1.ipynb) | 
 | Light II | [notes](pdf/light-2.pdf) | [notes with answers](pdf/light-2-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-2.ipynb) |
 | Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) | |
-| Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) | |
+| Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/atmosphere.ipynb) |
 | Detectors | [notes](pdf/detectors.pdf) | [notes with answers](pdf/detectors-answers.pdf) | |
 | Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | |
 | Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) | |
