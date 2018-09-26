@@ -209,6 +209,56 @@ disciplines.
     plane, estimate the diffraction limit in terms of the wavelength
     of light $\lambda$ and diameter $D$.
 
+\begin{answer}
+By Huygens' Principle, the two rays can be treated as each producing a
+spherically outgoing wave from their location on the aperture. If the
+two rays are in phase when they hit the perfectly constructed mirror,
+they will constructively interfere exactly at focus. Near but slightly
+off focus in the focal plane, they will not exactly interfere because
+the distances from the mirror for each ray will be slightly different,
+so their phases at this location will not be the same.  The size of
+the central image can be characterized by the position of the first
+null --- i.e. when the phase difference of the two rays becomes $\pi$,
+so that they destructively interfere.
+
+The path length from either aperture location to perfect focus is:
+\begin{equation}
+d = \sqrt{f^2 + \left(\frac{D}{2}\right)^2}, 
+\end{equation}
+where $f$ is the focal length.  For some $\delta$ in distance away
+from perfect focus, the path length for one ray will be:
+\begin{eqnarray}
+d_L &\approx& \sqrt{f^2 + \left(\frac{D}{2} + \delta\right)^2} \cr
+&\approx& \sqrt{d^2 + D\delta} \cr
+&\approx& d \left(1 + \frac{D \delta}{2 d}\right),
+\end{eqnarray}
+and the other ray will have a slightly shorter path by the same
+amount: 
+\begin{eqnarray}
+d_R &\approx& 
+d \left(1 - \frac{D \delta}{2 d}\right).
+\end{eqnarray}
+The difference in angle that $\delta$ corresponds to relative to
+incoming rays on the sky will be $\alpha \approx \delta / d$. That is,
+the difference in focal plane distance $\delta$ corresponds to a
+difference in $\alpha$ on sky for perfect geometric options. So we can
+write the difference in path length in units relative to sky:
+\begin{equation}
+\Delta d = d_L - d_R = D \alpha.
+\end{equation}
+
+These two waves will destructively interfere when  $\Delta d = \lambda
+/ 2$. This will be when:
+\begin{equation}
+\alpha = \frac{\lambda}{2 D}
+\end{equation}
+This of course is smaller than the first null for an Airy function,
+because the Airy function involves the interference of {\it all} of
+the waves coming from the surface of the mirror, many of which have
+much smaller separations. But this argument shows how $\lambda/D$
+enters the problem.
+\end{answer}
+
 \item The LSST telescope in Cerro Pachon has a diameter of $\sim 8$ m
     and is $f/1.4$ at its focus. To sample with at least two pixels
     per full-width half maximum (e.g. the Nyquist critical sampling)
