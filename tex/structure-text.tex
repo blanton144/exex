@@ -91,6 +91,7 @@ useful, especially on linear scales.
 To understand the linear growth, we start with the equations of motion
 for a pressureless, gravitating fluid:
 \begin{eqnarray}
+\label{eq:homogeneous}
 \frac{\mathrm{D}\vec{v}}{\mathrm{D}t} &=& - \vec\nabla\phi
 \mathrm{\quad (Euler's~equation)}\cr
 \frac{\mathrm{D}\rho}{\mathrm{D}t} &=& - \rho \vec\nabla\cdot \vec{v}
@@ -145,6 +146,7 @@ pattern exists simply changes in amplitude over time:
 \end{equation}
   The general solution is:
 \begin{equation}
+\label{eq:lineargrowth}
 D(t) = A t^{-1} + B t^{2/3}
 \end{equation}
 The first mode is decaying, and thus not important to the growth
@@ -152,12 +154,13 @@ of structure.  The second mode is the one that contributes to the
 growth of structure.
 
 This set of solutions is appropriate for the zero-energy, or ``flat''
-Universe, without a cosmological constant. At early times (but after
-recombination), while deceleration dominates the dynamics, it is a
-very good description of the Universe.  However, at later times it
-becomes less good. In particular, in our Universe, which appears to be
+Universe, without a cosmological constant, when matter density (rather
+than radiation) dominates. At early times (but after matter-radiation
+equality), while deceleration dominates the dynamics, it is a good
+description of the Universe.  However, at later times it becomes less
+good. In particular, in our Universe, which appears to be
 accelerating, the growth is slowed down considerably by the
-acceleration. 
+acceleration.
 
 The continuity equation (\ref{eq:continuity}) and linear growth imply
 a relationship between the peculiar velocity field and the growth
@@ -346,7 +349,7 @@ relative to the mean density of the universe will be $\rho_{\rm max}
 therefore take $t_{\rm max}$ to do so. However, upon full collapse
 shell-crossing will occur, because the collisionless dark matter will
 pass through the origin and oscillate around it. This process can be
-modeled (\citealt{bertschinger84a, dalal07a}) to derive the detailed
+modeled (\citealt{bertschinger85a, lithwick11a}) to derive the detailed
 structure of the resulting halo mass profile, but the virial theorem
 ($U=-2K$) can tell us about its overall size. Show that the final
 characteristic radius of the resulting {\it virialized} halo is
