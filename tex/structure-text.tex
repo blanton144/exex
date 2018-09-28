@@ -104,6 +104,8 @@ where the convective derivative is:
 \frac{\mathrm{D}}{\mathrm{D}t} = \frac{\partial}{\partial t} +
 \vec{v}\cdot\vec{\nabla}
 \end{equation}
+Here and below $\nabla$ refers to a spatial derivative in physical
+units (not comoving units).
 
 For the $\Omega_m = 1$ case, we can show that:
 \begin{equation}
@@ -115,25 +117,39 @@ $\rho_0(a) \propto a^{-3}$:
 \begin{equation}
 \frac{\rho}{\rho_0} = 1+ \delta
 \end{equation}
-and find the continuity equation holds for peculiar velocities:
+We will also make use of the time derivative with respect to a
+comoving observer, which is related to the convective derivative by:
+\begin{equation}
+\frac{\mathrm{D}}{\mathrm{D}t} = \frac{\mathrm{d}}{\mathrm{d} t} +
+\vec{v}_p\cdot\vec{\nabla}
+\end{equation}
+Here we choose to keep the peculiar velocity in physical units, and
+the derivative $\nabla$ in physics units (not comoving units).  We can
+show the continuity equation holds for peculiar velocities:
 \begin{equation}
 \label{eq:continuity}
 \frac{\mathrm{d}\delta}{\mathrm{d}t} =  
 - \vec\nabla\cdot\vec{v}_p
 \end{equation}
-In the perturbed quantities we find:
+In the perturbed quantities we find to linear order:
 \begin{eqnarray}
 \frac{\mathrm{d}\vec{v}_p}{\mathrm{d}t} &=&
 - \vec\nabla(\delta\phi)
 - H(t) \vec{v}_p \cr
-\nabla^2\left(\delta\phi\right)&=& 4\pi G \rho_0 \delta \cr
+\nabla^2\left(\delta\phi\right)&=& 4\pi G \rho_0 \delta
+\end{eqnarray}
+Remembering that the spatial derivatives are in physical, not comoving
+units, we can write:
+\begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t} \left[ \vec\nabla\cdot\vec{v}_p \right]
-&=& 
+= 
 \vec\nabla\cdot
 \left[\frac{\mathrm{d}\vec{v}_p}{\mathrm{d}t} \right]
 + H(t) \frac{\mathrm{d}\delta}{\mathrm{d}t} 
-\end{eqnarray}
-which can be combined into a second-order equation for the density:
+\end{equation}
+Then one can take a time derivative with respect to a comoving
+observer to Equation \ref{eq:continuity}, and with substitutions this
+leads to a second-order equation for the density:
 \begin{equation}
 \label{eq:secondorder}
 \frac{\mathrm{d}^2\delta}{\mathrm{d}t^2} + 2 \frac{\dot a}{a} 
@@ -142,8 +158,9 @@ which can be combined into a second-order equation for the density:
 This linear set of equations is separable, so that whatever spatial
 pattern exists simply changes in amplitude over time:
 \begin{equation}
-\delta(x, t) = \delta(x, t_0) \frac{D(t)}{D(t_0)}
+\delta(x, t) = \delta(x, t_0) \frac{D(t)}{D(t_0)},
 \end{equation}
+where often the convention is $D(t_0) = 1$.
   The general solution is:
 \begin{equation}
 \label{eq:lineargrowth}
@@ -164,15 +181,24 @@ acceleration.
 
 The continuity equation (\ref{eq:continuity}) and linear growth imply
 a relationship between the peculiar velocity field and the growth
-rate:
+rate. If we convert the spatial derivative to comoving units we find:
 \begin{equation}
-\vec\nabla\cdot\vec{v}_p = - a \delta(\vec{x}) \frac{\dot
-D(t)}{D(t_0)}
+\frac{1}{a} \vec\nabla_c\cdot\vec{v}_p = - \delta(\vec{x}, t_0) \dot
+D(t),
 \end{equation}
-where:
+(taking $D(t_0) = 1$), which we can rewrite as:
 \begin{equation}
-f = \frac{\dot D}{D} \approx \Omega_m^{0.6}
+\vec\nabla_c\cdot\vec{v}_p = - a \delta(\vec{x}, t_0) \dot  
+D(t) = - a \delta(\vec{x}, t_0) H f
 \end{equation}
+where the {\it growth rate} is:
+\begin{equation}
+f = \frac{\dd \ln D}{\dd \ln a}
+\end{equation}
+The choice to express this result in terms of the comoving spatial
+derivative of the physical peculiar velocity is strange but
+conventional.
+
 This peculiar velocity field distorts redshift-based maps of the
 universe in a specific way on large scales, that can be measured to
 constrain $f$. Since $\delta$ is not directly observable, the directly
@@ -304,6 +330,10 @@ with $k$?
 \item How is an initial $P(k) \propto k$ modified after the universe
 has entered the matter-dominated phase?
 \end{enumerate}
+\item Starting from the continuity equation in Equation
+   \ref{eq:homogeneous}, assuming a flat matter dominated universe
+    ($\Omega_m = 1$), and keeping only first-order terms, derive
+    Equation \ref{eq:continuity}.
 \item Starting from Equation \ref{eq:homogeneous}, and assuming a flat
     matter dominated universe ($\Omega_m = 1$), derive
     Equation \ref{eq:secondorder}.
@@ -336,7 +366,7 @@ expressed as:
 \begin{eqnarray}
 \label{eq:sphericalcollapse}
 \frac{R}{R_{\rm max}} &=& \frac{1}{2}\left(1 - \cos\eta\right), \cr
-\frac{t}{t_{\rm max}} &=& \frac{1}{\pi}\left(\eta - \sin\eta\right), \cr
+\frac{t}{t_{\rm max}} &=& \frac{1}{\pi}\left(\eta - \sin\eta\right)
 \end{eqnarray}
 where at time $t_{\rm max}$ the sphere reaches its maximum radius of
 expansion $R_{\rm max}$, before collapsing. 
@@ -386,14 +416,19 @@ $\sigma(M)$)?
 Write $\Phi(M)$  in terms of $M_\ast$, $\bar\rho$, and $n$. What
 happens as $n\rightarrow -3$, as it does at small scales?
 \end{enumerate}
-\item Bias from PS
+\item Argue why the excursion set approach should lead to the
+prediction that dense regions on large scales should have more and
+larger dark matter halos.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item $P(k)$ estimates from CAMB, etc
-\item Simple PM
+\item Download and install CAMB, the standard code to calculate the
+power spectrum. Plot the linear $P(k)$, for $\Omega_m= 0.1$, $0.3$ and
+1 (assume $h=0.7$). Examine the dependence on baryon density by
+doubling it from the standard value; the wiggles you see getting
+stronger are due to the baryon acoustic oscillation.
 \end{enumerate}
 
 \bibliographystyle{apj}
