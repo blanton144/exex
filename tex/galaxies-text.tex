@@ -51,6 +51,31 @@ luminosities. The luminosity function depends on band pass, because
 the colors of galaxies depend on luminosity. A similar function
 characterizes the stellar mass function.
 
+Estimates of the luminosity function are based on counting galaxies as
+a function of luminosity. However, for realistic catalogs we do not
+have complete samples and all estimates must be corrected for
+incompleteness. The most common sort of incompleteness is to have a
+{\it flux-limited} sample, so that underluminous galaxies cannot be
+seen over a large volume. However, for color-selected surveys or
+surveys that probe high redshift the incompleteness can take more
+complicated forms. The completeness is also a function of galaxy
+surface brightness. The simplest method to correct for incompleteness
+is the {\it $1/V_{\rm max}$ method}. If for each galaxy we can
+calculate the maximum volume over which it could have still entered
+the sample, then we can estimate the luminosity function at some $L$
+as:
+\begin{equation}
+\Phi(L) \dd{L} = \sum_i \frac{1}{V_{\rm max}}
+\end{equation}
+for all galaxies $i$ in a range $\dd{L}$ around $L$. However, this
+technique assumes we have a sample of luminosity $L$ galaxies spanning
+the full range of properties that might affect their selection. It
+also tends to be sensitive to the presence of large scale structure in
+the sample. Note that under some conditions, we can construct {\it
+volume-limited} samples which are statistically complete over some
+range of luminosities and some range of distances, which can be
+useful.
+
 The {\it stellar mass function} $\Phi(M_\ast)$ characterizes their
 distribution in total stellar mass. Estimates of stellar mass depend
 on broad-band observations and/or spectroscopic observations combined
@@ -240,12 +265,10 @@ galaxies, etc. central star bursts. ULSBs. UCDs.
 
 \begin{itemize}
   \item
-    {\it Blanton \& Moustakas}
+    {\it Physical Properties of Nearby Galaxies}, \citet{blanton09a}
   \item
-    {\it Graham paper on Sersic}
+    {\it Sersic}
 \end{itemize}
-
-\citet{gunn06a}
 
 \section{Order-of-magnitude Exercises}
 
