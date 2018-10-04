@@ -214,9 +214,12 @@ brighter fluxes (above the background).
 \end{answer}
 \item The noise in a data set is determined by the Poisson noise in
 the expectation value of the signal. However, observationally we often
-only have access to one realization of the signal. This leads to a
-bias in our estimate of the noise. Estimate this bias as a function of
-$n_e$.
+only have access to one realization of the signal, and often the
+quoted errors are based on the Poisson noise in that signal.  If we
+take multiple observations and combine them together weighting by the
+inverse variance estimated in this way, it leads to a bias. Ignoring
+any background contribution to the noise, estimate this bias as a
+function of $n_e$.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
