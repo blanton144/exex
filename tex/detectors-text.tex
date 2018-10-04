@@ -171,10 +171,47 @@ telescopes.
 \begin{enumerate}
 \item The detected electrons contributing to the noise include the
 object, background, and dark current signal. Write the fractional
-error in the counts, separating out the object signal dependent term
-from all of the object signal independent terms. For low object
-signal, how does the fractional error depend on signal? For high
-object signal, how does the fractional error depend on signal?
+error in the object counts. Separate the terms involving the other
+sources of noise. For low object signal, how does the fractional error
+depend on signal? For high object signal, how does the fractional
+error depend on signal?
+
+\begin{answer}[Author: Dou Liu]
+The noise $N$ includes the Poisson noise in the object, sky, dark
+counts ($n_\mathrm{obj}$, $n_\mathrm{sky}$, and $n_\mathrm{dark}$),
+added in quadrature with each other and the read noise
+$N_\mathrm{read}$:
+\begin{equation}
+\label{ }
+N
+= \sqrt{N_\mathrm{obj}^2+N_\mathrm{sky}^2+N_\mathrm{dark}^2+N_\mathrm{read}^2}=\sqrt{n_\mathrm{obj}+n_\mathrm{sky}+n_\mathrm{dark}+N_\mathrm{read}^2}
+\end{equation}
+The fractional error in the object counts is:
+\begin{equation}
+\label{ }
+\frac{N}{n_\mathrm{obj}}=\frac{\sqrt{n_\mathrm{obj}+n_\mathrm{sky}+n_\mathrm{dark}+N_\mathrm{read}^2}}{n_\mathrm{obj}}
+= \frac{1}{\sqrt{n_\mathrm{obj}}}\left(1+
+\sqrt{\frac{n_\mathrm{sky}+n_\mathrm{dark}+N_\mathrm{read}^2}{n_\mathrm{obj}}}\right)
+\end{equation}
+Defining:
+\begin{equation}
+\sigma_\mathrm{other}^2 =
+n_\mathrm{sky}+n_\mathrm{dark}+N_\mathrm{read}^2,
+\end{equation}
+we find that if $n_\mathrm{obj}\gg \sigma_\mathrm{other}^2$ (the
+object-dominated regime), then
+\begin{equation}
+\frac{N}{n_\mathrm{obj}} \approx \frac{1}{\sqrt{n_\mathrm{obj}}}.
+\end{equation}
+If $n_\mathrm{obj}\ll \sigma_\mathrm{other}^2$ (the
+background-dominated regime), then
+\begin{equation}
+\frac{N}{n_\mathrm{obj}} \approx \frac{\sigma_\mathrm{other}}{n_\mathrm{obj}}.
+\end{equation}
+Therefore, for the faintest fluxes (below the background) the
+fractional errors are a stronger function of the flux than they are at
+brighter fluxes (above the background).
+\end{answer}
 \item The noise in a data set is determined by the Poisson noise in
 the expectation value of the signal. However, observationally we often
 only have access to one realization of the signal. This leads to a
