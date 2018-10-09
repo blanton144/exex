@@ -84,11 +84,16 @@ the stellar mass is proportional to the light multiplied by a
 mass-to-light ratio. The mass-to-light ratio depends on the age,
 metallicity, dust content, and other properties of the stellar
 population, with the trend in all cases for the redder populations to
-have higher mass-to-light ratios. Stellar mass is defined as the
-current stellar mass in objects above the hydrogen burning limit,
-including remnants such as white dwarfs and neutron stars, but not
-including any mass returned through winds or supernovae to the
-interstellar medium.
+have higher mass-to-light ratios. For example, \citet{bell00a} find
+\begin{equation}
+\label{eq:belldejong}
+\log_{10} \left(\frac{M}{L}\right) \approx -0.3 + 1.1 (g-r)
+\end{equation}
+for the stellar mass-to-light ratio in solar units. Stellar mass is
+defined as the current stellar mass in objects above the hydrogen
+burning limit, including remnants such as white dwarfs and neutron
+stars, but not including any mass returned through winds or supernovae
+to the interstellar medium.
 
 As a function of redshift, the luminosity function and stellar mass
 function change. The stellar mass function in general needs to grow
@@ -232,6 +237,7 @@ luminosity and dynamics: The {\it fundamental plane} of giant
 elliptical galaxies, the relationship between size, luminosity, and
 velocity dispersion, which takes the approximate form:
 \begin{equation}
+\label{eq:fundamentalplane}
 r_e \propto \sigma^\alpha I_e^{-\beta}
 \end{equation}
 which implies a plane in the three-dimensional space of the logarithms
@@ -243,9 +249,10 @@ luminosities and their peak circular velocities, as measured with
 optical or radio observations. Since the colors of disk galaxies
 depend on luminosity, the slope of this relationship depends on the
 band that the luminosity is measured in. In the $I$-band, the
-relationship is equivalent to $L\propto v^{3.1}$. At low luminosities,
-the velocity is independent of $L$ (but is dependent on the total
-baryonic mass). 
+relationship is equivalent to $L\propto v^{3.1}$, and has a scatter of
+0.2--0.4 dex (depending on the sample used). At low luminosities, the
+velocity is independent of $L$ (but is dependent on the total baryonic
+mass).
 
 Luminous galaxies all seem to have a supermassive black holes at their
 centers, with evidence for the black holes from active galactic
@@ -264,10 +271,10 @@ galaxies, etc. central star bursts. ULSBs. UCDs.
 \section{Key References}
 
 \begin{itemize}
-  \item
-    {\it Physical Properties of Nearby Galaxies}, \citet{blanton09a}
-  \item
-    {\it Sersic}
+\item {\it Physical Properties and Environments of Nearby
+Galaxies}, \citet{blanton09a}
+\item {\it A Concise Reference to (Projected) S{\'e}rsic
+Quantities}, \citet{Graham:2005p2523}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
@@ -275,24 +282,80 @@ galaxies, etc. central star bursts. ULSBs. UCDs.
 \begin{enumerate} 
 \item Using the numbers in the text, estimate $\Omega_b$ and
     $\Omega_m$. 
-\item Estimate the stellar mass surface density for a Milky Way like
+\item Estimate the stellar mass surface density for a Milky Way-like
 disk galaxy.
 \end{enumerate} 
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Petrosian quantities for Sersic galaxies
-\item $\kappa$ space
-\item Tully-Fisher
+\item The fundamental plane (Equation \ref{eq:fundamentalplane}) can
+be reexpressed in quantities with a clearer physical
+interpretation. The usual form is called $\kappa$-space
+(\citealt{bender92a}): 
+\begin{eqnarray}
+\kappa_1 &\equiv& \left[ \log_{10} \sigma^2 + \log_{10} r_e \right]
+/ \sqrt{2} \cr
+\kappa_2 &\equiv& \left[ \log_{10} \sigma^2 + 2 \log_{10} I_e
+- \log_{10} r_e \right] / \sqrt{6} \cr
+\kappa_3 &\equiv& \left[ \log_{10} \sigma^2 - \log_{10} I_e
+- \log_{10} r_e \right] / \sqrt{3}
+\end{eqnarray}
+where $\sigma$ is in km s$^{-1}$, $r_e$ is in kpc, and $I_e$ is in
+$L_\odot$ kpc$^{-2}$. 
+\begin{enumerate}
+\item Show that $\kappa_1$ is proportional to the logarithm of the
+virial mass.
+\item Show that $\kappa_3$ is proportional to the logarithm of the
+virial mass to stellar light ratio.
+\item \cite{bender92a} and others find:
+\begin{equation}
+\kappa_3 \approx 0.15 \kappa_1 + 0.36.
+\end{equation}
+How does the mass-to-light ratio depend on virial mass (or
+alternatively, on luminosity)?
+\item Elliptical galaxies fall along the red sequence, which depends
+on absolute magnitude as:
+\begin{equation}
+g-r \approx {\rm constant} - 0.03 M_r
+\end{equation}
+This trend implies that the stellar mass to light ratio is a function
+of luminosity. Assuming that Equation {eq:belldejong} is constant as a
+function of luminosity, and a constant virial-to-stellar mass ratio,
+what would this trend imply for the virial mass-to-light ratio
+dependence on luminosity? Comment.
+\end{enumerate}
+\item The Tully-Fisher relation can be approximated under similarly
+simple assumptions. Assume (a) a constant dynamical-to-stellar mass ratio,
+(b) that the stellar mass-to-light ratio scales with the colors as in
+Equation \ref{eq:belldejong}, with a color dependence on absolute
+magnitude of: 
+\begin{equation}
+g-r \approx {\rm constant} - 0.06 M_r
+\end{equation}
+(again from \citealt{blanton03d}), and (c) that the observed
+dependence of surface brightness on luminosity for exponential-profile
+galaxies found in \citet{blanton03d} of $I\propto L^{1/4}$ in the
+$i$-band (see Figure 14 and Table 1). Under these conditions and using
+the virial relation, how does luminosity depend on circular velocity?
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Luminosity function vs Press-Schechter
-\item Looking at galaxy images across color magnitude space
-\item Spectra and colors
+\item Using a Schechter function approximation to the luminosity
+function in the optical (any version you can find) compare to the
+predicted Press-Schechter mass function of halos. Specifically, find
+the (zero-scatter) relationship between $L$ and $M_{\rm halo}$ that
+satisfies the abundance-matching requirement:
+\begin{equation}
+\Phi\left(>L(M_{\rm halo})\right) = \Phi\left(>M_{\rm halo}\right).
+\end{equation}
+\item Download a catalog SDSS Legacy Survey galaxies in the Main Sample between
+redshifts $0.01 < z <0.05$. Plot their absolute magnitude
+vs. color. Select several galaxies along the red and blue sequences,
+and download and show their color images. For the same galaxies,
+download and plot their spectra.
 \item Measurement of bulge and disk 
 \item Axis ratios of disk galaxies and elliptical galaxies
 \item Dust reddening vs. axis ratio
