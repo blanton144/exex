@@ -75,7 +75,7 @@ Constant.
 
 We define also:
 \begin{eqnarray}
-\Omega_k &=& \frac{2Ea^2(t) r^2}{mH^2} \cr
+\Omega_k &=& \frac{2E}{mH^2a^2(t) r^2} \cr
 \Omega_m &=& \frac{8\pi G\rho}{3H^2}\cr
 \Omega_\Lambda &=& \frac{\Lambda}{3H^2} 
 \end{eqnarray}
@@ -264,7 +264,7 @@ We start by rearranging Equation (\ref{eq:energy}) expressing the
 energy considerations:
 \begin{eqnarray}
 \frac{E}{m} &=& \frac{v^2}{2}-\frac{GM}{r} - \frac{\Lambda}{6}a^2(t)r^2 \cr
-1 &=& \frac{2E}{mv^2} + \frac{2GM}{a(t) rv^2} -
+1 &=& \frac{2E}{mv^2} + \frac{2GM}{a(t) rv^2} +
 \frac{\Lambda}{3}\frac{a^2(t) r^2}{v^2} 
 \end{eqnarray}
 Now use $H=v/a(t)r$. Note that $v={\dot a}(t) r$, so:
@@ -274,17 +274,18 @@ H(t) = \frac{\dot a}{a}
 This is the time-dependent Hubble parameter. Also let us express the
 mass $M$ in terms of the density: $M=4\pi r^3\rho/3$. Then:
 \begin{eqnarray}
-\frac{2Ea^2(t) r^2}{mH^2} + \frac{8\pi
+\frac{2E}{a^2(t) r^2 m H^2} + \frac{8\pi
   G\rho}{3H^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
 \Omega_k + \Omega_m + \Omega_\Lambda &=& 1
 \end{eqnarray}
 Note that the $E=0$ case is just the $\Omega_k=0$ case, where the
-spatial curvature is zero. It can be useful to recast this in yet
-another way:
-\begin{eqnarray}
-\frac{2Ea^2(t_0) r^2}{mH_0^2} + \frac{8\pi
-  G\rho(t_0)}{3H_0^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
-\end{eqnarray}
+spatial curvature is zero.
+% It can be useful to recast this in yet
+% another way:
+% \begin{eqnarray}
+% \frac{2E}{mH_0^2 a^2(t_0) r^2} + \frac{8\pi
+  % G\rho(t_0)}{3H_0^2}+\frac{\Lambda}{3H^2} &=& 1 \cr 
+% \end{eqnarray}
 \end{answer}
 \item Derive the expansion $a(t)$ as a function of $t$ in the matter
 dominated case and the radiation-dominated case.

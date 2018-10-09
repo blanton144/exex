@@ -7,11 +7,7 @@ with a volume energy density per unit frequency as follows:
 \begin{equation}
 u_\nu = \frac{8\pi \nu^2}{c^3} \frac{h\nu}{\exp(-h\nu/kT)-1} 
 \end{equation}
-Typical units are erg Hz$^{-1}$ cm$^{-3}$. At low frequency this is a
-power-law distribution, the Rayleigh-Jeans tail:
-\begin{equation}
-u_\nu \approx  \frac{8\pi k T \nu^2 }{c^3}
-\end{equation}
+Typical units are erg Hz$^{-1}$ cm$^{-3}$.
 The peak of $u_\nu$ or $u_\lambda$ is simply related to $T$ according
 to Wien's Law:
 \begin{equation}
@@ -21,18 +17,28 @@ h\nu_{\rm max} = 2.8 kT \quad\quad
 \end{equation}
 This leads to a specific intensity of this radiation field:
 \begin{equation}
-I_\nu = \frac{u_\nu c}{4\pi} = \frac{2\nu^2}{c^2}
+I_\nu = \frac{u_\nu c}{4\pi}.
 \end{equation}
 The flux density through a flat surface is then:
 \begin{equation}
 f_\nu = \pi I_\nu 
 \end{equation}
-and the total flux is:
+and the total flux is (integrating over $\nu$):
 \begin{equation}
 f = \frac{2\pi^5 k^4}{15 c^2 h^3} T^4 = \sigma T^4
 \end{equation}
 where this question uses the definition of the Stefan-Boltzmann
 constant $\sigma$.
+
+At low frequency this is a power-law distribution, the Rayleigh-Jeans
+tail:
+\begin{equation}
+u_\nu \approx \frac{8\pi k T \nu^2 }{c^3}
+\end{equation}
+and the specific intensity is:
+\begin{equation}
+I_\nu \approx \frac{2 \nu^2 }{c^2}
+\end{equation}
 
 Under many conditions, the photon distribution is not in thermal
 equilibrium, and therefore differs from the Planck spectrum. Such
