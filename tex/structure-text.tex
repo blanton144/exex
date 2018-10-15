@@ -399,10 +399,32 @@ field linearly-evolved to some redshift $z$.
 \item If we smooth the density field on some characteristic scale $R$,
 the smoothed density field will relate to the the statistics of halos
 of what mass $M$?
+\begin{answer}[Author: Trey Jensen]
+    Given that we have a nearly uniform universe with density $\bar{\rho}$, we know that the scale will be directly related to the mass via 
+    \begin{equation}
+        M=\bar{\rho} \frac{4}{3}\pi R^3.
+    \end{equation}
+\end{answer}
 \item If the smoothing is performed as a top-hat function in
 $k$-space, what does that smoothing corrrespond to in real space?
+\begin{answer}[Author: Trey Jensen]
+    The Fourier transform of a top-hat in three dimensions is a first order spherical Bessel function:
+\begin{equation}
+\tilde \delta = \frac{\sin k R}{kR}
+\end{equation}
+\end{answer}
 \item In terms of the power spectrum, what is the variance
 $\sigma^2(M)$?
+\begin{answer}[Author: Trey Jensen]
+The variance as a function of the wavenumber $k$ is
+$\sigma^2(k)=k^3 P(k)/(2\pi^2)$. Using $k=2\pi/R$ to associate $k$ and
+$R$, and from the previous part knowing the relation of mass to radius,
+then, we find:
+\begin{equation}
+    \sigma^2(k) = \frac{P(k)}{2\pi^2}
+    \left(\frac{32\pi^4\bar{\rho}}{3M}\right)
+\end{equation}
+\end{answer}
 \item Assume that locations above some linearly-evolved
 overdensity $\delta_c \sim 1.686$ on scale $R$ or larger have in fact
 collapsed into halos of the corresponding mass $M$ or larger. What

@@ -343,6 +343,15 @@ the virial relation, how does luminosity depend on circular velocity?
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
+\item Download a catalog SDSS Legacy Survey galaxies in the Main
+Sample between redshifts $0.01 < z < 0.2$. Estimate the shape of the
+luminosity function in the $r$-band using the $1/V_{\rm max}$
+method. In calculating $V_{\rm max}$ and luminosities, ignore both
+$K$-corrections and evolution of the population; a precise estimate
+would require estimating both, but in the $r$-band it is approximately
+the case that these effects cancel. Also account only for the redshift
+selection effects, and for the angular selection effects simply assume
+an effective area of 7500 square degrees.
 \item Using a Schechter function approximation to the luminosity
 function in the optical (any version you can find) compare to the
 predicted Press-Schechter mass function of halos. Specifically, find
@@ -351,18 +360,32 @@ satisfies the abundance-matching requirement:
 \begin{equation}
 \Phi\left(>L(M_{\rm halo})\right) = \Phi\left(>M_{\rm halo}\right).
 \end{equation}
-\item Download a catalog SDSS Legacy Survey galaxies in the Main Sample between
-redshifts $0.01 < z <0.05$. Plot their absolute magnitude
-vs. color. Select several galaxies along the red and blue sequences,
-and download and show their color images. For the same galaxies,
-download and plot their spectra.
-\item Measurement of bulge and disk 
-\item Axis ratios of disk galaxies and elliptical galaxies
-\item Dust reddening vs. axis ratio
-\item Velocity dispersion
-\item Rotation curves
-\item Tully Fisher
-\item FP
+\item Download the catalog of galaxies from
+the \href{http://nsatlas.org}{NASA Sloan Atlas} between redshifts
+$0.01 < z <0.05$. Plot their absolute magnitude vs. color. Select
+several galaxies along the red and blue sequences, and download and
+show their color images. For the same galaxies, download and plot
+their spectra.
+\item With the NASA Sloan Atlas, for red and blue galaxies separately, plot the
+distribution of their axis ratios $b/a$. Show the color images for
+several high and low axis ratio cases. Choose galaxies (red or blue)
+with $n<2$ and plot their color vs. axis ratio --- can you explain the
+correlation that you see?
+\item For five red sequence galaxies from the NASA Sloan Atlas with
+between about $10^9$--$10^{11}$ $M_\odot$, download their
+spectra. Choose bright galaxies (e.g. $m_r < 16$) to maximize
+signal-to-noise ratio. Plot the spectra around the region of the Mg
+$b$ signature, which is an important absorption line in red giant
+stars (which dominate the light of red galaxies with old stellar
+populations). Normalize the spectra so you can compare the widths of
+the absorption line. If you assume the line is intrinsically narrow,
+can you determine the velocity dispersion of the stars in the galaxy?
+\item Install the {\tt sdss-marvin} package to get MaNGA data within
+Python. Search for MaNGA IFU observations of several nearly edge-on
+galaxies on the blue sequence between $10^9$--$10^{11}$
+$M_\odot$. Plot the rotation curve for each one just by plotting the
+velocity as a function of position along the major axis. How does the
+maximum rotation velocity depend on stellar mass?
 \end{enumerate}
 
 \bibliographystyle{apj}
