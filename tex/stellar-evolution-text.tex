@@ -37,7 +37,7 @@ hydrogen burning on the main sequence. The cores are typically
 millions to billions of Kelvin and fully ionized. Hydrogen is burned
 to helium through two major processes, the {\it p-p chain} at low
 masses and the {\it CNO cycle} at high masses ($M>2 M_\odot$). Each
-process yields one ${}^4He$ nucleus with a mass of 3.96$m_p$ from 4
+process yields one ${}^4$He nucleus with a mass of 3.96$m_p$ from 4
 protons; the one percent difference yields the energy for stellar
 luminosity. Numerous other nuclear processes are occurring
 simultaneously that contribute to the luminosity (and to the neutrino
@@ -66,10 +66,27 @@ Stellar structure is controlled by the following equations:
 \end{equation}
 or in the form of convection.
 \end{itemize}
-$\kappa(r)$ is a critical parameter, as it strongly affects the
+$\kappa(r)$ is the opacity defined as the cross-section to absorption
+per unit mass (so is $1/\rho l$, where $l$ is the mean free path of a
+photon). Opacity is a critical parameter, as it strongly affects the
 structure of the star, and therefore its size. The higher the
 metallicity, the higher the opacity, the larger the star, and
 therefore the lower the surface temperature at a given luminosity.
+
+The most important contributions to opacity inside the bulk of the
+star come from Thomson scattering, free-free absorption, and
+bound-free absorption. The latter two effects scale according to {\it
+Kramer's Law}, which scales as follows:
+\begin{equation}
+\kappa \propto Z \rho T^{-7/2}
+\end{equation}
+The scaling results from just the consideration of the effects of
+brehstrahhlung on a Planck spectrum, and the density of free
+electrons. Because of the temperature dependence, at high temperatures
+($T> 10^6$ K) Thomson scattering dominates, for which $\kappa$ is
+constant. There are two other major sources of opacity, bound-bound
+absorption, which is subdominant over most of the star, and H$^{-}$
+absorption, which is only possible in the outer layers.
 
 In the exercises, we will show that these equations imply a scaling of
 luminosity with mass of approximately $L\propto M^4$ and with surface
@@ -96,16 +113,22 @@ around the inert helium core. This shell burning yields tremendous
 luminosity and also induces the outer layers of the stars to expand up
 to AU or greater size. The result is a red giant. The red giant
 evolves up the red giant branch, increasing in luminosity until the
-tip of the red giant branch. In this phase, stellar winds can be
-active. This maximum luminosity is set by the onset of helium
-burning. For stellar masses of $M>2M_\odot$, the core is nondegenerate
-and expands, leading the envelope to contract and the star to become
-blue; some loops in the color-magnitude diagram can occur. For lower
-stellar masses, there is a thermal runaway process called the {\it
-helium flash} and the stellar structure readjusts, with the stars
-ending up on the {\it horizontal branch}, with a luminosity determined
-by the core mass (usually around 0.5 $M_\odot$) and the temperature
-determined by how much envelope was lost through winds.
+tip of the red giant branch. The color of the red giant branch is
+largely set by the {\it Hayashi limit}, which determines how low a
+temperature the atmosphere can become and still satisfy energy
+transport constraints. In the red giant phase, stellar winds can be
+active.
+
+The maximum luminosity at the tip of the red giant branch is set by
+the onset of helium burning. For stellar masses of $M>2M_\odot$, the
+core is nondegenerate and expands, leading the envelope to contract
+and the star to become blue; some loops in the color-magnitude diagram
+can occur. For lower stellar masses, there is a thermal runaway
+process called the {\it helium flash} and the stellar structure
+readjusts, with the stars ending up on the {\it horizontal branch},
+with a luminosity determined by the core mass (usually around 0.5
+$M_\odot$) and the temperature determined by how much envelope was
+lost through winds.
 
 The net result of stellar evolution is that at early times the stellar
 population is mostly on the main sequence and it is dominated by the
@@ -166,7 +189,63 @@ temperature).
     lifetime for the Sun of 10 billion years. What fraction of the
     total hydrogen in the Sun needs to be converted to helium to
     provide this lifetime?
-\item Using the relations found in the text above, what is the 
+\item Estimate the scaling relations between luminosity, mass, and
+    surface temperature on the main sequence from the equations of
+    stellar structure. Assume that the central temperature $T_c$ is
+    approximately constant (it is more like $T\propto M^{-1/2}$ in
+    reality). Calculate the scaling separately for high mass stars,
+    assuming their opacity is dominated by Thomson scattering, and low
+    mass stars, assuming their opacity is dominated by Kramer's Law.
+
+\begin{answer}
+Using dimensional analysis, the energy transport equation implies the
+relations: 
+\begin{eqnarray}
+\frac{T_c}{R} &\propto& \frac{L \rho}{R^2T_c^3} \mathrm{\quad high~mass}\cr
+\frac{T_c}{R} &\propto& \frac{L \rho^2}{R^2T_c^{7.5}} \mathrm{\quad low~mass}
+\end{eqnarray}
+and we can rearrange these:
+\begin{eqnarray}
+  L &\propto& \frac{T_c^4 R}{\rho} \propto \frac{T_c^4
+  R^4}{M} \mathrm{\quad high~mass} \cr
+  L &\propto& \frac{T_c^{8.5} R}{\rho^2} \propto \frac{T_c^{8.5}
+  R^7}{M^2} \mathrm{\quad low~mass}
+\end{eqnarray}
+The hydrostatic equation implies:
+\begin{equation}
+P \propto \frac{M^2}{R^4}
+\end{equation}
+and we can convert the ideal gas law ($P = nkT$) to:
+\begin{equation}
+P \propto \frac{MT_C}{R^3}.
+\end{equation}
+Equating the two expressions, balancing temperature and density
+against gravity leads to:
+\begin{equation}
+T_c \propto \frac{M}{R}
+\end{equation}
+or $M\propto R$. Then plugging into the energy transport equation:
+\begin{eqnarray}
+  L &\propto& M^3 \mathrm{\quad high~mass} \cr
+  L &\propto& M^5 \mathrm{\quad low~mass}
+\end{eqnarray}
+Now we can use the Stefan-Boltzmann law to relate the surface
+temperature to the luminosity:
+\begin{equation}
+L \propto R^2 T_s^4
+\end{equation}
+If we just average the high and low mass exponents and assert
+$L\propto M^4$, it is simple to show that
+\begin{equation}
+L \propto T_s^8,
+\end{equation}
+explaining the extremely strong dependence of luminosity on surface
+temperature in the Hertzsprung-Russell diagram. Note that using $T_c$
+that varies with mass changes these exponents somewhat but only
+weakly. Of course getting things right in detail requires detailed
+numerical calculations.
+\end{answer}
+
 \end{enumerate} 
 
 \section{Analytic Exercises}

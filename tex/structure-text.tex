@@ -334,9 +334,119 @@ has entered the matter-dominated phase?
    \ref{eq:homogeneous}, assuming a flat matter dominated universe
     ($\Omega_m = 1$), and keeping only first-order terms, derive
     Equation \ref{eq:continuity}.
+
+%\begin{answer}
+%\begin{eqnarray}
+%\frac{{\rm D}\vec{v}}{{\rm D} t} =
+%\left[ \frac{\dd{}}{\dd{t}} + \vec{v}_p \cdot \vec{\nabla} \right]
+%\left[\rho_0 \left(1+\delta\right)\right] &=&
+%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_0
+%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_p \cr
+%
+%\frac{\dd{\rho_0}}{\dd{t}}
+%\frac{\dd{}}{\dd{t}}\left(\rho_0 \delta\right)
+%+ \vec{v}_p \cdot \vec{\nabla} \right]
+%\left[\rho_0 \left(1+\delta\right)\right] &=&
+%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_0
+%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_p
+%\end{eqnarray}
+%\end{answer}
+
+
 \item Starting from Equation \ref{eq:homogeneous}, and assuming a flat
     matter dominated universe ($\Omega_m = 1$), derive
     Equation \ref{eq:secondorder}.
+
+% didn't need to find a^{2/3}
+% sorta skipped over key part
+\begin{answer}[Author: Kate Storey-Fisher]
+Equations \ref{eq:homogeneous} are the equations of motion for a
+pressureless, gravitating fluid (Euler's equation, the continuity
+equation, and Poisson's equation).
+
+We can perturb the density around the homogeneous density $\rho_0$.
+If $\Omega_m = 1$, conservation of energy gives us $\rho_0
+\propto a^{-3}$. We also perturb the other quantities, giving:
+\begin{eqnarray}
+\rho  &\rightarrow& (1+\delta)\rho_0 \\
+\vec{v} &\rightarrow& \vec{v}_0 + \vec{v}_p \\
+\phi  &\rightarrow& \phi_0 + \delta\phi
+\end{eqnarray}
+
+For Poisson's equation we find:
+\begin{eqnarray}
+\nabla^2\phi &=& 4\pi G \rho  \cr
+\nabla^2\left(\phi_0 + \delta\phi\right) &=& 4\pi
+G \rho_0\left(1+\delta\right)  \cr
+\nabla^2\left(\delta\phi\right) &=& 4\pi G \rho_0 \delta
+\end{eqnarray}
+
+For Euler's equation we find:
+\begin{eqnarray}
+\frac{{\rm D}\vec{v}}{{\rm D} t} =
+\left[ \frac{\dd{}}{\dd{t}} + \vec{v}_p \cdot \vec{\nabla} \right]
+\left[\vec{v}_0 + \vec{v}_p\right] &=& - \vec{\nabla}\left(\phi_0
++ \delta\phi\right) \cr
+\frac{\dd{\vec{v}_0}}{\dd{t}} + \vec{v}_p \cdot \vec{\nabla}\vec{v}_0
++ \frac{\dd{\vec{v}_p}}{\dd{t}} + \vec{v}_p \cdot \vec{\nabla}\vec{v}_p
+&=& - \vec{\nabla}\phi_0 - \vec{\nabla}\left(\delta\phi_0\right)
+\end{eqnarray}
+The first terms on both sides cancel because they solve the
+homogeneous equations (for which ${\rm D}/{\rm D}t
+= \dd{}/\dd{t}$). The last term on the left hand side is
+second-order. Rearranging, we are left with
+\begin{eqnarray}
+\frac{\dd{\vec{v}_p}}{\dd{t}}
+&=& - \vec{v}_p \cdot \vec{\nabla}\vec{v}_0
+- \vec{\nabla}\left(\delta\phi_0\right)
+\end{eqnarray}
+Remembering that $\vec{v}_0 = ({\dot a}/a)\vec{r} = H\vec{r}$, where
+$\vec{r}$ is in physical units, we have
+\begin{eqnarray}
+\label{eq:dvdt}
+\frac{\dd{\vec{v}_p}}{\dd{t}}
+&=&
+- H \vec{v}_p
+- \vec{\nabla}\left(\delta\phi_0\right)
+\end{eqnarray}
+where the first term on the right-hand side is the Hubble drag term.
+
+We now take the divergence of Equation \ref{eq:dvdt}, and get
+\begin{eqnarray}
+\nabla \cdot \frac{\mathrm{d}\vec{v}_p}{\mathrm{d} t} &=& -\vec{\nabla}^2(\delta\phi) - H(t)\nabla \cdot \vec{v}_p \\  
+ &=& -4\pi G \rho_0 \delta + H(t) \frac{\mathrm{d}\delta}{\mathrm{d} t}  \label{eq:4piG}
+\end{eqnarray}
+where in the second line we have substituted the continuity equation
+and the Poisson equation.
+
+Taking the time derivative of the continuity equation, we find:
+\begin{equation}
+\frac{\mathrm{d}^2\delta}{\mathrm{d} t^2}
+= \frac{\mathrm{d}}{\mathrm{d}
+t}\left(-\vec{\nabla} \cdot \vec{v}_p\right) \label{eq:d2delta}
+\end{equation}
+
+Because the spatial derivatives are in physical units, and using the
+continuity equation again:
+\begin{equation}
+\frac{\mathrm{d}^2\delta}{\mathrm{d} t^2} =
+- \frac{\mathrm{d}}{\mathrm{d}t} \left(\vec{\nabla} \cdot \vec{v}_p\right)
+- = \vec{\nabla} \cdot \frac{\mathrm{d}\vec{v}_p}{\mathrm{d} t} - H(t) \frac{\mathrm{d}\delta}{\mathrm{d} t} 
+\end{equation}
+
+And now substitute Equation \ref{eq:4piG} into the RHS of the above equation:
+\begin{equation}
+\frac{\mathrm{d}^2\delta}{\mathrm{d} t^2} = -\Bigg(-4\pi G \rho_0 \delta + H(t) \frac{\mathrm{d}\delta}{\mathrm{d} t}\Bigg) - H(t) \frac{\mathrm{d}\delta}{\mathrm{d} t} 
+\end{equation}
+Rearranging,
+\begin{equation}
+\frac{\mathrm{d}^2\delta}{\mathrm{d} t^2} +
+2H(t) \frac{\mathrm{d}\delta}{\mathrm{d} t} - 4\pi G \rho_0 \delta =
+0,
+\end{equation}
+which is the equation for linear growth of the overdensity field.
+\end{answer}
+
 \item Show that Equation \ref{eq:lineargrowth} solves
 Equation \ref{eq:secondorder}.
 \item Consider a spherical region with mean overdensity $\bar\delta
