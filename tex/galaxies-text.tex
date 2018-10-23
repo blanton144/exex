@@ -338,6 +338,44 @@ dependence of surface brightness on luminosity for exponential-profile
 galaxies found in \citet{blanton03d} of $I\propto L^{1/4}$ in the
 $i$-band (see Figure 14 and Table 1). Under these conditions and using
 the virial relation, how does luminosity depend on circular velocity?
+
+\begin{answer}
+The \citet{bell00a} dependence of stellar mass-to-light ratio color
+can be combined with the dependence of color on absolute magnitude:
+\begin{eqnarray}
+\log_{10} \left(\frac{M_\ast}{L}\right) &\approx& -0.3 + 1.1 (g-r) \cr
+&\approx& \mathrm{constant} - 0.066 M_r  \cr
+\end{eqnarray}
+or equivalently:
+\begin{eqnarray}
+\left(\frac{M_\ast}{L}\right) &\propto& L^{(-0.066)(-2.5)} \cr
+\left(\frac{M_\ast}{L}\right) &\propto& L^{0.17} \cr
+M_\ast &\propto& L^{1.17}
+\end{eqnarray}
+The stellar radius (the scale out to which the circular velocity is
+probed by an optical rotation curve) is related to the surface
+brightness and luminosity as:
+\begin{equation}
+L \propto I_\ast r_\ast^2 \propto L^{1/4} r_\ast^2,
+\end{equation}
+where we have (somewhat shakily) used $i$-band relationship between
+$I$ and $L$.  Rearranging we find:
+\begin{equation}
+r_\ast \propto L^{3/8}
+\end{equation}
+If the dynamical-to-stellar mass ratio is constant then the virial
+relation gives:
+\begin{equation}
+M_\ast \propto L^{1.17} \propto v^2 r_\ast \propto v^2 L^{3/8}
+\end{equation}
+or equivalently:
+\begin{equation}
+L \propto v^{2.5}
+\end{equation}
+This obviously is a rough approximation because the relationship
+between the dynamical and stellar mass depends a lot on the radius at
+which you define it.
+\end{answer}
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
