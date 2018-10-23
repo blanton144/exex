@@ -239,13 +239,13 @@ ends up in dark matter halos greater than that mass. This function can
 be differentiated to yield the halo mass function:
 \begin{equation}
 \Phi(M) \dd M
-= \frac{1}{\sqrt{2\pi}} \frac{\bar \rho}{M} \frac{\delta_c}{\sigma^2(M)} \left[
+= \frac{1}{\sqrt{2\pi}} \frac{\bar \rho}{M} \frac{\delta_c}{\sigma^3(M)} \left[
 - \frac{\dd \sigma^2}{\dd
 M}\right] \exp\left[-\frac{\delta_c^2}{2\sigma^2}\right] \dd M
 \end{equation}
 For $P(k)\propto k^n$, one can show:
 \begin{equation}
-\Phi(M) = \frac{\bar\rho}{2\pi
+\Phi(M) \dd{M} = \frac{\bar\rho}{\sqrt{2\pi}
 M} \left(\frac{M}{M_\ast}\right)^{(n+3)/6}
 \left(\frac{n+3}{3}\right)
 \exp\left[-\frac{1}{2}\left(\frac{M}{M_\ast}\right)^{(n+3)/3}\right] \frac{\dd
@@ -523,15 +523,15 @@ $k$-space, what does that smoothing corrrespond to in real space?
 \tilde \delta = \frac{\sin k R}{kR}
 \end{equation}
 \end{answer}
-\item In terms of the power spectrum, what is the variance
-$\sigma^2(M)$?
+\item In terms of the power spectrum, how does the variance
+$\sigma^2(M)$ scale with $M$?
 \begin{answer}[Author: Trey Jensen]
-The variance as a function of the wavenumber $k$ is
-$\sigma^2(k)=k^3 P(k)/(2\pi^2)$. Using $k=2\pi/R$ to associate $k$ and
-$R$, and from the previous part knowing the relation of mass to radius,
-then, we find:
+The variance as a function of the wavenumber $k$ is approximately
+$\sigma^2(k) \propto k^3 P(k)$. Using $k=2\pi/R$ to associate $k$ and
+$R$, and from the previous part knowing the relation of mass to
+radius, then, we find:
 \begin{equation}
-    \sigma^2(k) = \frac{P(k)}{2\pi^2}
+    \sigma^2(k) \sim P(k)
     \left(\frac{32\pi^4\bar{\rho}}{3M}\right)
 \end{equation}
 \end{answer}
@@ -540,13 +540,114 @@ overdensity $\delta_c \sim 1.686$ on scale $R$ or larger have in fact
 collapsed into halos of the corresponding mass $M$ or larger. What
 fraction $F(>M)$ of the volume has done so (express in terms of $\delta_c$ and
 $\sigma(M)$)?
+\begin{answer}[Author: Trey Jensen]
+    Because we have a Gaussian random field, and we know the standard
+    deviation of density from above, then the fraction of volume above
+    this critical density on scale $M$ is the probability of this
+    Gaussian random field being above this value, that is, we simply
+    integrate the the PDF, giving the complementary error function.
+    which is the complementary error function. However, we also need
+    to account for the regions which are below the critical overdensity on
+    scale $M$, but above it on some larger scale. Since the $\delta$
+    as a function of increasing smoothing wavenumber $k$ (decreasing
+    mass) is a random walk, for all points that cross the critical
+    overdensity at some wavenumber smaller than $k$ that are still above
+    the critical overdensity at $k$, there is another point that takes the
+    equal and opposite path after crossing the critical overdensity, and
+    is below the critical overdensity at scale $k$. This leads to an
+    extra factor of two so:
+    \begin{equation}
+        F(>M)
+    = \frac{2}{\sqrt{2\pi}\sigma}\int^\infty_{\delta_c}\dd{M} \delta \exp\left(-\frac{\delta^2}{2\sigma^2}\right)
+    \end{equation}
+    We leave the expression in this form rather than in terms of the
+    error function, because it makes the calculation below easier.
+\end{answer}
+
 \item Derive from $F(>M)$ the mass function of halos $\Phi(M)$. 
+\begin{answer}
+    The mass function is simply the derivative of $F(>M)$,
+    converted to a number density with the factor $\bar{\rho}/M$:
+    \begin{equation}
+    \Phi(M) =
+        \frac{\bar{\rho}}{M} \frac{\dd{}}{\dd{M}} F(>M)
+    \end{equation}
+    If we rewrite $F(>M)$ with a change of variables $x=\delta/\sigma$:
+    \begin{equation}
+    F(>M) = \frac{2}{\sqrt{2\pi}} \int_{\delta_c/\sigma}^\infty \dd{x}
+                          \exp\left(-\frac{x^2}{2}\right)
+    \end{equation}
+    then it is apparent that:
+    \begin{equation}
+    \frac{\partial F}{\partial M}
+    = \frac{2}{\sqrt{2\pi}} \exp\left(-\frac{\delta_c^2}{2\sigma^2}\right)
+    \frac{\partial}{\partial M}\left(\frac{\delta_c}{\sigma}\right).
+    \end{equation}
+    We can then convert this to a slightly different form:
+    \begin{equation}
+    \Phi(M) = \frac{\bar{\rho}}{M}
+    \frac{1}{\sqrt{2\pi}} \frac{\delta_c}{\sigma^3}
+    \exp\left(-\frac{\delta_c^2}{\sigma^2}\right)
+    \left[ - \frac{\partial \sigma^2}{\partial M}\right]
+    \end{equation}
+    to match the text.
+\end{answer}
+
 \item Assume $P(k)\propto k^n$. Define the nonlinear mass $M_\ast$:
 \begin{equation}
-\sigma^2 = \left(\frac{M}{M_\ast}\right)^{-(n+3)/3}.
+\sigma^2 = \delta_c^2 \left(\frac{M}{M_\ast}\right)^{-(n+3)/3}.
 \end{equation}
 Write $\Phi(M)$  in terms of $M_\ast$, $\bar\rho$, and $n$. What
 happens as $n\rightarrow -3$, as it does at small scales?
+\begin{answer}
+First let us evaluate:
+\begin{equation}
+\frac{\dd \sigma^2}{\dd M}
+= - \delta_c^2 \frac{1}{M_\ast} \frac{n+3}{3}
+\left(\frac{M}{M_\ast}\right)^{-(n+6)/3}
+\end{equation}
+Then we can plug in
+\begin{eqnarray}
+\Phi(M) &=& \frac{\bar{\rho}}{M}
+\frac{1}{\sqrt{2\pi}}
+\frac{1}{M_\ast} \frac{n+3}{3}
+\left(\frac{M}{M_\ast}\right)^{-(n+6)/3}
+\frac{\delta_c^3}{\sigma^3}
+\exp\left(-\frac{\delta_c^2}{\sigma^2}\right) \cr
+&=& \frac{\bar{\rho}}{M}
+\frac{1}{\sqrt{2\pi}}
+\frac{1}{M_\ast} \frac{n+3}{3}
+\left(\frac{M}{M_\ast}\right)^{-(n+6)/3}
+\left(\frac{M}{M_\ast}\right)^{(n+3)/2}
+\exp\left(-\frac{\delta_c^2}{\sigma^2}\right) \cr
+&=& \frac{\bar{\rho}}{M}
+\frac{1}{\sqrt{2\pi}}
+\frac{1}{M_\ast} \frac{n+3}{3}
+\left(\frac{M}{M_\ast}\right)^{(n-3)/6}
+\exp\left(-\frac{\delta_c^2}{\sigma^2}\right) \cr
+&=& \frac{\bar{\rho}}{M}
+\frac{1}{\sqrt{2\pi}}
+\frac{1}{M}
+\frac{n+3}{3}
+\left(\frac{M}{M_\ast}\right)^{(n+3)/6}
+\exp\left[-\left(\frac{M}{M_\ast}\right)^{(n+3)/3}\right]
+\end{eqnarray}
+where the last term matches the corresponding equation in the text.
+When $n\rightarrow -3$ from above, and we consider $M\ll M_\ast$, this
+mass function becomes close to but slightly shallower then $M^{-2}$,
+which would be the divergent function.
+
+It is worth pausing here and asking what it would mean if $n<-3$ ---
+would that lead to a divergent mass function? Obviously that cannot
+reflect reality, but what happens to the excursion set argument?  What
+happens is that $n<-3$ implies that the smallest scales do not
+collapse first, because $k^3P(k)$ is not monotonically
+increasing. This means that the hierarchical collapse ansatz  that
+underlies the excursion set picture fails and it is not applicable in
+this case. 
+\end{answer}
+
+
 \end{enumerate}
 \item Argue why the excursion set approach should lead to the
 prediction that dense regions on large scales should have more and
