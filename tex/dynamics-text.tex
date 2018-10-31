@@ -4,11 +4,11 @@
 
 Stellar dynamics is almost entirely collisionless, due to the low
 number density of stars relative to their radii. It is therefore
-governed by the collisionless Boltzmann equation (sometimes called the
-Vlasov equation) acting under gravity.
+governed by the {\it collisionless Boltzmann equation} (sometimes
+called the {\it Vlasov equation}) acting under gravity.
 
-In the continuum limit, we can express the distribution function of
-stars in phase space as $f(\vec{x}, \vec{v}, t)$, in units of per
+In the continuum limit, we can express the {\it distribution function}
+of stars in phase space as $f(\vec{x}, \vec{v}, t)$, in units of per
 length-cubed per unit velocity-cubed. If we define the phase space
 vector $\vec{w} = \{\vec{x}, \vec{v}\}$ then we can write $f(\vec{w},
 t)$. The distribution in phase space can be arbitrarily
@@ -17,8 +17,10 @@ any particular equation of state.
 
 The continuum limit will be violated most rapidly by two-body
 interactions. We find in the exercises that the time for an $N$-body
-system to ``relax'' due to this effect is:
+system to relax due to this effect, the {\it two-body relaxation
+time}, is:
 \begin{equation}
+\label{eq:relax}
 t_{\rm relax} \sim \frac{0.1 N}{\ln N} t_{\rm cross}
 \end{equation}
 where $t_{\rm cross}$ is the crossing time of the system. Globular
@@ -32,8 +34,8 @@ equation under just gravity:
  \frac{\partial f}{\partial t} + \vec{v}\cdot\vec{\nabla} f -
 \vec{\nabla}\Phi\cdot\frac{\partial f}{\partial \vec{v}} = 0
 \end{equation}
-It can be shown that this equation obeys a special case of Liouville's
-Theorem:
+It can be shown that this equation obeys a special case of {\it
+Liouville's Theorem}:
 \begin{equation}
 \frac{{\rm d}f}{{\rm d}t} = 0
 \end{equation}
@@ -42,11 +44,15 @@ where in this case the substantive derivative is:
 \frac{\rm d}{{\rm d}t} = \frac{\partial}{\partial t}
 + \sum_\alpha \frac{\partial}{\partial w_\alpha}
 \end{equation}
+The meaning of Liouville's Theorem is that as a particle travels
+through phase space, the phase space density of particles around it
+remains constant.
 
 \section{Jeans Equations}
 
-The first few moments collisionless Boltzmann equation are instructive
-and can be useful. These equations are known as the Jeans Equations.
+The first few moments of the collisionless Boltzmann equation are
+instructive and can be useful. These equations are known as the {\it
+Jeans Equations}.
 
 The zeroth moment yields the equation of continuity:
 \begin{equation}
@@ -58,8 +64,10 @@ where $n(\vec{x})$ is the mean density per unit volume and
 $\langle\rangle$ indicates a density weighted-mean over all
 velocities.
 
-The first moment yields something akin to Euler's equations:
+The first moment of velocity yields something akin to Euler's
+equations:
 \begin{equation}
+\label{eq:euler}
 n \frac{\partial \langle\vec{v}\rangle}{\partial t}
  + n \langle \vec{v} \rangle \cdot
  \vec{\nabla} \langle\vec{v}\rangle
@@ -67,31 +75,72 @@ n \frac{\partial \langle\vec{v}\rangle}{\partial t}
  {\mathbf{\sigma^2}})
 \end{equation}
 where ${\mathbf{\sigma^2}}$ is the tensor second moment of the velocity
-field, analogous to pressure. Each moment of the collisional Boltzman
-equation involves terms of higher order in this fashion; whereas in a
+field, analogous to pressure:
+\begin{equation}
+\sigma_{ij} = \left\langle \left(v_i - \langle v_i \rangle\right)
+\left(v_j - \langle v_j \rangle\right) \right\rangle
+\end{equation}
+Each successively higher moment of the collisional Boltzman equation
+involves terms of higher order in this fashion; whereas in a
 collisional fluid the system would close with an equation of state, in
-a collisionless system the equations never close. 
+a collisionless system the equations never close.
 
 In steady state, where the density is not changing with time anywhere
-and therefore the mean velocity is zero everywhere, we find:
+and therefore the mean velocity is zero everywhere, we find a relation
+analogous to the hydrostatic equation:
 \begin{equation}
+ \label{eq:steady}
  \vec{\nabla} \cdot(n
  {\mathbf{\sigma^2}}) = -n \vec{\nabla}\Phi(\vec{x}, t)
 \end{equation}
 Under spherical symmetry in configuration space, this can be
 rewritten:
 \begin{equation}
+ \label{eq:spherical}
 \frac{\partial(n \sigma_{rr}^2)}{\partial r}
 + \frac{n}{r} \left[2 \sigma_{rr}^2
 - \left(\sigma_{\theta\theta}^2 + \sigma_{\phi\phi}^2\right)\right] =
 - n \frac{\partial \Phi}{\partial r}
 \end{equation}
+and in addition $\sigma_{\theta\theta}^2 = \sigma_{\phi\phi}^2$. In
+this equation, $\sigma_{rr}$ and $\sigma_{\theta\theta}$ may both be
+functions of $r$.
+
 Although the spherical symmetry in configuration space means that $f$
 does not depend on $\theta$ or $\phi$, it can clearly depend on
 $v_\theta$ and $v_\phi$. Thus, $\sigma_{rr}^2$ does not have to equal
-$\sigma_{\theta\theta}^2$ pr $\sigma_{\phi\phi}^@$. The orbit
-distribution can be anisotropic, and the degree anisotropy affects the
-radial distribution $n(r)$. 
+$\sigma_{\theta\theta}^2$. The orbit distribution can be anisotropic,
+and the degree anisotropy affects the radial distribution $n(r)$.
+This anisotropy is usually quantified by
+\begin{equation}
+\beta(r)  = 1 - \frac{\sigma_{\theta\theta}^2}{\sigma_{rr}^2}
+\end{equation}
+We can then write:
+\begin{equation}
+ \label{eq:spherical}
+M(<r) = \frac{rv_c^2}{G} = - \frac{r \sigma_{rr}^2}{G}
+\left[\frac{\dd{\ln n}}{\dd{\ln r}}
++ \frac{\dd{\ln \sigma_{rr}^2}}{\dd{\ln r}} + 2 \beta\right],
+\end{equation}
+where we have defined $v_c$ as the circular velocity of a stable
+circular orbit. In this equation, the right hand side consists of
+in-principle observables. Particularly, $n(r)$ is the tracer density;
+the potential could be set by other unobserved masses. However, in
+practice $\beta$ proves hard to constrain for most systems, for which
+only line-of-sight velocities and projected densities are known.
+
+If we take $\sigma_{rr}$ to be constant and $\beta=0$, and we assume
+that the particles are {\it self-gravitating} --- meaning that they
+are the source of the potential --- then a solution to the equations
+is given by the singular isothermal sphere:
+\begin{eqnarray}
+n &\propto& r^{-2} \cr
+M(<r) = \frac{rv_c^2}{G} &=& \frac{2 r \sigma_{rr}^2}{G}
+\end{eqnarray}
+yielding the relation $v_c^2 = 2\sigma_{rr}^2$, which is a useful
+order-of-magnitude relationship between the circular velocity and the
+one-dimensional (for example, line-of-sight) velocity dispersion in
+gravitating systems.
 
 \section{Virial Theorem}
 
@@ -175,7 +224,7 @@ Gaussian width $\sigma$ in each dimension. Generically, at large
 radius $\rho \propto r^{-2}$ for an isothermal sphere. At these radii
 the circular velocity $v_c = \sqrt{2}\sigma$. The case in which
 $r^{-2}$ at all radii is known as the {\it singular isothermal
-sphere}.
+sphere}, because of the infinite value of the density at the center.
 
 \section{Chandrasekhar Dynamical Friction}
 
@@ -243,7 +292,8 @@ clearest to think of the virial theorem establishing the relationship
 between $K$ and $U$ for a bound, equilibrium system.  However, as
 described in the problems, one can create definitions of
 ``characteristic'' for $v$, $M$, and $r$ for which the equation $v^2 =
-GM/r$ holds strictly.
+GM/r$ holds strictly, and will scale with a constant coefficient in
+homologous systems.
 
 \section{Important numbers}
 
@@ -268,13 +318,241 @@ GM/r$ holds strictly.
 \section{Analytic Exercises}
 
 \begin{enumerate}
+\item In this exercise, we derive the equation for the relaxation time
+given in Equation \ref{eq:relax}. Relaxation refers to the effect of
+granularity in the potential due to the fact that there are a finite
+number of particles in the system, due primarily to two-body
+interactions. A distribution function that forms an equilibrium
+system, if sampled by a finite number of particles, will slowly (or
+quickly) wander away from that equilibrium, on a time scale associated
+with the relaxation time. We will calculate this for a system of mass
+$M$, consisting of $N$ particles with mass $m$, within some system
+size $R$. For this exercise we define the crossing time $t_c=R/v$,
+where $v$ is the typical velocity of a particle.
+\begin{enumerate}
+\item What does the virial theorem tell us about the crossing time
+$t_c$?
+\begin{answer}
+The typical velocity is defined by the virial relation $v^2\sim GM/R$,
+so the crossing time is $R^{3/2}/M^{1/2}$ (related, as it needs to be,
+by the square root of the density).
+\end{answer}
+\item Imagine two particles of mass $m$ passing by each other with
+speed $v$ with an impact parameter $b$, defined as their separation at
+infinity normal to their relative velocity. Argue from a heuristic
+point of view why the velocity perturbation normal to the original
+velocity will scale $\propto Gm/bv$ (in detail it is $\Delta
+v_\perp \approx 2Gm/bv$).
+\begin{answer}
+At closest approach the relative acceleration perpendicular to the
+original velocity is $Gm/b^2$, and this closest approach lasts a time
+of order $b/v$. Multiplying these together yields the $Gm/bv$ scaling.
+\end{answer}
+\item Consider interactions in some range of impact parameters,
+between $b$ and $b+\dd{b}$. During one crossing time of a particle,
+what is the mean $\langle \delta v_\perp\rangle$ and mean-squared
+$\langle \delta v_\perp^2\rangle$ perturbation that these
+interactions cause on the velocity of the particle perpendicular to
+its motion?
+\item Below $b_{\rm min} = Gm/v^2$ our assumptions break down. We will
+take the perhaps questionable route of ignoring these close
+encounters. Considering only interactions with impact parameters
+between $b_{\rm min}$ and $R$ to express the total
+$langle \delta v_\perp\rangle$ over all encounters in a crossing
+time. Express the result in terms of $\Lambda = R/b_{\rm min}$.
+\item Define the relaxation time as the time it takes for the total
+fractional perturbation in velocity to reach unity. How many crossing
+times does it take?
+\item Approximate the answer one step further, using the
+virial theorem to show $\Lambda \sim N$, and thus expressing the
+number of crossings just in terms of $N$.
+\end{enumerate}
 \item Show that Liouville's Theorem follows from the collisionless
 Boltzmann equation. 
-\item Verify the expressions for the Jeans Equations. 
-\item Verify the expressions for the Virial relation.
+\item Verify the expressions for the first-order Jeans Equation. 
+\item Show that Equation \ref{eq:spherical} follows from
+Equation \ref{eq:steady} under spherical symmetric in configuration
+space. 
+\begin{answer}
+First we need to recognize that if there is spherical symmetry in
+configuration space, then in spherical coordinates $\sigma_{ij}$ will
+be diagonal. Furthermore, the derivatives of $\sigma_{ij}$ with
+respect to angular coordinates will be zero. We can write
+$\vec{\nabla}$ in spherical coordinates as:
+\begin{equation}
+\vec{\nabla} = {\hat e}_e \partial_r + {\hat
+e}_\theta \frac{1}{r} \partial_\theta + {\hat
+e}_\phi \frac{1}{r\sin\theta} \partial_\phi
+\end{equation}
+We are applying this operator to the tensor $\mathbf{\sigma^2}$ so we
+need to work out how it acts on basis vectors:
+\begin{equation}
+\begin{array}{ccc}
+\partial_r {\hat e}_r = 0 & 
+\partial_r {\hat e}_\theta = 0 &
+\partial_r {\hat e}_\phi = 0 \cr
+\partial_\theta {\hat e}_r = {\hat e}_\theta & 
+\partial_\theta {\hat e}_\theta = - {\hat e}_r &
+\partial_\theta {\hat e}_\phi = 0 \cr
+\partial_\phi {\hat e}_r = \sin\theta {\hat e}_\phi & 
+\partial_\phi {\hat e}_\theta = \cos\theta {\hat e}_\phi &
+\partial_\phi {\hat e}_\phi = - \cos\theta {\hat e}_\theta - \sin\theta {\hat e}_r \cr
+\end{array}
+\end{equation}
+Then we can write the right-hand side of Equation \ref{eq:steady} as:
+\begin{equation}
+\left[{\hat e}_r \partial_r +
+{\hat e}_\theta \frac{1}{r} \partial_\theta + 
+{\hat e}_\phi \frac{1}{r\sin\theta} \partial_\phi\right] \cdot
+\left[ \langle n\rangle \sigma_{ij}^2 {\hat e}_i {\hat e}_j \right]
+\end{equation}
+where we use the Einstein summation convention. The first term yields:
+\begin{equation}
+{\hat e}_r \partial_r \left(\langle n\rangle \sigma_{rr}^2\right).
+\end{equation}
+The second term yields:
+\begin{eqnarray}
+{\hat e}_\theta \cdot \frac{1}{r} \partial_\theta \left[ \langle
+n\rangle \sigma_{ij}^2 {\hat e}_i {\hat e}_j \right] &=& 
+{\hat e}_\theta \cdot \frac{1}{r} \partial_\theta
+\left[\langle n \rangle \left(\sigma_{rr}^2 {\hat e}_r {\hat e}_r +
+\sigma_{\theta\theta}^2 {\hat e}_\theta {\hat e}_\theta +
+\sigma_{\phi\phi}^2 {\hat e}_\phi {\hat e}_\phi\right) \right] 
+\cr
+&=& {\hat e}_\theta \cdot \frac{\langle n \rangle}{r}
+\left[
+\sigma_{rr}^2 {\hat e}_\theta {\hat e}_r +
+\sigma_{rr}^2 {\hat e}_r {\hat e}_\theta -
+\sigma_{\theta\theta}^2 {\hat e}_r {\hat e}_\theta -
+\sigma_{\theta\theta}^2 {\hat e}_\theta {\hat e}_r\right]\cr
+&=& \frac{\langle n \rangle}{r}
+\left[
+\sigma_{rr}^2 {\hat e}_r -
+\sigma_{\theta\theta}^2 {\hat e}_r\right]\cr
+&=& \frac{\langle n \rangle}{r}
+\left[
+\sigma_{rr}^2 -
+\sigma_{\theta\theta}^2 \right] {\hat e}_r
+\end{eqnarray}
+The third term yields:
+\begin{eqnarray}
+{\hat e}_\phi \frac{1}{r\sin\theta} \cdot \partial_\phi 
+\left[ \langle n\rangle \sigma_{ij}^2 {\hat e}_i {\hat e}_j \right]
+&=& 
+{\hat e}_\phi \frac{1}{r\sin\theta} \cdot \partial_\phi 
+\left[\langle n \rangle \left(\sigma_{rr}^2 {\hat e}_r {\hat e}_r +
+\sigma_{\theta\theta}^2 {\hat e}_\theta {\hat e}_\theta +
+\sigma_{\phi\phi}^2 {\hat e}_\phi {\hat e}_\phi\right) \right] 
+\cr 
+&=&
+{\hat e}_\phi \frac{\langle n \rangle}{r\sin\theta} \cdot
+\left(\sigma_{rr}^2 \sin\theta {\hat e}_\phi {\hat e}_r +
+\sigma_{rr}^2 \sin\theta {\hat e}_r {\hat e}_\phi +
+\sigma_{\theta\theta}^2 \cos\theta {\hat e}_\phi {\hat e}_\theta +
+\right. \cr
+&& 
+\left.
+\sigma_{\theta\theta}^2 \cos\theta {\hat e}_\theta {\hat e}_\phi - 
+\sigma_{\phi\phi}^2 \sin\theta {\hat e}_r {\hat e}_\phi -
+\sigma_{\phi\phi}^2 \sin\theta {\hat e}_\phi {\hat e}_r - \right. \cr
+& &
+\left.
+\sigma_{\phi\phi}^2 \cos\theta {\hat e}_\theta {\hat e}_\phi -
+\sigma_{\phi\phi}^2 \cos\theta {\hat e}_\phi {\hat e}_\theta
+\right) \cr
+&=&
+ \frac{\langle n \rangle}{r} \left(
+ \sigma_{rr}^2 - \sigma_{\phi\phi}^2 \right) {\hat e}_r +
+ \frac{\langle
+ n \rangle \cos\theta}{r \sin\theta} \left(\sigma_{\theta\theta}^2
+ - \sigma_{\phi\phi}^2\right) {\hat e}_\theta
+\end{eqnarray}
+Since under spherical symmetric the gradient of the potential has no
+components in the angular directions, the second term must also be
+zero:
+\begin{equation}
+\sigma_{\theta\theta} = \sigma_{\phi\phi}
+\end{equation}
+and the radial terms then add together and yield Equation
+(\ref{eq:spherical}):
+\begin{equation}
+\frac{\partial(n \sigma_{rr}^2)}{\partial r}
++ \frac{n}{r} \left[2 \sigma_{rr}^2
+- \left(\sigma_{\theta\theta}^2 + \sigma_{\phi\phi}^2\right)\right] =
+- n \frac{\partial \Phi}{\partial r}
+\end{equation}
+\end{answer}
+\item Using the spherically symmetric first-order Jeans Equation,
+Equation (\ref{eq:spherical}), shown that
+Equation \ref{eq:sphericalmass} holds.
+\item For a singular isothermal sphere with $n\propto r^{-2}$ and
+$\sigma_{rr}^2$ a constant, but $\beta > 0$, what choice of $\beta$
+will make the radial velocity dispersion equal to the 
+velocity of a stable circular orbit in the potential?
+\item Starting with the first-order Jeans Equation,
+Equation (\ref{eq:euler}), take another moment with respect to
+position. Rearrange in terms of the kinetic and potential energy
+tensors to obtain the tensor virial theorem.
 \item Define the characteristic v, M, R for virial theorem
-\item Plummer model
-\item Isothermal sphere model
+\item We will derive the Plummer model for a spherical equilibrium set
+of orbits. Under Jeans Theorem, all equilibrium models will have
+$f(E,J)$.  We can take:
+\begin{equation}
+f = \left\{ \begin{array}{ll}
+k_1 (-E)^p & E<0 \cr
+0 & E>0 \end{array} \right.
+\end{equation}
+Under this form, we can find self-consistent combinations of $\rho$
+and the gravitational potential $\phi$.
+\begin{enumerate}
+\item Show that under this form, the density becomes:
+\begin{equation}
+\rho = k_2 \left(-\phi\right)^n
+\end{equation}
+for $n=p+3/2$. You may find the following integral useful:
+\begin{equation}
+\int_0^a {\dd x} x^m \left(a^n - x^n\right)^p =
+\frac{a^{m+1+np} \Gamma\left((m+1)/n\right) \Gamma\left(p+1\right)}
+{n \Gamma\left[(m+1)/n +p + 1\right]}
+\end{equation}
+\item Demonstrate that the potential:
+\begin{equation}
+\phi = - \frac{GM}{R} \frac{1}{\left(1 + r^2/R^2\right)^{1/2}}
+\end{equation}
+satisfies this relation for $n=5$. 
+\end{enumerate}
+\item We will derive the isothermal sphere model for a spherical
+equilibrium set of orbits. Under Jeans Theorem, all equilibrium models
+will have $f(E,J)$.  We can take:
+\begin{equation}
+f = 
+k \exp\left(-E/2\sigma^2\right)
+\end{equation}
+There is something very unusual about this assumption, because it
+includes positive as well as negative energies. As it turns out, this
+feature has to do with the result we find later than the total size
+and mass of the system is infinite. 
+\begin{enumerate}
+\itemS Show that:
+\begin{equation}
+\rho = m K \left(4\pi\sigma^2\right)^{3/2} \exp\left(-\phi/2 \sigma^2\right)
+\end{equation}
+\item Show that the density must satisfy the equation:
+\begin{equation}
+\frac{\partial}{\partial
+r} \left(r^2 \frac{\partial \ln \rho}{\partial r} \right) =
+- \frac{2\pi G}{\sigma^2} r^2 \rho
+\end{equation}
+\item Using the hydrostatic equation and the ideal gas law, and
+assuming isothermal gas, show that $\sigma^2$ is the equivalent of
+$kT/2m$ --- i.e. $m\sigma^2$ is like the energy per degree of freedom.
+\item Find the singular solution with $\rho\propto r^{-2}$ everwhere,
+and express $\rho(r)$, $M(<r)$, and $v_c(r)$ as functions of
+$\sigma^2$ and $r$.
+\end{enumerate}
+We will show in a  numerical exercise that we can numerically integrate
+the equations to a better solution by imposing a zero slop at $r=0$
+(but it is still infinite mass).
 \item Lowered isothermal sphere model
 \item King model
 \item Tidal radius
