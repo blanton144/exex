@@ -54,7 +54,8 @@ The first few moments of the collisionless Boltzmann equation are
 instructive and can be useful. These equations are known as the {\it
 Jeans Equations}.
 
-The zeroth moment yields the equation of continuity:
+The zeroth moment integrated over velocity yields the equation of
+continuity:
 \begin{equation}
 \frac{\partial n}{\partial t}
 + \vec{\nabla} \cdot\left(n \left\langle\vec{v}\right\rangle\right) =
@@ -64,8 +65,8 @@ where $n(\vec{x})$ is the mean density per unit volume and
 $\langle\rangle$ indicates a density weighted-mean over all
 velocities.
 
-The first moment of velocity yields something akin to Euler's
-equations:
+The first moment integrated over velocity yields something akin to
+Euler's equations:
 \begin{equation}
 \label{eq:euler}
 n \frac{\partial \langle\vec{v}\rangle}{\partial t}
@@ -337,7 +338,8 @@ The typical velocity is defined by the virial relation $v^2\sim GM/R$,
 so the crossing time is $R^{3/2}/M^{1/2}$ (related, as it needs to be,
 by the square root of the density).
 \end{answer}
-\item Imagine two particles of mass $m$ passing by each other with
+\item \label{q:deflection}
+Imagine two particles of mass $m$ passing by each other with
 speed $v$ with an impact parameter $b$, defined as their separation at
 infinity normal to their relative velocity. Argue from a heuristic
 point of view why the velocity perturbation normal to the original
@@ -493,7 +495,7 @@ velocity of a stable circular orbit in the potential?
 Equation (\ref{eq:euler}), take another moment with respect to
 position. Rearrange in terms of the kinetic and potential energy
 tensors to obtain the tensor virial theorem.
-\item Define the characteristic v, M, R for virial theorem
+% \item Define the characteristic v, M, R for virial theorem
 \item We will derive the Plummer model for a spherical equilibrium set
 of orbits. Under Jeans Theorem, all equilibrium models will have
 $f(E,J)$.  We can take:
@@ -551,7 +553,7 @@ and express $\rho(r)$, $M(<r)$, and $v_c(r)$ as functions of
 $\sigma^2$ and $r$.
 \end{enumerate}
 We will show in a  numerical exercise that we can numerically integrate
-the equations to a better solution by imposing a zero slop at $r=0$
+the equations to a better solution by imposing a zero slope at $r=0$
 (but it is still infinite mass).
 \item Lowered isothermal sphere model
 \item King model
@@ -562,7 +564,80 @@ particle of mass $M$ moving at velocity $\vec{v}_M$ through a system
 of density $\rho$ with a Gaussian velocity dispersion $\sigma$ in each
 Cartesian dimension.
 \begin{enumerate}
-\item We use the same approach for calculating the 
+\item We use the same approach for calculating the relaxation
+time. Consider a two-body interaction in the frame of the particle
+with mass $M$, with a particle in the field with velocity
+$\vec{v}$. Using the results of Exercise \ref{q:deflection}, estimate
+the change of the velocity of the second particle along the
+original direction ${\hat v}$. 
+\begin{answer}
+The perpendicular velocity deflection is $2GM/bv$. However, the
+velocity amplitude should not change. This means that the deflection
+angle should satisfy:
+\begin{equation}
+\sin \theta_D = \frac{2GM/ bv}{v} = \frac{2GM}{bv^2}
+\end{equation}
+If we assume that the velocities are typicall not much perturbed on
+average, we can write the perpendicular deflection as:
+\begin{eqnarray}
+\left|\Delta \vec{v}_{||}\right| &=&
+v\left(1- \cos\theta_D\right) \cr
+&\approx&
+v\left(\frac{\theta_D^2}{2}\right) \cr
+&\approx&
+\frac{2G^2M^2}{b^2 v^3}
+\end{eqnarray}
+\end{answer}
+\item What is the velocity change of the particle of mass $M$ due to
+this interaction?
+\begin{answer}
+Conservation of momentum says it must be:
+\begin{equation}
+\left|\Delta \vec{v}_{M,||}\right| = \frac{m}{M} 
+\left|\Delta \vec{v}_{||}\right| \approx
+\frac{2G^2Mm }{b^2 v^3}
+\end{equation}
+\end{answer}
+
+\item If the particle of mass $M$ travels at velocity $\vec{v}_M$
+through a uniform sea of particles of mass $m$ with a velocity
+distribution $f(\vec{v}_m$, what is its rate of encounters with
+particles within some differential $\dd{}^3\vec{v}_m$ around a
+particular velocity $\vec{v}_m$, and within a differential $\dd{b}$
+around impact parameter $b$?
+\begin{answer}
+Define relative velocity as $\vec{v}_0 = \vec{v}_m - \vec{v}_M$. Then
+the particle of mass $M$ sweeps out particles of mass $m$ in the
+specified annulus around it with the rate:
+\begin{equation}
+2\pi b \dd{b} v_0
+\end{equation}
+Using the distribution function then, the rate is:
+\begin{equation}
+r(v_0) = 2\pi b \dd{b} v_0 f(\vec{v}_m)
+\dd{}^3\vec{v}_m
+\end{equation}
+\end{answer}
+\item In the case of the perpendicular deflection, the mean velocity
+difference averages to zero. However, the mean velocity difference
+along the parallel direction is always in the same direction. Assume
+some $b_{\rm max}$ is set by the size of the system in question, and
+define:
+\begin{equation}
+\Lambda = \frac{b_{\rm max}v_0^2}{GM} \sim \frac{M_{\rm total}}{M}
+\end{equation}
+where the approximation is from the virial relation. Derive the change
+in $\vec{v}_M$ per unit time from particles around velocity
+$\vec{v}_m$.
+\begin{answer}
+\begin{eqnarray}
+\left.\frac{\dd\vec{v}_M}{\dd{t}} \right|_m  &=&
+\vec{v}_0 f(\vec{v}_m) \dd{}^3 \vec{v}_m
+\int_0^{b_{\rm max}} \dd{b} (2\pi b) \frac{2G^2Mm}{b^2 v_0^3} \cr
+&=&
+\end{eqnarray}
+\end{answer}
+
 \item One
 \end{enumerate}
 
@@ -571,7 +646,7 @@ Cartesian dimension.
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-
+\item Lowered isothermal sphere.
 \item $\Phi$, $n$ and $\beta$
 \item Dynamics estimates from Gaia
 \item Globular cluster radial profiles.
