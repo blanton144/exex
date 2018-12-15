@@ -127,6 +127,61 @@ large. The emission lines are shifted in energy by that much, and the
 overall pattern of transitions in gas at temperature $T$ is the same
 as hydrogen for a gas with temperature $T/4$.
 
+\subsection{Str{\"o}mgren Spheres}
+
+The illustrative case of an HII region is a {\it Stromgren sphere},
+which results from a spherically symmetric, uniform cloud of gas being
+ionized by such a star. If Q is the number of photons emitted by the
+star, and assuming Case B recombination (optically thick to photons
+slightly more energetic that the Lyman limit, but optically thin
+otherwise), then equilibrium between ionization and recombination
+dictates:
+\begin{equation}
+Q = \frac{4\pi}{3} R_{S}^3 \alpha_B n(H+) n_e = 
+\frac{4\pi}{3} R_{S}^3 \alpha_B n_e^2 
+\end{equation}
+Typical values are $Q\sim 10^{49}$ s$^{-1}$, $\alpha_B \sim
+4\times10^{-13}$ cm$^3$ s$^{-1}$, $n_e \sim 10$ cm$^{-3}$. Solving for
+$R_S$ yields $\sim 10$ pc. The size of the sphere is therefore
+determined by the overall flux.
+
+The above calculation assumes that the hydrogen is fully ionized. We
+can check this assumption by considering the ionization balance at a
+point within the sphere, say at 5 pc. The cross-section for
+photoionization is $a \sim 6 \times 10^{-18}$ cm$^{2}$. The balance
+becomes:
+\begin{equation}
+n(H_0)  a \frac{Q}{4\pi d^2} \approx n_e n_p \alpha_B.
+\end{equation}
+Defining the neutral fraction, $n(H_0) = \xi n_H$, so
+that $n_e = (1-\xi) n_H$, we find:
+\begin{equation}
+\xi \frac{a Q}{4 \pi d^2} \approx n_H (1-xi)^2 \alpha_B
+\end{equation}
+For $\xi\ll 1$:
+\begin{equation}
+\xi \approx \frac{1}{1 + aQ/4\pi d^2
+n_H \alpha} \approx \frac{n_H \alpha}{a Q / 4\pi d^2}
+\end{equation}
+Then $\xi \sim 10^{-5}$, because the recombination rate is much slower
+than the ionization rate. 
+
+At the edge of the system, we must have $\xi\sim 0.5$, and we can
+check the mean free path at this point, which is:
+\begin{equation}
+d \sim \frac{1}{\xi n a} \sim 0.01 \mathrm{~pc}
+\end{equation}
+So the Stromgren sphere is naturally thin.
+
+In addition to all of the geometrical approximations and neglect of
+collisional effects and other physics, this basic calculation assumes
+that the photoionization is dominated by photons right above the
+photoionization threshold. This approximation is good for O and B
+stars. However, for harder spectra, such as those from much hotter
+sources or AGN, the mean photon energy is much larger and therefore
+the cross-section $a$ is much smaller. This leaders to much larger
+partially ionized regions.
+
 \subsection{Collisional excitation}
 
 Heavier elements than hydrogen tend to be incompletely ionized in gas
@@ -307,7 +362,86 @@ fields tend to emit these lines strongly.
 
 \subsection{BPT diagrams}
 
+Emission line regions can result from several different ionization
+sources: generally one of star-formation, AGN, hot evolved stars, or
+shocks. \citet{baldwin81a} described what is now the classic {\it BPT
+classification} which helps to distinguish some of these ionization
+mechanisms. If the AGN broad-line region is visible, it is
+unambiguous; however, more commonly only the narrow-line region is
+visible, and with integrated (as opposed to resolved) spectra.
+
+The BPT diagrams involve the [OIII]/H$\beta$ flux ratio plotted
+against [NII]/H$\alpha$, [OI]/H$\alpha$, and [SII]/H$\alpha$. The
+Balmer line normalization accounts for any variation in the overall
+luminosity of the region due to its size and total energy of the
+ionization sources. The use of H$\beta$ instead of H$\alpha$ for
+[OIII] because this ratio is more stable to reddening and
+spectrophotometric variations.
+
+[OIII]/H$\beta$ traces the ionization parameter. The other ratios
+trace the size of the partially ionized region, which increases with
+the hardness parameter. Stellar ionization sources are limited in
+their hardness, so generally the higher ratios indicate the present of
+AGN or post-AGN stars (which reach $10^5$ K in temperature).
+
+Thus, to the left and bottom in these plots lie the cases where the
+emitting flux is dominated by gas ionized from star-formation. In this
+region, the line ratios are determined mostly by the processes we have
+described above. To the right and to the right-top of the plot lie the
+{\it LINER} (low ionization) and Seyfert regions. In these regions,
+while the above discussion proves a useful guide, in detail a number
+of other high energy processes come into play. The Seyfert emission is
+invariably powered by AGN, but the LINER region can be powered either
+by low luminosity AGN or other sources, such as post-AGB stars. The
+extent and line ratio distribution
+
 \subsection{Metallicity diagnostics for star-forming galaxies}
+
+In the context of understanding galaxy evolution and formation, the
+metallicity of the interstellar gas is an important parameter, since
+it traces some combination of the chemical enrichment history and
+accretion history.  Within the star forming region of the BPT diagram,
+there are a number of established methods of determining the
+metallicity. In this diagram, the metallicity generally increases with
+increasing [NII]/H$\alpha$; as we will see below, it is an example of
+a strong-line metallicity indicator.
+
+The first and most reliable metallicity indicator is the {\it
+recombination line method}. Within a few individual HII regions, it is
+possible to measure recombination lines of the metal ions. These
+recombination lines do depend on the ionization fractions for ions
+associated with the observed lines, but otherwise have very little
+dependence on temperature and density, and scale linearly with the
+ionic abundance. However, because the ions are $<10^{-4}$ as abundant
+as hydrogen, the recombination lines are extremely faint and so only a
+handful of HII regions can be observed with high enough
+signal-to-noise ratio.
+
+The second most reliable indicator is the {\it direct method}, which
+depends on the more strongly emitting collisionally excited
+lines. This technique makes use of the diagnostics for $T_e$ and $n_e$
+described above, which allows one to calculate the emissivity of other
+indicators, such as [OII] 3726, 3729 or [OIII] 4959, 5008, relative to
+H$\alpha$ or H$\beta$. Then observations of these lines yields the
+metallicity. However, because it relies on collisionally excited
+lines, the $T_e$, $n_e$, and metallicity indicators all depend on the
+square of the density, which means that the measurement is biased
+towards the higher density regions in the presence of density
+fluctuations in the HII regions. In addition, as described above, the
+temperature sensitive auroral lines tend to be faint.
+
+Finally, the least reliable, but most commonly applied indicator is
+the {\it strong line method}. It is most commonly applied because it
+relies only on easily measurable lines, which allows it to be used on
+many more, and more distant, galaxies. These methods take advantage of
+known correlations within the properties of HII regions, such as
+between the gas temperature, the N/O abundance ratio and metallicity,
+etc.). Empirical calibrations of the strong line method use
+calibrations against the direct method; examples are R23 = ([OII] +
+[OIII])$/$H$\beta$, the similar S23, and O3N2 = [OIII] / N[II].
+Theoretical models for HII regions are also available to calibrate
+these ratios, and they have also also led to the use of the N2O2 =
+[NII]/[OII] ratio.
 
 \section{Commentary}
 
@@ -318,6 +452,9 @@ temperature in the idealized cases, as well the effects of realistic
 issues such as fluctuations in density and temperature in the ionized
 gas. It also ignores many diagnostics, particularly those outside the
 optical.
+
+Gas metallicity indicators are somewhat famously discrepant with each
+other in an absolute sense by quite a bit.
 
 \section{Key References}
 

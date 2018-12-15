@@ -27,6 +27,8 @@ ALL= \
 	$(PDFDIR)/emission-line-answers.pdf \
 	$(PDFDIR)/black-holes.pdf \
 	$(PDFDIR)/black-holes-answers.pdf \
+	$(PDFDIR)/high-redshift.pdf \
+	$(PDFDIR)/high-redshift-answers.pdf \
 	$(PDFDIR)/dynamics.pdf \
 	$(PDFDIR)/dynamics-answers.pdf \
 	$(PDFDIR)/lensing.pdf \
@@ -35,6 +37,8 @@ ALL= \
 	$(PDFDIR)/groups-answers.pdf \
 	$(PDFDIR)/galaxies.pdf \
 	$(PDFDIR)/galaxies-answers.pdf \
+	$(PDFDIR)/star-formation.pdf \
+	$(PDFDIR)/star-formation-answers.pdf \
 	$(PDFDIR)/stellar-evolution.pdf \
 	$(PDFDIR)/stellar-evolution-answers.pdf \
 	$(PDFDIR)/stellar-populations.pdf \

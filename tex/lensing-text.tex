@@ -117,6 +117,7 @@ where
 \end{equation}
 We can also show:
 \begin{equation}
+\label{eq:poissonlike}
 \nabla^2\psi = 2 \kappa
 \end{equation}
 We can define the Fermat time delay potential as
@@ -140,15 +141,162 @@ The lens equation can be locally linearized  around $\vec{\beta_0}$:
 + \frac{\partial \vec{\beta}}{\partial \vec{\theta}} \cdot \left(\vec{\theta}
 - \vec{\theta_D} \right), 
 \end{equation}
-where the Jacobian can be written in index form:
-\begin{equation}
-{\bf A}\left(\vec{\theta}\right) = 
+The vector $\vec{\theta}$ and the Jacobian can be written in index form:
+\begin{eqnarray}
+\vec{\theta} &=& \theta_i {\hat e}_i = \theta_1 {\hat e}_1
++ \theta_2 {\hat e}_2 \cr
+{\bf A}\left(\vec{\theta}\right) &=& 
 \frac{\partial \vec{\beta}}{\partial \vec{\theta}} = \left(\delta_{ij}
 - \frac{\partial^2 \psi}{\partial\theta_i \partial\theta_j}\right)
-{\hat e}_i {\hat e}_j
+{\hat e}_i {\hat e}_j.
+\end{eqnarray}
+
+The Jacobian is symmetric, so has only three independent parameters,
+and we can define three parameters to characterize it, $\kappa$,
+$\gamma_1$, and $\gamma_2$:
+\begin{equation}
+{\bf A} = \left(\begin{array}{cc}
+1-\kappa - \gamma_1 & -\gamma_2 \cr
+- \gamma_2 & 1-\kappa + \gamma_1
+\end{array}\right).
+\end{equation}
+We do this because, as we are about to show, $\kappa$ (called the {\it
+convergence}) is basically the isotropic component of the distortion,
+and $\gamma = \gamma_1 + i\gamma_2 = |\gamma| \exp(2i\phi)$ is a shear
+term expressing the nonisotropic component, including the rotation of
+the image $\phi$.
+
+If you have a circularly symmetric source on sky, this linear
+transformation will convert it into an ellipse. You can determine the
+parameters of the ellipse from the eigenspace of the of the distortion
+matrix. The two eigenvalues are
+\begin{equation}
+\lambda_{\pm} = (1-\kappa) \pm |\gamma|
+\end{equation}
+The eigenvector associated with $\lambda_+$ is rotated from ${\hat
+e}_1$ towards ${\hat e}_2$ by the angle $\phi$, which is defined by:
+\begin{equation}
+\cos 2\phi = \frac{\gamma_1}{|\gamma|}
+\end{equation}
+Based on the eigenvalues, the magnification is:
+\begin{equation}
+M = \left(\lambda_+ \lambda_-\right)^{-1} = \left[(1-\kappa)^2 -
+|\gamma|^2\right]^{-1} 
 \end{equation}
 
-{\bf NEED TO FINISH THIS}
+In order for $\kappa$ to express an isotropic distortion, then we must
+define:
+\begin{eqnarray}
+\kappa &=& \frac{1}{2}\left(
+\frac{\partial^2\psi}{\partial\theta_1^2} +
+\frac{\partial^2\psi}{\partial\theta_2^2}\right) \cr
+\gamma_1 &=& \frac{1}{2} \left(
+\frac{\partial^2\psi}{\partial\theta_1^2} -
+\frac{\partial^2\psi}{\partial\theta_2^2}\right),
+\end{eqnarray}
+and we can further see:
+\begin{eqnarray}
+\gamma_2 &=& \frac{\partial^2\psi}{\partial\theta_1 \partial\theta_2}.
+\end{eqnarray}
+Therefore, we can relate the lensing potential curvature to the shear
+and convergence of distortions.
+
+We also see why we defined the convergence with $\kappa$, because it
+is related to $\psi$ in the same way as the $\kappa$ in the previous
+subsection (Equation \ref{eq:poissonlike}). 
+
+In reality, the lensing is integrated through a series of mass sheets
+that comprise the three-dimensional density field. In addition, the
+convergence due to the mean density is already accounted for in the
+cosmological comoving transerve distance, luminosity distance, and
+angular diameter distances. The cosmological comoving transverse
+distance is that which is relevant to lensing. A rigorous derivation
+is beyond our scope here, but the consequence is that the convergence
+in some direction for sources at $D=D_S$ can be written as:
+\begin{equation}
+\kappa(\vec{\theta}, D_S)
+= \frac{3 \Omega_m}{2} \int_0^{D_S} \frac{\dd{D_L}}{a(D_L)}
+\frac{D_{LS} D_L}{D_S} \delta(\vec{\theta}, D_L)
+\end{equation}
+where is it understood that $D_L$, $D_{LS}$, and $z_L$ are the
+appropriate quantities for a giving lens distance $D_L$. Two important
+aspects of this formula are the dependence on $\Omega_m$ and the
+weighting factor $D_{LS} D_L$, which tells us which distances do the
+most lensing. For a flat universe, $D_{LS}D_L = (D_S - D_L)D_L$, which
+has a maximum at $D_L = D_S/2$, so most of the lensing effect is at
+from about half the distance of the source. The convergence is also
+dependent on the distance of both the lenses and sources, which
+therefore need to be known to interpret lensing data accurately.
+
+Weak lensing can be observed through its effects on the size and
+brightness of sources (the magnification) or due to the induced change
+in ellipticity. Magnification causes a {\it magnification bias} in
+flux-limited samples with steep flux counts, because the magnification
+will bring a large number of sources from below the (unlensed) flux
+limit.  Magnification can also be detected by correlating the number
+of background sources against foreground lens galaxies.
+
+The changes in ellipticity can only be observed statistically, because
+galaxies at best have random ellipticities (in fact, it is worse as
+their ellipticities tend to be aligned, an effect known as {\it
+intrinsic alignment}). If you observe an individual galaxy, its
+typical ellipticity is $\sim 0.3$ whereas the lensing induced
+ellipticity is $<10^{-3}$. One can average over many galaxies along
+some line of site to detect a net ellipticity that can be associated
+with lensing, which is the ratio of eigenvalues:
+\begin{equation}
+\frac{\lambda_+}{\lambda_-} = \frac{1-\kappa +  |\gamma|}{1-\kappa -
+|\gamma|}
+\end{equation}
+Since one cannot nearly as easily determine the magnification and
+therefore $\kappa$, the ratio in effect one is measuring the {\it
+reduced shear}:
+\begin{equation}
+g = \frac{\gamma}{1-\kappa},
+\end{equation}
+for which
+\begin{equation}
+\frac{\lambda_+}{\lambda_-} = \frac{1 +  |g|}{1- |g|}.
+\end{equation}
+
+There are two general ways the shear is used. The first is the {\it
+cosmic shear}, which looks at shear-shear correlations. This method
+yields a fairly direct constraint on the statistics of the total mass
+density fluctuations. The second is {\it galaxy-galaxy lensing}
+correlations, which cross-correlates known foreground sources with
+background shear patterns. In general galaxy-galaxy lensing is usually
+easier, because the cross-correlation increases the signal-to-noise
+and because it tends to average over systematics. 
+
+The shear-shear correlation is a bit subtle, because there is a
+component of the shear transverse to the separation vector, and
+cross-wise from it. The treatment of this is beyond our scope
+here. The key points are that the shear is interrelated with the
+surface mass density. In particular:
+\begin{eqnarray}
+\gamma &=& \frac{1}{2}\left(\partial\psi_{,11}
+- \partial\psi_{,22}\right) + i \partial\psi_{,12} \cr
+&=& \frac{1}{\pi} \int \dd^2\vec{\theta}' \kappa\left(\vec{\theta}'\right)
+\left[\frac{1}{2}\left(\partial_1\partial_1 - \partial_2 \partial_2\right)
++ i \partial_1 \partial_2\right]
+\ln \left|\vec{\theta} - \vec{\theta}'\right] \cr
+&=& \frac{1}{\pi} \int \dd^2\vec{\theta}' \kappa\left(\vec{\theta}'\right)
+\left( \frac{\theta_2^2 - \theta_1^2 -
+2i \theta_1\theta_2}{\theta^4} \right)
+\end{eqnarray}
+So the shear is related through an integral with the surface mass
+density. This integral may be inverted from shear data to yield the
+mass density; it is a bit tricky because the kernel is $1/\theta^2$ so
+edge and finite volume effects are important (though remember it is in
+two-dimensions so this scaling is not as bad as for three dimensions).
+It can be further shown that the correlation function and power
+spectrum of the shear field can be directly related to the convergence
+field, meaning that the statistics of the shear field can be used
+directly (without explicitly building a map of $\kappa$).
+
+Galaxy-galaxy lensing typically is used by measuring the mean
+tangential shear $\gamma_t$ around identified foreground sources
+(usually galaxies or clusters of galaxies). 
 
 \subsection{Microlensing}
 
@@ -195,10 +343,97 @@ observations of its lensing.
 
 \begin{enumerate}
 \item GR calculation of lensing offset
-\item Show Einstein angle
-\item Calculate offset from Einstein angle for strong lensing
-\item Calculate offset from source angle for weak lensing
-\item Calculate magnification
+\item For a symmetric, point mass lens, derive the angular radius of the image
+    that is formed, called the Einstein angle.
+\begin{answer}
+Using the notation in Figure \ref{fig:symmetric}, geometrically it
+must be that:
+\begin{equation}
+\theta_D = \theta_S + \theta_E
+\end{equation}
+Under the small angle approximation, therefore:
+\begin{equation}
+\theta_D = r_E \left(\frac{1}{D_L} + \frac{1}{D_{LS}}\right) =
+r_E \frac{D_S}{D_{LS} D_L} 
+\end{equation}
+Therefore:
+\begin{equation}
+r_E = \frac{D_{LS} D_L}{D_S} \theta_D.
+\end{equation}
+Again using the small angle approximation, the impact parameter is
+$r_E$, so we can write:
+\begin{equation}
+r_E = \frac{D_{LS} D_L}{D_S} \frac{4GM}{r_Ec^2}
+\end{equation}
+and solve for:
+\begin{equation}
+r_E = \sqrt{\frac{4GM}{c^2} \frac{D_{LS} D_L}{D_S}}
+\end{equation}
+The Einstein angle can then be calculated (again using small angles):
+\begin{equation}
+\theta_E = \sqrt{\frac{4GM}{c^2} \frac{D_{LS}}{D_S D_L}}
+\end{equation}
+\end{answer}
+
+\item Calculate the location of the two magnified images that form when the
+source is offset from the point lens.
+\begin{answer}
+Using the notation in Figure \ref{fig:offset}, we have:
+\begin{equation}
+r_I = r_S + r_D,
+\end{equation}
+and therefore:
+\begin{eqnarray}
+\theta_\pm D_S &=& \beta D_S + D_{LS} \theta_D \cr
+\theta_\pm &=& \beta + \frac{D_{LS}}{D_S} \frac{4GM}{r_\pm c^2} \cr
+&=& \beta + \frac{D_{LS}}{D_S D_L} \frac{4GM}{\theta_\pm c^2} \cr
+&=& \beta + \frac{\theta_E^2}{\theta_\pm}
+\end{eqnarray}
+Then we can rearrange this to:
+\begin{equation}
+\theta_\pm^2 - \beta \theta_\pm - \theta_E^2 = 0 
+\end{equation}
+with the solutions:
+\begin{equation}
+\theta_\pm = \frac{\beta \pm \sqrt{\beta^2 + 4\theta_E^2}}{2}
+\end{equation}
+For the strong-lensing limit $\beta \ll \theta_E$, this leads to:
+\begin{equation}
+\theta_\pm = \pm \theta_E + \frac{\beta}{2}
+\end{equation}
+For the weak-lensing limit $\beta \gg \theta_E$:
+\begin{equation}
+\theta_\pm
+= \beta \left(\frac{1}{2} \pm \frac{1}{2} \sqrt{1+
+\frac{4\theta_E^2}{\beta^2}}\right) 
+\end{equation}
+and we find:
+\begin{eqnarray}
+\theta_+ &\approx& \beta + \frac{\theta_E^2}{\beta} \cr
+\theta_- &\approx& - \frac{\theta_E^2}{\beta}
+\end{eqnarray}
+\end{answer}
+\item In the weak lensing limit for a point mass lens,  what is the
+magnification?
+\begin{answer}
+Consider a source at $\beta$, with a size in the radial and tangential
+directions of $\dd\beta$ and $\dd\phi$ (for the polar coordinate
+$\phi$). Its unlensed area is:
+\begin{equation}
+A_S = \beta \dd\beta \dd\phi
+\end{equation}
+The area of each lensed image is:
+\begin{equation}
+A_\pm = \left| \theta_\pm\right| \dd\theta_\pm \dd\phi
+= \left| \theta_\pm\right| \left|\frac{\dd\theta_\pm}{\dd\beta}\right| \dd\beta\dd\phi
+= \left|\frac{\theta_\pm}{\beta}\right| \left|\frac{\dd\theta_\pm}{\dd\beta}\right| A_S
+\end{equation}
+Then:
+\begin{equation}
+M = \frac{A_+ + A_-}{A_S} = \frac{1+
+2\theta_E^2/\beta^2}{\sqrt{1+4\theta_E^2/\beta^2} }
+\end{equation}
+\end{answer}
 \item Critical surface density case
 \item Derive shear and magnification properties
 \end{enumerate}
@@ -213,3 +448,13 @@ observations of its lensing.
 
 \bibliographystyle{apj}
 \bibliography{exex}  
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{figures/symmetric_lens.jpg}
+\caption{\label{fig:symmetric} Geometry for symmetric point mass lens.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{figures/offset_lens.jpg}
+\caption{\label{fig:offset} Geometry for offset point mass lens.}
+\end{figure}
