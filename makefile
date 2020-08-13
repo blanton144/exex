@@ -7,6 +7,8 @@ ALL= \
 	$(PDFDIR)/syllabus.pdf \
 	$(PDFDIR)/toc.pdf \
 	$(PDFDIR)/intro.pdf \
+	$(PDFDIR)/theory.pdf \
+	$(PDFDIR)/theory-answers.pdf \
 	$(PDFDIR)/agn.pdf \
 	$(PDFDIR)/agn-answers.pdf \
 	$(PDFDIR)/inventory.pdf \

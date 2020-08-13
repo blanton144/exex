@@ -1,0 +1,229 @@
+\title{\bf Overview of Galaxy Formation Theory}
+
+\section{Basics}
+
+\subsection{General Story}
+
+Galaxies form through the nonlinear gravitational collapse of dark
+matter halos. Baryons participate in this collapse with the dark
+matter, but unlike dark matter are able to radiate energy away and
+therefore sink deeper into the potential well. They cannot radiate
+away angular momentum, and they experience gas pressure; this
+combination leads ultimately to the formation of rotating gas
+disks. In this process, pockets of the gas cool, becoming neutral or
+molecular. Inside the molecular regions, individual stars collapse and
+cool. Through stellar processes, these stars enrich the interstellar
+medium and return energy to it through feedback. At the centers of the
+galaxies, black holes form and grow, and also exert feedback on the
+gas. These feedback effects may help determine the star formation
+rates of the forming galaxies. As these events occur, galaxies
+experience further accretion and major mergers. Although there is not
+an agreed-upon quantitative understanding of this whole process, there
+is strong evidence that the dark matter halos with masses near
+$10^{12}$ $M_\odot$.
+
+Although this basic story is known, many of its details are unclear
+and it is not known if the story is complete. The current theories of
+galaxy formation do a good job reproducing the gross properties of
+galaxies near $z\sim 0$. It remains to be seen if they consistently
+predict the differences in the galaxy population at higher redshift,
+more detailed properties of galaxies such as their mass profiles,
+stellar kinematics, and internal chemical patterns, and their gaseous
+environments.
+
+\subsection{Halos and Galaxies}
+
+An overarching challenge for physical galaxy formation theory can be
+expressed as the relationship between halo mass and stellar mass of
+galaxies. Approximately, this relationship expresses how effiently the
+matter that fell into a halo was converted into star.
+
+This relationship can be observationally constrained through {\it
+  abundance matching}. Abundance matching assumes that halo mass and
+stellar mass are at least approximately monotonically related. For any
+halo mass $M_h$ for which the number density of halos above that mass
+is predicted to be $\Phi_h(>M_h)$, one can find a corresponding
+stellar mass $M_\ast$ for which the real universe is observed to have
+$\Phi_\ast(>M_\ast) = \Phi(>M_h)$, and conclude that halos of mass
+$M_h$ host galaxies with stellar mass $M_\ast$. There are numerous
+refinements of this technique that account for scatter in the
+relationship between $M_h$ and $M_\ast$, that use subhalos rather than
+halos, that use circular velocity instead of $M_h$.
+
+The other basic tool for understanding this relationship is the {\it
+  halo occupation distribution} model. This model connects $N$-body
+predictions of dark matter halo properties to observed galaxy
+properties through $P(>M_\ast | M_h)$, the probability distribution of
+the number of galaxies above stellar mass $M_\ast$ within a halo of
+mass $M_h$. Many refinements of this model exist, the most important
+of which is the distinction between {\it central galaxies} in a halo
+and {\it satellite galaxies}. The framework also can be used to study
+galaxies of different classes or properties, and as a function of
+different environments around each halo.
+
+\citet{wechsler18a} review the literature of the galaxy-halo
+connection, including abundance matching and halo occupation
+distributions. The major conclusion from these studies is that
+$M_\ast/M_h$ peaks at $M_h\sim 10^{12}$. This ratio rises linearly or
+even more steeply between $10^{10}$ and $10^{12}$ $M_\odot$ and
+declines as $\sim M_h^{-1/2}$ at higher masses. These conclusions are
+validated by using them to predict observations of weak lensing and
+galaxy correlation functions. They can be further used to study the
+scatter in the relationship between $M_h$ and $M_\ast$, how central
+and satellite galaxies differ in their star formation histories, and
+how these properties depend on environment.
+
+These results outline a basic challenge of galaxy formation theories,
+which is to explain how the efficiency of star formation depends on halo
+mass.
+
+\subsection{Physical Processes}
+
+Theoretical models seek to explain galaxy-halo relation and the other
+properties of galaxies from, most ambitiously, a first-principles
+approach beginning with pattern of matter fluctuations at the time of
+recombination. \citet{somerville15a} outline the major physical
+processes at play:
+\begin{itemize}
+  \item Gravity, which drives gravitational growth leading to the
+    collapse and clustering of dark matter halos. 
+  \item Hydrodynamics, which controls the flow of the baryons and
+    produces shocks. 
+  \item Thermal processes, which control the cooling of gas and thus
+    how it will flow into galaxies.
+  \item Star formation, which in the context of galaxy formation
+    models means how cool gas proceeds to fragment and form dense
+    cloud cores that lead to individual stars, and which may affect
+    the subsequent evolution of the galaxy through feedback due to
+    stellar winds and supernovae.
+  \item Black hole formation and growth, which occurs due to gas
+    inflow to the very centers of galaxies, and which may affect the
+    subsequent evolution of the galaxy through AGN feedback.
+  \item Nucleosynthesis, which leads to chemical enrichment of
+    interstellar gas, which affects the thermal processes because of
+    the importance of metal cooling.
+  \item Radiative transfer, which can heat and cool gas, as well as
+    affect the observed nature of the galaxies.
+\end{itemize}
+
+In galaxy formation theories, gas cooling, inflow, and feedback play
+critical roles, and as noted below can only be modeled through {\it
+subgrid} physics---i.e. not from first principles. What simulations
+can predict from first principles are the effects of gravity on
+nonlinear collapse, the cooling of gas on large scales, and the flows
+of gas.  However, these first principles calculations are still
+limited by resolution, which may lead to qualitatively important
+errors even on large scales.
+
+\subsection{Methodology}
+
+Simulations of galaxy formation utilize N-body simulations,
+hydrodynamic simulations, and prescriptions for subgrid
+physics, or rely on approximations to those simulations known as {it
+semianalytic models}.
+
+As used in the cosmological literature, the term {\it N-body
+simulation} refers to a purely gravitational simulation of the
+collisionless Boltzmann equation, approximated with particle
+methods. These simulations nominally simulate pure cold dark matter
+models, with no baryons. Traditional N-body simulations do not solve
+the collisionless Boltzmann equation fully, but use particles to
+sample the density field and study the gravitational interactions of
+the particles. Because the number density of particles in the
+simulation is far below the number density of expected cold dark
+matter particles, if the gravitational interactions were solved
+exactly they would lead to unrealistically short two-body relaxation
+times in the simulations. Therefore, the gravitational force law needs
+to be {\it softened} at some length. 
+
+[Semi-analytic]
+
+[Hydro]
+
+[Subgrid physics]
+
+[Feedback]
+
+\subsection{Features of Theoretical predictions}
+
+[Cooling]
+
+[hot vs cold mode]
+
+\section{Commentary}
+
+[Successes and challenges]
+
+% \section{Important numbers}
+
+% \begin{itemize}
+% \item 
+% \end{itemize}
+
+\section{Key References}
+
+\begin{itemize}
+  \item
+    \href{https://ui.adsabs.harvard.edu/abs/2015ARA%26A..53...51S/abstract}
+    {{\it Physical Models of Galaxy Formation in a Cosmological
+        Framework} (\citealt{somerville15a})}
+  \item
+    \href{https://ui.adsabs.harvard.edu/abs/2018ARA%26A..56..435W/abstract}
+      {{\it The Connection Between Galaxies and Their Dark Matter
+          Halos} (\citealt{wechsler18a})}
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Estimate the maximum efficiency of converting mass energy
+    into emission for a non-rotating black hole of mass $M$.
+
+\begin{answer}
+In order to fall deeper into a potential well, matter has to lose
+orbital energy and that energy is available for emission. In the case
+of a black hole, once it reaches the innermost stable circular orbit
+at $3r_s$, it can simply fall in without any further energy loss.
+
+Using a Newtonian approximation, the orbital energy is $E = K + U =
+-U/2$. From infinity to $3r_s$ implies an energy loss per unit mass of
+$GM/6r_sc^2 = 1 / 12$, implying a maximum conversion efficiency of
+$\sim 0.08$. In a general relativistic calculation, the real energy
+available is slightly smaller than this ($\sim 0.06$).
+
+For a spinning black hole, the efficiency can be considerably higher.
+\end{answer}
+
+\item Estimate efficiency of accretion
+\item Estimate hottest gas in continuum
+\item What is virial tempereature near disk
+\item Doppler velocities to sizes
+\item Critical density of CIII] and OIII
+\item Estimate filling factor of BLR, NLR
+\item Estimate duty cycle
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Eddington luminosity
+\item Temperature profile of accretion disk
+\item Relationship between energy distribution and synchrotron
+\item Superluminal motion
+\item Relativistic Beaming
+\item Polarization
+\end{enumerate}
+
+\section{Numerics and Data Exercises}
+
+\begin{enumerate}
+\item Quasar SEDs
+\item Quasar variability
+\item Densities from line ratios
+\item Temperatures from line ratios
+\item OIII/Hbeta and ionization parameter
+\item resolved spectroscopy of AGN
+\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  

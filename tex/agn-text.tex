@@ -3,39 +3,42 @@
 \section{Basics}
 
 Every massive galaxy contains supermassive black hole ($M> 10^5$
-$M_\odot$) at its center. In cases that gas is accreting onto the
-black hole, these can emit copious luminosity and are referred to as
-{\it active galactic nuclei}. Their total luminosities can be from
-$10^{40}$ to $10^{47}$ erg s$^{-1}$, in the brighter cases outshining
-the rest of the galaxy. An accretion disk a few hundred Schwarschild
-radii in size emits a thermal {\it continuum} in the UV and optical,
-as well as in the X-rays. The accretion can power an outflowing {\it
-  jet} visible in synchroton in the radio. Surrounding the accretion
-disk is a {\it broad line region} a few pc in size, consisting of
-dense clouds ($n>10^4$ cm$^{-3}$); the Doppler broadening of these
-clouds orbiting the center of the galaxy is 1000s of km
-s$^{-1}$. Outside that region is a {\it narrow line region} a few
-hundred pc in size, also consisting of clouds but of lower density,
-and with a Doppler broadening of 100s of km s$^{-1}$. In between is a
-dusty region, possibly toroidal in shape, but in any case causing some
-the broad line region to be heavily extincted along at least some
-lines of sight. This picture, known as the {\it unification model} is
-designed to explain the various observational classes of active
-galactic nuclei, as explained below.
+$M_\odot$) at its center (\citealt{kormendy13a}). In cases that gas is
+accreting onto the black hole, these can emit copious luminosity and
+are referred to as {\it active galactic nuclei}. Their total
+luminosities can be from $10^{40}$ to $10^{47}$ erg s$^{-1}$, in the
+brighter cases outshining the rest of the galaxy.
+
+The prevailing understanding of the structure of the emitting region
+is known as the {\it unification model} (\citealt{antonucci93a,
+netzer15a}). An accretion disk a few hundred Schwarschild radii in
+size emits a thermal {\it continuum} in the UV and optical, as well as
+in the X-rays. The accretion can power an outflowing {\it jet} visible
+in synchroton in the radio. Surrounding the accretion disk is a {\it
+broad line region} a few pc in size, consisting of dense clouds
+($n>10^4$ cm$^{-3}$); the Doppler broadening of these clouds orbiting
+the center of the galaxy is 1000s of km s$^{-1}$. Outside that region
+is a {\it narrow line region} a few hundred pc in size, also
+consisting of clouds but of lower density, and with a Doppler
+broadening of 100s of km s$^{-1}$. In between is a dusty region,
+possibly toroidal in shape, but in any case causing some the broad
+line region to be heavily extincted along at least some lines of
+sight. This picture was developed to explain the various observational
+classes of active galactic nuclei, as explained below.
 
 There is an array of nomenclature associated with quasars. Below
 luminosities of around $10^{44}$ erg s$^{-1}$ they are known as {\it
-  Seyfert galaxies}. If broad line emission is visible, they are known
+Seyfert galaxies}. If broad line emission is visible, they are known
 as {\it Type 1}, and if it is not they are known as {\it Type 2};
 there are also intermediate types occasionally defined. Depending on
-their radio flux, Seyfers and quasars can be {\it radio-loud} or not.
+their radio flux, Seyferts and quasars can be {\it radio-loud} or not.
 
 \subsection{Black hole accretion}
 
 Active galactic nuclei are powered by accretion. Matter accreting
 loses energy (and necessarily angular momentum) through some form of
-viscosity. This orbital energy loss heats the gas and the energy is
-emitted radiatively. This process can proceed until the material
+viscosity. This orbital energy loss heats the gas and the energy can
+be emitted radiatively. This process can proceed until the material
 reaches the innermost stable circular orbit, at $3r_S$, at which point
 the material does not need to lose energy to fall directly into the
 black hole. We quantify the efficiency of this process as a fraction
@@ -57,34 +60,26 @@ L_{\rm Edd} = \frac{4\pi G c m_p}{\sigma_T} \approx 1.26 \times
 This limit implies that to reach $L\sim 10^{44}$ erg s$^{-1}$ requires
 a black hole with a mass at least $10^6$ $m_\odot$. Although this
 limit only strictly applies in spherical symmetry, estimates of black
-hole masses imply luminosities of $0.01$--$0.1 L_{\rm Edd}$. Sometimes
-the Eddington limit is expressed as a mass accretion limit assuming
-some $\epsilon$, but of course for low $\epsilon$ the mass accretion
-is not prevented from being very high.
+hole masses often imply luminosities of $0.01$--$0.1 L_{\rm
+Edd}$. Sometimes the Eddington limit is expressed as a mass accretion
+limit assuming some $\epsilon$, but of course for a lower $\epsilon$
+the mass accretion rate can be higher.
 
 If accreting gas has angular momentum, it will naturally form a disk
 of gas. The gas will experience viscosity. If the disk is Keplerian,
 this viscosity will naturally transport angular moment outward. The
 loss of angular momentum and the conversion of energy to heat allows
-the accretion. If the disk is optically thick, and geometrically thin,
-it can be shown that the temperature profile will be:
+the accretion. The disk may be optically thick and geometrically thin
+(\citealt{shakura73a}). It can be shown in this case that the
+temperature profile will be:
 \begin{equation}
   T(r) = \left(\frac{3 c^6}{64\pi G^2 \sigma_{SB}}\right)^{1/4}
     \left(\frac{r}{r_S}\right)^{-3/4} {\dot m}^{1/4} M^{-1/2}
 \end{equation}
 The global resulting spectrum is the sum of the blackbody spectrum
 from all the radii. Generally, the spectrum will be hotter for lower
-mass black holes, or for more rapidly accreting black holes.
-
-However, a thin disk is not the only conceivable outcome for the
-accretion. An alternative possibility is that the disk (or some part
-of it) does not efficiently radiate the energy dissipated, in which
-case the disk can thicken. The resulting {\it advection dominated
-  accretion flow} transports the thermal energy produced directly into
-the black hole through accretion, and thus is less efficient at
-turning gravitational energy into radiation. Theoretical models favor
-the creation of jets in this scenario, collimated by the inner edge of
-the thick disk formed. 
+mass black holes, or for more rapidly accreting black holes. AGN in
+this mode typically have $L>0.01 L_{\rm Edd}$.
 
 X-rays arise from the accretion disk. In AGN, the thermal continuum
 only provides substantial X-rays in the soft regime ($<2$ keV). The
@@ -95,6 +90,19 @@ temperature. Through inverse Compton scattering, it converts the disk
 continuum radiation into hard X-rays, extending in a power law
 spectrum $f_\nu \propto \nu^{-2}$ up to 100 keV.
 
+However, a thin disk is not the only conceivable outcome for the
+accretion. An alternative possibility is that the disk (or some part
+of it) does not efficiently radiate the energy dissipated, in which
+case the disk can thicken. The resulting {\it advection dominated
+accretion flow} or {\it radiatively inefficient accretion flow}
+transports the thermal energy produced directly into the black hole
+through accretion, and thus is less efficient at turning gravitational
+energy into radiation (\citealt{narayan05a}). Theoretical models favor
+the creation of jets in this scenario, collimated by the inner edge of
+the thick disk formed.
+
+{\bf do X-rays arise from ADAF?}
+
 \subsection{Jet}
 
 In many systems, the accretion drives a jet of ionized gas outwards,
@@ -103,25 +111,26 @@ structures.  This jet is visible in the radio through synchrotron
 radiation with a power law spectrum. The radiating electrons are
 highly relativistic. The synchrotron radiation can be visible at
 higher frequencies, up through the optical. X-ray emission can be
-visible as well, which may be related to synchrotron processes as
-well. The radio spectra have a variety of shapes depending on the
-level of self-absorption.
+visible as well, which may be related to synchrotron processes as well
+{\bf better explanation}. The radio spectra have a variety of shapes
+depending on the level of self-absorption.
 
 The jets are typically moving at a high fraction of the speed of
 light, based on observed motions of features in the jets when resolved
-in the radio and optical. This causes the radiation to be beamed
-strongly along the jet axis; this effect on the surface brightness
-causes the jet toward us to be detectable more often than the jet away
-from us.
+in the radio and optical {\bf citation}. This causes the radiation to
+be beamed strongly along the jet axis; the $(1+z)^4$ effect of this
+blue or redshifting on the surface brightness causes the jet toward us
+to be detectable more often than the jet away from us.
 
 The beaming can cause the inferred luminosity of the source to be
 extremely high if it is observed along the beam. This phenomenon is
-known as a {\it blazar}. The beamed synchrotron emission can overwhelm
-the ultraviolet-optical line and continuum emission, resulting in a
-pure power law continuum in the optical. This phenomenon is referred
-to as a {\it BL Lac} after the archetypal case. These sources are
-typically highly variable. If some line emission remains, the galaxy
-is known as an {\it optically violent variable (OVV)} star.
+known as a {\it blazar} {\bf citation}. The beamed synchrotron
+emission can overwhelm the ultraviolet-optical line and continuum
+emission, resulting in a pure power law continuum in the optical. This
+phenomenon is referred to as a {\it BL Lac} after the archetypal
+case. These sources are typically highly variable. If some line
+emission remains, the galaxy is known as an {\it optically violent
+variable (OVV)} star.
 
 \subsection{Broad line region}
 
@@ -140,12 +149,13 @@ luminosity compared to the ionizing continuum flux, it can be inferred
 that the solid angle covered by the clouds is about 10\%. These
 considerations lead to the picture of the broad line region as a large
 number of dense clouds surrounding the central black hole and its
-accretion disk.
+accretion disk. {\bf citation}
 
 \subsection{Narrow line region}
 
 Essentially all quasars and AGN exhibit narrow optical emission lines,
-with widths of hundreds of km s$^{-1}$, indicating a region of a few
+with widths of hundreds of km s$^{-1}$ (typically broader than
+observed for non-AGN emission lines) indicating a region of a few
 hundred pc. The narrow line region can be resolved in many cases, and
 often has a biconical shape. The emitting lines include forbidden
 lines, with line ratios indicating densities of $n\sim 10^4$ cm$^{-3}$
@@ -187,9 +197,10 @@ necessary. To explain the observations, the dusty region should be
 larger that the broad line region, but smaller than the narrow line
 region. The most direct evidence for this hypothesis is the
 observation of broad lines in the polarization spectrum of narrow line
-AGN. The broad line region light is being scattered and polarized by
-gas in the narrow line region. These observations demonstrate that the
-dusty region does not obscure in all directions.
+AGN (see \citealt{antonucci93a}). The broad line region light is being
+scattered and polarized by gas in the narrow line region. These
+observations demonstrate that the dusty region does not obscure in all
+directions.
 
 \subsection{Variability}
 
@@ -203,38 +214,71 @@ location of the emission.  The line emission variability can be shown
 to lag the continuum, and the delay can be used to determine the
 radius of emission of the lines, and combined with their Doppler
 shifts, an estimate of the black hole mass; this technique is known as
-{\it reverberation mapping}. Occasionally even on a year-to-decade
-time scale active galactic nuclei and quasars have been known to turn
-off rapidly; the continuum and broad line emission disappears, but the
-narrow line emission (which extends for hundreds of lightyears)
-remains. This phenomenon is known as {\it changing look}.
+{\it reverberation mapping} {\bf citation}. Occasionally even on a
+year-to-decade time scale active galactic nuclei and quasars have been
+known to turn off rapidly; the continuum and broad line emission
+disappears, but the narrow line emission (which extends for hundreds
+of lightyears) remains. This phenomenon is known as {\it changing
+look}.
 
 From the demographics and clustering of optically-bright quasars it is
 known that they are not in that state all of the time. From these
 considerations, {\it duty cycle} of quasars is estimated to be about
 {\bf 10 percent??}. Thus over long time scales (likely tens of
-millions of years) all quasars must turn on and off.
+millions of years) all quasars must turn on and off. {\bf citation}
 
 \subsection{Luminosity function and evolution}
 
+[luminosity function shape and evolution]
+
+The overall luminosity function can be converted into a black hole
+growth rate. The dependence of this growth rate on redshift is
+strong; the peak of black hole growth inferred is at $z\sim 2$--3
+(\citealt{shankar09a}), with a steep decline after $z\sim 1$ and
+before $z\sim 3$. This growth rate evolution approximately follows the
+similar pattern of star formation rate density over cosmic time.
 
 \section{Commentary}
+
+\section{Important numbers}
+
+\begin{itemize}
+\item $L_{\rm Edd} = 1.5 \times 10^{38} M_{\rm BH} / M_\odot {\rm
+~erg~s}^{-1}$
+\end{itemize}
 
 \section{Key References}
 
 \begin{itemize}
   \item
-    {\it Netzer}
+    \href{https://ui.adsabs.harvard.edu/abs/2015ARA%26A..53..365N/abstract}
+    {{\it Revisiting the Unified Model of Active Galactic Nuclei
+      (\citealt{netzer15a})}}
   \item
     {\it AGN Book}
 \end{itemize}
 
-\citet{gunn06a}
-
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Compare maximum efficiency to stellar
+\item Estimate the maximum efficiency of converting mass energy
+    into emission for a non-rotating black hole of mass $M$.
+
+\begin{answer}
+In order to fall deeper into a potential well, matter has to lose
+orbital energy and that energy is available for emission. In the case
+of a black hole, once it reaches the innermost stable circular orbit
+at $3r_s$, it can simply fall in without any further energy loss.
+
+Using a Newtonian approximation, the orbital energy is $E = K + U =
+-U/2$. From infinity to $3r_s$ implies an energy loss per unit mass of
+$GM/6r_sc^2 = 1 / 12$, implying a maximum conversion efficiency of
+$\sim 0.08$. In a general relativistic calculation, the real energy
+available is slightly smaller than this ($\sim 0.06$).
+
+For a spinning black hole, the efficiency can be considerably higher.
+\end{answer}
+
 \item Estimate efficiency of accretion
 \item Estimate hottest gas in continuum
 \item What is virial tempereature near disk

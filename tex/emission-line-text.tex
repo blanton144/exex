@@ -40,16 +40,16 @@ ionization energy; it declines as $E^{-3}$ (or equivalently
 $\nu^{-3}$) at higher energy, so photoionization for most ionizing
 spectra is dominated by photons near the threshold.
 
-For hydrogen in the electronic ground state, the {\it ionization
-potential} is 13.6 eV, corresponding to a photon of wavelength
-912 \AA. The ionization of other atoms is strongly affected by their
-ionization energy. Helium has an ionization potential of 24.6 eV, and
-HeII (He$^+$) has an ionization potential of 54.4 eV. For single
+The degree of ionization of atoms is largely determined by their
+ionization energy. For hydrogen in the electronic ground state, the
+{\it ionization potential} is 13.6 eV, corresponding to a photon of
+wavelength 912 \AA.  Helium has an ionization potential of 24.6 eV,
+and HeII (He$^+$) has an ionization potential of 54.4 eV. For single
 ionization, carbon, nitrogen, and oxygen have similar ionization
 potentials to hydrogen, whereas neon has a slightly deeper potential,
 and silicon and sulfur have slightly shallower potentials. For more
 highly ionized species, the ionization potential becomes deeper in
-general. 
+general.
 
 The electron temperatures in the interstellar medium ($\sim 10^4$ K)
 usually correspond to energies $kT$ far below these ionization
@@ -92,33 +92,41 @@ hydrogen, two limiting cases exist:
     \sum_{l=0}^{n-1} \alpha_{nl}(T)
   \end{equation}
 \item Case B: optically thick to photons at energies just above the H
-  ionization limit (13.6 eV). The recombinations to $n=1$ do not
-  count, because they just result in an ionizing photon that is
-  immediately recaptured:
+  ionization limit (13.6 eV). The recombinations to $n=1$ 
+  virtually always result in an ionizing photon that is
+  immediately reionizes another atom. This means that the effective
+  recombination rate is modified by subtracting the recombinations to
+  $n=1$:
   \begin{equation}
     \alpha_B(T) = \alpha_A(T) - \alpha_{1s} (T)
   \end{equation}
 \end{itemize}
 For most cases within the interstellar medium, Case B is appropriate
 because enough neutral H is available, even in HII regions. In such
-cases, the system is optically thick to all Lyman-series photons.
+cases, the system is typically also optically thick to all
+Lyman-series photons; i.e. the neutral atoms are usually in the ground
+state and the cross-sections for Lyman-series excitation are
+comparable to the cross-sections for ionization.
 
 The Case A recombination spectrum can be calculated by assuming the
-levels are populated by recombination as above, and then using the
-decay probabilities from each state. The Case B recombination spectrum
-is calculated the same way, but just taking all transitions to $n=1$
-out of the picture. The temperature enters the calculation weakly due
-to its effect on the recombination coefficients $\alpha$. The density
-enters the calculation even more weakly (until $n>10^6$ cm$^{-3}$),
-because collisions affect the high $n$ levels.
+levels are populated by recombination according to the individual
+$\alpha_{nl}$, and then using the decay probabilities from each
+state. The Case B recombination spectrum is calculated the same way,
+but just taking removing all transitions to $n=1$ from the
+calculation. The temperature enters the calculation weakly due to its
+effect on the recombination coefficients $\alpha_{nl}$. The density
+enters the calculation because collisions affect the high $n$ levels,
+but this dependence is weak (until $n>10^6$ cm$^{-3}$,
 
 In HII regions, where Case B holds, Lyman lines have a special
 fate. They undergo {\it resonant scattering}; every Lyman line emitted
 is very quickly reabsorbed. Since they undergo many scatterings, and
 also can decay to lower levels between scatterings, eventually they
-result in a Lyman-$\alpha$ photon. In HII regions, they can escape
-only through a rare two-photon decay to a continuum (when the state is
-2s) or by being Doppler scattered into a wing of the line. 
+result in a Lyman-$\alpha$ photon. In HII regions, this scattering
+continues until one of the atoms excited to the $n=2$ state decays
+instead in a rare two-photon decay (from the 2s state), or a photon
+Doppler scattered into the wing of the line where the optical depth is
+lower.
 
 Helium also contributes recombination radiation. For very hard
 photoionization sources, He III will predominate. This is a
@@ -137,7 +145,7 @@ slightly more energetic that the Lyman limit, but optically thin
 otherwise), then equilibrium between ionization and recombination
 dictates:
 \begin{equation}
-Q = \frac{4\pi}{3} R_{S}^3 \alpha_B n(H+) n_e = 
+Q = \frac{4\pi}{3} R_{S}^3 \alpha_B n(H^{+}) n_e = 
 \frac{4\pi}{3} R_{S}^3 \alpha_B n_e^2 
 \end{equation}
 Typical values are $Q\sim 10^{49}$ s$^{-1}$, $\alpha_B \sim
@@ -156,7 +164,7 @@ n(H_0)  a \frac{Q}{4\pi d^2} \approx n_e n_p \alpha_B.
 Defining the neutral fraction, $n(H_0) = \xi n_H$, so
 that $n_e = (1-\xi) n_H$, we find:
 \begin{equation}
-\xi \frac{a Q}{4 \pi d^2} \approx n_H (1-xi)^2 \alpha_B
+\xi \frac{a Q}{4 \pi d^2} \approx n_H (1-\xi)^2 \alpha_B
 \end{equation}
 For $\xi\ll 1$:
 \begin{equation}
@@ -171,7 +179,7 @@ check the mean free path at this point, which is:
 \begin{equation}
 d \sim \frac{1}{\xi n a} \sim 0.01 \mathrm{~pc}
 \end{equation}
-So the Stromgren sphere is naturally thin.
+The Stromgren sphere has a thin surface relative to its overall size.
 
 In addition to all of the geometrical approximations and neglect of
 collisional effects and other physics, this basic calculation assumes
@@ -179,7 +187,7 @@ that the photoionization is dominated by photons right above the
 photoionization threshold. This approximation is good for O and B
 stars. However, for harder spectra, such as those from much hotter
 sources or AGN, the mean photon energy is much larger and therefore
-the cross-section $a$ is much smaller. This leaders to much larger
+the cross-section $a$ is much smaller. This leads to much larger
 partially ionized regions.
 
 \subsection{Collisional excitation}
@@ -199,7 +207,8 @@ dominates, they are also called {\it forbidden lines}.
 Among the collisionally excited lines, depending on the radiative
 decay times, there are both {\it strong lines} that are bright and
 easy to measure, and other lines sometimes referred to as {\it auroral
-lines} (particularly [OIII] 4363) that tend to be fainter.
+lines} (particularly [OIII] 4363) that tend to be fainter. See the
+more complete discussion below.
 
 \subsection{Measurements of emission lines}
 
@@ -232,7 +241,8 @@ The Doppler widths are typically 10--20 km s$^{-1}$ locally within
 star forming regions, a few hundred km s$^{-1}$ in narrow line regions
 of AGN, and a few thousaid km s$^{-1}$ in broad line regions. For
 spectra that integrate over substantial parts of galaxies, the line
-widths may be larger because of large scale motions such as rotation.
+widths may be larger because they integrate over large scale motions
+such as rotation.
 
 Emission line strengths can be quantified also by their equivalent
 width, which is their flux divided by the local flux density of the
@@ -462,37 +472,61 @@ other in an absolute sense by quite a bit.
 \section{Key References}
 
 \begin{itemize}
-  \item
-    \href{http://}
-    {\it Physics of the Interstellar and Intergalactic Medium,
-      \citet{draine07a}}
-  \item
-    \href{http://}
-    {\it Osterbrock
-      \citet{osterbrock06a}}
-  \item
-    \href{http://}
-    {\it Blanc
-      \citet{blanc15a}}
+  \item {\it Physics of the Interstellar and Intergalactic
+    Medium, \todo{need draine cite}}
+
+  \item {\it Astrophysics of Gaseous Nebulae and Active Galactic
+    Nuclei, \citet{osterbrock06a}}
+
+  \item {\it IZI: Inferring the gas phase metallicity (Z) and
+    ionization parameter (q) of ionized nebulae using Bayesian
+    statistics, \citet{blanc15a}}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Dependence on temperature and resulting metallicity dependence
-  of Halpha 
-\item Using typical mass-to-light ratios in the $i$-band, and star
-formation rate normalizations for H$\alpha$, approximately relate a
-H$\alpha$ equivalent width to the equivalent specific star formation
-rate.
+\item Estimate the temperature necessary for the typical
+    electron-hydrogen collision to result in an
+    ionization. \todo{finish answer}
+    \begin{answer}
+    This condition requires $kT \sim$ 13.6 eV. 
+    \end{answer}
+
+\item Estimate the typical collisional excitation levels found in
+    $10^4$ K gas; i.e. their approximate wavelength of emission were
+    they to decay directly to the ground state. \todo{finish answer}
+
+\item For an HII region with $n_H = 10$ cm$^{-3}$ and of size $s=10$ pc,
+    at what ionization level $1- \xi$ is it optically thick to photons
+    just over the threshold for ionizing hydrogen.
+
+    \begin{answer}
+    Using the cross-section for ionization in the text, $a\sim 6\times
+    10^{-18}$ cm$^2$, we can write the optical depth as:
+       \begin{equation}
+        \tau \sim n_H a s \xi,
+       \end{equation}
+    and so it will be optically thick when $\tau\sim 1$, or:
+       \begin{equation}
+        \xi \sim \frac{1}{n_H a s} \sim \frac{1}{(10) (6 \times
+    10^{-18}) (3 \times 10^{19})} \sim \frac{1}{2000} \sim 5 \times
+    10^{-4}.
+       \end{equation}
+    Thus, even at ionization fractions of $1- \xi=0.9995$, this system
+    will be optically thick to ionizing photons.
+    \end{answer}
+
+ \todo{does this make sense to calculate? does it show actually most
+ of the photon capture is near the edge of the HII region, since the
+ typical ionization fraction is higher?}
+
 \end{enumerate}   
 
 \section{Analytic Exercises}
 
 \begin{itemize}
-\item Show explicitly from Equation \ref{eq:alpha} that the
-recombination coefficients should scale
-as $\alpha\propto T^{-1/2}$.
+\item \todo{Is there a simple way to calculate $\nu^{-3}$?}
 \item alpha calculation
 \item Calculating line ratios vs. temperature
 \item Ly-alpha scattering
@@ -501,6 +535,10 @@ as $\alpha\propto T^{-1/2}$.
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
+\item Download the following five galaxy spectra from the SDSS
+ database, and the following ten stellar spectra. We will concentrate
+ on measuring two particular emission lines in the galaxy spectra,
+ using continuum subtraction based on the stellar spectra.
 \item Use of Balmer decrement for dust
 \item Running MAPPINGS or other
 \end{enumerate}`
