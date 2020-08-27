@@ -2,7 +2,6 @@ Please read the following documents related to this class:
 
  * [Syllabus](pdf/syllabus.pdf)
  * [Introduction](pdf/intro.pdf) 
- * [Table of Contents](pdf/toc.pdf).
  * [Slides (on Dropbox)](https://www.dropbox.com/sh/97mr5mt9u6cyay8/AADPxv1XZh0k97chEPJr8hWFa?dl=0).
 
 | Inventory | [notes](pdf/inventory.pdf) | | |
