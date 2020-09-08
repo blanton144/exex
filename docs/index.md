@@ -4,7 +4,7 @@ Please read the following documents related to this class:
  * [Introduction](pdf/intro.pdf) 
  * [Slides (on Dropbox)](https://www.dropbox.com/sh/97mr5mt9u6cyay8/AADPxv1XZh0k97chEPJr8hWFa?dl=0).
 
-| Inventory | [notes](pdf/inventory.pdf) | 
+| Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) | |
 | Light I | [notes](pdf/light-1.pdf) | 
 | Light II | [notes](pdf/light-2.pdf) |
 | Telescopes | [notes](pdf/telescopes.pdf) |
