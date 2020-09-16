@@ -5,8 +5,8 @@ Please read the following documents related to this class:
  * [Slides (on Dropbox)](https://www.dropbox.com/sh/97mr5mt9u6cyay8/AADPxv1XZh0k97chEPJr8hWFa?dl=0).
 
 | Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) | |
-| Light I | [notes](pdf/light-1.pdf) | 
-| Light II | [notes](pdf/light-2.pdf) |
+| Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-1.ipynb) |
+| Light II | [notes](pdf/light-2.pdf) | [notes with answers](pdf/light-2-answers.pdf)| [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-2.ipynb)
 | Telescopes | [notes](pdf/telescopes.pdf) |
 | Atmosphere | [notes](pdf/atmosphere.pdf) |
 | Detectors | [notes](pdf/detectors.pdf) |
