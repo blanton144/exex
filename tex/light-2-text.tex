@@ -230,6 +230,35 @@ The effective wavelength of $V$ is 5500 {\AA}, and of $K$ is about 2.2
 
 \begin{enumerate}
 \item Prove Wien's law, Equation \ref{eq:wiens}.
+
+\begin{answer}[Author: Matthew Daunt]
+We begin with the Planck spectrum:
+    \begin{align*}
+        u(\nu) & = \frac{8 \pi h}{c^3} \frac{\nu^3}{\exp[h \nu / k T] - 1}
+    \end{align*}
+    To find the max of the energy density with respect to $\nu$, I will differentiate with respect to $\nu$, and then set equal to 0 and solve for $\nu$.
+    \begin{align*}
+        \frac{d u}{d \nu} & = \frac{8 \pi h}{c^3}
+    \left( \frac{3 \nu^2}{\exp[h \nu / k T] - 1} - \frac{\nu^3}{(\exp[h \nu
+    / k T] - 1)^2}\exp[h \nu/k T]\left(\frac{h}{k T}\right) \right) \\
+        \frac{d u}{d \nu} & = \frac{8 \pi h}{c^3} \frac{3 \nu^2 (\exp[h \nu / k T] - 1) - \nu^3 \frac{h}{k T} \exp[h \nu/k T]}{(\exp[h \nu / k T] - 1)^2} \\
+        0 & = \frac{8 \pi h}{c^3} \frac{3 \nu^2 (\exp[h \nu / k T] - 1) - \nu^3 \frac{h}{k T} \exp[h \nu/k T]}{(\exp[h \nu / k T] - 1)^2} \\
+        0 & =  3 \nu^2 (\exp[h \nu / k T] - 1) - \nu^3 \frac{h}{k T} \exp[h \nu/k T] \\
+        0 & =  3 (\exp[h \nu / k T] - 1) - \nu \frac{h}{k T} \exp[h \nu/k T]
+    \end{align*}
+    Now let $x = \frac{h \nu}{k T}$.
+    \begin{align*}
+        0 & =  3 (\exp[x] - 1) - x \exp[x]
+    \end{align*}
+    This root-finding problem cannot be further reduced
+    analytically. Newton's method as
+    implemented by {\tt scipy} in Python can be applied, which
+    converges to $x=2.82$. Thus:
+    \begin{align*}
+        2.8 k T & = h \nu
+    \end{align*}
+\end{answer}
+
 \item The Bohr sequence is a consequence of Schroedinger's equation
   applied to the electron. However, the original Bohr model was based
   on the classical picture of an electron orbiting the proton due to
