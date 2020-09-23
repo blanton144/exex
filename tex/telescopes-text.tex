@@ -71,6 +71,7 @@ so:
 \end{equation}
 or inversely as 
 \begin{equation}
+\label{eq:platescale}
 \frac{{\rm d}\theta}{{\rm d}x} \approx 
 \left(\frac{f}{D}\right)^{-1} \frac{{\rm m}}{D}
 \left(0.206\frac{\rm arcsec}{\mu{\rm m}}\right)
@@ -265,8 +266,101 @@ enters the problem.
     for the best atmospheric seeing in Chile it might encounter (about
     0.5 arcsec FWHM), what must the detector pixel size be?
 
-\item How accurate does the surface of a telescope mirror have to be
-    in: the $X$-rays? the optical? the radio?
+\begin{answer}
+To sample with two pixels per FWHM requires $\theta\sim 0.25$ arcsec
+$\sim 1.212 \times 10^{-6}$ radians.  The focal distance is $N D =
+1.4\times 8 {\rm ~m} = 11.2 {\rm ~m}$, and we find therefore that the
+pixel size should be $\theta N D \sim 13~\mu$m (or equivalently
+consult Equation \ref{eq:platescale}). The actual LSST design has 10
+$\mu$m pixels.
+\end{answer}
+
+\item Assuming that telescope diffraction is the dominant effect
+defining the PSF of a telescope, how accurate does its mirror have to
+    be in order to limit the change in the central flux of the PSF due
+    to imperfections to less than 10\%? In the $X$-rays? the optical?
+    the radio?
+
+\begin{answer}[Author: Nanoom Lee]
+Let's approximate the telescope as consisting of just two patches of
+mirror and consider the interference from those two patches. If they
+are perfectly accurately placed than the intensity of light at the
+center of focus is just proportional to the the time-averaged square
+of the electric field due to each one added together:
+\begin{eqnarray}
+I &\propto& \left\langle
+\left|
+\sin\left(\omega t - \frac{2\pi d}{\lambda}\right) +
+\sin\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\right|^2 \right\rangle \cr
+&\propto& 4 \left\langle
+\left|
+\sin\left(\omega t - \frac{2\pi d}{\lambda}\right)^2
+\right|^2 \right\rangle
+\end{eqnarray}
+where $\lambda$ is the wavelength of the light, $\omega$ is its
+frequency, and $d$ is the path length from the given mirror.
+
+Now let's assume the mirror are not perfectly placed. This corresponds
+to the case that a full mirror is not perfectly figured and
+polished. The waves will no longer perfectly constructively interfere.
+We quantify the level of imperfection as a small difference in the
+path length, $\Delta d = \delta$. Then, the light ray reflected at
+this point will interfere with the other light ray and change the
+intensity of the light at the focus.
+\begin{eqnarray}
+I' &\propto& \left\langle\left|
+\sin\left(\omega t - \frac{2\pi d}{\lambda}\right) +
+\sin\left(\omega t - \frac{2\pi
+(d+\delta)}{\lambda}\right)\right|^2\right\rangle \cr
+&\propto& \left\langle\left[
+\sin\left(\omega t - \frac{2\pi d}{\lambda}\right)^2 +
+\sin\left(\omega t - \frac{2\pi (d+\delta)}{\lambda}\right)^2
++ 2 \sin\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\sin\left(\omega t - \frac{2\pi (d+\delta)}{\lambda}\right)
+\right]\right\rangle \cr
+&\propto& \frac{I}{2}
++ \left\langle 2 \sin\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\sin\left(\omega t - \frac{2\pi (d+\delta)}{\lambda}\right)
+\right\rangle
+\end{eqnarray}
+where in the last line we just use the fact that the time average of
+$\sin^2(\omega t + \phi)$ is independent of $\phi$. Considering the
+second term, we can use trigonometric identities to simplify it:
+\begin{eqnarray}
+\left\langle 2 \sin\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\sin\left(\omega t - \frac{2\pi (d+\delta)}{\lambda}\right)
+\right\rangle
+&=& 
+\left\langle 2 \sin^2\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\cos\left(\frac{2\pi \delta}{\lambda}\right)
+\right\rangle + \cr
+& &
+\left\langle 2
+\sin\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\cos\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\sin\left(\frac{2\pi \delta}{\lambda}\right)
+\right\rangle \cr
+&=& 
+\left\langle 2 \sin^2\left(\omega t - \frac{2\pi d}{\lambda}\right)
+\cos\left(\frac{2\pi \delta}{\lambda}\right)
+\right\rangle
+\end{eqnarray}
+where in the last line we drop the time average sine times cosine,
+which will be zero. Then we find:
+\begin{eqnarray}
+\frac{I'}{I} &=& \frac{1}{2} \left(1 + 
+\cos\left(\frac{2\pi \delta}{\lambda}\right) \right) \cr
+&\approx& 1 - \frac{1}{4}\left(\frac{2\pi\delta}{\lambda}\right)^2
+\end{eqnarray}
+The question asks when this ratio is 0.9, which will be when:
+\begin{equation}
+\frac{\delta}{\lambda} \approx \frac{1}{\sqrt{10} \pi} \approx \frac{1}{10}
+\end{equation}
+So about $\delta \sim 0.1$ \AA\ for X-rays, $\sim 0.05~\mu$m  in the
+optical, and $\delta \sim 1~$mm for 
+the cm-wavelength radio.
+ \end{answer}
 \end{enumerate} 
 
 \section{Analytic Exercises}
@@ -315,6 +409,67 @@ primary mirror (and the secondary would obstruct that area anyway).
 What is the analytic form of the diffraction limited point spread
 function for an aperture like this?
 \end{enumerate}
+
+\begin{answer}[Author: Nick Faucher]
+
+The diffraction-limited point spread function of a telescope is equal
+to the squared modulus of the Fourier transform of the pupil. In this
+case, we are considering a pupil which allows light to pass through a
+circular aperture of radius b, excluding the center of the circle out
+to radius a with a $<$ b:
+\begin{equation}
+f(r,\theta)= 
+\begin{cases}
+   0,& \text{if } r < a\\
+   1,& \text{if } a \leq r \leq b\\
+    0,              & \text{otherwise}
+\end{cases}
+\end{equation}
+
+The two-dimensional Fourier transform for a single circular aperture
+with radius b can be written in polar coordinates as
+
+\begin{equation}
+\mathcal{F}(k,\phi)= \int_{0}^{b} \int_{0}^{2\pi} e^{i \: k \: r \: cos(\theta-\phi)} d\theta \: r \: dr
+\end{equation}
+
+\noindent Since the Fourier transform of a circularly symmetric function is also circularly symmetric, we can let $\phi=0$ to simplify the integral:
+
+%\begin{equation}
+\begin{align*}
+\mathcal{F}(k) &= \int_{0}^{b} \int_{0}^{2\pi} e^{i \: k \: r \: cos(\theta)} d\theta \: r \: dr \\ \\
+&= 2 \: \pi \int_{0}^{b} J_0 (k \: r) r \: dr
+\end{align*}
+%\end{equation}
+
+\noindent Where $J_0$ is the $0^{th}$ order Bessel function. Through the change of variables $u=k \: r$, we can  write the integral as 
+
+\begin{equation}
+\mathcal{F}(k) = \frac{2\pi}{k^2} \int_{0}^{k \: b} J_0 (u) u \: du \\ \\
+\end{equation}
+
+\noindent Which has the well known solution
+
+\begin{equation}
+\mathcal{F}(k) = \frac{2\pi}{k^2} J_1 (k \: b) k \: b  \\ \\
+\end{equation}
+
+\begin{equation}
+\mathcal{F}(k) = 2 \pi \: b^2 \bigg[ \frac{J_1 (k \: b)}{k \: b} \bigg]  \\ \\
+\end{equation}
+
+\noindent To get the Fourier transform corresponding to Equation (1), we can simply take the result from Equation (5) and subtract from it the same equation with b replaced by a:
+
+\begin{equation}
+\mathcal{F}(k) = 2 \: \pi \: b^2 \bigg[ \frac{J_1 (k \: b)}{k \: b} \bigg] - 2 \: \pi \: a^2 \bigg[ \frac{J_1 (k \: a)}{k \: a} \bigg]  \\ \\
+\end{equation}
+
+\noindent The analytic form of the diffraction limited point spread function is then given by 
+
+\begin{equation}
+I(k) = \Bigg| 2 \: \pi \: b^2 \bigg[ \frac{J_1 (k \: b)}{k \: b} \bigg] - 2 \: \pi \: a^2 \bigg[ \frac{J_1 (k \: a)}{k \: a} \bigg] \Bigg|^2  \\ \\
+\end{equation}
+\end{answer}
 
 \section{Numerics and Data Exercises}
 
