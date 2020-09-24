@@ -7,10 +7,10 @@ Please read the following documents related to this class:
 | Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) | |
 | Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-1.ipynb) |
 | Light II | [notes](pdf/light-2.pdf) | [notes with answers](pdf/light-2-answers.pdf)| [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-2.ipynb)
-| Telescopes | [notes](pdf/telescopes.pdf) | [notes](pdf/telescopes-answers.pdf) |
+| Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) |
 | Atmosphere | [notes](pdf/atmosphere.pdf) |
 | Detectors | [notes](pdf/detectors.pdf) |
-| Images | [notes](pdf/images.pdf) | [notes](pdf/images-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/images.ipynb)
+| Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/images.ipynb)
 | Spectra | [notes](pdf/spectra.pdf) |
 | Distance ladder | [notes](pdf/distance-ladder.pdf) |
 | Cosmology | [notes](pdf/cosmology.pdf) |
