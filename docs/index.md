@@ -10,7 +10,7 @@ Please read the following documents related to this class:
 | Telescopes | [notes](pdf/telescopes.pdf) | [notes](pdf/telescopes-answers.pdf) |
 | Atmosphere | [notes](pdf/atmosphere.pdf) |
 | Detectors | [notes](pdf/detectors.pdf) |
-| Images | [notes](pdf/images.pdf) |
+| Images | [notes](pdf/images.pdf) | (pdf/images-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/images.ipynb)
 | Spectra | [notes](pdf/spectra.pdf) |
 | Distance ladder | [notes](pdf/distance-ladder.pdf) |
 | Cosmology | [notes](pdf/cosmology.pdf) |
