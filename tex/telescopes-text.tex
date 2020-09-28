@@ -167,6 +167,7 @@ For the simplest aperture, a circular one with no phase shifts, the
 width of the diffraction-limited point spread function is related to
 the aperture diameter $D$. Specifically:
 \begin{equation}
+\label{eq:psf_tophat}
 I(x) \propto \left(\frac{J_1(x)}{x}\right)^2,
 \end{equation}
 where $J_1$ is the first-order Bessel function and $x=\pi D \theta
@@ -430,44 +431,58 @@ The two-dimensional Fourier transform for a single circular aperture
 with radius b can be written in polar coordinates as
 
 \begin{equation}
-\mathcal{F}(k,\phi)= \int_{0}^{b} \int_{0}^{2\pi} e^{i \: k \: r \: cos(\theta-\phi)} d\theta \: r \: dr
+\mathcal{F}(k,\phi)= \int_{0}^{b} \int_{0}^{2\pi} e^{i \: k \: r \: \cos(\theta-\phi)} d\theta \: r \: dr
 \end{equation}
 
-\noindent Since the Fourier transform of a circularly symmetric function is also circularly symmetric, we can let $\phi=0$ to simplify the integral:
+Since the Fourier transform of a circularly symmetric function is also circularly symmetric, we can let $\phi=0$ to simplify the integral:
 
 %\begin{equation}
 \begin{align*}
-\mathcal{F}(k) &= \int_{0}^{b} \int_{0}^{2\pi} e^{i \: k \: r \: cos(\theta)} d\theta \: r \: dr \\ \\
+\mathcal{F}(k) &= \int_{0}^{b} \int_{0}^{2\pi} e^{i \: k \: r \: \cos(\theta)} d\theta \: r \: dr \\ \\
 &= 2 \: \pi \int_{0}^{b} J_0 (k \: r) r \: dr
 \end{align*}
 %\end{equation}
 
-\noindent Where $J_0$ is the $0^{th}$ order Bessel function. Through the change of variables $u=k \: r$, we can  write the integral as 
-
+Where $J_0$ is the $0^{th}$ order Bessel function. Through the change of variables $u=k \: r$, we can  write the integral as 
 \begin{equation}
 \mathcal{F}(k) = \frac{2\pi}{k^2} \int_{0}^{k \: b} J_0 (u) u \: du \\ \\
 \end{equation}
-
-\noindent Which has the well known solution
-
+which has the well known solution
 \begin{equation}
 \mathcal{F}(k) = \frac{2\pi}{k^2} J_1 (k \: b) k \: b  \\ \\
 \end{equation}
-
+or equivalently:
 \begin{equation}
 \mathcal{F}(k) = 2 \pi \: b^2 \bigg[ \frac{J_1 (k \: b)}{k \: b} \bigg]  \\ \\
 \end{equation}
-
-\noindent To get the Fourier transform corresponding to Equation (1), we can simply take the result from Equation (5) and subtract from it the same equation with b replaced by a:
-
+The wavenumber $k$ corresponds to a position in the focal plane
+equivalent to some off-axis angle $\theta$; it turns out that (based
+on the text below Equation \ref{eq:psf_tophat}) $k=2\pi\theta
+/ \lambda$ (a future version of these solutions should explain why
+those precise units!). Thus:
 \begin{equation}
-\mathcal{F}(k) = 2 \: \pi \: b^2 \bigg[ \frac{J_1 (k \: b)}{k \: b} \bigg] - 2 \: \pi \: a^2 \bigg[ \frac{J_1 (k \: a)}{k \: a} \bigg]  \\ \\
+\mathcal{F}(\theta) = 2\pi \: b^2 \left[
+\frac{J_1 (2\pi b \theta /\lambda)}{2\pi b \theta / \lambda} \right]  \\ \\
 \end{equation}
 
-\noindent The analytic form of the diffraction limited point spread function is then given by 
+To get the Fourier transform corresponding to Equation (1), we can
+simply take the result from Equation (5) and subtract from it the same
+equation with b replaced by a:
+\begin{equation}
+\mathcal{F}(\theta) = 2 \pi \: b^2 \bigg[
+\frac{J_1 (2\pi b \theta/\lambda)}{2\pi b \theta / \lambda} \bigg] -
+2 \: \pi \: a^2 \bigg[ \frac{J_1 (2 \pi a \theta/\lambda)}{2\pi
+a \theta / \lambda} \bigg]  \\ \\
+\end{equation}
+
+The analytic form of the diffraction limited point spread function is
+then given by
 
 \begin{equation}
-I(k) = \Bigg| 2 \: \pi \: b^2 \bigg[ \frac{J_1 (k \: b)}{k \: b} \bigg] - 2 \: \pi \: a^2 \bigg[ \frac{J_1 (k \: a)}{k \: a} \bigg] \Bigg|^2  \\ \\
+I(k) = \Bigg| 2 \: \pi \: b^2 \bigg[ \frac{J_1 (2 \pi b \theta
+/\lambda)}{2\pi b \theta / \lambda} \bigg]
+- 2 \: \pi \: a^2 \bigg[ \frac{J_1 (2 \pi a \theta / \lambda)}{2\pi
+a \theta/\lambda} \bigg] \Bigg|^2  \\ \\
 \end{equation}
 \end{answer}
 
