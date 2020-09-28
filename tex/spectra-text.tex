@@ -139,13 +139,50 @@ issues or due to imperfections in the extraction method.
 
 \begin{enumerate} 
 \item Assuming the centroid accuracy is related to $R$ and $S/N$ ratio
-    in a similar way for spectra of single emission lines as for point
-    sources in an image, for a line with $S/N \sim 10$ in its total
-    flux, how high $R$ do you have to be to determine a Doppler
-    velocity to 10 km s$^{-1}$ precisions? How would absorption lines
-    differ? How would a redshift determination using a full optical
-    spectrum change the precision of the determination qualitatively?
+    in a similar way for optical spectra of single emission lines as
+    for point sources in an image, for an unresolved line with
+    $S/N \sim 10$ in its total flux, how high $R$ do you have to be to
+    determine a Doppler velocity to 10 km s$^{-1}$ precision?  How
+    would a redshift determination using a full optical spectrum
+    (i.e. using many lines) change the precision of the determination
+    qualitatively? How does dependence of the velocity precision on
+    $R$ differ qualitatively for absorption lines?
+
+\begin{answer}[Author: Matthew Daunt]
+    Due to the Doppler shift, we can predict the radial velocity of an
+    object using the observed wavelength and observed wavelength,
+    via
+\begin{equation}
+    v_r = \frac{\lambda_{obs} -\lambda_0}{\lambda_0} c
+\end{equation}
+    Resolution is defined as
+    \begin{equation}
+        R = \frac{\lambda}{\Delta \lambda}
+    \end{equation}
+    where $\Delta \lambda$ is the full width half max (FWHM). We
+    can express the resolution in velocity units therefore as
+    \begin{equation}
+    \Delta v = \frac{\lambda}{R } \frac{c}{\lambda} = \frac{c}{R}
+\end{equation}
+    The precision in the radial velocity should be better when the FWHM is
+    smaller and the $S/N$ is higher. The scaling is the same as for
+    positions in an image, such that
+    \begin{equation}
+    \sigma \sim {\rm FWHM~}/ (S/N) = \frac{c}{R} \frac{1}{S/N}
+    \end{equation}
+    For $S/N = 10$, this equation is therefore:
+    \begin{equation}
+    \sigma \sim \frac{30,000 {\rm ~km} {\rm ~s}^{-1}}{R}
+    \end{equation}
+    which therefore requires $R\sim 3,000$.  If you have more than one
+    emission line, you can use the $S/N$ in each of the, and the
+    combined precision will be better than just using one. The case of
+    absorption lines will differ because the noise in the continuum
+    will contribute, and a larger width of the line will degrade the
+    precision further than for an emission line.
+\end{answer}
 \end{enumerate} 
+
 
 % \section{Analytic Exercises}
 
