@@ -219,9 +219,10 @@ can be followed exactly. It can be shown that the mean density of the
 sphere at turn-around is about 5.5 times the mean density of the
 universe, and collapse occurs in twice the turn-around time. The
 virial theorem and energy conservation lead to a typical overdensity
-of the collapsed object within its virial radius of $18\pi^2 \approx
-178$. Meanwhile, the linearly extrapolated overdensity at that time is
-only about $\delta_{\rm linear}\approx 1.7$.
+of the collapsed object within its virial radius of $\delta_{\rm vir}
+= 18\pi^2 \approx 178$. Meanwhile, the linearly extrapolated
+overdensity at that time is only about $\delta_{\rm linear}\approx
+1.7$.
 
 The mass spectrum of collapsed halos can be predicted approximately
 using {\it excursion set theory}, or the {\it Press-Schechter}
@@ -277,13 +278,39 @@ include feedback of supernovae, winds, and active galactic nuclei on
 the fluid; this {\it subgrid physics} is typically parameterized in a
 simple way.
 
-An important insight from N-body simulations is how halos grow through
+One important insight from N-body simulations is how halos grow through
 accretion of smaller companion halos. These accreted halos often
 survive for long periods of time, and are therefore distinct clumps
 known as {\it subhalos} within each halo. The centers of halos and
 subhalos are the locations where galaxies form (\citealt{wechsler18a}).
 
-\todo{Need to discuss NFW profile here}
+The simulations also clarify the internal structure of
+halos. Generally their radial profiles can be modeled as:
+\begin{equation}
+\rho(r) = \frac{\rho_s}{\frac{r}{r_s}\left(1
++ \frac{r}{r_s}\right)^2},
+\end{equation}
+the ``NFW'' profile of \citet{navarro97a}. In the context of a
+specific profile, we define $R_{\rm vir}$ and $M_{\rm vir}$ based on
+the radius and enclosed mass within which the mean overdensity is
+$\delta_{\rm vir}$ as predicted by the spherical collapse model. Thus:
+\begin{equation}
+M_{\rm vir} = \frac{4\pi}{3} R_{\rm vir}^3 \bar\rho \left(1+ \delta_{\rm
+vir}\right)
+\end{equation}
+The halo concentration can be characterized by:
+\begin{equation}
+c_{\rm vir} = \frac{R_{\rm vir}}{r_s}
+\end{equation}
+The structure of a halo is fully defined by $M_{\rm vir}$ and $c_{\rm
+vir}$. In simulations, typically $c_{\rm vir} \sim 5$--$30$
+(\citealt{bullock01b; wang20a}), declining with increasing halo mass
+and with increasing redshift. Any given choice of halo structure
+yields a particular maximum circular velocity $v_{\rm max}$; the
+dependence on mass is such that:
+\begin{equation}
+M_{\rm vir} \propto v_{\rm max}^{3.4}.
+\end{equation}
 
 \section{Commentary}
 
