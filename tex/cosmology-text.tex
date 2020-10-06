@@ -292,6 +292,41 @@ matter-dominated case (i.e. $\Omega_m \approx 1$) is $a(t)\propto t^{2/3}$ and i
 case (i.e. $\Omega_r \approx 1$) is $a(t)\propto t^{1/2}$.
 For the latter, use the fact that the gravitating energy density
 $\rho \propto a^{-4}$ because of the effect of redshift.
+
+\begin{answer}[Author: Gregory Beauregard]
+First, we consider a matter-dominated case $\Omega_m\approx 1$. If we
+consider the mass inside the expanding spherical shell, allowing that
+it be constant and expressing it in terms of its density, we have that
+$a(t_0)^3\rho_c=a(t)^3\rho$ where we specified that $t_0=\text{today}$
+and $a(t_0)=1$ so that $\rho$ is expressible in terms of the critical
+density $\rho_c$ as $\rho=\rho_c/a^3$ so that we get $\rho\propto
+a^{-3}$ as stated in the notes for matter. We defined:
+\begin{equation*}
+  \Omega_m=\frac{8\pi G\rho}{3H^2}.
+\end{equation*}
+Definitions are chosen so that $H=\dot{a}/a$. Bringing things together
+with the assumption that $\Omega_m\approx 1$, we have
+\begin{equation*}
+  \sqrt{a}\dot{a}=\sqrt{\frac{8\pi G\rho_c}{3}}.
+\end{equation*}
+The differential equation is separable to be easily solved, and the
+righthand side is the Hubble parameter at current time (redshift
+zero), so it's $H_0$.
+\begin{equation*}
+  a(t)=\left(3/2 H_0 t\right)^{2/3}\propto t^{2/3}
+\end{equation*}
+So we have in the matter dominated case that $a(t)\propto t^{2/3}$.
+For the radiation dominated case, when we instead have that
+$\rho\propto a^{-4}$ instead of $\rho\propto a^{-3}$, we get a
+separable differential equation of the form
+\begin{equation*}
+  a\dot{a}=C.
+\end{equation*}
+With the same boundary of $a(0)=0$ as before, we have the solution is
+of the form $a(t)=Ct^{1/2}$ (different $C$). In other words,
+$a(t)\propto t^{1/2}$.
+\end{answer}
+
 \item 
 In the local universe, clearly the redshift $z$ can be interpreted as
 a recession velocity $v$.  However, on non-local scales in general
