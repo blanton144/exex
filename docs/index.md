@@ -13,8 +13,8 @@ Please read the following documents related to this class:
 | Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/images.ipynb)
 | Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) |
 | Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/distance-ladder.ipynb)
-| Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | 
-| Structure Formation | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/cosmology.ipynb)
+| Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) |  [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/cosmology.ipynb)
+| Structure Formation | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) |
 | Galaxies | [notes](pdf/galaxies.pdf) |
 | Interstellar Medium | [notes](pdf/ism.pdf) |
 | Star Clusters | [notes](pdf/stellar-clusters.pdf) |
