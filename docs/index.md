@@ -8,13 +8,13 @@ Please read the following documents related to this class:
 | Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-1.ipynb) |
 | Light II | [notes](pdf/light-2.pdf) | [notes with answers](pdf/light-2-answers.pdf)| [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/light-2.ipynb)
 | Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) |
-| Atmosphere | [notes](pdf/atmosphere.pdf) |
-| Detectors | [notes](pdf/detectors.pdf) |
+| Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) |
+| Detectors | [notes](pdf/detectors.pdf) | [notes with answers](pdf/detectors-answers.pdf) |
 | Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/images.ipynb)
-| Spectra | [notes](pdf/spectra.pdf) |
-| Distance ladder | [notes](pdf/distance-ladder.pdf) |
-| Cosmology | [notes](pdf/cosmology.pdf) |
-| Structure Formation | [notes](pdf/structure.pdf) |
+| Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) |
+| Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/distance-ladder.ipynb)
+| Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | 
+| Structure Formation | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/cosmology.ipynb)
 | Galaxies | [notes](pdf/galaxies.pdf) |
 | Interstellar Medium | [notes](pdf/ism.pdf) |
 | Star Clusters | [notes](pdf/stellar-clusters.pdf) |

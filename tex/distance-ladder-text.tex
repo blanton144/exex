@@ -178,10 +178,53 @@ constant.
 \begin{enumerate} 
 \item Estimate age of the universe from the Hubble constant assuming
     constant expansion.
+
+\begin{answer}[Author: Jiarong Zhu]
+Hubble's law states $v = H_0 d$, where $H_0\approx 70$ km s$^{-1}$
+Mpc$^{-1}$. If we assume constant expansion (no acceleration or
+deceleration), the age of universe will be:
+\begin{equation}
+T = \frac{d}{v}=\frac{1}{H_0}\approx
+\frac{{\rm Mpc}}{70 {\rm ~km} {\rm ~s}^{-1}} =
+\frac{10^6*3.086*10^{13} {\rm ~km}}{70 {\rm ~km}} {\rm s}\approx
+4.4*10^{17} {\rm ~s}\approx 13.9 {\rm ~Gyr}.
+\end{equation}
+\end{answer}
+
 \item What is the maximum parallax at 1 pc, 10 pc, 1 kpc, and 1 Mpc?
     Assuming you can get good positions to with a few hundredths of a
     FWHM, what size telescopes do you need so that you can measure
     parallax at these distances?
+
+\begin{answer}[Author: Jiarong Zhu]
+The definition of the maximum parallax p is:
+\begin{equation}
+    p = \frac{1 {\rm ~AU}}{d} = \frac{1''}{d}
+\end{equation}
+where $d$ is in parsec.
+
+Thus if $d$ equals 1 pc, 10 pc, 1 kpc, 1 Mpc, the parallax will be
+$1''$, $0.1''$, $10^{-3}\,''$, $10^{-6}\,''$, respectively. 
+
+In order to measure parallax at these distances, the telescope
+resolution needs to be $\sim 10^{-6}$ arcsec. If we can get good
+positions to $\sim 10^{-2}$ FWHM, suppose the telescope has size $D$
+and measures light at a wavelength $\lambda$, we have
+
+\begin{equation}
+    10^{-6} {\rm ~arcsec} \sim \frac{\lambda}{D} \times 10^{-2}
+\end{equation}
+Recalling that $1'' \approx 4.84*10^{-6}$, then:
+
+\begin{equation}
+    D \sim \frac{\lambda * 10^4}{1''}\approx \frac{\lambda \times
+    10^4}{4.84\times 10^{-6}}= (\frac{\lambda}{484 {\rm ~nm}}){\rm ~km}
+\end{equation}
+
+For instance, if the telescope is optical telescope, $\lambda \sim
+500$ nm, the size $D$ of the telescope would need to be $\sim 1$ km.
+\end{answer}
+
 \item If the typical peculiar velocity of a galaxy is $\sim 300$ km
     s$^{-1}$, at what redshift does its contribution to the distance
    error drop below 5\%?
