@@ -199,30 +199,42 @@ T = \frac{d}{v}=\frac{1}{H_0}\approx
 \begin{answer}[Author: Jiarong Zhu]
 The definition of the maximum parallax p is:
 \begin{equation}
-    p = \frac{1 {\rm ~AU}}{d} = \frac{1''}{d}
+    p = \frac{1 {\rm ~AU}}{d} = \frac{1''}{d / 1 {\rm ~pc}}.
 \end{equation}
-where $d$ is in parsec.
 
 Thus if $d$ equals 1 pc, 10 pc, 1 kpc, 1 Mpc, the parallax will be
 $1''$, $0.1''$, $10^{-3}\,''$, $10^{-6}\,''$, respectively. 
 
-In order to measure parallax at these distances, the telescope
-resolution needs to be $\sim 10^{-6}$ arcsec. If we can get good
-positions to $\sim 10^{-2}$ FWHM, suppose the telescope has size $D$
-and measures light at a wavelength $\lambda$, we have
-
+If we can get good positions to $\sim 10^{-2}$ FWHM, suppose the
+telescope has size $D$ and measures light at a wavelength $\lambda$,
+we find we can measure parallaxes of:
 \begin{equation}
-    10^{-6} {\rm ~arcsec} \sim \frac{\lambda}{D} \times 10^{-2}
+    p \sim \frac{\lambda}{D} \times 10^{-2}
 \end{equation}
-Recalling that $1'' \approx 4.84*10^{-6}$, then:
-
+Recalling that $1'' = \pi / 180 / 3600 {\rm ~rad} \approx 4.84*10^{-6}
+{\rm ~rad}$, then:
 \begin{equation}
-    D \sim \frac{\lambda * 10^4}{1''}\approx \frac{\lambda \times
-    10^4}{4.84\times 10^{-6}}= (\frac{\lambda}{484 {\rm ~nm}}){\rm ~km}
+    D \sim 10^{-2} \times \frac{\lambda}{p}\approx \frac{\lambda (d /
+    1 {\rm ~pc})}{484\times 10^{-6}} \approx
+    \left(\frac{\lambda}{484 {\rm ~nm}}\right)
+    \left(\frac{d}{1 {\rm ~pc}}\right) 10^{-3} {\rm ~m}
 \end{equation}
 
 For instance, if the telescope is optical telescope, $\lambda \sim
-500$ nm, the size $D$ of the telescope would need to be $\sim 1$ km.
+500$ nm, the size $D$ of the telescope would need to be $\sim 1$ km in
+order to have the resolution to measure parallax.
+
+This diameter requirement only accounts for the diffraction limit and
+not other considerations. For example, although the diffraction limit
+of a $\sim$ mm-sized telescope is in principle sufficient to measure
+parallax at 1 pc, obviously that is impractical because you cannot
+gather enough photons in a reasonable time to perform the measurement!
+Conversely, although a baseline $D\sim 1$ km is necessary based on the
+diffraction limit to measure parallax at 1 Mpc, you may not need a
+km-diameter worth of light-gathering power for that measurement.
+E.g. using an interferometer fed by two large but possible-to-build
+optical telescopes, separated by a km, would be enough (though also
+challenging and expensive to do!!).
 \end{answer}
 
 \item If the typical peculiar velocity of a galaxy is $\sim 300$ km
