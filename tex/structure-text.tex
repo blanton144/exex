@@ -39,13 +39,16 @@ function:
 In plain language, the correlation function is the excess probability
 of finding a pair of galaxies with separation $r$, above the
 probability for a spatially uniform Poisson distribution with the same
-number density of galaxies.
+number density of galaxies.  Typically, $P(k)$ and $\xi(r)$ are
+expressed in comoving coordinates, because as discussed below under
+linear theory their overall shape in comoving coordinates is retained,
+and only their amplitude changes.
 
 The inflationary $\Lambda$CDM prediction for $P(k)$ is that during the
 era of linear gravitational growth, on large scales (low $k$) its
 power law slope is $n\sim 1$ and on small scales (high $k$) its power
 law slope is $n\sim -3$ (e.g. \citealt{bardeen86a}; Appendix G). The
-turnover scale is associated with the horizon size at matter-radiation
+turnover scale is associated with the Hubble scale at matter-radiation
 equality, for reasons explored in the exercises. We can characterize
 the overall second-order amplitude fluctuations on any scale as:
 \begin{equation}
@@ -304,7 +307,7 @@ c_{\rm vir} = \frac{R_{\rm vir}}{r_s}
 \end{equation}
 The structure of a halo is fully defined by $M_{\rm vir}$ and $c_{\rm
 vir}$. In simulations, typically $c_{\rm vir} \sim 5$--$30$
-(\citealt{bullock01b; wang20a}), declining with increasing halo mass
+(\citealt{bullock01b, wang20a}), declining with increasing halo mass
 and with increasing redshift. Any given choice of halo structure
 yields a particular maximum circular velocity $v_{\rm max}$; the
 dependence on mass is such that:
@@ -339,25 +342,72 @@ M_{\rm vir} \propto v_{\rm max}^{3.4}.
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item We can understand the turnover in $P(k)$ very simply once we
-understand how growth proceeds for $k$ modes inside and outside the
-particle horizon. Here we give the picture in the ``synchronous
-gauge''; the heuristic narrative outside the horizon depends on gauge,
-but the observables do not (\citealt{ma95a}). The following results in
-this case regarding density perturbation growth allow us to
-characterize the tranfer function $T(k)$ which modifies the density
-field modes.  During radiation domination, inside the horizon the
-density only grows logarithmically (because the Jeans scale is nearly
-the horizon size for a relativistic fluid) and outside the horizon the
-density grows as $\delta\propto a^2$. During matter domination, at all
-scales $\delta\propto a$.
+\item We can understand the shape of the linear power spectrum $P(k)$
+once we understand how growth proceeds for $k$ modes inside and
+outside the Hubble radius $r_{\rm Hubble} = c/H(t)$. Here we give the
+picture in the ``synchronous gauge''; the heuristic narrative outside
+the horizon depends on gauge, but the observables do not
+(\citealt{ma95a}). The inflationary $P_{\rm inflation}(k)\propto k$ at
+all scales (roughly). However, during the radiative-dominated era,
+$P(k)$ is altered so that it turns over at small scales and becomes
+$\propto k^{-3}$ at small scales. All of this happens when all scales
+are still very much in the linear growth regime, and so the resulting
+function is usually referred to as $P_{\rm linear}(k)$, the ``linear''
+power spectrum.  The transfer function is defined as $T(k) = P_{\rm
+linear}(k) / P_{\rm inflation}(k)$, where we remind ourselves that $k$
+is expressed in comoving coordinates. During radiation domination,
+inside the horizon the density only grows logarithmically (because the
+Jeans scale is nearly the horizon size for a relativistic fluid) and
+outside the Hubble radius the density grows as $\delta\propto
+a^2$. During matter domination, at all scales $\delta\propto a$.
 \begin{enumerate}
-\item For a mode $k$ that enters the horizon before matter dominates,
-how does the time it spends outside the horizon scale with $k$? 
+\item For a mode $k$ (expressed in comoving coordinates) that
+enters the Hubble radius before matter-radiation equality, how does
+the scale radius $a_{\rm in}$ at which it enters the Hubble radius
+depend on $k$?
+
+\begin{answer}[Author: Nicholas Faucher]
+For any power law dependence of $a(t)= t^n$ on time, the Hubble radius
+$r_{\rm Hubble} = c a/{\dot a} \propto a^{1/n}$ in physical
+coordinates. In comoving coordinates, $r_{\rm Hubble, c} \propto
+a^{1/n-1}.$ In the radiation dominated era where $a\propto t^{1/2}$,
+therefore, $r_{\rm Hubble,c} \propto a$. Since $k \propto r^{-1}$,
+then the scale radius at which mode $k$ enters the horizon scales with
+$k$ as $a_{\rm in} \propto k^{-1}$.
+\end{answer}
+
 \item How does the growth factor experienced outside the horizon scale
-with $k$?
-\item How is an initial $P(k) \propto k$ modified after the universe
-has entered the matter-dominated phase?
+with $k$, for scales that enter the horizon during the radiation
+dominated era?
+
+\begin{answer}[Author: Nicholas Faucher]
+As noted above, the growth factor outside the horizon in the radiation
+dominated era scales with $a^2$, so by the time they enter the
+horizons the densities $\delta$ have grown an amount $\propto a_{\rm
+in}^2 \propto k^{-2}$.
+\end{answer}
+\item Therefore, determine how the primordial $P(k) \propto k$ will 
+have been modified by the time the universe has reached
+matter-radiation equality?
+
+\begin{answer}
+The power spectrum $P(k)\propto \delta^2$ so at scales below the
+Hubble radius, the amount that the power spectrum on comoving
+wavenumbers $k > 2\pi/r_{\rm Hubble, c}$ at matter-radiation equality
+will have grown is $\propto k^{-4}$. At $k<2\pi/r_{\rm Hubble, c}$,
+the primordial $P(k)$ will have grown in amplitude but not changed its
+dependence on scale.
+
+Therefore if the initial, primordial $P(k) \propto k$ at all scales,
+then it will retain that shape at small $k$, but be altered to
+$P(k)\propto k^{-3}$ at large $k$, with a broad turn-over region
+around $k \sim 2\pi/r_{\rm Hubble, c}$, with $r_{\rm Hubble, c}$ being
+the comoving Hubble radius at matter-radiation equality. 
+
+After matter-radiation equality, both large and small scales grow
+$\propto a$, so the shape of $P(k)$ is ``frozen in'' and only the
+amplitude grows, until nonlinear growth ensuse on small scales.
+\end{answer}
 \end{enumerate}
 \item Starting from the continuity equation in Equation
    \ref{eq:homogeneous}, assuming a flat matter dominated universe
@@ -679,8 +729,44 @@ this case.
 
 \item Argue {\it qualitatively} why the excursion set approach should
 lead to the prediction that dense regions on large scales should have
-more and larger dark matter halos; this argument was formalized
+more high mass dark matter halos; this argument was formalized
 originally by \citet{mo96a}.
+
+\begin{answer}
+The Press-Schechter ansatz can be expressed in terms of a random
+walk. For a random location, consider the smoothed linear density
+field around it, starting with very large smoothing and stepping to
+smaller and smaller scales. We quantify the smoothing scale by $k$,
+where the radius of the smoothing scale is $R=2\pi/k$. For the largest
+scales ($k=0$), the overdensity is 0 (the mean). As $k$ increases, the
+overdensity at that particular location goes up and down in a random
+walk. The first smoothing scale $R=2 \pi/k$) at which the linear
+density around that point exceeds $\sim$ 1.7---the first
+``upcrossing''---corresponds to the mass of the halo that that
+location is in. Imagine performing this random walk for all locations;
+the result is an ensemble of different walks, and for those walks the
+distribution of the masses associated with the ``first upcrossings''
+is the prediction for the distribution of halo masses.
+
+Now consider, instead of a {\it random} location, a location already
+known to be an overdense region on some scale $R$. That fixes a
+wavenumber $k= 2\pi/R$ and an overdensity $\delta$ at which the random
+walk ``starts.'' The random walk proceeds to higher $k$.  But since it
+started at some $delta>0$, its first upcrossing will happen sooner on
+average, i.e. at smaller $k$. That means that on average these points
+will be in larger mass galaxies. Thus, we see that overdense regions
+should have halo mass functions that are shifted to higher masses.
+
+Considering a location known to be an underdense region on some scale,
+it should have its first upcrossing happen at a larger k, or smaller
+mass. So the mass function will be shifted to lower masses in regions
+that are underdense on large scales.
+
+\citet{mo96a} take this argument farther (and more rigorously
+mathematically) and calculate the relationship between $\delta_m$ and
+the halo overdensity $\delta_h$ as a function of halo mass $M$---the
+``bias'' of the halos.
+\end{answer}
 
 \end{enumerate}
 
