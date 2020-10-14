@@ -558,6 +558,48 @@ expressed as:
 where at time $t_{\rm max}$ the sphere reaches its maximum radius of
 expansion $R_{\rm max}$, before collapsing. 
 
+\begin{answer}[Author: Gregory Beauregard]
+We seek the solution to:
+\begin{equation}\label{eq:orig}
+  \frac{\mathrm d^2 R}{\mathrm dt^2}=-\frac{GM(<r)}{R^2}=-\frac{4\pi G}{3}\bar\rho(1+\bar\delta)R
+\end{equation}
+We wish to demonstrate that solutions to the above equation can be expressed as
+\begin{align}
+  \frac{R}{R_\text{max}}&=\frac{1}{2}(1-\cos\eta)\label{eq:r} \\
+  \frac{t}{t_\text{max}}&=\frac{1}{\pi}(\eta-\sin\eta)\label{eq:t}.
+\end{align}
+We do some implicit differentiation with respect to $t$ with
+Equations \ref{eq:r} and \ref{eq:t}.
+\begin{align}
+  \frac{\dot R}{R_\text{max}}&=\frac{1}{2}\dot\eta\sin\eta\label{eq:rd} \\
+  \frac{\ddot R}{R_\text{max}}&=\frac{1}{2}(\dot\eta^2\cos\eta+\ddot\eta\sin\eta)\label{eq:rdd} \\
+  \frac{1}{t_\text{max}}&=\frac{\dot\eta}{\pi}(1-\cos\eta)\label{eq:td} \\
+  0&=\frac{1}{\pi}(\ddot\eta(1-\cos\eta)+\dot\eta^2\sin\eta)\label{eq:tdd}
+\end{align}
+Solving Equation \ref{eq:tdd} for $\ddot\eta$ and plugging into Equation \ref{eq:rdd} we get a nice simplification:
+\begin{equation}
+  \frac{\ddot R}{R_\text{max}}=-\frac{\dot\eta^2}{2}\label{eq:rdd-simp}
+\end{equation}
+From Equation \ref{eq:td} we get $\dot\eta$ as
+\begin{equation}
+  \dot\eta=\frac{\pi}{t_\text{max}}\frac{1}{1-\cos\eta}\label{eq:etad}.
+\end{equation}
+We can combine Equations \ref{eq:rdd-simp} and \ref{eq:etad} to get $\ddot R$, the lefthand side of Equation \ref{eq:orig}.
+\begin{equation}
+  \ddot R=-\frac{\pi^2 R_\text{max}}{2t_\text{max}^2}\frac{1}{(1-\cos\eta)^2}\label{eq:left}
+\end{equation}
+Computing the righthand side of Equation \ref{eq:orig}, $-GM/R^2$, with Equation \ref{eq:r} we have that
+\begin{equation}
+  -\frac{GM}{R^2}=-\frac{4GM}{R_\text{max}^2}\frac{1}{(1-\cos\eta)^2}\label{eq:right}.
+\end{equation}
+By comparing Equation \ref{eq:left} to Equation \ref{eq:right} we see
+that Equations \ref{eq:r} and \ref{eq:t} give a solution to
+Equation \ref{eq:orig} with
+\begin{equation}
+  GM=\frac{\pi^2}{8}\frac{R_\text{max}^3}{t_\text{max}^2}.
+\end{equation}
+\end{answer}
+
 \item Show that at time $t_{\rm max}$, the density of the sphere
 relative to the mean density of the universe will be $\rho_{\rm max}
 / \bar\rho(t_{\rm max}) = 9 \pi^2 / 16 \approx 5.5$.
@@ -571,6 +613,21 @@ structure of the resulting halo mass profile, but the virial theorem
 ($U=-2K$) can tell us about its overall size. Show that the final
 characteristic radius of the resulting {\it virialized} halo is
 $R_{\rm vir} = R_{\rm max} / 2$.
+
+\begin{answer}[Author:Nanoom Lee]
+Using the virial theorem, energy conservation
+can be written as
+\begin{equation}
+E(t_{\rm max}) = -\frac{GM^2}{R_\text{max}} = E(t_{\rm vir}) =
+-\frac{GM^2}{R_\text{vir}} + K = -\frac{GM^2}{R_\text{vir}} +
+\frac{GM^2}{2R_\text{vir}} = -\frac{GM^2}{2R_\text{vir}},
+\end{equation}
+which gives
+\begin{equation}
+R_\text{vir}=R_\text{max}/2.
+\end{equation}
+\end{answer}
+
 \item Show that the mean overdensity within the resulting halo  is
 $\delta_{\rm vir} = 18\pi^2 \approx 178$. 
 \item By linearizing the Equations \ref{eq:sphericalcollapse}, show
