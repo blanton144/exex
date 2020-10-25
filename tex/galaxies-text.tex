@@ -315,14 +315,59 @@ $L_\odot$ kpc$^{-2}$.
 \begin{enumerate}
 \item Show that $\kappa_1$ is proportional to the logarithm of the
 virial mass.
+
+\begin{answer}[Author: Nick Faucher]
+Starting from the virial relation, assuming all elliptical galaxies
+are homologous:
+\begin{equation}
+M \propto  \sigma^2 r_e
+\end{equation}
+where $\sigma$ is the velocity dispersion at radius $r_{e}$ and $M$ is
+the mass inside that radius, taking the logarithm of both sides, we
+find:
+\begin{equation}
+\log_{10}(M) \propto \log_{10}(\sigma^2) + \log_{10}(r_{e}) \propto \kappa_1
+\end{equation}
+\end{answer}
+
 \item Show that $\kappa_3$ is proportional to the logarithm of the
 virial mass to stellar light ratio.
+
+\begin{answer}[Author: Nick Faucher]
+Since luminosity is proportional to surface brightness times radius
+squared, we can write the scaling relation of the mass-to-light ratio
+as
+\begin{equation}
+\frac{M}{L} \propto \frac{M}{I_e r_e^2} \propto \frac{\sigma^2}{I_e r_e} 
+\end{equation}
+where we have again invoked the virial theorem. Applying the logarithm
+to both sides we find:
+\begin{equation}
+\log_{10}\frac{M}{L} \propto \log_{10}(\sigma^2) - \log_{10}(r_{e}) - \log_{10}(I_e) \propto \kappa_3
+\end{equation}
+\end{answer}
+
 \item \cite{bender92a} and others find:
 \begin{equation}
 \kappa_3 \approx 0.15 \kappa_1 + 0.36.
 \end{equation}
 How does the mass-to-light ratio depend on virial mass (or
 alternatively, on luminosity)?
+
+\begin{answer}[Author: Nick Faucher]
+Using the relation given by Bender et al. (1992) with the relation
+given above, we find:
+\begin{equation}
+\frac{M}{L} \propto 10^{\kappa_3} \propto 10^{0.15\kappa_1 +
+0.36}  \propto 10^{0.15 \log_{10}M + 0.36} \propto M^{0.15}.
+\end{equation}
+Alternatively, through some simply algebra we can write this relation
+in terms of luminosity:
+\begin{equation}
+\frac{M}{L} \propto L^{0.176}
+\end{equation}
+\end{answer}
+
 \item Elliptical galaxies fall along the red sequence, which depends
 on absolute magnitude as:
 \begin{equation}
@@ -333,6 +378,35 @@ of luminosity. Assuming that Equation \ref{eq:belldejong} is constant as a
 function of luminosity, and a constant virial-to-stellar mass ratio,
 what would this trend imply for the virial mass-to-light ratio
 dependence on luminosity? Comment.
+
+\begin{answer}[Author: Nick Faucher]
+Bell \& de Jong (2000) give a relation for the stellar mass-to-light ratio
+\begin{equation}
+\log_{10}(\frac{M_\ast}{L}) \approx 1.1(g-r) - 0.3
+\end{equation}
+and thus:
+\begin{equation}
+\frac{M_\ast}{L} \propto 10^{1.1(g-r)} \propto 10^{-1.1(0.03M_r)}
+\end{equation}
+In terms of the luminosity instead of absolute magnitude:
+\begin{equation}
+\frac{M}{L} \propto L^{0.0825}
+\end{equation}
+Comparing this result to the result from part (c), we see that
+assuming a constant virial-to-stellar mass ratio does not explain the
+observed scaling of the virial mass-to-light ratio with luminosity in
+the fundamental plane. In particular, under this assumption, the
+virial mass-to-light ratios of giant elliptical galaxies would
+increase more slowly with increasing luminosity than they do from
+applying the virial theorem to the results of Bender et
+al. (1992). This discrepancy would be resolved if the
+virial-to-stellar mass ratio for these galaxies scaled with luminosity
+as
+\begin{equation}
+\frac{M_{virial}}{M_{\ast}} \propto L^{0.094}
+\end{equation}
+\end{answer}
+
 \end{enumerate}
 \item The Tully-Fisher relation can be approximated under similarly
 simple assumptions. Assume (a) a constant dynamical-to-stellar mass ratio,
