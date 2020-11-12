@@ -201,7 +201,8 @@ deep in the cloud there is a large optical depth for the photons
 exciting to the rotation-vibration levels. H$_2$ emission is very
 weak, so molecular clouds are typically studied through the emission
 of other molecules, principally through radio-wavelength lines of CO
-calibrated relative to H$_2$ through virial masses of local clouds.
+calibrated relative to H$_2$ through virial masses of local clouds
+(\citealt{bolatto13a}).
 
 The rotational energy states for a diatomic molecule are:
 \begin{equation}
@@ -273,8 +274,8 @@ to keep this dependence in mind.
     \href{http://}
     {\it Physics of the Interstellar and Intergalactic Medium,
       \citet{draine07a}}
-\item Leroy ARAA
-\item Kalberla ARAA
+\item \citet{bolatto13a}
+\item \citet{kalberla09a}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
@@ -351,20 +352,22 @@ L = \frac{3}{4} N_H \Delta E A =  \left[ \frac{3}{4} \frac{A hc}
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
-\item Something with CHIANTI database and chiantipy
+\item Install and use {\tt ChiantiPy} to calculate the total radiative
+losses for optically thin, hot gas (i.e. coronal gas) as a function of
+temperature from $T \sim 10^4$ to $10^8$ K.
 \item Calculating $\phi$
-For the process
-\begin{equation}
-X^{+r} + h\nu \rightarrow X^{+r +1} + e^{-1} + {\rm ~kinetic energy},
-\end{equation}
-the heating rate per unit volume is:
-\begin{equation}
-\Gamma = n\left(X^{+r}\right)  \int_{\nu_0}^\infty {\rm
-d}\nu \sigma_{\rm pi} c \left(\frac{u_n}{h_\nu} \right)
-(h\nu - h \nu_0)
-\end{equation}
-where $h\nu_0$ is the ionization energy. The number of ionizations
-per unit volume can be calculated similarly.
+%For the process
+%\begin{equation}
+%X^{+r} + h\nu \rightarrow X^{+r +1} + e^{-1} + {\rm ~kinetic energy},
+%\end{equation}
+%the heating rate per unit volume is:
+%\begin{equation}
+%\Gamma = n\left(X^{+r}\right)  \int_{\nu_0}^\infty {\rm
+%d}\nu \sigma_{\rm pi} c \left(\frac{u_n}{h_\nu} \right)
+%(h\nu - h \nu_0)
+%\end{equation}
+%where $h\nu_0$ is the ionization energy. The number of ionizations
+%per unit volume can be calculated similarly.
 \item depletion onto dust
 \item reddening  in optical, NIR
 \item Virial estimate of H2 masses

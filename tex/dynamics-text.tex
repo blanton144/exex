@@ -303,14 +303,17 @@ homologous systems.
 
 \begin{itemize}
   \item
-    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
-    {\it Binney \& Tremaine}
-      \citet{cox00a}}, Chapter 5
+    {\it Galactic
+    Dynamics, \href{https://ui.adsabs.harvard.edu/abs/2009PhT....62e..56B/abstract}{\citet{binney09a}}}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
+\item Assuming the Milky Way halo is isothermal and spherical, given
+    the circular velocity at the radius of the Sun is 220 km s$^{-1}$,
+    what do you expect the one-dimensional velocity dispersion of dark
+    matter particles is? What is the mass interior to the Sun?
 \item What is the typical relaxation time for globular clusters?
     Galaxies? Clusters of galaxies?
 \item What are the tidal radii for:
@@ -561,6 +564,7 @@ and mass of the system is infinite.
 \end{equation}
 \item Show that the density must satisfy the equation:
 \begin{equation}
+\label{eq:lane-emden}
 \frac{\partial}{\partial
 r} \left(r^2 \frac{\partial \ln \rho}{\partial r} \right) =
 - \frac{2\pi G}{\sigma^2} r^2 \rho
@@ -657,20 +661,35 @@ $\vec{v}_m$.
 &=&
 \end{eqnarray}
 \end{answer}
-
-\item Derive the tidal potential.
 \end{enumerate}
-
+\item Imagine two masses, $M_1$ and $M_2$, orbiting in a circular
+orbit around each other with a constant separation $D$. Transform into
+a frame rotating with the orbit, and find the effective potential
+$\Phi_{\rm eff}$ such that in the rotating frame:
+\begin{equation}
+{\rm d}\vec{v}/{\rm d}t = - \vec{\nabla}\Phi_{\rm eff}.
+\end{equation}
+Plot contours of this effective potential in the orbital plane; you
+should see a number of stationary points (the Lagrange points), one of
+which is between the two masses. Then, for $M_2\ll M_1$, show that the
+stationary point between the two masses is a distance from the small
+mass of:
+\begin{equation}
+r = \left(\frac{M_2}{3M_1}\right)^{1/3} D
+\end{equation}
+That distance is approximately the tidal radius.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
 
 \begin{enumerate}
+\item Using the inner boundary condition that $\partial\rho/\partial
+r=0$, integrate Equation \ref{eq:lane-emden} outwards to derive the
+shape of an isothermal sphere with a core.
 \item Lowered isothermal sphere.
 \item $\Phi$, $n$ and $\beta$
 \item Dynamics estimates from Gaia
 \item Globular cluster radial profiles.
-\item Map Palomar 5 tidal tail
 \item Tidal potential
 \end{enumerate}
 
