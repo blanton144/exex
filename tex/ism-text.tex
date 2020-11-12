@@ -369,7 +369,14 @@ temperature from $T \sim 10^4$ to $10^8$ K.
 %where $h\nu_0$ is the ionization energy. The number of ionizations
 %per unit volume can be calculated similarly.
 \item depletion onto dust
-\item reddening  in optical, NIR
+\item Use the \citet{schlegel98a} dust maps (available for example
+through the {\tt dustmaps} Python package, to find the dust extinction
+for two regions on the sky: $(l, b) = (180^\circ, 10^\circ)$ and
+$(180^\circ, 70\circ)$. Find GALEX, SDSS, and 2MASS fluxes and Gaia
+parallaxes for stars in those directions. Based on the high Galactic
+latitude direction, find a color cut in $J-K$ which selects red giant
+stars. Using the UV-optical-infrared colors of those stars in the two
+directions, estimate the dust extinction curve.
 \item Virial estimate of H2 masses
 \item HII map exploration; dust, CO, HI emission
 \end{enumerate}`
