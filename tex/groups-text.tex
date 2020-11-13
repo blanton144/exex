@@ -132,9 +132,12 @@ amplitude constraints $\rho_g(r)$ and therefore the total gas mass.
 
 In reality, galaxy cluster gas temperatures vary throughout the
 cluster. Many clusters are {\it cool core} clusters, whose inner parts
-are roughly a factor two cooler than the outer parts. Other clusters
-appear to be more disturbed, due to mergers and infalls, and have a
-less regular temperature pattern.
+are roughly a factor two cooler than the outer parts. These cool
+clusters are typically more regular and tend to have a clear brightest
+cluster galaxy. Other clusters appear to be more disturbed, due to
+mergers and infalls, and have a less regular temperature pattern. They
+correspondingly tend to lack regularity or a clear brightest cluster
+galaxy.
 
 One expects cooling near cluster centers theoretically due to the
 higher density at the center. The cooling time for the gas and the
@@ -158,18 +161,38 @@ enriched from a combination of in situ enrichment from the galaxies
 and intergalactic stars and from stripping of previously enriched
 gas. 
 
-% Mantz, Simionescu
+The overall cluster X-ray luminosity is a function of mass and
+temperature, with $L_X\propto T^3$ and $L_X\propto M^2$. The nature of
+these scaling relations suggests that at lower mass the cluster gas
+has an entropy floor. The entropy is usually quantified by the {\it
+entropy index}:
+\begin{equation}
+K\equiv \frac{P}{\rho^\gamma} = \frac{kT}{\mu m_p \rho^{2/3}}
+\end{equation}
+where the second equality is for a monoatomic, nonrelativistic, ideal
+gas. The entropy per unity mass $s$ can be written in that case as:
+\begin{equation}
+\label{eq:entropy}
+s = \frac{k}{\mu m_p} \ln K^{3/2} + {\rm ~constant}
+\end{equation}
+The entropy floor is usually interpreted as the result of a heating
+source prior to falling into the cluster.
 
-{\bf Cooling}
-
-{\bf scaling}
-
-SZ effect
+Cluster gas can also be detected through the {\it thermal
+Sunyaev-Zeldovich effect}, which is the inverse Compton scattering of
+cosmic microwave background photons on the electrons in the cluster
+gas. This process results in a slight increase in energies of the
+photon distribution, and this spectral distortion is observable. Above
+$\nu \sim 218$ GHz (near the CMB spectrum peak), this yields an
+increase in flux, and below that frequency it yields a decrease in
+flux. Motion of the cluster with respect to the CMB will also yield an
+additional spectral distortion, called the {\it kinetic
+Sunyaev-Zeldovich effect} which tends to be at least an order of
+magnitude smaller and must be observed at $\nu \sim 218$ GHz.
 
 Gas at lower temperatures exists in groups and individual galaxies as
 well, but is too cold to be detected in the X-ray regime. The
-extreme-UV emission from this gas is difficult to observe because {\bf
-why}
+extreme-UV emission from this gas is difficult to observe.
 
 \subsection{Dark matter in clusters}
 
@@ -189,33 +212,71 @@ M(<r) = - \frac{kTr^2}{G\mu m_p} \left[\frac{\dd \ln \rho_g}{\dd r}
 + \frac{\dd T}{\dd r}\right]
 \end{equation}
 
+\section{Commentary}
+
+The largest halos form galaxies with a low stellar-to-halo mass ratio,
+a fact which is one of the major goals of galaxy formation theory to
+explain. This problem must be closely related to the ``cooling flow''
+problem---the lack of cold gas and star formation in the centers of
+clusters for which the cooling times are short---and the entropy floor
+in lower mass clusters.
+
 \section{Important numbers}
 
-Kev to T
+\begin{itemize}
+\item $k(T / 10^{6}{\rm ~K}) \approx 0.86 {\rm ~keV}$
+\end{itemize}
 
 \section{Key References}
 
 \begin{itemize}
-  \item
-    \href{http://adsabs.harvard.edu/abs/2000asqu.book.....C}{
-    {\it Binney \& Tremaine}
-      \citet{cox00a}}, Chapter 5
+\item {\it Formation of Galaxy
+Clusters, \href{https://ui.adsabs.harvard.edu/abs/2012ARA%26A..50..353K/abstract}{\citet{kravtsov12a}}}
+\item {\it X-ray Properties of Groups of
+Galaxies, \href{https://ui.adsabs.harvard.edu/abs/2000ARA%26A..38..289M/abstract}{\citet{mulchaey00a}}}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
 
 \begin{enumerate} 
-\item Virial velocities
-\item Gas temperature
-\item Dynamical friction in group
-\item Ram pressure stripping
-\item Tidal radii
+\item Estimate the virial velocities to expect for a galaxy cluster
+    with $M\sim 10^{14}$ $M_\odot$ and $R\sim 1$ Mpc.
+\item Estimate the gas temperature that should be required for
+hydrostatic equilibrium in such a cluster.
+\item For a cluster with a total mass of $10^{14}$ $M_\odot$, estimate
+    the star formation that would be associated with a cooling time of
+    $10^{10}$ Gyr.
+\item Calculate the cross-section for interaction of a photon
+    traveling through a massive cluster; i.e. for the inverse Compton
+    scattering that causes the Sunyaev-Zeldovich effect.
 \end{enumerate}   
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item SZ effect
+\item Estimate how viable ram pressure stripping will be for a galaxy
+    disk. Assume a thin disk of gas coplanar with the disk of stars,
+    with surface densities such that $\Sigma_{\rm gas} \ll\Sigma_\ast$.
+    \begin{enumerate}
+    \item Approximate the disks as infinitely thin, and calculate the
+    acceleration that will result for a mass displaced from the center
+    of the stellar disk. Using that acceleration, what pressure will
+    the gas feel towards the disk plane if it is displaced?
+    \item Through dimensional analysis, estimate the form the ram
+    pressure due to motion through the intracluster medium.
+    \item For a spiral galaxy like the Milky Way, compare
+    quantitatively the restoring pressure due to gravitation to the
+    ram pressure.
+    \end{enumerate}
+\item In the Sunyaev-Zeldovich process, the scattering yields a change
+    in frequency $\Delta\nu/\nu \approx kT/m_ec^2$. Show that at
+    $h\nu\ll kT$, the change in brightness temperature is:
+    \begin{equation}
+   \frac{\Delta T_b}{T_b} \equiv -2y =
+    - \frac{2k\sigma_T}{m_ec^2} \int {\rm d}x n_e T_e,
+    \end{equation}
+    where $x$ is the coordinate along the line of sight.
+\item Prove Equation \ref{eq:entropy}.
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
