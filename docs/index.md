@@ -19,7 +19,7 @@ Please read the following documents related to this class:
 | Star Clusters | [notes](pdf/stellar-clusters.pdf) | [notes with answers](pdf/stellar-clusters-answers.pdf) | [Jupyter solutions](https://nbviewer.jupyter.org/github/blanton144/exex/blob/master/docs/notebooks/stellar-clusters.ipynb)
 | Stellar Evolution | [notes](pdf/stellar-evolution.pdf) | [notes with answers](pdf/stellar-evolution-answers.pdf)
 | Stellar Populations | [notes](pdf/stellar-populations.pdf) | [notes with answers](pdf/stellar-populations-answers.pdf)
-| Stellar Dynamics | [notes](pdf/dynamics.pdf) |
+| Stellar Dynamics | [notes](pdf/dynamics.pdf) | [notes with answers](pdf/dynamics-answers.pdf)
 | Interstellar Medium | [notes](pdf/ism.pdf) |
 | Emission lines | [notes](pdf/emission-line.pdf) |
 | Star Formation | [notes](pdf/star-formation.pdf) |

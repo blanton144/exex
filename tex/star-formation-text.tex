@@ -16,6 +16,12 @@ from the stars. The {\it star clusters} that result seem to have a
 similar mass distribution to the gas clouds (though it is thought that
 clusters form within isolated {\it clumps} within the clouds).
 
+At redshift zero, spiral galaxies at Milky Way masses have star
+formation rates around a few solar masses per year. Most estimates of
+the dependence on stellar mass find SFR $\propto M_\ast^{2/3}$. At
+higher redshifts the typical star formation rates of such galaxies are
+higher, by about a factor of ten at $z\sim 1$.
+
 \subsection{Initial mass function}
 
 The stars within the clusters form over a large range of masses. The
@@ -153,15 +159,30 @@ Q_{\rm gas} = \frac{\sigma_g \kappa}{\pi G \Sigma_{\rm gas}} < 1
 where $\kappa$ is the epicyclic frequency of the disk, and $\sigma_g$
 is the velocity dispersion of the gas. For higher $Q$, the Coriolis
 forces in the disk prevent large scale collapse even above the Jeans
-mass. In the $Q$ value in disks tends to correlate with many other
-parameters and it is difficult to disentangle whether the observed
-threshold is due to the Toomre criterion or a different one
-(\citealt{leroy08a}).
+mass. If stars dominate the gravitational field (as for a large spiral
+at $z\sim 0$), then it can be shown that:
+\begin{equation}
+Q_{\rm \ast} = \frac{\sigma_{\ast,R} \kappa}{3.36 G \Sigma_{\rm \ast}} < 1
+\end{equation}
+Under most conditions found in the local universe, both $Q_{\rm gas}$
+and $Q_{\rm \ast}$ are of order but greater than unity, so clearly
+this simplified picture is not complete. Observationally, the $Q$value in disks tends to correlate with many other parameters and it is
+therefore difficult to disentangle whether the observed threshold is
+due to the Toomre criterion or a different one (\citealt{leroy08a}).
+
+Considerations that are ``global'' like these ones probably only
+govern the formation, or not, of molecular clouds. Within molecular
+clouds, fragmentation must occur and collapse of individual cores to
+form individual stars. This process is complex and involves
+turbulence, magnetic fields (which supply substantial pressure), as
+well as cooling physics, all important well below any resolvable scale
+within a galaxy simulation.
 
 \section{Key References}
 
 \begin{itemize}
-  \item \citet{kennicutt12a}
+  \item {\it Star Formation in the Milky Way and Nearby
+  Galaxies, \href{https://ui.adsabs.harvard.edu/abs/2012ARA%26A..50..531K/abstract}{\citet{kennicutt12a}}}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
@@ -171,13 +192,27 @@ threshold is due to the Toomre criterion or a different one
 difference in inferred star formation rate between assuming a Salpeter
 function all the way to the hydrogen burning limit, and one that turns
 over to a constant below 0.5 $M_\odot$?
+\item For a Milky Way-mass galaxy, what is the typical depletion time
+for its gas? Is it lower or higher for lower mass galaxies? Given how
+star formation rates change with redshift, what should we expect about
+the gas content of higher redshift galaxies? 
 \end{enumerate}   
 
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Derive KS law
-\item Toomre criterion
+\item The Kennicutt-Schmidt Law says that $\Sigma_{\rm
+SF} \propto \Sigma_{\rm gas}^{3/2}$. Assuming that gas disks have a
+uniform thickness, show that this relationship would result if the
+star formation rate density at all points in the disk was proportional
+to the gravitational free-fall time multiplied by the gas density.
+\item The Jeans instability can be derived for a self-gravitating gas
+by linearizing the fluid equations:
+\begin{eqnarray}
+\dot\rho &=& - \nabla\cdot\vec{v} \cr
+\dot\vec{\rho v} &=& - \nabla P - \rho \nabla\Phi \cr
+\dot\vec{v} &=& - \frac{1}{\rho}\nabla P - \nabla\Phi \cr
+\end{eqnarray}
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
