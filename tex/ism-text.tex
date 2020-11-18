@@ -292,6 +292,41 @@ roughly in proportion to metallicity and approximately as $T^{1.7}$.
 158 $\mu$m and [OI] 63 $\mu$m should start to become important.
 \item Estimate the optical depth due to dust through the warm-phase neutral
 medium, for 100 pc and for 8 kpc.
+\begin{answer}[Author: Nicholas Faucher]
+The warm-phase neutral medium consists mainly of neutral Hydrogen
+atoms at a temperature around 5,000 K and number density $0.5 \, {\rm
+~cm}^{-3}$. In order to estimate the optical depth due to dust within
+this medium, we must find the number of density of dust, which
+comprises around 1\% of the mass. Multiplying the number density of
+Hydrogen by its mass gives the mass density of the gas:
+\begin{equation}
+\rho \approx (0.5 \, {\rm ~cm}^{-3}) \, (1.674\times10^{-24} \, {\rm
+~g}) \approx 7.85\times10^{-25} \frac{{\rm ~g}}{{\rm ~cm}^3}
+\end{equation}
+From this we can estimate the mass density of the dust to be
+$\rho_{\rm dust} \sim 7.85\times 10^{-27} {\rm ~g}{\rm ~cm}^{-3}$. To
+find the number density of dust, we need to estimate the mass of the
+dust grains. Assuming spherical dust grains with diameter $0.1 \, \mu
+m$ with density similar to that of ${\rm SiO}_2$ ($\sim 3 {\rm ~g}{\rm
+~cm}^3$), we find a mass of $M_{\rm dust} \sim 1.57\times10^{-15} \,
+{\rm ~g}$. We can now estimate the number density of such dust grains:
+\begin{equation}
+n_{\rm dust} \sim \frac{\rho_{\rm dust}}{M_{\rm dust}} \sim 5\times
+10^{-12} \, {\rm ~cm}^{-3}
+\end{equation}
+Now we can estimate the optical looking through a given
+distance $d$:
+\begin{equation}
+\tau = n \sigma_n d \sim (5 \times 10^{-12} \, {\rm cm}^{-3})
+\left[\pi (5\times10^{-6} \, {\rm ~cm})^2\right] d \sim
+4\times 10^{-22} \left(\frac{d}{\rm cm}\right) \sim
+10^{-3} \left(\frac{d}{\rm pc}\right)
+\end{equation}
+Therefore $\tau \sim 0.1$ for 100 pc and $\tau\sim 8$ 
+for 8 kpc. Thus, we see that looking up out of the plane there will be
+a modest amount of extinction; looking towards the center of the
+Galaxy there will be many, many magnitudes of extinction!
+\end{answer}
 \item We often see little reddening of the central star of an HII
 region. Assuming the extinction is less than 0.1 mag, what would that
 say about the dust fraction in HII regions relative to its presence in
