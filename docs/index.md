@@ -22,11 +22,11 @@ Please read the following documents related to this class:
 | Stellar Dynamics | [notes](pdf/dynamics.pdf) | [notes with answers](pdf/dynamics-answers.pdf)
 | Interstellar Medium | [notes](pdf/ism.pdf) |
 | Emission lines | [notes](pdf/emission-line.pdf) |
-| Star Formation | [notes](pdf/star-formation.pdf) |
-| Nucleosynthesis | [notes](pdf/nucleosynthesis.pdf) |
-| Chemical Evolution | [notes](pdf/chemical-evolution.pdf) |
-| Black Holes | [notes](pdf/black-holes.pdf) |
-| Active Galactic Nuclei | [notes](pdf/agn.pdf) |
 | Lensing | [notes](pdf/lensing.pdf) |
 | Groups \& Clusters | [notes](pdf/groups.pdf) |
+| Star Formation | [notes](pdf/star-formation.pdf) |
+| Black Holes | [notes](pdf/black-holes.pdf) |
+| Active Galactic Nuclei | [notes](pdf/agn.pdf) |
+| Nucleosynthesis | [notes](pdf/nucleosynthesis.pdf) |
+| Chemical Evolution | [notes](pdf/chemical-evolution.pdf) |
 | High Redshift Galaxies | [notes](pdf/high-redshift.pdf) |
