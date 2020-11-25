@@ -295,16 +295,129 @@ population modeling. These uncertainties are:
     very approximate number for the O2 star BI 237 in the Large
     Magellanic Cloud, according to the atlas of \citealt{smith12a}).
 \item Estimate the difference in mass-to-light ratio in the $r$-band
-    between a 10 million year old and 10 billion year old stellar
+    between a 200 million year old and 10 billion year old stellar
     population. Assume that the solar mass stars (which dominate the
-    flux of the older population) spend about 5\% of their time at the
-    tip of the red giant branch.
+    flux of the older population) spend about 10\% of their time at
+    the tip of the red giant branch and that the distribution of stars
+    along the red giant branch is constant per unit magnitude.
+
+\begin{answer}
+At 200 Myr in age, the stars in stellar population stars are mostly in
+main sequence. The luminosity is dominated by late-type B stars of
+about 5 $M_\odot$, whereas the mass is dominated by low mass
+stars. The mass-to-light ratio may be calculated as:
+\begin{equation}
+\frac{M}{L} = \frac{\int_{0.08M_\odot}^{5 M_\odot} {\rm d}M M \Phi(M)}
+{\int_{0.08M_\odot}^{5 M_\odot} {\rm d}M L(M) \Phi(M)}
+\end{equation}
+where $\Phi(M)$ is the initial stellar mass function. If we assume
+$(L/L_\odot) = (M/M_\odot)^4$ and $\Phi\propto M^{-2.35}$, then in
+solar units:
+\begin{equation}
+\frac{M}{L} = \frac{\int_{0.08}^{5} {\rm d}x x^{-1.35}}
+{\int_{0.08}^{5} {\rm d}x x^{1.65}}
+\end{equation}
+which evaluates to $M/L\sim 0.2$. 
+
+Now, for the 10 Gyr stellar population, solar mass stars are just
+entering the red giant branch. The luminosity of solar mass stars in
+the red giant phase is $L_{\rm RGB} \sim 10^{3}L_{\odot}$. Solar mass
+stars spend 10\% of the main sequence lifetime on the RGB, meaning
+that the set of stars there will be those that leave the main sequence
+within about 10\% of the total lifetime (1 Gyr). Let us call the range
+of masses this corresponds to $\Delta M(t_\odot)$. We can write the
+mass to light ratio as:
+\begin{equation}
+\frac{M}{L} = \frac{\int_{0.08 M\odot}^{M_\odot} {\rm
+d}M M \Phi(M)}{\Phi(M_\odot) \Delta M(t_\odot) \langle L_{\rm
+RGB}\rangle}
+\end{equation}
+We can determine $\Delta_M(t_\odot)$ as follows, by relating the range
+in time to a range in mass:
+\begin{equation}
+\Delta M (t) \sim \Delta t \left|\frac{{\rm d}M}{{\rm d}t}\right|
+\end{equation}
+and differentiating the relationship
+\begin{equation}
+\left(\frac{t}{t_\odot}\right) = \left(\frac{M}{M_\odot}\right)^3
+\end{equation}
+to show
+\begin{equation}
+\left|\frac{{\rm d}M}{{\rm d}t}\right|
+= \frac{M_\odot}{3 t_\odot} \left(\frac{M}{M_\odot}\right)^4 
+\end{equation}
+and so:
+\begin{equation}
+\Delta M (t) \sim \frac{1}{3} M_\odot \frac{\Delta t}{t_\odot} \left(\frac{M}{M_\odot}\right)^4 
+\end{equation}
+Then we can calculate:
+\begin{equation}
+\langle L_{\rm RGB} \rangle =
+\frac{\int_{L_\odot}^{10^3 L_\odot} {\rm d}L N(L) L}
+{\int_{L_\odot}^{10^3 L_\odot} {\rm d}L N(L)}
+\end{equation}
+where $N(L)\propto 1/L$ (constant per unit magnitude), so:
+\begin{equation}
+\langle L_{\rm RGB} \rangle =
+\frac{\int_{L_\odot}^{10^3 L_\odot} {\rm d}L}
+{\int_{L_\odot}^{10^3 L_\odot} {\rm d}L L^{-1}} \sim \frac{1000}{3\ln
+10} L_\odot \sim 140 L_\odot
+\end{equation}
+Plugging in and using solar units:
+\begin{equation}
+\frac{M}{L} = \frac{\int_{0.08}^{1} {\rm
+d}x x^{-1.35}}{(1/3) (140) (0.1)} \sim 1
+\end{equation}
+In fact, this is an underestimate; for old populations the
+RGB tends to be more heavily populated per unit magnitude near its
+base, which increases the mass-to-light ratio by a factor of a few.
+
+An important point is that although the old population is dominated by
+solar mass stars, and also has a mass-to-light ratio similar to solar
+values, this is the consequence of the balance between the numerator,
+dominated by the lower stellar masses, and the denominator, dominated
+by the post-main sequence lifetime and luminosity distribution. Thus
+the rough agreement in mass-to-light ratio is a coincidence.
+\end{answer}
 \item Using a Salpeter initial mass function, and assuming that
 $L\propto M^4$ determines both the luminosity and lifetimes of the
 stars, calculate how the stellar luminosity varies as a function of
 time expected at early times (e.g. $\sim 100$ Myr), before the red
 giant branch population of stars becomes important. Do not worry about
 the absolute value of the luminosity, just its time dependence.
+
+\begin{answer}[Author: Nicholas Faucher]
+The lifetime of a star with mass $m$ can be estimated by comparing to
+the lifetime of the Sun, $\tau_{\odot} \approx 10^{10} \, yr$, as
+$\tau \approx \frac{m}{L} \, \tau_{\odot}$, where $m$ and $L$ are the
+mass and luminosity of a star in solar units. Assuming a mass-to-light
+ratio of $L \propto m^4$, we can rewrite this equation in terms of
+mass only:
+\begin{equation}
+\tau \approx \frac{1}{m^3} \, \tau_{\odot}
+\end{equation}
+Solving this equation for $m$ sets the upper limit on the masses of
+stars in a population at time $\tau$. Assuming a Salpeter IMF, which
+asserts that the number of stars in a stellar population with mass
+between $m$ and $m+dm$ is proportional to $m^{-2.35}$, we can
+determine the time dependence of a stellar population's luminosity. To
+do this, we also assume that each star has constant luminosity until
+the end of its lifetime, at which point it has no luminosity. Then the
+total luminosity is just the integral of the stars
+\begin{equation}
+L(t) \propto \int_{0.08}^{\big( \frac{10^{10}}{t} \big) ^{\frac{1}{3}}} m^{-2.35} \, m^4 \, dm
+\end{equation}
+The term corresponding to the lower limit on the integral is
+negligibly small ($\sim 10^{-4}$) and so we get
+\begin{equation}
+L(t) \propto t^{-0.883}
+\end{equation}
+This dependence should hold at early times, when post-main sequence
+stars are not dominating the luminosity. As the population ages past a
+billion years, the luminosity is dominated by red giant branch stars
+and this dependence changes (slowing down generally).
+\end{answer}
+
 \item What is difference between the mass-to-light ratios of two
 10-billion-year-old stellar populations, one with a Salpeter IMF and
 one with an IMF which is Salpeter above $M=0.7M_\odot$ but has
