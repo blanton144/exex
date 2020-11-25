@@ -544,11 +544,73 @@ for $n=p+3/2$. You may find the following integral useful:
 \frac{a^{m+1+np} \Gamma\left((m+1)/n\right) \Gamma\left(p+1\right)}
 {n \Gamma\left[(m+1)/n +p + 1\right]}
 \end{equation}
+
+\begin{answer}[Author: Jiarong Zhu]
+The distribution function f :
+\begin{equation}
+f = 
+\begin{cases}
+k_1 (-E)^p & {E < 0} \\
+0 & {E > 0}
+\end{cases}
+\end{equation}
+$f$ is non-zero only when $E<0$, which fact will be used in the following calculation. Energy E takes the form:
+\begin{equation}
+    E = \frac{1}{2}m v^2 + m\phi
+\end{equation}
+Thus $E<0$ corresponds to $v<v_{max}=\sqrt{2(-\phi)}$.
+Density $\rho(\vec x) = m n(\vec x)$, where n is number density and can be calculated by integrating $f(\vec x,\vec v)$ over the velocity space:
+\begin{align*}
+n &= \int f \,d^3 \vec v  \\
+&= \int_{0}^{\infty} 4\pi v^2 f \,dv  \\
+&= \int_{0}^{v_{max}} 4 \pi v^2 k_1 \left(-\frac{1}{2}m v^2 -  m \phi\right)^p \,dv + \int_{v_{max}}^{\infty}4
+\pi v^2 * 0 \,dv\\
+&= 4 \pi
+k_1 \left(\frac{m}{2}\right)^p \int_{0}^{v_{max}=\sqrt{2(-\phi)}} v^2
+(2(-\phi) - v^2)^p\,dv \\
+&= 4 \pi k_1 \left(\frac{m}{2}\right)^p (-2\phi)^{\frac{3+2p}{2}}\frac{\Gamma (3/2) \Gamma (p+1)}{2\Gamma (3/2 +p+1)}\\
+&\propto (-\phi)^{p+3/2}
+\end{align*} 
+\end{answer}
+
 \item Demonstrate that the potential:
 \begin{equation}
 \phi = - \frac{GM}{R} \frac{1}{\left(1 + r^2/R^2\right)^{1/2}}
 \end{equation}
 satisfies this relation for $n=5$. 
+
+\begin{answer}[Author: Jiarong Zhu]
+We want to show that potential below satisfies the relation  $\rho = k_2 (-\phi)^5$. 
+\begin{equation}
+    \phi = - \frac{GM}{R}\frac{1}{(1+r^2/R^2)^{1/2}}
+\end{equation}
+
+We know that the potential satisfies Poisson's equation:
+\begin{equation}
+   \nabla ^2 \phi = 4 \pi G \rho 
+\end{equation}
+For spherical equilibrium, potential only depend on radius $r$. Calculate LHS of Eqn.(4) with Eqn.(3) plugged in:
+
+
+\begin{align*}
+    \nabla ^2 \phi &= \frac{1}{r^2}\frac{\partial}{\partial r}(r^2 \frac{\partial \phi}{\partial r})\\
+    & = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2 \frac{GM}{2R}\frac{2r/R^2}{(1+r^2/R^2)^{3/2}})\\
+    &= \frac{GM}{R^3}\frac{1}{r^2}\frac{\partial}{\partial r}(\frac{r^3}{(1+r^2/R^2)^{3/2}}) \\
+    &= \frac{GM}{R^3}(\frac{3(1+r^2/R^2)^{3/2}-r^2 \frac{3}{2} (1+r^2/R^2)^{1/2}\frac{2}{R^2}}{(1+r^2/R^2)^3})\\
+    &= \frac{3GM}{R^3(1+r^2/R^2)^{5/2}} \\
+    & \propto (-\phi)^5
+\end{align*}
+$\therefore \rho \propto \nabla ^2 \phi \propto (-\phi)^5 $
+\\
+The proportionality can be easily fixed by assign $k_1$ properly.
+
+The Plummer model density profile, sometimes used for modeling
+spherical systems like globular clusters, is therefore:
+\begin{equation}
+\rho \propto \frac{1}{\left(1 + r^2/R^2\right)^{5/2}}.
+\end{equation}
+\end{answer}
+
 \end{enumerate}
 \item We will derive the isothermal sphere model for a spherical
 equilibrium set of orbits. Under Jeans Theorem, all equilibrium models
