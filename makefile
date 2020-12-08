@@ -11,6 +11,9 @@ ALL= \
 	$(PDFDIR)/theory-answers.pdf \
 	$(PDFDIR)/agn.pdf \
 	$(PDFDIR)/agn-answers.pdf \
+	$(PDFDIR)/feedback.pdf \
+	$(PDFDIR)/feedback-answers.pdf \
+	$(PDFDIR)/inventory.pdf \
 	$(PDFDIR)/inventory.pdf \
 	$(PDFDIR)/inventory-answers.pdf \
 	$(PDFDIR)/detectors.pdf \

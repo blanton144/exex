@@ -1,0 +1,341 @@
+\title{\bf Feedback Effects in Galaxy Formation}
+
+\section{Basics}
+
+The discussion here follows the description found in the textbook of
+Cimatti, Fraternali, \& Nipoti.
+
+\subsection{General Concepts in Feedback}
+
+The concept of star formation feedback in galaxy formation is
+generally motivated by the need to explain low global star formation
+efficiency within high and low mass dark matter halos. For that
+reason, generally feedback refers to {\it negative feedback} effects;
+that is, processes that inhibit star formation. These effects are
+divided into {\it stellar feedback}, which is literally feedback in
+the sense that star formation leads to stellar processes that inhibit
+further star formation, and {\it AGN feedback}, which refers to AGN
+processes that inhibit star formation. In both cases, some combination
+of radiative energy and kinetic energy flux couples to gas in the
+galaxy to heat it, add turbulence to it, or drive it in large scale
+winds to the outskirts of or entirely out of the galaxy.
+
+In the case of winds, the distinction is made between {\it
+  momentum-driven} and {\it energy-driven} winds. Physically, these
+cases are distinguished by whether the cooling time of the affected
+gas is short relative to the dynamical time. If the cooling time is
+short, then the energy quickly radiates away, but the momentum
+imparted is not radiated away and the wind is momentum driven. If the
+cooling time is not short, the thermal energy created by the feedback
+helps to drive the wind. The distinction is important to the
+dependence on galaxy potential depth of the relationship between a
+star formation rate ($\dot M_\ast$) or black hole accretion rate
+($\dot M_{\rm BH}$) to a mass outflow rate.
+
+In the case of an energy-driven wind, the energy converted to kinetic
+energy per unit time is proportional to the star formation or
+black hole accretion rate:
+\begin{equation}
+\dot K \propto \dot M.
+\end{equation}
+Because in a time-invariant wind $\dot K = \dot M_{\rm w} v_{\rm w}^2$,
+the rate of mass driven to some velocity $v_{\rm w}$ is:
+\begin{equation}
+\dot M_{\rm w} \propto \dot K v_{\rm w}^{-2} \propto \dot M v_{\rm
+  w}^{-2}.
+\end{equation}
+The escape speed is proportional to the velocity dispersion of the
+halo $\sigma$, so if we want to know how much mass is flowing out of
+the galaxy (i.e. reaches $v_{\rm w} \sim \sigma$) it will scale as:
+\begin{equation}
+\dot M_{\rm out} \propto \dot M \sigma^{-2}.
+\end{equation}
+
+In the case of a momentum-driven wind, the momentum imparted per unit
+time (due to mechanical energy or radiation pressure) will be
+proportion to the star formation or black hole accretion rate:
+\begin{equation}
+\dot p \propto \dot M.
+\end{equation}
+Because in a time-invariant wind $\dot p = \dot M_{\rm w} v_{\rm w}$,
+the rate of mass driven to some velocity $v_{\rm w}$ is:
+\begin{equation}
+\dot M_{\rm w} \propto \dot p v_{\rm w}^{-1} \propto \dot M v_{\rm
+  w}^{-1}.
+\end{equation}
+The escape speed is proportional to the velocity dispersion of the
+halo $\sigma$, so if we want to know how much mass is flowing out of
+the galaxy (i.e. reaches $v_{\rm w} \sim \sigma$) it will scale as:
+\begin{equation}
+\dot M_{\rm out} \propto \dot M \sigma^{-1}.
+\end{equation}
+
+In the context of galaxy formation, these different scalings mean that
+these two types of wind shape galaxy stellar mass function
+differently.
+
+\subsection{Stellar Feedback}
+
+Stellar feedback comes in the form of supernovae and stellar winds,
+primarily from massive stars. Individual supernovae generally do not
+impart much of their energy to the interstellar medium as kinetic
+energy, only a few percent. Stellar feedback generally is thought to
+operate effectively through the combination of many massive stars or
+supernovae creating {\it superbubbles} from which emanate winds. These
+winds are usually taken to be energy driven
+
+For either a single massive star, a group of massive stars, or a group
+of supernovae, we can treat the feedback as a steady, very supersonic
+wind acting for some period of time. We can calculate what fraction of
+that power is converted into kinetic energy of the interstellar
+medium. This calculation assumes some constant input of supersonic
+wind energy under spherical symmetry. The wind shocks the surrounding
+interstellar medium and creates a hot, expanding bubble of gas at
+pressure $P_b$, with a shocked shell of interstellar medium gas
+surrounding it. The bubble's thermal energy increases due to
+mechanical energy being converted to thermal energy, and decreases due
+to its expansion:
+\begin{equation}
+\label{eq:energy-bubble}
+\frac{{\rm d}U_b}{{\rm d}t} \approx L_{\rm w} - P_b \frac{{\rm
+    d}V}{{\rm d}t}.
+\end{equation}
+For a nonrelativistic ideal gas, we can write $U_b = (3/2) P_b V$.
+
+The shell's momentum is driven by the pressure of the hot bubble
+behind it, and we can write its equation of motion:
+\begin{equation}
+\label{eq:shell}
+\frac{{\rm d}}{{\rm d}t} \left(M_{\rm sh} v_{\rm sh}\right) = 4\pi
+r_{\rm sh}^2 P_b
+\end{equation}
+We can solve for $P_b$, and assuming the interstellar medium is of
+constant density $\rho_0$ and is all swept up in the shell, we find:
+\begin{equation}
+\label{eq:shell-pb}
+P_b = \rho_0\left(\frac{1}{3} r_{\rm sh} {\ddot r}_{\rm sh} + {\dot
+r}_{\rm sh}^2\right)
+\end{equation}
+Solving for $r_{\rm sh}$ assuming a power law solution in time we
+find:
+\begin{equation}
+\label{eq:shell-evolution}
+r_{\rm sh}
+= \left(\frac{125}{154\pi}\right)^{1/5} \left(\frac{L_w}{\rho_0}\right)^{1/5}
+t^{3/5}
+\end{equation}
+We can calculate the kinetic energy of the shell's expansion:
+\begin{equation}
+\label{eq:shell-kinetic}
+K_{\rm sh} = \frac{1}{2} M_{\rm sh} v_{\rm sh}^2 = \frac{15}{77}L_w
+t \approx 0.2 L_w t
+\end{equation}
+This calculation shows that the conversion of wind energy to kinetic
+energy is rather efficient for a steady, supersonic wind in a uniform
+medium.
+
+Numerically, if we consider massive O-stars, they lose mass at about
+$10^{-6}$ $M_\odot$ yr$^{-1}$, in winds that reach thousands of km
+s$^{-1}$. Such a wind will produce a mechanical power of:
+\begin{equation}
+L_{\rm w} = \frac{1}{2} \dot M_{\rm w} v_{\rm w}^2 \sim 10^{36}
+\left(\frac{\dot M_{\rm w}}{10^{-6} M_\odot {\rm ~yr}^{-1}}\right)
+\left(\frac{v_{\rm w}} {2\times 10^3 {\rm km~s}^{-1}} \right) {\rm ~erg~s}^{-1}.
+\end{equation}
+Using the equations above, this results over the lifetime of a single
+O star (of order million years) a bubble of size $\sim 100$ pc.
+
+For a given cluster of massive stars, the exercises show that a
+similar amount of power is produced by supernovae, but over a longer
+time (up to the lifetime of 8 $M_\odot$ stars, or about 30 million
+years), which means that the feedback is dominated by the combined
+effect of these supernovae producing superbubbles.
+
+Per unit star formation the rate of core-collapse supernovae is:
+\begin{equation}
+R_{\rm SN} \approx 10^{-2} \left(\frac{\rm SFR}{M_\odot {\rm
+~yr}^{-1}}\right) {\rm ~yr}^{-1}
+\end{equation}
+If we relate the mass outflow rate to the kinetic energy input rate by
+$\dot K \sim {\dot M}_{\rm out} v_{\rm esc}^2 / 2$, and use an energy for
+each supernova of $10^{51}$ erg, then:
+\begin{equation}
+\dot M_{\rm out} \sim \frac{\eta}{0.1} \left(\frac{{\rm SFR}}{M_\odot
+{\rm ~yr}^{-1}}\right) \left(\frac{v_{\rm esc}}{300 {\rm
+~km~s}^{-1}}\right)^{-2} M_\odot {\rm ~yr}^{-1}
+\end{equation}
+where $\eta$ is the fraction conversion of wind power into kinetic
+energy (calculated as 0.2 above). 
+
+A momentum-driven model is also possible if the medium around the star
+formation is optically thick. This situation would apply mostly to
+starbursts. An order-of-magnitude estimate of the momentum-driven
+winds yields:
+\begin{equation}
+\dot M_{\rm out} \sim \left(\frac{{\rm SFR}}{M_\odot
+{\rm ~yr}^{-1}}\right) \left(\frac{v_{\rm esc}}{300 {\rm
+~km~s}^{-1}}\right)^{-1} M_\odot {\rm ~yr}^{-1}
+\end{equation}
+which is similar to the energy-driven winds at moderate star formation
+rates but much more effective for star bursts
+(see \citealt{murray05b}).
+
+For some of the observed wind velocities in star forming galaxies, the
+high observed velocities ($500$--$1000$ km s$^{-1}$) and relatively
+high inferred mass-loading factors suggest a momentum driven wind.
+
+\subsection{AGN Feedback}
+
+AGN feedback is driven by accretion onto a black hole. The luminosity
+of an accreting black hole is limited (in the spherical case) to the
+Eddington luminosity $L_{\rm Edd}$. This luminosity can be related to
+an Eddington mass accretion rate:
+\begin{equation}
+{\dot M}_{\rm Edd} = \frac{L_{\rm Edd}} {\epsilon_{\rm rad} c^2},
+\end{equation}
+where $\epsilon_{\rm rad}$ is the radiative efficiency, which in
+theory can be as high as 0.29 for a highly spinning black hole with
+very radiatively efficient accretion, but is typically thought to be
+$\sim 0.1$ even for AGN in radiatively efficient phases. 
+
+We can estimate whether AGN have sufficient energy to substantially
+affect the galaxy by comparing the total energy emitted in the
+formation of the black hole to the potential energy of the bulge:
+\begin{equation}
+\frac{E_{\rm BH}}{E_{\rm bulge}} \sim \frac{\epsilon_{\rm rad} M_{\rm BH}
+c^2}{M_{\rm bulge} \sigma^2} \sim 100 \frac{\epsilon_{\rm
+rad}}{0.1} \left(\frac{\sigma}{300 {\rm
+~km~s}^{-1}}\right)^{-2} \frac{M_{\rm BH}/M_{\rm bulge}}{0.001}
+\end{equation}
+For a massive galaxy, then, there is amply energy available in
+principle to affect the evolution of the bulge region.
+
+It is believed that AGN feedback occurs in both radiatively efficient
+and radiatively inefficient AGN phases. The {\it radiative} or {\it
+quasar} mode feedback is associated with Eddington ratios of $L/L_{\rm
+Edd} > 10^{-2}$. Feedback occurs through photoionization heating and
+radiation pressure. The dominant effect on the galaxy as a whole is
+thought to be through the radiation pressure, which can create a
+galactic wind. The radiation pressure is proportional to the
+luminosity and the momentum imparted per unit time to the wind is
+dimensionally:
+\begin{equation}
+p_w \propto {\dot M}_{\rm BH}  v_w
+\end{equation}
+with the constant of proportionality estimated theoretically at about
+0.5. This effect drives a momentum-driven wind. In theoretical models
+the mechanical efficiency is:
+\begin{equation}
+\epsilon_w = \frac{L_w}{{\dot M}_{\rm BH} c^2} \sim 10^{-3}.
+\end{equation}
+
+The {\it jet} or {\it radio} mode feedback occurs primarily in the
+radiatively inefficient regime (Eddington ratios $<10^{-2}$). The jets
+of the AGN interact with the hot gas in the galaxy or surrounding
+cluster mechanically. In a few systems, the effects of these
+interactions can be seen as X-ray bubbles or cavities. The gas outside
+the cavity is at the virial temperature and emits in the X-rays. The
+gas inside the cavity is moving relativistically and its primary
+emission is radio synchtron. The surrounding pressure can be estimated
+from the X-ray data, and the total energy in the bubble is:
+\begin{equation}
+E = U + W = \frac{1}{\gamma - 1} PV + PV = \frac{\gamma}{\gamma - 1} PV,
+\end{equation}
+where $\gamma = 4/3$ for a relativistic gas. The kinetic power can be
+estimated as $E/t$ where $t$ is some estimate of the age of the
+bubble, for example based on its size and the sound speed
+(\citealt{fabian12a}). This power is comparable in magnitude and tends
+to scale with the X-ray luminosity, indicating that it can balance
+cooling. In fact, the kinetic power associated with these bubbles is
+thought to couple very efficiently to the interstellar or
+intergalactic gas.
+
+One of the reasons that AGN feedback began to be considered seriously
+is that it is possible to construct a scaling relation based on the
+Eddington limit that looks like $M_{\rm BH}$-$\sigma$ relation of
+galaxies. In particular, if you set the total outward force due to
+radiation pressure at the Eddington limit, $L_{\rm Edd} / c$, equal to
+the total inward force due to gravity on some amount of gas $M_{\rm
+gas} = f M_{\rm gal}$:
+\begin{equation}
+\frac{L_{\rm Edd}}{c} = \frac{4\pi G_{\rm BH} m_p}{\sigma_T}
+= \frac{GM_{\rm gal}M_{\rm gas}}{r} = \frac{f
+G}{r^2} \left(\frac{2\sigma^2 r}{G}\right)^2 = \frac{4f\sigma^2}{G}
+\end{equation}
+which implies that $M_{\rm BH} \propto \sigma^4$, relatively similar
+to the relation observed. Thus, if the fraction of gas loss $f$ is
+constant across galaxy mass, and the typical Eddington ratios are
+constant across galaxy mass (or at least that the momentum imparted by
+feedback processes scales linear with black hole mass), then the
+$M_{\rm BH}$-$\sigma$ relation will follow.
+
+The argument can be made more specific by supposing that the growth of
+the surrounding galaxy is in fact Eddington limited by the action of
+the quasar. This requires that the quasar radiation couple with the
+interstellar gas much better than the Thomson cross-section with the
+electrons. In fact, for galaxies with Milky Way-like dust to gas
+ratios, the cross-section of dust per proton is about $\sigma_d \sim
+1000 \sigma_T$. Thus for dusty neutral gas, the Eddington limit is
+about 1000 times larger. Over the course of the lifetime of the galaxy
+and black hole, if both grow at their respective Eddington limits (or
+some equal fraction thereof) they will end up with $M_{\rm BH}/M_{\rm
+gal} \sim \sigma_T / \sigma_d \sim 10^{-3}$ (\citealt{fabian12a}).
+This same argument also would lead to $M_{\rm gal} \propto \sigma^4$,
+as seen for elliptical galaxies in the Faber-Jackson
+relation. 
+
+\section{Commentary}
+
+Much of the literature on feedback is motivated by the desire to get
+the theoretical predictions of galaxy formation simulations to agree
+with observations. Although some of the arguments are suggestive
+regarding AGN feedback and the $M_{\rm BH}$-$\sigma$ relation, it is
+still fairly speculative that these processes are related and not a
+numerical and dimensional coincidence.
+
+\section{Key References}
+
+\begin{itemize}
+  \item Cimatti
+  \item
+    \href{https://ui.adsabs.harvard.edu/abs/2015ARA%26A..53...51S/abstract}
+    {{\it Physical Models of Galaxy Formation in a Cosmological
+        Framework} (\citealt{somerville15a})}
+\end{itemize}
+
+\section{Order-of-magnitude Exercises}
+
+\begin{enumerate} 
+\item Estimate proportionality between the supernova rate and the star
+  formation rate.
+\item For an O/B association with 100 O and B stars (down to 8
+$M_\odot$), what is the typical power output of supernovae?
+\item For a single massive with a wind like that described above, in a
+typical region of the interstellar medium, after about 100,000 years
+what sized region will it have created around it?
+\item Estimate of energy driven stellar feedback wind outflow rates
+\item Estimate of momentum driven stellar feedback wind outflow rates
+\end{enumerate} 
+
+\section{Analytic Exercises}
+
+\begin{enumerate}
+\item Sedov
+\item Derive Equation \ref{eq:shell-pb} from \ref{eq:shell}. Using
+this relationship along with Equation \ref{eq:energy-bubble} show that
+Equation \ref{eq:shell-evolution} holds. Finally, show that the
+kinetic energy of the shell obeys Equation \ref{eq:shell-kinetic}.
+\item Show that about 20\% of the power input into an expanding bubble 
+this relationship along with Equation \ref{eq:energy-bubble} show that
+Equation \ref{eq:shell-evolution} holds.
+\item Energy from SNe (Cimatti S8.7.1)
+\end{enumerate}
+
+%\section{Numerics and Data Exercises}
+%
+%\begin{enumerate}
+%\item Dealing with a numerical simulation result
+%\end{enumerate}
+
+\bibliographystyle{apj}
+\bibliography{exex}  
