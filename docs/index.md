@@ -26,7 +26,7 @@ Please read the following documents related to this class:
 | Groups \& Clusters | [notes](pdf/groups.pdf) |
 | Star Formation | [notes](pdf/star-formation.pdf) |
 | Black Holes | [notes](pdf/black-holes.pdf) |
-| Active Galactic Nuclei | [notes](pdf/agn.pdf) |
+| Active Galactic Nuclei | [notes](pdf/agn.pdf) | [notes with answers](pdf/agn-answers.pdf) 
 | Nucleosynthesis | [notes](pdf/nucleosynthesis.pdf) |
 | Chemical Evolution | [notes](pdf/chemical-evolution.pdf) |
 | High Redshift Galaxies | [notes](pdf/high-redshift.pdf) |
