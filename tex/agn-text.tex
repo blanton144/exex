@@ -1,13 +1,11 @@
 \title{\bf Active Galactic Nuclei \& Quasars}
 
-{\bf what fractions of galaxies are radio}
-
 \section{Basics}
 
 Every massive galaxy contains supermassive black hole ($M> 10^5$
 $M_\odot$) at its center (\citealt{kormendy13a}). In cases that gas is
 accreting onto the black hole, these can emit copious luminosity and
-are referred to as {\it active galactic nuclei}. Their total
+are referred to as {\it active galactic nuclei}. Their bolometric
 luminosities can be from $10^{40}$ to $10^{47}$ erg s$^{-1}$, in the
 brighter cases outshining the rest of the galaxy.
 
@@ -33,17 +31,21 @@ luminosities of around $10^{44}$ erg s$^{-1}$ they are known as {\it
 Seyfert galaxies}. If broad line emission is visible, they are known
 as {\it Type 1}, and if it is not they are known as {\it Type 2};
 there are also intermediate types occasionally defined. Depending on
-their radio flux, Seyferts and quasars can be {\it radio-loud} or not.
+their radio flux, Seyferts and quasars are called {\it radio-loud}
+($\nu L_\nu > 10^{41}$ erg s$^{-1}$ or so) or {\it radio-quiet}; these
+terms are inconsistently used, with radio-loud sometimes meaning
+simply that the radio emission is detected.
 
 \subsection{Black hole accretion}
 
 Active galactic nuclei are powered by accretion. Matter accreting
 loses energy (and necessarily angular momentum) through some form of
-viscosity. This orbital energy loss heats the gas and the energy can
-be emitted radiatively. This process can proceed until the material
-reaches the innermost stable circular orbit, at $3r_S$, at which point
-the material does not need to lose energy to fall directly into the
-black hole. We quantify the efficiency of this process as a fraction
+viscosity; the exact processes are not well-understood. This orbital
+energy loss heats the gas and the energy can be emitted
+radiatively. This process can proceed until the material reaches the
+innermost stable circular orbit, at $3r_S$, at which point the
+material does not need to lose energy to fall directly into the black
+hole. We quantify the efficiency of this process as a fraction
 $\epsilon$ of the rest mass energy ($mc^2$). The luminosity of the
 active galactic nucleus is then $\epsilon \dot M$, if $\dot M$ is the
 mass accretion rate. As shown in the exercises, the maximum efficiency
@@ -62,10 +64,10 @@ L_{\rm Edd} = \frac{4\pi G c m_p}{\sigma_T} \approx 1.26 \times
 This limit implies that to reach $L\sim 10^{44}$ erg s$^{-1}$ requires
 a black hole with a mass at least $10^6$ $m_\odot$. Although this
 limit only strictly applies in spherical symmetry, estimates of black
-hole masses often imply luminosities of $0.01$--$0.1 L_{\rm
-Edd}$. Sometimes the Eddington limit is expressed as a mass accretion
-limit assuming some $\epsilon$, but of course for a lower $\epsilon$
-the mass accretion rate can be higher.
+hole masses often imply luminosities of $0.01$--$0.1 L_{\rm Edd}$ for
+the most active AGN. Sometimes the Eddington limit is expressed as a
+mass accretion limit assuming some $\epsilon$, but of course for a
+lower $\epsilon$ the mass accretion rate can exceed the limit.
 
 If accreting gas has angular momentum, it will naturally form a disk
 of gas. The gas will experience viscosity. If the disk is Keplerian,
@@ -101,57 +103,57 @@ transports the thermal energy produced directly into the black hole
 through accretion, and thus is less efficient at turning gravitational
 energy into radiation (\citealt{narayan05a}). Theoretical models favor
 the creation of jets in this scenario, collimated by the inner edge of
-the thick disk formed.
-
-{\bf do X-rays arise from ADAF?}
+the thick disk formed. They also predict that these disks are hot,
+comparable to the virial temperature at each radius; X-rays arise both
+from Comptonization and from thermal brehmstrahlung.
 
 \subsection{Jet}
 
 In many systems, the accretion drives a jet of ionized gas outwards,
-in some cases hundreds of kpc in length.  The jets often end in lobed
-structures.  This jet is visible in the radio through synchrotron
-radiation with a power law spectrum. The radiating electrons are
-highly relativistic. The synchrotron radiation can be visible at
-higher frequencies, up through the optical. X-ray emission can be
-visible as well, which may be related to synchrotron processes as well
-{\bf better explanation}. The radio spectra have a variety of shapes
+in some cases hundreds of kpc in length; these jets are reviewed
+by \citet{blandford19a}.  The jets often end in lobed structures.
+This jet is visible in the radio through synchrotron radiation with a
+power law spectrum. The radiating electrons are highly
+relativistic. The synchrotron radiation can be visible at higher
+frequencies, up through the optical. X-ray emission can be visible as
+well; the emission mechanism is disputed, but could be inverse Compton
+scattering of CMB photons or could be synchrotron
+self-Comptonization. The radio spectra have a variety of shapes
 depending on the level of self-absorption.
 
 The jets are typically moving at a high fraction of the speed of
 light, based on observed motions of features in the jets when resolved
-in the radio and optical {\bf citation}. This causes the radiation to
+in the radio and optical. This causes the radiation to
 be beamed strongly along the jet axis; the $(1+z)^4$ effect of this
 blue or redshifting on the surface brightness causes the jet toward us
 to be detectable more often than the jet away from us.
 
 The beaming can cause the inferred luminosity of the source to be
 extremely high if it is observed along the beam. This phenomenon is
-known as a {\it blazar} {\bf citation}. The beamed synchrotron
-emission can overwhelm the ultraviolet-optical line and continuum
-emission, resulting in a pure power law continuum in the optical. This
-phenomenon is referred to as a {\it BL Lac} after the archetypal
-case. These sources are typically highly variable. If some line
-emission remains, the galaxy is known as an {\it optically violent
-variable (OVV)} star.
+known as a {\it blazar}. The beamed synchrotron emission can overwhelm
+the ultraviolet-optical line and continuum emission, resulting in a
+pure power law continuum in the optical. This phenomenon is referred
+to as a {\it BL Lac} after the archetypal case. These sources are
+typically highly variable. If some line emission remains, the galaxy
+is known as an {\it optically violent variable (OVV)} star.
 
 \subsection{Broad line region}
 
-Many quasars and AGN exhibit broad emission lines {\bf what fraction}
-with Doppler widths of order $10^4$ km s$^{-1}$. These velocities
-imply a distance of a few hundred Schwarzschild radii from the central
-black hole, which translates into {\bf what} for a $10^8$ $M_\odot$
-black hole. Forbidden lines are not seen in these regions, which
-implies a high electron density, and from the presence of
-semiforbidden lines we infer $n_e \sim 10^{10}$ cm$^{-3}$. The
-ionization stages present imply temperatures of $2\times 10^4$ K. With
-the density, temperature, and volume implied by these numbers, total
-emission from the gas then can be used to infer the filling factor,
-which is at the very most $f\sim 0.1$. From the total actual
-luminosity compared to the ionizing continuum flux, it can be inferred
-that the solid angle covered by the clouds is about 10\%. These
-considerations lead to the picture of the broad line region as a large
-number of dense clouds surrounding the central black hole and its
-accretion disk. {\bf citation}
+Many quasars and AGN exhibit broad emission lines with Doppler widths
+of order $10^4$ km s$^{-1}$. These velocities imply a distance of a
+few hundred Schwarzschild radii from the central black hole, which
+translates into about 0.1 pc for a $10^8$ $M_\odot$ black
+hole. Forbidden lines are not seen in these regions, which implies a
+high electron density, and from the presence of semiforbidden lines we
+infer $n_e \sim 10^{10}$ cm$^{-3}$. The ionization stages present
+imply temperatures of $2\times 10^4$ K. With the density, temperature,
+and volume implied by these numbers, total emission from the gas then
+can be used to infer the filling factor, which is at the very most
+$f\sim 0.1$. From the total actual luminosity compared to the ionizing
+continuum flux, it can be inferred that the solid angle covered by the
+clouds is about 10\%. These considerations lead to the picture of the
+broad line region as a large number of dense clouds surrounding the
+central black hole and its accretion disk.
 
 \subsection{Narrow line region}
 
@@ -216,22 +218,22 @@ location of the emission.  The line emission variability can be shown
 to lag the continuum, and the delay can be used to determine the
 radius of emission of the lines, and combined with their Doppler
 shifts, an estimate of the black hole mass; this technique is known as
-{\it reverberation mapping} {\bf citation}. Occasionally even on a
-year-to-decade time scale active galactic nuclei and quasars have been
-known to turn off rapidly; the continuum and broad line emission
+{\it reverberation mapping} (\citealt{peterson93a}). Occasionally even
+on a year-to-decade time scale active galactic nuclei and quasars have
+been known to turn off rapidly; the continuum and broad line emission
 disappears, but the narrow line emission (which extends for hundreds
 of lightyears) remains. This phenomenon is known as {\it changing
-look}.
+look} (\citealt{green22a}).
 
 From the demographics and clustering of optically-bright quasars it is
 known that they are not in that state all of the time. From these
 considerations, {\it duty cycle} of quasars is estimated to be about
-{\bf 10 percent??}. Thus over long time scales (likely tens of
-millions of years) all quasars must turn on and off. {\bf citation}
+$10^{-3}$ or so (e.g. \citealt{shankar10a}). The total ``on-time'' for
+a quasar thus is limited to of order $10^7$ years; it can be expected
+that this duration is not always contiguous in time. At lower
+Eddington ratios, this duty cycle must (by definition) be higher.
 
 \subsection{Luminosity function and evolution}
-
-[luminosity function shape and evolution]
 
 The overall luminosity function can be converted into a black hole
 growth rate. The dependence of this growth rate on redshift is
@@ -257,7 +259,8 @@ similar pattern of star formation rate density over cosmic time.
     {{\it Revisiting the Unified Model of Active Galactic Nuclei
       (\citealt{netzer15a})}}
   \item
-    {\it AGN Book}
+    Krolik {\it Active Galactic Nuclei: From the Central Black Hole to
+    the Galactic Environment (\citealt{krolik99a})}
 \end{itemize}
 
 \section{Order-of-magnitude Exercises}
