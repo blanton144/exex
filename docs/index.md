@@ -7,8 +7,8 @@ Please read the following documents related to this class:
 | Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) | |
 | Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1.pdf) | [Jupyter answers](notebooks/light-1.html) |
 | Light II | [notes](pdf/light-2.pdf) | [notes with answers](pdf/light-2-answers.pdf) | [Jupyter answers](notebooks/light-2.html) |
-| Telescopes | [notes](pdf/telescopes.pdf) |
-| Atmosphere | [notes](pdf/atmosphere.pdf) |
+| Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) | [Jupyter answers](notebooks/telescopes.html) |
+| Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) | [Jupyter answers](notebooks/atmosphere.html) |
 | Detectors | [notes](pdf/detectors.pdf) |
 | Images | [notes](pdf/images.pdf) |
 | Spectra | [notes](pdf/spectra.pdf) |
