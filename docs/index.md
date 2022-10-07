@@ -9,9 +9,9 @@ Please read the following documents related to this class:
 | Light II | [notes](pdf/light-2.pdf) | [notes with answers](pdf/light-2-answers.pdf) | [Jupyter answers](notebooks/light-2.html) |
 | Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) | [Jupyter answers](notebooks/telescopes.html) |
 | Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) | [Jupyter answers](notebooks/atmosphere.html) |
-| Detectors | [notes](pdf/detectors.pdf) |
-| Images | [notes](pdf/images.pdf) |
-| Spectra | [notes](pdf/spectra.pdf) |
+| Detectors | [notes](pdf/detectors.pdf) | [notes with answers](pdf/detectors-answers.pdf) | |
+| Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | [Jupyter answers](notebooks/images.html) |
+| Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) | |
 | Distance ladder | [notes](pdf/distance-ladder.pdf) |
 | Cosmology | [notes](pdf/cosmology.pdf) |
 | Structure Formation | [notes](pdf/structure.pdf) |

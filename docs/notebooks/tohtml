@@ -1,0 +1,3 @@
+#!/bin/csh -f
+
+jupyter nbconvert --to html images.ipynb
