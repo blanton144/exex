@@ -286,7 +286,7 @@ The inverse variance weighted mean of the observations is:
 where $\sigma_i^2$ is the variance we use. If we use $\sigma_i^2 =
 n_i$ to estimate the variance, we find:
 \begin{equation}
-{\hat n} = \frac{N}{\sum_{i=1}^N 1 / n_i^2},
+{\hat n} = \frac{N}{\sum_{i=1}^N 1 / n_i},
 \end{equation}
 
 We can ask what the expectation value of this estimate is by averaging
@@ -294,7 +294,7 @@ over an ensemble. This will tell us what the bias in this estimator
 is. We find:
 \begin{equation}
 \left\langle {\hat n} \right\rangle
-= \frac{N}{\left\langle \sum_{i=1}^N 1 / n_i^2 \right\rangle}
+= \frac{N}{\left\langle \sum_{i=1}^N 1 / n_i \right\rangle}
 = \frac{1}{\left\langle 1/n\right\rangle},
 \end{equation}
 where the last step uses the fact that all of the observations are
@@ -312,11 +312,11 @@ For large $\bar n$, we can approximate the Poisson distribution as a
 Gaussian and find an approximate solution which is pretty good for
 $\bar n>10$ or so. We write:
 \begin{eqnarray}
-\left\langle \frac{1}{\hat n} \right\rangle
+\left\langle \frac{1}{n} \right\rangle
 &=& \frac{1}{\sqrt{2\pi} \sigma} \int_{-\infty}^{\infty} {\rm
 d}n \frac{1}{n} \exp\left(- (n - {\bar n})^2 / 2\sigma^2\right).
 \end{eqnarray}
-Then we Taylor expand $1/n$ around $\bar n$:
+Then in the integral we Taylor expand $1/n$ around $\bar n$:
 \begin{equation}
 \frac{1}{n} \approx \frac{1}{\bar n}
 - \frac{1}{{\bar n}^2}\left(n - {\bar n}\right)
@@ -326,24 +326,24 @@ The first term just integrates to $1/{\bar n}$. The second term is odd
 around ${\bar n}$ so integrates to zero. The third term integrates to:
 \begin{equation}
 \frac{1}{\sqrt{2\pi} \sigma} \frac{1}{{\bar n}^3} 
-\int_{-\infty}^{\infty} {\rm d}n \frac{1}{n} \left(n - {\bar
+\int_{-\infty}^{\infty} {\rm d}n \left(n - {\bar
 n}\right)^2 \exp\left(- (n - {\bar n})^2 / 2\sigma^2\right).
 \end{equation}
 This is a known definite integral and we then find, substituting
 $\sigma^2 = {\bar n}$, that this term is just $1/{\bar n}^2$. So then
 combining the first and third terms:
 \begin{equation}
-\left\langle \frac{1}{\hat n} \right\rangle \approx \frac{1}{\bar
+\left\langle \frac{1}{n} \right\rangle \approx \frac{1}{\bar
 n} \left(1 + \frac{1}{\bar n}\right)
 \end{equation}
-and therefor
+and therefore
 \begin{equation}
 \left\langle {\hat n} \right\rangle
 = \frac{1}{\left\langle 1/n\right\rangle} \approx {\bar n}
 \left(1 - \frac{1}{\bar n}\right).
 \end{equation}
 The Jupyter notebook shows this result compared to the full Poisson
-calculatio, showing that the approximation becomes reasonable
+calculation, showing that the approximation becomes reasonable
 (i.e. close to the right answer relative to the bias itself) at ${\bar
 n} > 10$.
 
@@ -355,12 +355,16 @@ time---i.e. without any reason to expect that the expectation value of
 $n$ would change from observation to observation. That case is exactly
 what we have just considered, and if we take the mean of the
 observations, and if we expect the variance to be dominated by the
-object itself, we should definitely not weight that mean by the
-inverse variance estimated from the signal.  On the other hand, if we
+object itself, then inverse variance weighting leads to a bias (and
+in this case, no actual gain in precision).
+On the other hand, if we
 take several exposures whose variances we expect to vary for reasons
 we can predict---like different exposure times, or because we can
-determine that the background signal is changing---we {\it can} and
-should take those differences in variance into account.
+determine that the background signal is changing---we {\it can} 
+take those contributions to the difference in variance into account
+in our weighting, and we {\it should} to achieve mininum variance.
+There is no very simple hard-and-fast rule---usually you have to think
+about your specific data set to figure out the right thing to do.
 \end{answer}
 \end{enumerate}
 
