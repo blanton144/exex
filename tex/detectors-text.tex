@@ -161,8 +161,37 @@ telescopes.
     W m$^{-2}$ sr$^{-1}$ (\citealt{fabian92a}). The Chandra X-ray
     telescope often takes exposures of $\sim 10^4$ s, and has a
     resolution of order an arcsec. What is the expected number of
-    background photons within the a FWHM of a source that are
+    background photons within the FWHM of a source that are
     contributed by this background for such an exposure?
+\begin{answer}[]
+The number of photons should be to an order of magnitude:
+\begin{equation}
+N \sim \frac{(\nu I_\nu) A \Delta T {\rm FWHM}^2}{h\nu}
+\end{equation}
+$\nu I_\nu$ is the energy per unit time per area per solid angle if we
+assume the width of bandpass in Chandra we are talking about has
+$\Delta \nu \sim \nu$. $h\nu$ is the energy per photon (i.e. 1 keV).
+$A$ is the effective area of Chandra---note that because it is grazing
+incidence optics this effective area is smaller than the diameter of
+the telescope. Consulting Chandra's web site we find that at 1 keV,
+$A\sim 400$ cm$^2$.  FWHM$^2$ represents to order of magnitude the
+solid angle we are integrating over. We will take FWHM $\sim$ 1
+arcsec.  $\Delta T$ is $10^4$ s as the problem asks.
+Plugging in numbers and changing units a bit:
+\begin{eqnarray}
+N &\sim& \frac{(3\times 10^{-8} {\rm ~erg} {\rm ~cm}^{-2} {\rm ~s}^{-1}
+{\rm sr}^{-1}) (400 {\rm ~cm}^2) (10^4 {\rm ~s}) (1 {\rm
+~arcsec}^2)}{1 {\rm ~keV}}\cr
+&\sim& \frac{(3\times 10^{-8} {\rm ~erg} {\rm ~cm}^{-2} {\rm ~s}^{-1}
+{\rm sr}^{-1}) (400 {\rm ~cm}^2) (10^4 {\rm ~s}) (2.35\times 10^{-11} {\rm
+~sr})}{1.602\times 10^{-9} {\rm ~erg}}\cr
+&\sim& \frac{(3) (4) (2.35)}{1.602} \times 10^{-4} \sim 1.8 \times
+10^{-3}
+\end{eqnarray}
+So you expect within any FWHM to have almost no background photons
+from the cosmic X-ray background, even for a 3 hour exposure!
+\end{answer}
+
 \item What is the highest angular resolution that can be achieved by a
     ground-based interferometric radio experiment at $\sim 1.6$ GHz?
 
@@ -228,14 +257,111 @@ Therefore, for the faintest fluxes (below the background) the
 fractional errors are a stronger function of the flux than they are at
 brighter fluxes (above the background).
 \end{answer}
-\item The noise in a data set is determined by the Poisson noise in
+\item It is a commonly used practice to combine different observations
+of a quantity (say flux) by using a weighted mean, using weights equal to the
+inverse variance of each observation. The advantage of doing so is
+that if the inverse variance is known, this weighted mean is the
+minimum variance estimator of the quantity itself. For imaging
+conducted with photon-counting detectors, when the background is
+minimal, the noise in a data set is the Poisson noise in
 the expectation value of the signal. However, observationally we often
 only have access to one realization of the signal, and often the
-quoted errors are based on the Poisson noise in that signal.  If we
-take multiple observations and combine them together weighting by the
-inverse variance estimated in this way, it leads to a bias. Ignoring
-any background contribution to the noise, estimate this bias as a
-function of $n_e$.
+quoted errors are based on the Poisson noise estimated from the signal
+itself. If we take multiple observations and combine them together
+weighting by the inverse variance estimated in this way, it leads to a
+bias. Ignoring any background contribution to the noise, estimate this
+bias as a function of the true expected number of photons $\bar n$.
+
+\begin{answer}
+Let us define $\bar n$ as the expectation value of the number of
+photons, $N$ as the number of observations, $n$ as the actual number
+of photons in any given observation, and $\{n_i\}$ as the set of
+actual observations of numbers of photons.
+
+The inverse variance weighted mean of the observations is:
+\begin{equation}
+{\hat n} = \frac{\sum_{i=1}^N n_i / \sigma_i^2}
+{\sum_{i=1}^N 1 / \sigma_i^2},
+\end{equation}
+where $\sigma_i^2$ is the variance we use. If we use $\sigma_i^2 =
+n_i$ to estimate the variance, we find:
+\begin{equation}
+{\hat n} = \frac{N}{\sum_{i=1}^N 1 / n_i^2},
+\end{equation}
+
+We can ask what the expectation value of this estimate is by averaging
+over an ensemble. This will tell us what the bias in this estimator
+is. We find:
+\begin{equation}
+\left\langle {\hat n} \right\rangle
+= \frac{N}{\left\langle \sum_{i=1}^N 1 / n_i^2 \right\rangle}
+= \frac{1}{\left\langle 1/n\right\rangle},
+\end{equation}
+where the last step uses the fact that all of the observations are
+equivalent, so the expectation value of $1/n_i$ is the same for all of
+them. 
+
+Now for a true Poisson distribution, the value of $\langle 1/n\rangle$
+is problematic because of cases when $n=0$. It is probably a
+bad idea to weight your data by the inverse variance if your estimate
+for the variance is zero. In the Jupyter notebook we treat this case,
+assuming our data analyst sets $\sigma_i^2 = 1$ when $n_i=0$, which
+is, well, pretty common practice.
+
+For large $\bar n$, we can approximate the Poisson distribution as a
+Gaussian and find an approximate solution which is pretty good for
+$\bar n>10$ or so. We write:
+\begin{eqnarray}
+\left\langle \frac{1}{\hat n} \right\rangle
+&=& \frac{1}{\sqrt{2\pi} \sigma} \int_{-\infty}^{\infty} {\rm
+d}n \frac{1}{n} \exp\left(- (n - {\bar n})^2 / 2\sigma^2\right).
+\end{eqnarray}
+Then we Taylor expand $1/n$ around $\bar n$:
+\begin{equation}
+\frac{1}{n} \approx \frac{1}{\bar n}
+- \frac{1}{{\bar n}^2}\left(n - {\bar n}\right)
++ \frac{1}{{\bar n}^3}\left(n - {\bar n}\right)^2 + \ldots
+\end{equation}
+The first term just integrates to $1/{\bar n}$. The second term is odd
+around ${\bar n}$ so integrates to zero. The third term integrates to:
+\begin{equation}
+\frac{1}{\sqrt{2\pi} \sigma} \frac{1}{{\bar n}^3} 
+\int_{-\infty}^{\infty} {\rm d}n \frac{1}{n} \left(n - {\bar
+n}\right)^2 \exp\left(- (n - {\bar n})^2 / 2\sigma^2\right).
+\end{equation}
+This is a known definite integral and we then find, substituting
+$\sigma^2 = {\bar n}$, that this term is just $1/{\bar n}^2$. So then
+combining the first and third terms:
+\begin{equation}
+\left\langle \frac{1}{\hat n} \right\rangle \approx \frac{1}{\bar
+n} \left(1 + \frac{1}{\bar n}\right)
+\end{equation}
+and therefor
+\begin{equation}
+\left\langle {\hat n} \right\rangle
+= \frac{1}{\left\langle 1/n\right\rangle} \approx {\bar n}
+\left(1 - \frac{1}{\bar n}\right).
+\end{equation}
+The Jupyter notebook shows this result compared to the full Poisson
+calculatio, showing that the approximation becomes reasonable
+(i.e. close to the right answer relative to the bias itself) at ${\bar
+n} > 10$.
+
+What is the consequence of this calculation? It is that you should be
+careful when you are weighting by an inverse variance that you have
+estimated from the signal itself. Say we took several images of the
+same object under the same conditions with the same exposure
+time---i.e. without any reason to expect that the expectation value of
+$n$ would change from observation to observation. That case is exactly
+what we have just considered, and if we take the mean of the
+observations, and if we expect the variance to be dominated by the
+object itself, we should definitely not weight that mean by the
+inverse variance estimated from the signal.  On the other hand, if we
+take several exposures whose variances we expect to vary for reasons
+we can predict---like different exposure times, or because we can
+determine that the background signal is changing---we {\it can} and
+should take those differences in variance into account.
+\end{answer}
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
