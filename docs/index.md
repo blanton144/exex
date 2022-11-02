@@ -12,8 +12,8 @@ Please read the following documents related to this class:
 | Detectors | [notes](pdf/detectors.pdf) | [notes with answers](pdf/detectors-answers.pdf) | [Jupyter answers](notebooks/detectors.html) |
 | Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | [Jupyter answers](notebooks/images.html) |
 | Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) | |
-| Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | notebooks/distance-ladder.html |
-| Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | notebooks/cosmology.html |
+| Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter answers](notebooks/distance-ladder.html) |
+| Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | [Jupyter answers](notebooks/cosmology.html) |
 | Structure Formation | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | |
 | Galaxies | [notes](pdf/galaxies.pdf) |
 | Star Clusters | [notes](pdf/stellar-clusters.pdf) |
