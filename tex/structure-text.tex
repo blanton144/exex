@@ -127,7 +127,7 @@ comoving observer, which is related to the convective derivative by:
 \vec{v}_p\cdot\vec{\nabla}
 \end{equation}
 Here we choose to keep the peculiar velocity in physical units, and
-the derivative $\nabla$ in physics units (not comoving units).  We can
+the derivative $\nabla$ in physical units (not comoving units).  We can
 show the continuity equation holds for peculiar velocities:
 \begin{equation}
 \label{eq:continuity}
@@ -414,22 +414,39 @@ amplitude grows, until nonlinear growth ensuse on small scales.
     ($\Omega_m = 1$), and keeping only first-order terms, derive
     Equation \ref{eq:continuity}.
 
-%\begin{answer}
-%\begin{eqnarray}
-%\frac{{\rm D}\vec{v}}{{\rm D} t} =
-%\left[ \frac{\dd{}}{\dd{t}} + \vec{v}_p \cdot \vec{\nabla} \right]
-%\left[\rho_0 \left(1+\delta\right)\right] &=&
-%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_0
-%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_p \cr
-%
-%\frac{\dd{\rho_0}}{\dd{t}}
-%\frac{\dd{}}{\dd{t}}\left(\rho_0 \delta\right)
-%+ \vec{v}_p \cdot \vec{\nabla} \right]
-%\left[\rho_0 \left(1+\delta\right)\right] &=&
-%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_0
-%- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_p
-%\end{eqnarray}
-%\end{answer}
+\begin{answer}
+We start with:
+\begin{eqnarray}
+\frac{{\rm D}\rho}{{\rm D} t} &=& - \rho \vec{\nabla}\cdot\vec{v},
+\end{eqnarray}
+and plug in $\rho = \rho_0(1+\delta)$ and $\vec{v} = \vec{v}_0
++ \vec{v}_p$:
+\begin{eqnarray}
+\label{eq:step}
+\frac{{\rm D}\rho_0}{{\rm D} t}(1 + \delta)
++ \rho_0 \frac{{\rm D}\delta}{{\rm D} t}
+&=& - \rho_0 (1 + \delta) \vec{\nabla}\cdot\vec{v}_0
+- \rho_0 (1+\delta) \vec{\nabla}\cdot\vec{v}_p
+\end{eqnarray}
+The homogeneous solution to the equations is just:
+\begin{eqnarray}
+\frac{{\rm D}\rho_0}{{\rm D} t}
+&=& - \rho_0 \vec{\nabla}\cdot\vec{v}_0,
+\end{eqnarray}
+which means that the first terms on the left and right of
+Equation \ref{eq:step} cancel. $\rho_0$ then divides out, leaving:
+\begin{eqnarray}
+\frac{{\rm D}\delta}{{\rm D} t}
+&=& - (1 + \delta) \vec{\nabla}\cdot\vec{v}_p\cr
+\frac{{\rm d}\delta}{{\rm d} t} + \vec{v}_p\cdot\vec{\nabla}\delta
+&=& - (1 + \delta) \vec{\nabla}\cdot\vec{v}_p\cr
+\frac{{\rm d}\delta}{{\rm d} t}
+&=& - \vec{\nabla}\cdot\vec{v}_p
+\end{eqnarray}
+where in the last step we have dropped terms with both $\delta$ and
+$\vec{v}_p$ because they are second order, and we are left with our
+linear continuity equation. 
+\end{answer}
 
 
 \item Starting from Equation \ref{eq:homogeneous}, and assuming a flat

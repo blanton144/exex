@@ -207,22 +207,31 @@ surrounding us, of roughly the same density. Together these
 relativistic particles have $\Omega_{r0} \sim 4\times 10^{-5}$
 $h^{-2}$.  The density of non-relativistic matter scales as $a^{-3}$
 but due to redshift the energy density of relativistic particles
-scales as $a^{-4}$. At these times, $a(t)\propto t^{1/2}$. Therefore,
-sufficiently far into the past the radiation dominates.  This is
-called the epoch of {\it matter-radiation equality}, and occurs at a
-redshift of order $z \sim \Omega_{m0}/\Omega_{r0} \sim 3000$. Note that the
+scales as $a^{-4}$.  Therefore, sufficiently far into the past the
+radiation dominates. At those early times, $a(t)\propto t^{1/2}$.
+
+The epoch where matter and radiation have the same energy density is
+called {\it matter-radiation equality}, and occurs at a redshift of
+order $z \sim \Omega_{m0}/\Omega_{r0} \sim 3000$. Note that the
 relativistic contribution of radiation still needs to be accounted for
-in equations for the expansion at redshifts down to about $z\sim 30$.
+in equations for the expansion at redshifts down to about $z\sim
+30$. Including radiation contributions, we need to use:
+\begin{equation}
+\label{eq:fullE}
+E(z) = \sqrt{\Omega_{\Lambda,0} + \Omega_{m,0} (1+z)^3 + \Omega_{r,0}
+(1+z)^4}
+\end{equation}
 
 A significant quantity to compute is the {\it particle horizon} at any
-given time. This is the distance that any particle can travel between
-$t=0$ and some later time; it defines the scale on which causal
-communication could have happened at any given time. It is given by
-integrating the distance a photon can travel in comoving coordinates
-at each interval $\dd t$:
+given time. This is the physical distance that any particle can travel
+between $t=0$ and some later time; it defines the scale on which
+causal communication could have happened at any given time. It is
+given by integrating the distance a photon can travel in comoving
+coordinates at each interval $\dd t$ (and then rescaling by
+$a=1/(1+z)$ into physical distance):
 \begin{equation}
 r_H = a \int_0^t \frac{c \dd t}{a(t)}
-= \frac{1}{1+z} \int_{1+z}^\infty \frac{c}{H(z)}.
+= \frac{1}{1+z} \int_{1+z}^\infty {\dd z} \frac{c}{H(z)}.
 \end{equation}
 During the matter dominated epoch, $r_H\propto a^{3/2}$. During the
 radiation dominated epoch $r_H\propto a^2$.
@@ -247,9 +256,6 @@ radiation dominated epoch $r_H\propto a^2$.
 \item Approximately, why does recombination occur at $z\sim 1100$?
 \item How many ionizing photons per cubic Mpc are necessary to
 reionize the Universe?
-\item Estimate the particle horizon size at $z\sim 1100$, assuming
-either the universe is radiation-dominated, or it is matter-dominated,
-above that redshift.
 \end{enumerate} 
 
 \section{Analytic Exercises}
@@ -393,6 +399,31 @@ to the maximal rotation velocity in the galaxy's rest frame.
 time. Assuming that the radiation is only affected by the redshift,
 show how the energy density and temperature of this radiation depends
 on redshift.
+\item Estimate the particle horizon size at $z\sim 1100$, given the
+modern cosmological parameters.
+
+\begin{answer}
+We begin by recasting the Equation \ref{eq:fullE} for the horizon
+size with $a = 1/(1+z)$:
+\begin{equation}
+r_H = \frac{ac}{H_0} \int_0^a {\rm d}a'
+ \frac{1}{\sqrt{\Omega_{\Lambda,0} a'^4 + \Omega_{m,0} a'
++ \Omega_{r,0}}}
+\end{equation}
+Now we note that at the early redshifts we are considering, the first
+term in the square root in the denominator is exceedingly
+small. Therefore we can ignore it to write:
+\begin{eqnarray}
+r_H &=& \frac{ac}{H_0} \int_0^a {\rm d}a'
+ \frac{1}{\sqrt{\Omega_{m,0} a' + \Omega_{r,0}}} \cr
+&=& \frac{ac}{H_0} \left[\frac{2}{\Omega_{m,0}} \sqrt{\Omega_{m,0} a'
+ + \Omega_{r,0}}\right]^a_0\cr
+ &=& \frac{ac}{H_0} \frac{2}{\Omega_{m, 0}} \left[\sqrt{\Omega_{m,0} a
+ + \Omega_{r,0}} - \sqrt{\Omega_{r,0}}\right]
+\end{eqnarray}
+Now, plugging in $H_0=$ 70 km s$^{-1}$ Mpc$^{-1}$, $\Omega_{m,0}=0.3$,
+and $\Omega_{r,0} = 8.24\times 10^{-5}$, we find $r_H \sim 254$ kpc.
+\end{answer}
 \end{enumerate}
 
 \section{Numerics and Data Exercises}
