@@ -239,6 +239,7 @@ where it is shown that for a mass $M$ moving through a system with
 density $\rho$ with an isothermal distribution function of velocity
 distribution $\sigma$ there is a drag force:
 \begin{equation}
+\label{eq:chandra}
 \frac{\dd{\vec{v}_M}}{\dd{t}} = - \frac{4\pi \ln\Lambda
 G^2M\rho}{v_M^3} \left[\erf X
 -  \frac{2X}{\sqrt{\pi}} \exp\left(-X^2\right) \right] \vec{v}_M
@@ -645,8 +646,6 @@ $\sigma^2$ and $r$.
 We will show in a  numerical exercise that we can numerically integrate
 the equations to a better solution by imposing a zero slope at $r=0$
 (but it is still infinite mass).
-\item Lowered isothermal sphere model
-\item King model
 \item Tidal radius
 \item We will here derive Equation (\ref{eq:chandra}) for the
 Chandrasekhar Dynamical Friction. We will calculate the drag on a
@@ -752,7 +751,22 @@ That distance is approximately the tidal radius.
 \item Using the inner boundary condition that $\partial\rho/\partial
 r=0$, integrate Equation \ref{eq:lane-emden} outwards to derive the
 shape of an isothermal sphere with a core.
-\item Lowered isothermal sphere.
+\item The spherically symmetric
+isothermal model has an issue that it has finite phase space
+density for positive energies. The ``lowered isothermal model'' deals
+with this issue by setting:
+\begin{equation}
+f(E) = \rho_1 \left(2\pi \sigma^2\right)^{-3/2} \left( e^{E/\sigma^2}
+- 1\right)
+\end{equation}
+for $E<0$ and $f(E) = 0$ otherwise. Analytically, integrate this phase
+space density to get the density $\rho$ and the radial equation for
+the potential $\Phi(r)$. The {\it King models} are models which obey
+the condition ${\rm d}\Phi/{\rm d}r=0$. Setting the initial value
+$\Phi(r=0)$ to $-3\sigma^2$, $-6\sigma^2$, and $-12\sigma^2$,
+numerically integrate the equation outward until $\Phi(r)$ becomes
+positive and plot the resulting density profiles. Consult Binney \&
+Tremaine \S4.3.3(c) for assistance and to check your answer!
 \item $\Phi$, $n$ and $\beta$
 \item Dynamics estimates from Gaia
 \item Globular cluster radial profiles.
