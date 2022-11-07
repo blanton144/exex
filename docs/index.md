@@ -15,10 +15,10 @@ Please read the following documents related to this class:
 | Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter answers](notebooks/distance-ladder.html) |
 | Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | [Jupyter answers](notebooks/cosmology.html) |
 | Structure Formation | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | |
-| Galaxies | [notes](pdf/galaxies.pdf) |
-| Star Clusters | [notes](pdf/stellar-clusters.pdf) |
-| Stellar Evolution | [notes](pdf/stellar-evolution.pdf) |
-| Stellar Populations | [notes](pdf/stellar-populations.pdf) |
+| Galaxies | [notes](pdf/galaxies.pdf) | [notes with answers](pdf/structure-answers.pdf) | [Jupyter answers](notebooks/galaxies.html) |
+| Star Clusters | [notes](pdf/stellar-clusters.pdf) | [notes with answers](pdf/stellar-clusters-answers.pdf) | [Jupyter answers](notebooks/galaxies.html) |
+| Stellar Evolution | [notes](pdf/stellar-evolution.pdf) | [notes with answers](pdf/stellar-evolution-answers.pdf) | |
+| Stellar Populations | [notes](pdf/stellar-populations.pdf) | [notes with answers](pdf/stellar-population-answers.pdf) | |
 | Stellar Dynamics | [notes](pdf/dynamics.pdf) |
 | Interstellar Medium | [notes](pdf/ism.pdf) |
 | Emission lines | [notes](pdf/emission-line.pdf) |

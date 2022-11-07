@@ -4,3 +4,5 @@ jupyter nbconvert --to html images.ipynb
 jupyter nbconvert --to html detectors.ipynb
 jupyter nbconvert --to html distance-ladder.ipynb
 jupyter nbconvert --to html cosmology.ipynb
+jupyter nbconvert --to html galaxies.ipynb
+jupyter nbconvert --to html stellar-clusters.ipynb
