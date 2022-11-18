@@ -418,10 +418,57 @@ billion years, the luminosity is dominated by red giant branch stars
 and this dependence changes (slowing down generally).
 \end{answer}
 
-\item What is difference between the mass-to-light ratios of two
+\item What is the difference between the mass-to-light ratios of two
 10-billion-year-old stellar populations, one with a Salpeter IMF and
 one with an IMF which is Salpeter above $M=0.7M_\odot$ but has
 $\Phi(M) \propto$ constant at lower masses?
+
+\begin{answer}
+In this case we can avoid the calculation of the relative luminosities
+of these two populations. For a 10-billion-year-old population, star
+with mass $M_\odot$ has just entered the post-main sequence phase. So
+for two populations with the same number of solar mass stars, the
+population of red giants is the same for both populations. Since the
+red giant populations dominate the luminosity for an old stellar
+population, the luminosities of these two populations will be nearly
+identical.
+
+So the difference in mass-to-light ratio can be calculated as the
+difference in total mass for two populations with the same number of
+solar mass stars. 
+
+For the Salpeter case, using a normalization constant $A$:
+\begin{eqnarray}
+M &=& A\int_{0.08M\odot}^{M_\odot} {\rm d}M' M' \Phi(M') \cr
+&=& A M_\odot \int_{0.08}^{1} {\rm d}x x^{-1.35} \cr
+&=& - \frac{A M_\odot}{0.35} \left.
+x^{-0.35} \right|_{0.08}^{1} \approx 4.1 A M_\odot
+\end{eqnarray}
+
+For the non-Salpeter case, using the same normalization to match
+$\Phi(M)$ at $M=M_\odot$: 
+\begin{eqnarray}
+M &=& A\int_{0.08M\odot}^{M_\odot} {\rm d}M' M' \Phi(M') \cr
+&=& A M_\odot \left[ \int_{0.7}^{1} {\rm d}x\, x^{-1.35} +
+\int_{0.08}^{0.7} {\rm d}x\, x\right]\cr
+&=& A M_\odot \left[
+- \frac{1}{0.35} \left. x^{-0.35} \right|_{0.7}^{1.0}
++ \frac{1}{2} \left. x^2 \right|_{0.08}^{0.7}\right]\cr
+&\approx& (0.38 + 0.48) AM_\odot \approx 0.86  A M_\odot
+\end{eqnarray}
+
+So for the same luminosity (dominated by the red giants) the
+non-Salpeter case has a mass to light ratio about $1/5$ of the
+Salpeter case. This emphasizes that the bulk of the ``stellar mass''
+that is inferred from stellar population analyses is usually actually
+hardly contributing to the light, and could be removed from the
+stellar population without much affecting the spectrum. Therefore the
+stellar mass values are very dependent on the assumed stellar
+IMF. Note that I've picked a pretty extreme non-Salpeter
+case---a \citet{kroupa01a} or \citet{chabrier03a} IMF, which reflect
+our best estimates of the IMF in the Milky Way, is more like
+$\Phi(M) \propto M^{-1}$ at low masses rather than a constant.
+\end{answer}
 \end{enumerate} 
 
 %\section{Analytic Exercises}
