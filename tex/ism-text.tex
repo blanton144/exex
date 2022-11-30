@@ -333,6 +333,10 @@ say about the dust fraction in HII regions relative to its presence in
 the neutral and molecular gas?
 \item Dust emits a large proportion of its light around 100 $\mu$m in
 an approximately thermal distribution. What temperature is the dust?
+\item Assuming about 1\% of the interstellar medium is in the form of
+dust, that the gas is solar metallicity (i.e. $12
++ \log_{10}(O/H) \sim 8.7$), and that most of the dust is in the form
+MgSiO$_4$, estimate how much of the oxygen is depleted onto dust.
 \end{enumerate}   
 
 \section{Analytic Exercises}
@@ -403,17 +407,22 @@ temperature from $T \sim 10^4$ to $10^8$ K.
 %\end{equation}
 %where $h\nu_0$ is the ionization energy. The number of ionizations
 %per unit volume can be calculated similarly.
-\item depletion onto dust
 \item Use the \citet{schlegel98a} dust maps (available for example
 through the {\tt dustmaps} Python package, to find the dust extinction
-for two regions on the sky: $(l, b) = (180^\circ, 10^\circ)$ and
-$(180^\circ, 70\circ)$. Find GALEX, SDSS, and 2MASS fluxes and Gaia
-parallaxes for stars in those directions. Based on the high Galactic
+for two regions on the sky: $(l, b) = (212^\circ, 16^\circ)$ and
+$(180^\circ, 70^\circ)$. From the SDSS photometric database retrieve
+SDSS and 2MASS fluxes for stars in those directions
+(say, within a degree). Based on the high Galactic
 latitude direction, find a color cut in $J-K$ which selects red giant
-stars. Using the UV-optical-infrared colors of those stars in the two
+stars. Using the optical-infrared colors of those stars in the two
 directions, estimate the dust extinction curve.
-\item Virial estimate of H2 masses
-\item HII map exploration; dust, CO, HI emission
+\item A number of radio surveys have cataloged the molecular clouds in
+our galaxy, one of which
+is \href{https://sedigism.mpifr-bonn.mpg.de/cgi-bin-seg/SEDIGISM_DATABASE.cgi}{SEDIGISM}. Using
+the merged catalog of molecular clouds in that region, find the
+relation between a virial mass defined as $5 \sigma^2 R /G$ and the
+integrated CO luminosity found in the catalogs (which is for
+{}$^{13}$CO).
 \end{enumerate}`
 
 \bibliographystyle{apj}
