@@ -27,14 +27,19 @@ sight. This picture was developed to explain the various observational
 classes of active galactic nuclei, as explained below.
 
 There is an array of nomenclature associated with quasars. Below
-luminosities of around $10^{44}$ erg s$^{-1}$ they are known as {\it
-Seyfert galaxies}. If broad line emission is visible, they are known
-as {\it Type 1}, and if it is not they are known as {\it Type 2};
-there are also intermediate types occasionally defined. Depending on
-their radio flux, Seyferts and quasars are called {\it radio-loud}
-($\nu L_\nu > 10^{41}$ erg s$^{-1}$ or so) or {\it radio-quiet}; these
-terms are inconsistently used, with radio-loud sometimes meaning
-simply that the radio emission is detected.
+bolometric luminosities of around $10^{44}$ erg s$^{-1}$ they are
+known as {\it Seyfert galaxies}. If broad line emission is visible,
+they are known as {\it Type 1}, and if it is not they are known as
+{\it Type 2}; there are also intermediate types occasionally
+defined. Depending on their radio flux, Seyferts and quasars are
+called {\it radio-loud} or {\it radio-quiet}; these terms are
+inconsistently used in the literature. Typically radio-loud refers to
+the criterion of \citet{kellerman89a}, who use $R = f_{\nu}(6{\rm
+~cm}) / f_\nu (4400 \AA)$ and define radio-loud as $R>10$.  radio
+emission is detected, which very roughly often corresponds to $\nu
+L_\nu > 10^{41}$ erg s$^{-1}$ or so. Depending on author, radio-quiet
+can either meaning not radio-loud, or undetected in the radio, or
+consistent with star forming radio emission.
 
 \subsection{Black hole accretion}
 
@@ -58,6 +63,7 @@ pressure on the surrounding material will prevent inward flow due to
 gravitational accelerations. The exercises derive this {\it Eddington
   limit}:
 \begin{equation}
+\label{eq:eddington}
 L_{\rm Edd} = \frac{4\pi G c m_p}{\sigma_T} \approx 1.26 \times
 10^{38} \left(\frac{M_{\rm BH}}{M_\odot}\right) \mathrm{~erg~s}^{-1}
 \end{equation}
@@ -297,7 +303,10 @@ For a spinning black hole, the efficiency can be considerably higher.
 \section{Analytic Exercises}
 
 \begin{enumerate}
-\item Eddington luminosity
+\item Derive the Eddington limit in
+Equation \ref{eq:eddington}. Assume a pure hydrogen, fully ionized gas
+in spherical symmetry.  First show that the radiation pressure on the
+electrons outward and the gravitational force
 \item Temperature profile of accretion disk
 \item Relationship between energy distribution and synchrotron
 \item Superluminal motion
