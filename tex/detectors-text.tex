@@ -11,18 +11,18 @@ physics behind modern detectors except insofar as necessary to explain
 how to interpret data taken with them.
 
 In the optical, out to about a micron, the most common detector in use
-is the {\it charge-coupled device} (CCD). Out to about 28 $\mu$m, the
-most common detectors are infrared detector arrays. Although CCD and
-infrared arrays are different technologies, both are
-semiconductor-based detectors that detect photons of energy higher
-than their band gap between their bound valence electron energies and
-their conduction band. Silicon is the best-developed CCD technology
-and has a band gap of 1.1 $\mu$m.  Germanium CCDs could in principle
-extend this sensitivity to $1.8$ $\mu$m, but their technology is not
-cost-effective today. HgCdTe (``MER-CAH-TEL'') infrared detectors have
-a band gap of that can be designed anywhere between 0.4--12
-$\mu$m. Si:As detectors can extend to 28 $\mu$m (and are for example
-used in the two redder WISE bands).
+is the {\it charge-coupled device} (CCD). Beyond 1 $\mu$m to about 28
+$\mu$m, the most common detectors are infrared detector
+arrays. Although CCD and infrared arrays are different technologies,
+both are semiconductor-based detectors that detect photons of energy
+higher than their band gap between their bound valence electron
+energies and their conduction band. Silicon is the best-developed CCD
+technology and has a band gap of 1.1 $\mu$m.  Germanium CCDs could in
+principle extend this sensitivity to $1.8$ $\mu$m, but their
+technology is not cost-effective today. HgCdTe (``MER-CAH-TEL'')
+infrared detectors have a band gap of that can be designed anywhere
+between 0.4--12 $\mu$m. Si:As detectors can extend to 28 $\mu$m (and
+are for example used in the two redder WISE bands).
 
 Each pixel of a CCD detects individual photons that hit it, each of
 which usually contributes one electron to the overall signal. For most
@@ -45,7 +45,8 @@ charge can be read out nondestructively, allowing many reads on the
 same pixel. However, the read out is intrinsically noisier.
 
 From this basic understanding, there results an interpretation of the
-digital numbers reported by a semiconductor device:
+digital numbers (DN), sometimes referred to as analog-to-digital
+units (ADU), reported by a semiconductor device:
 \begin{equation}
 \mathrm{DN} =
 \frac{n_e}{\mathrm{Gain~}} = 
@@ -90,11 +91,12 @@ underneath the atmosphere the cosmic rays will be directed
 preferentially downwards).
 
 In the ultraviolet, other detectors are still in use. For example,
-GALEX uses a position sensitive proportional counter. These devices
+GALEX used a position sensitive proportional counter. These devices
 are essentially a crossed grid of wires under voltage inside a chamber
 filled with an inert gas that can be ionized by UV photons. When a UV
 photon causes a charge track, the voltage change is detected and
-recorded. Unlike CCDs, these detectors can detect individual photons.
+recorded. Unlike CCDs, these detectors detect photons primarily
+individually.
 
 In the X-rays, CCD detectors are now typically used. CCDs lose
 sensitivity in the UV due to absorption on their surfaces, but at
@@ -166,7 +168,7 @@ telescopes.
 \begin{answer}[]
 The number of photons should be to an order of magnitude:
 \begin{equation}
-N \sim \frac{(\nu I_\nu) A \Delta T {\rm FWHM}^2}{h\nu}
+N \sim \frac{(\nu I_\nu) A \Delta T ({\rm FWHM})^2}{h\nu}
 \end{equation}
 $\nu I_\nu$ is the energy per unit time per area per solid angle if we
 assume the width of bandpass in Chandra we are talking about has

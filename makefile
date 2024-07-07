@@ -52,8 +52,8 @@ ALL= \
 	$(PDFDIR)/distance-ladder-answers.pdf \
 	$(PDFDIR)/chemical-evolution.pdf \
 	$(PDFDIR)/chemical-evolution-answers.pdf \
-	$(PDFDIR)/stellar-clusters.pdf \
-	$(PDFDIR)/stellar-clusters-answers.pdf \
+	$(PDFDIR)/stellar-resolved.pdf \
+	$(PDFDIR)/stellar-resolved-answers.pdf \
 	$(PDFDIR)/cosmology.pdf \
 	$(PDFDIR)/cosmology-answers.pdf \
 	$(PDFDIR)/structure.pdf \

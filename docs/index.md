@@ -16,7 +16,7 @@ Please read the following documents related to this class:
 | Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | [Jupyter answers](notebooks/cosmology.html) |
 | Structure Formation | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | |
 | Galaxies | [notes](pdf/galaxies.pdf) | [notes with answers](pdf/structure-answers.pdf) | [Jupyter answers](notebooks/galaxies.html) |
-| Star Clusters | [notes](pdf/stellar-clusters.pdf) | [notes with answers](pdf/stellar-clusters-answers.pdf) | [Jupyter answers](notebooks/galaxies.html) |
+| Resolved Stellar Surveys | [notes](pdf/stellar-resolved.pdf) | [notes with answers](pdf/stellar-resolved-answers.pdf) | |
 | Stellar Evolution | [notes](pdf/stellar-evolution.pdf) | [notes with answers](pdf/stellar-evolution-answers.pdf) | |
 | Stellar Populations | [notes](pdf/stellar-populations.pdf) | [notes with answers](pdf/stellar-populations-answers.pdf) | |
 | Stellar Dynamics | [notes](pdf/dynamics.pdf) | [notes with answers](pdf/dynamics-answers.pdf) | [Jupyter answers](notebooks/dynamics.html) |

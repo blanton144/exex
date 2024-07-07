@@ -29,8 +29,8 @@ f_\nu = \int {\rm d}\Omega I_\nu \cos\theta.
 \end{equation}
 A special unit for flux density (mostly in use in radio astronomy) is
 the Jansky, which is $10^{-23}$ erg s$^{-1}$ cm$^{-2}$
-Hz$^{-1}$. Sometimes the flux density is also called the {\it spectral
-  energy distribution}.
+Hz$^{-1}$. Sometimes the flux density as a function of wavelength or
+frequency is also called the {\it spectral energy distribution}.
 
 The electromagnetic wave can also be expressed in terms of
 photons. The energy of photons correspond to a wavelength of light:
@@ -126,6 +126,7 @@ pass. It can be expressed in terms of a model for $f_\nu$ or
 $f_\lambda$ of the object and $g_\nu$ or $g_\lambda$ of the standard
 source:
 \begin{eqnarray}
+\label{eq:maggies}
   \mu_b &=&
   \frac{\int {\rm d}\nu (f_\nu(\nu)/\nu) R_b(\nu)}
        {\int {\rm d}\nu (g_\nu(\nu)/\nu) R_b(\nu)} \cr
@@ -139,9 +140,9 @@ the output signal of the instrument in band $b$. This formula is the
 same for photon-counting and energy-counting devices, though note that
 for the latter instrumentalists typically report a definition of
 $R(\lambda)$ or $R(\nu)$ which is the contribution of an amount of
-energy to the signal rather than that of a photon; therefore the
-$R(\lambda)$ or $R(\nu)$ so defined needs to be transformed into
-per-photon units.
+energy to the signal rather than that of a photon; therefore to use
+Equation (\ref{eq:maggies}) the $R(\lambda)$ or $R(\nu)$ so defined
+needs to be transformed into per-photon units.
 
 Typical choices of $g_\nu$ are the spectrum of Vega (which is only
 known to a few percent accuracy in the optical and near-infrared) and
@@ -158,7 +159,9 @@ The classical astronomical {\it magnitude} is defined as:
 m = -2.5 \log_{10} \mu
 \end{equation}
 The bright end of this system corresponds roughly to the original
-magnitude system developed by astronomers in the ancient world.
+magnitude system developed by astronomers in the ancient world. That
+this remains true is a testament to the near fanatical commitment to
+backwards compatibility that characterizes many astronomers.
 
 The luminosity is often expressed as the {\it absolute magnitude},
 which is defined as the magnitude the object would have were it at
@@ -215,6 +218,7 @@ naturally an uncertain quantity.
 \item $\nu \sim 1$ GHz for $\lambda \sim 1$ m.
 \item $m_{V, {\rm Vega}} \sim 0$ mag.
 \item $M_{V, \odot} \sim 5$ mag.
+\item $M_{V, {\rm Milky Way}} \sim -20$ mag.
 \end{itemize}
 
 \section{Key References}
@@ -282,7 +286,12 @@ So the flux of photons is:
 \frac{\dot N}{A} = \frac{f_\nu \Delta\nu}{h\nu} \sim 
 10^4 \mathrm{~s}^{-1} \mathrm{~cm}^{-2}.
 \end{equation}
-If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$ s$^{-1}$. 
+If $A \sim \pi r^2 \sim 0.2$ cm$^2$ then $\dot N \sim 2000$
+s$^{-1}$.
+
+Note that your retina is a very efficient detector---at low flux
+levels it detects pretty much every photon that hits it---and 2000 is
+a lot of photons per second. Why are these stars so hard to see?
 \end{answer}
 
 \item How much does surface brightness dimming change the magnitudes
@@ -394,9 +403,10 @@ D_L = (1+z)^2 D_A
   Gaussian corresponding to $R\sim 1000$ and plot it.
 \item Plot $D_L$ versus $z$ based on the equations found
   in \citet{hogg99cosm}, for a flat $\Lambda$CDM cosmology with
-  $\Omega_m = 0.3$ and $H_0 = 70$ km s$^{-1}$ Mpc$^{-1}$. Determine
-  where the difference in inferred luminosity of an object, relative
-  to assuming $D_L = cz / H_0$, would reach 1\%. 
+  $\Omega_m = 0.3$ and $H_0 = 70$ km s$^{-1}$ Mpc$^{-1}$. Determine at
+  what redshift the difference between the actuall inferred luminosity
+  of an object, and the luminosity assuming $D_L = cz / H_0$, would
+  reach 1\%.
 \item Download the filter curve for the SDSS $g$ and $r$
   bands. Calculate the observed $g$ and $r$ band magnitudes
   corresponding to a galaxy spectrum (say for some galaxy with $z \sim
@@ -420,7 +430,8 @@ D_L = (1+z)^2 D_A
   web site}), find an X-ray image of the center of the galaxy NGC
   1068. Compare this to the X-ray image of the center of the galaxy
   NGC 3992. Use the hardest (highest energy) band available from the
-  Position Sensitive Proportional Counter (PSPC) images
+  Position Sensitive Proportional Counter (PSPC) images. {\bf And
+  eROSITA}
 \end{enumerate}
 
 \bibliographystyle{apj}

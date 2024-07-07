@@ -15,7 +15,7 @@ $M_\odot = 2\times 10^{33}$ g and its radius is $R_\odot = 0.7 \times
 typically {\it parsecs} ($\approx 2 \times 10^5$ AU, or about 3.3
 lightyears) away.
 
-\citet{blandhawthorn16a} describes the Milky Way galaxy. The Sun
+\citet{blandhawthorn16a} reviews what we know of  the Milky Way galaxy. The Sun
 orbits the Galaxy in a roughly circular orbit at about 8.5 kpc from
 the center, with a velocity of $\sim 220$ km s$^{-1}$, along with most
 stars in the Milky Way's disk. The Milky Way visible by eye in the
@@ -38,11 +38,12 @@ fraction of a micron in size. This dust reddens and extincts light
 passing through it. Using infrared satellite observations of 100
 $\mu$m emission from this cold dust, we have estimates of the amount
 of dust in front of any object outside of our galaxy
-(\citealt{schlegel98a}). All extragalactic observations must be
-corrected for this effect. Near the Galactic Plane, the dust
-extinction is extremely high, causing the {\it Zone of Avoidance} for
-galaxy maps. The dust greatly hinders study of the Milky Way disk in
-the optical, making objects fainter and very difficult to correct.
+(\citealt{schlegel98a}), and even coarse three-dimensional maps of the
+dust. All extragalactic observations must be corrected for this
+effect. Near the Galactic Plane, the dust extinction is extremely
+high, causing the {\it Zone of Avoidance} for galaxy maps. The dust
+greatly hinders study of the Milky Way disk in the optical, making
+objects fainter and very difficult to correct.
 
 The galaxy exists within the deep potential well of a {\it dark
   matter} halo, which is only detectable today through its
@@ -55,14 +56,18 @@ interacts with baryonic matter primarily gravitationally.
 
 The nearest galaxies to the Milky Way are its {\it dwarf galaxy}
 satellites (\citealt{mcconnachie12a}), the largest of which are the
-Large and Small Magellanic Clouds (LMC and SMC). These two satellites
-are visible from the Southern Hemisphere with the naked eye. They are
+Large and Small MCs (LMC and SMC)\footnote{Known commonly still as the
+Magellanic Clouds, a name falling into disfavor because Magellan did
+not discover, characterize, or ever even remark upon the Clouds, and
+furthermore was not a terrific person.}. These two satellites are
+visible from the Southern Hemisphere with the naked eye. They are
 about 10\% and 1\% of the Milky Way's luminosity and are about 50 kpc
 away, and therefore within the Milky Way's dark matter halo. Many
 dozens of other satellites are known.
 
 The nearest galaxy of comparable size to the Milky Way is Messier 31,
-also known as M31 or Andromeda. It is about 800 kpc away, and moving
+also known as M31 or Andromeda (the last name deriving from the
+constellation it is found in). It is about 800 kpc away, and moving
 toward the Milky Way, indicating the two are part of a bound group
 that will eventually merge. M31 is somewhat more luminous then the
 Milky Way and differs in a number of important details, most obviously
@@ -70,8 +75,8 @@ having a larger bulge relative to its disk.
 
 There are nearly a billion other detected galaxies, and the census of
 galaxies suggests there are hundreds of billions total in the
-observable universe. They have a mean separation of a few Mpc, but are
-not uniformly distributed. Instead they exist in dense clusters,
+observable universe. They have a mean separation of $\sim 5$ Mpc, but
+are not uniformly distributed. Instead they exist in dense clusters,
 connected by filaments and walls, with void regions in between. These
 large scale structure form from initial primordial density
 fluctuations through gravitational growth. The galaxies have a range
@@ -99,7 +104,7 @@ be derived through the {\it virial relation}, which dimensionally is:
 v^2 \sim \frac{GM}{R}
 \end{equation}
 for characteristic velocity $v$, mass $M$, and radius $R$. Stellar
-dynamics theory yields a {\it virial theorem}, which define more
+dynamics theory yields a {\it virial theorem}, which defines more
 precisely what we mean by these characteristic quanties. The virial
 theorem can be quantified as $U = -2 K$, where $U$ is the total
 potential energy and $K$ is the total kinetic energy.
@@ -219,7 +224,8 @@ $10^{10}$ in the Milky Way indicates that the total rate of encounters
 is of order unity per 10 billion years.
 \end{answer}
 \item Use dimensional analysis to derive the virial relationship
-between size and mass in an equilibrium gravitating system.
+among characteristic size, mass, and velocity in an equilibrium
+gravitating system.
 
 \begin{answer}
 A gravitating system has a characteristic radius $R$, mass $M$, and
@@ -286,6 +292,53 @@ which up to a factor of order unity is the virial relation.
     the current time, these two effects tend to cancel and the above
     estimate of the universe's age is correct to better than 5\%.
   \end{answer}
+\item Estimate the cosmic mass density in g cm$^{-3}$ of stars and of dark matter
+    due to galaxies like the Milky Way, using the mean separation
+    quoted above. Compare to the closure density in General Relativity
+    of $\rho_c = 3H_0^2 / 8\pi G$.
+
+    \begin{answer} If the mass of one galaxies in stars or dark
+    matter is denoted $M$, and their mean separation denoted $d$, the
+    density for baryons or dark matter will be:
+    \begin{equation}
+    \rho \sim \frac{M}{d^3}
+    \end{equation}
+    For stars:
+    \begin{eqnarray}
+    \rho
+    &\sim& \frac{3 \times 10^{10} M_\odot}{\left(5 {\rm
+    ~Mpc}\right)^3} \cr
+    &\sim& \frac{6 \times 10^{43} {\rm ~g}}{\left(1.5 \times 10^{25} {\rm ~cm}\right)^3} \cr
+    &\sim& \frac{6 \times 10^{43} {\rm ~g}}{3.4 \times 10^{75} {\rm
+    ~cm}^3} \cr
+    &\sim& 2 \times 10^{-32} {\rm ~g} {\rm cm}^{-3}
+    \end{eqnarray}
+    And for $M\sim 10^{12} M_\odot$ for the dark matter we find:
+    \begin{equation}
+    \rho \sim 6 \times 10^{-31} {\rm ~g} {\rm cm}^{-3}.
+    \end{equation}
+
+    Meanwhile, using the calculation in the previous prohlem that
+    $H_0 \sim (4.3 \times 10^{17} {\rm
+    ~s})^{-1}$:
+    \begin{eqnarray}
+     \rho_c &\sim& \frac{3}{8 \pi \left(4.3 \times
+     10^{17} {\rm ~s}\right)^2 \left(6.67 \times 10^{-8} {\rm ~cm}^3
+      {\rm ~g}^{-1} {\rm ~s}^{-2}\right)} \cr
+      &\sim& 10^{-29} {\rm ~g} {\rm ~cm}^{-3}
+    \end{eqnarray}
+
+    So galaxies like the Milky Way are not enough to close the
+    universe, by a fairly long shot (about a factor of
+    15--20). Something like this was pointed out as early as the early
+    1970s (\cite{gott74a}). Of course this was not nearly enough
+    evidence to conclude that the universe is open or
+    $\Lambda$-dominated---the mass could have been hiding in very
+    faint galaxies (which it turns out do have much higher total
+    mass-to-light ratios) or in the outer regions of galaxies. This
+    increases the crude estimate above by a factor of about 5, we now
+    know, not enough for the universe's mass density to be
+    critical.  \end{answer}
 \end{enumerate}   
 
 %\section{Numerical and Data Exercises}
