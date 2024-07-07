@@ -2,7 +2,7 @@ Please read the following documents related to this class:
 
  * [Syllabus](pdf/syllabus.pdf)
  * [Introduction](pdf/intro.pdf) 
- * [Slides (on Dropbox)](https://www.dropbox.com/sh/97mr5mt9u6cyay8/AADPxv1XZh0k97chEPJr8hWFa?dl=0).
+ * [Slides (on Google Drive)](https://drive.google.com/drive/folders/1M7fAwuOwLCsNzZZkeDDtHR234Ho3S_xf?usp=sharing).
 
 | Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) | |
 | Light I | [notes](pdf/light-1.pdf) | [notes with answers](pdf/light-1.pdf) | [Jupyter answers](notebooks/light-1.html) |
