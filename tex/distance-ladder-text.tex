@@ -9,21 +9,61 @@ refined over the past century.
 
 The distance ladder begins with the measurement of {\it parallax},
 which is the apparent motion of sufficiently nearby stars due to the
-motion of the Earth around the Sun. Precise measurements of stars over
-time in a fixed reference frame yield {\it proper motions} and
-parallax-based distances. Most recently, the Gaia satellite has
-provided a large sample of stars with measured parallaxes reaching
-across our Galaxy.
+motion of the Earth around the Sun. A {\it parsec} is the distance at
+which the parallax angle caused by a 1 AU projected separation is 1
+arcsec.  Precise measurements of stars over time in a fixed reference
+frame yield {\it proper motions} and parallax-based distances. Most
+recently, the Gaia satellite has provided a large sample of stars with
+measured parallaxes reaching across our Galaxy.
 
 To reach distances outside our galaxy, we must rely on less direct
-measurements of distance. Usually this involves finding objects or
-phenomena that have pairs of observables with a known relation but
-with different dependences on distance.
+measurements of distance. There are some methods that can be thought
+of as ``geometry-and-physics-based.'' Others are standard candles or
+standard rules, phenomena that have pairs of observables with a known
+intrinsic relation but with different dependences on distance.
 
-Many of these techniques fall into the {\it standard candle} category:
-a luminosity is estimated by some means, and a flux is measured, and
-the distance is inferred from the inverse-square law $f=L/4\pi D^2$.
-The most prominent standard candles are:
+Among the important methods based tightly on geometry and physics, I
+will discuss eclipsing binaries, masers, and gravitational waves:
+\begin{itemize}
+\item Some binary stars, like Algol, eclipse each other during their
+orbit. Their light curve alone yields a period $P$ and their radii
+relative to the orbit size, $r_1/a$ and $r_2/a$ for any given
+eccentricity and phase of eclipse. If both their spectra can also be
+measured, this can yield velocities, which yields enough information
+to determine their total mass $M$, eccentricity $e$, and the
+line-of-sight semimajor axis of the orbit $a \sin i$. For eclipsing
+binaries $i\approx 90^\circ$. So, for example, for a circular orbit
+$\Delta v_{\rm max} = 2\pi a / P$; the analysis is more complex for
+elliptical orbits but not less constraining.  Thus, from gravitational
+and geometric considerations, you can determine the sizes of the
+stars. Spectra can yield constraints on their surface
+temperatures. The sizes and temperatures determines the luminosities,
+which combined with fluxes determines the distance.
+\item Under certain conditions the supermassive
+black holes at the centers of galaxies may contain H$_2$O
+masers. Under even more special conditions, these systems can be
+sufficiently clean that one may measure velocities and accelerations
+over time of clouds in circular orbits, which yields a physical
+distance. Combined , this combination yields the mass of the black
+hole and the distance. Only one clean enough system is known, about 8
+Mpc away in NGC 4258. In this case, the foreground clumps'
+acceleration yields $GM/r^2$, and the transverse clumps' velocities
+yield $GM/r$; the combination can then yield both $M$ and $r$, and the
+angular size then implies a distance $D$. The largest error in this
+case is associated with the inclination of the system.
+\item Colliding compact objects whose gravitational waves are detected can
+yield constraints on distance from the gravitational waveform, because
+the total mass of the system is related to both the waveform frequency
+and the total energy. If the redshift is known from an electromagnetic
+counterpart, then the rest-frame waveform frequency can be determined,
+and the object can be placed on the redshift-distance relation
+(\citealt{holz18a}).
+\end{itemize}
+
+Many other techniques fall into the {\it standard candle} category: a
+luminosity is estimated by some means, and a flux is measured, and the
+distance is inferred from the inverse-square law $f=L/4\pi D^2$.  The
+most prominent standard candles are:
 \begin{itemize}
 \item {\it RR Lyrae} variable stars. These stars are relatively low mass
   horizontal branch stars. They vary due to the $\kappa$ mechanism,
@@ -51,10 +91,15 @@ The most prominent standard candles are:
   giant branch that can be used as a standard candle.
 \item {\it Type Ia supernovae}. These supernovae result from the
   nuclear detonation of white dwarfs, probably due to accretion from
-  or collision with a binary companion. The Phillips relation connects
-  the time scale of the supernova light curve to the luminosity of the
-  supernova. These sources were used to provide the first definitive
-  evidence for the existence of cosmic acceleration.
+  or collision with a binary companion. Although for many years the
+  theoretical scenario involved a red giant accreting onto a white
+  dwarf until it exceeded the Chandrasekhar mass (the {\it
+  single-degenerate} scenario), nowadays the favored scenario involves
+  two white dwarfs (the {\it double-degenerate} scenario). The
+  Phillips relation connects the time scale of the supernova light
+  curve to the luminosity of the supernova. These sources were used to
+  provide the first definitive evidence for the existence of cosmic
+  acceleration.
 \end{itemize}
 Historically, a number of other distance measurements have also been
 used that could be categorized as standard candle distances. Some
@@ -66,38 +111,6 @@ luminosity, size, and velocity dispersion. The difficulty in
 implementing these methods in a way that is free of systematic errors
 generally has led to the use of supernovae for the most recent
 measurements of the distance ladder.
-
-Several other standard candle techniques prove useful, or may soon do
-so. I will discuss eclipsing binaries, masers, and gravitational
-waves:
-\begin{itemize}
-\item Some binary stars, like Algol, eclipse each other during their
-orbit. Their light curve alone yields a period $P$ and their radii
-relative to the orbit size, $r_1/a$ and $r_2/a$ for any given
-eccentricity and phase of eclipse. If both their spectra can also be
-measured, this can yield velocities, which yields enough information
-to determine their total mass $M$, eccentricity $e$, and the
-line-of-sight semimajor axis of the orbit $a \sin i$.  For eclipsing
-binaries $i\approx 90^\circ$.  Thus, from gravitational and geometric
-considerations, you can determine the sizes of the stars. Spectra can
-yield constraints on their surface temperatures. The sizes and
-temperatures determines the luminosities, which combined with fluxes
-determines the distance.
-\item Under certain conditions the supermassive
-black holes at the centers of galaxies may contain H$_2$O
-masers. Under even more special conditions, these systems can be
-sufficiently clean that one may measure velocities and accelerations
-over time of clouds in circular orbits, which yields a physical
-distance. Combined , this combination yields
-the mass of the black hole and the distance. Only one clean enough
-system is known, about 8 Mpc away in NGC 4258.
-\item Colliding compact objects whose gravitational waves are detected can
-yield constraints on distance from the gravitational waveform, because
-the total mass of the system is related to both the waveform frequency
-and the total energy. If the redshift is known from an electromagnetic
-counterpart, then the rest-frame waveform frequency can be determined,
-and the object can be placed on the redshift-distance relation.
-\end{itemize}
 
 A major application of these methods is to compare the redshifts and
 distances of local galaxies. This comparison led Hubble to the Hubble
@@ -234,7 +247,7 @@ challenging and expensive to do!!).
 
 \item If the typical peculiar velocity of a galaxy is $\sim 300$ km
     s$^{-1}$, at what redshift does its contribution to the distance
-   error drop below 5\%?
+   error drop below 5\% of the distance?
 \item Based on their luminosities, what are the relative distances to
    which you should be able to determine distances to RR Lyrae,
    TRGB stars, Cepheids, and SN Type Ia?
