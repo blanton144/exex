@@ -4,9 +4,9 @@ Please read the following documents related to this class:
  * [Introduction](pdf/intro.pdf) 
  * [Slides (on Google Drive)](https://drive.google.com/drive/folders/1M7fAwuOwLCsNzZZkeDDtHR234Ho3S_xf?usp=sharing).
 
-| Inventory | [notes](pdf/inventory.pdf) | 
-| Light I | [notes](pdf/light-1.pdf) | 
-| Light II | [notes](pdf/light-2.pdf) | 
+| Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) |  |
+| Light I | [notes](pdf/light-1.pdf) |  [notes with answers](pdf/light-1-answers.pdf) | [Jupyter answers](notebooks/lights-2.ipynb) |
+| Light II | [notes](pdf/light-2.pdf) |  [notes with answers](pdf/light-2-answers.pdf) | [Jupyter answers](notebooks/light-2.ipynb) |
 | Telescopes | [notes](pdf/telescopes.pdf) | 
 | Atmosphere | [notes](pdf/atmosphere.pdf) | 
 | Detectors | [notes](pdf/detectors.pdf) | 
