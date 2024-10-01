@@ -293,6 +293,45 @@ We begin with the Planck spectrum:
   true electron mass being replaced by the {\it reduced mass}. Given
   this understanding, how should the spectrum of deuterium compare to
   the spectrum of hydrogen?
+
+\begin{answer}[Author: Paul Demidov]
+We assume that we are only concerned with Coulomb forces, we
+approximate $m_p \approx m_n$, and we still treat the nucleus of
+deuterium as a point particle, just of a large mass particle. Then
+we can compare the reduced mass of the electron for hydrogen:
+\begin{equation}
+\mu_{e, H} = \frac{m_p m_e}{m_p + m_e}
+\end{equation}
+to that of deuterium:
+\begin{equation}
+\mu_{e, D} = \frac{2 m_p m_e}{2 m_p + m_e}
+\end{equation}
+Then:
+\begin{equation}
+\frac{\mu_{e, D}}{\mu_{e, H}} = \frac{2(m_p + m_e)}{2m_p + m_e}
+= \frac{(1 + m_e/m_p)}{1 + m_e / 2 m_p}
+\approx 1 + \frac{m_e}{m_p} - \frac{1}{2} \frac{m_e}{m_p}  = 1
++ \frac{1}{2} \frac{m_e}{m_p}
+\end{equation}
+The reduced mass is what should appear in the Bohr formula for the
+energy levels of the electron:
+\begin{equation}
+E_n = - \frac{\mu e^4}{2 \hbar^2} \frac{1}{n^2}
+\end{equation}
+Since $m_e/m_p\sim 5\times 10^{-3}$, all of the energy levels get deeper by a
+factor $\sim 2.5\times 10^{-4}$, and all of the transitions will be
+different in energy by that factor. The photons are then
+correspondingly shorter in wavelength (or higher in frequency). For
+example, the Lyman-$\alpha$ transition that in vacuum is normally
+1215.7 \AA becomes 1215.4 \AA. Note that this is {\it much} bigger
+than the fine structure splitting of this line.
+
+There is observational relevance of this shift, since high resolution
+measurements of Lyman-$\alpha$ in absorption at high redshift allows a
+measurement of the deuterium-to-hydrogen abundance ratio, which can be
+tied to Big Bang Nucleosynthesis, and is part of the evidence that the
+baryonic density is much lower than $\Omega_m$ (\citealt{burles98a}). 
+\end{answer}
 \end{enumerate}
 
 \section{Numerics and Data Exercises}

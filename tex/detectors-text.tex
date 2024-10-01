@@ -296,19 +296,22 @@ over an ensemble. This will tell us what the bias in this estimator
 is. We find:
 \begin{equation}
 \left\langle {\hat n} \right\rangle
-= \frac{N}{\left\langle \sum_{i=1}^N 1 / n_i \right\rangle}
-= \frac{1}{\left\langle 1/n\right\rangle},
+= \left\langle \frac{N}{\sum_{i=1}^N 1 / n_i} \right\rangle
 \end{equation}
+This is a fairly problematic expectation value. First, we can't easily
+calculate it. Second, for a true Poisson distribution, the value of
+$\langle 1/n\rangle$ is problematic because of cases when $n=0$. It is
+probably a bad idea to weight your data by the inverse variance if
+your estimate for the variance is zero. In the Jupyter notebook we
+treat this case, assuming our data analyst sets $\sigma_i^2 = 1$ when
+$n_i=0$, which is, well, pretty common practice.
+
+To proceed with our analysis, we have to make some approximations. Let
+us approximate the Poisson distribution.
 where the last step uses the fact that all of the observations are
 equivalent, so the expectation value of $1/n_i$ is the same for all of
 them. 
 
-Now for a true Poisson distribution, the value of $\langle 1/n\rangle$
-is problematic because of cases when $n=0$. It is probably a
-bad idea to weight your data by the inverse variance if your estimate
-for the variance is zero. In the Jupyter notebook we treat this case,
-assuming our data analyst sets $\sigma_i^2 = 1$ when $n_i=0$, which
-is, well, pretty common practice.
 
 For large $\bar n$, we can approximate the Poisson distribution as a
 Gaussian and find an approximate solution which is pretty good for
