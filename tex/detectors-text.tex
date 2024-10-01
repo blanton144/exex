@@ -292,12 +292,12 @@ n_i$ to estimate the variance, we find:
 \end{equation}
 
 We can ask what the expectation value of this estimate is by averaging
-over an ensemble. This will tell us what the bias in this estimator
-is. We find:
+over an ensemble:
 \begin{equation}
 \left\langle {\hat n} \right\rangle
 = \left\langle \frac{N}{\sum_{i=1}^N 1 / n_i} \right\rangle
 \end{equation}
+
 This is a fairly problematic expectation value. First, we can't easily
 calculate it. Second, for a true Poisson distribution, the value of
 $\langle 1/n\rangle$ is problematic because of cases when $n=0$. It is
@@ -306,47 +306,78 @@ your estimate for the variance is zero. In the Jupyter notebook we
 treat this case, assuming our data analyst sets $\sigma_i^2 = 1$ when
 $n_i=0$, which is, well, pretty common practice.
 
-To proceed with our analysis, we have to make some approximations. Let
-us approximate the Poisson distribution.
-where the last step uses the fact that all of the observations are
-equivalent, so the expectation value of $1/n_i$ is the same for all of
-them. 
-
-
-For large $\bar n$, we can approximate the Poisson distribution as a
-Gaussian and find an approximate solution which is pretty good for
-$\bar n>10$ or so. We write:
+To proceed with our analysis, we have to make some
+approximations. We are going to use the rules for expanding
+moments of distributions. E.g. if we have some variate $y$ whose
+moments we know, we can estimate the moments of $f(y)$ as:
 \begin{eqnarray}
-\left\langle \frac{1}{n} \right\rangle
-&=& \frac{1}{\sqrt{2\pi} \sigma} \int_{-\infty}^{\infty} {\rm
-d}n \frac{1}{n} \exp\left(- (n - {\bar n})^2 / 2\sigma^2\right).
+ \langle f(y) \rangle &=& \langle y \rangle + \frac{1}{2}
+ f''(\langle y \rangle)
+ \left\langle \left(y - \langle y \rangle\right)^2 \right\rangle\cr
+ \left\langle \left( f(y) - \langle f(y) \rangle\right)^2 \right\rangle &=&
+ \left[f'(\langle y \rangle)\right]^2 
+ \left\langle \left(y - \langle y \rangle\right)^2 \right\rangle -
+ \frac{1}{4} \left[f''(\langle y \rangle)\right]^2 
+ \left\langle \left(y - \langle y \rangle\right)^2 \right\rangle^2
 \end{eqnarray}
-Then in the integral we Taylor expand $1/n$ around $\bar n$:
+These rules follow more-or-less straightforwardly from Taylor
+expanding $f(y)$ around $\langle y \rangle$ and taking the moments.
+
+In our case we write:
 \begin{equation}
-\frac{1}{n} \approx \frac{1}{\bar n}
-- \frac{1}{{\bar n}^2}\left(n - {\bar n}\right)
-+ \frac{1}{{\bar n}^3}\left(n - {\bar n}\right)^2 + \ldots
+ y = \frac{1}{N} \sum_{i=1}^N \frac{1}{n_i}
 \end{equation}
-The first term just integrates to $1/{\bar n}$. The second term is odd
-around ${\bar n}$ so integrates to zero. The third term integrates to:
+and 
 \begin{equation}
-\frac{1}{\sqrt{2\pi} \sigma} \frac{1}{{\bar n}^3} 
-\int_{-\infty}^{\infty} {\rm d}n \left(n - {\bar
-n}\right)^2 \exp\left(- (n - {\bar n})^2 / 2\sigma^2\right).
+ \hat n = f(y) = \frac{1}{y}
 \end{equation}
-This is a known definite integral and we then find, substituting
-$\sigma^2 = {\bar n}$, that this term is just $1/{\bar n}^2$. So then
-combining the first and third terms:
+
+Then we can write:
 \begin{equation}
-\left\langle \frac{1}{n} \right\rangle \approx \frac{1}{\bar
-n} \left(1 + \frac{1}{\bar n}\right)
+\langle \hat n \rangle \approx
+\frac{1}{\langle y \rangle}
+\left[ 1 + \frac{\left\langle \left(y - \langle
+y \rangle\right)^2 \right\rangle}
+{\langle y \rangle^2} \right]
 \end{equation}
-and therefore
+
+We now need the mean and variance of $y$. Since all of the $n_i$ are
+drawn from the same distribution, then the expectation value of $y$ is
+just the same as the expectation value of one of them, which we can
+write as follows, using the same approximation for $y(n)$ as we did
+for $f(y)$:
 \begin{equation}
-\left\langle {\hat n} \right\rangle
-= \frac{1}{\left\langle 1/n\right\rangle} \approx {\bar n}
-\left(1 - \frac{1}{\bar n}\right).
+\langle y\rangle = \left\langle \frac{1}{n} \right\rangle
+\approx \frac{1}{\bar n} \left[1+ \frac{\left\langle \left(n - \bar
+n\right)^2\right\rangle}{\bar n^2}\right]
+= \frac{1}{\bar n} \left[ 1 + \frac{1}{\bar n}\right]
 \end{equation}
+
+The variance of $y$ will obey:
+\begin{equation}
+{\rm Var}(y; N) = \frac{1}{N} {\rm Var}(y; N=1)
+\end{equation}
+Using the above rule for the Taylor expansion of the second moment,
+applied to the function $y(n)$:
+\begin{eqnarray}
+\left\langle \left( y - \langle y \rangle \right)^2 \right\rangle
+&\approx& \left[y'(\bar n)\right]^2  \bar n - \frac{1}{4} \left[y''(\bar
+n)\right]^2 \bar n^2 \cr
+&=& \frac{1}{\bar n^3} \left(1 - \frac{1}{\bar n}\right)
+\end{eqnarray}
+
+Putting this together, and keeping only the lowest orders, we find:
+\begin{eqnarray}
+ \langle \hat n \rangle &\approx&
+\bar n \left[ 1 + \frac{1}{\bar n}\right]^{-1}
+\left[ 1 + \frac{1}{N} \frac{(1/\bar n^3) \left(1 - 1 / \bar n\right)}
+{(1/\bar n^2) \left(1 + 1/\bar n\right)^2} \right] \cr
+ &=&
+\bar n \left[ 1 + \frac{1}{\bar n}\right]^{-1}
+\left[ 1 + \frac{1}{N} \frac{1}{\bar n} \frac{1 - 1 / \bar n}
+{\left(1 + 1/\bar n\right)^2} \right]
+\end{eqnarray}
+
 The Jupyter notebook shows this result compared to the full Poisson
 calculation, showing that the approximation becomes reasonable
 (i.e. close to the right answer relative to the bias itself) at ${\bar
