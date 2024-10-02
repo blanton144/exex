@@ -239,8 +239,8 @@ accounted for percent level calibration accuracy.
 \item
     Perform the same test with sinc interpolation.
 \item Perform the same test with a ``damped'' version of sinc
-    interpolation, which multiplies the kernel by a broad Gaussian
-    (say, a few FWHM broad).
+    interpolation, which multiplies the kernel by a broader sinc
+    function; the Lanczos kernel.
 \end{enumerate}
 \item CCD images from SDSS are available
 as \href{https://www.sdss.org/dr14/imaging/images/#corr}{corrected
@@ -267,10 +267,6 @@ the center to perform a quadratic interpolation to find the peak.
 evaluate how the precision of each estimate depends on the total $S/N$
 within 3 FWHM.
 \end{enumerate}
-\item It is common to use the measured signal from a Poisson process
-to estimate the noise. Use a Monte Carlo technique to estimate the
-bias that this causes as a function of the expectation value $\bar N$
-for the Poisson process.
 \end{enumerate}
 
 \bibliographystyle{apj}
