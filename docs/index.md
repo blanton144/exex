@@ -7,9 +7,9 @@ Please read the following documents related to this class:
 | Inventory | [notes](pdf/inventory.pdf) | [notes with answers](pdf/inventory-answers.pdf) |  |
 | Light I | [notes](pdf/light-1.pdf) |  [notes with answers](pdf/light-1-answers.pdf) | [Jupyter answers](notebooks/lights-2.ipynb) |
 | Light II | [notes](pdf/light-2.pdf) |  [notes with answers](pdf/light-2-answers.pdf) | [Jupyter answers](notebooks/light-2.ipynb) |
-| Telescopes | [notes](pdf/telescopes.pdf) | 
-| Atmosphere | [notes](pdf/atmosphere.pdf) | 
-| Detectors | [notes](pdf/detectors.pdf) | 
+| Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) | [Jupyter answers](notebooks/telescopes.ipynb) |
+| Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) | [Jupyter answers](notebooks/atmosphere.ipynb) |
+| Detectors | [notes](pdf/detectors.pdf) | [notes with answers](pdf/detectors-answers.pdf) | [Jupyter answers](notebooks/detectors.ipynb) |
 | Images | [notes](pdf/images.pdf) | 
 | Spectra | [notes](pdf/spectra.pdf) | 
 | Distance ladder | [notes](pdf/distance-ladder.pdf) | 
