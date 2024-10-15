@@ -10,10 +10,10 @@ Please read the following documents related to this class:
 | Telescopes | [notes](pdf/telescopes.pdf) | [notes with answers](pdf/telescopes-answers.pdf) | [Jupyter answers](notebooks/telescopes.ipynb) |
 | Atmosphere | [notes](pdf/atmosphere.pdf) | [notes with answers](pdf/atmosphere-answers.pdf) | [Jupyter answers](notebooks/atmosphere.ipynb) |
 | Detectors | [notes](pdf/detectors.pdf) | [notes with answers](pdf/detectors-answers.pdf) | [Jupyter answers](notebooks/detectors.ipynb) |
-| Images | [notes](pdf/images.pdf) | 
-| Spectra | [notes](pdf/spectra.pdf) | 
-| Distance ladder | [notes](pdf/distance-ladder.pdf) | 
-| Cosmology | [notes](pdf/cosmology.pdf) | 
+| Images | [notes](pdf/images.pdf) | [notes with answers](pdf/images-answers.pdf) | [Jupyter answers](notebooks/images.ipynb) |
+| Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) | [Jupyter answers](notebooks/spectra.ipynb) |
+| Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter answers](notebooks/distance-ladder.ipynb) |
+| Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | [Jupyter answers](notebooks/cosmology.ipynb) |
 | Structure Formation | [notes](pdf/structure.pdf) | 
 | Galaxies | [notes](pdf/galaxies.pdf) | 
 | Resolved Stellar Surveys | [notes](pdf/stellar-resolved.pdf) | 
