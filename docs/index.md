@@ -14,7 +14,7 @@ Please read the following documents related to this class:
 | Spectra | [notes](pdf/spectra.pdf) | [notes with answers](pdf/spectra-answers.pdf) | [Jupyter answers](notebooks/spectra.ipynb) |
 | Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter answers](notebooks/distance-ladder.ipynb) |
 | Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | [Jupyter answers](notebooks/cosmology.ipynb) |
-| Structure Formation | [notes](pdf/structure.pdf) | 
+| Structure | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | [Jupyter answers](notebooks/structure.ipynb) |
 | Galaxies | [notes](pdf/galaxies.pdf) | 
 | Resolved Stellar Surveys | [notes](pdf/stellar-resolved.pdf) | 
 | Stellar Evolution | [notes](pdf/stellar-evolution.pdf) | 
