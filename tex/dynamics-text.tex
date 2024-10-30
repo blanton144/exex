@@ -451,11 +451,13 @@ where $v$ is the typical velocity of a particle.
 \begin{enumerate}
 \item What does the virial theorem tell us about the crossing time
 $t_c$?
+`
 \begin{answer}
 The typical velocity is defined by the virial relation $v^2\sim GM/R$,
 so the crossing time is $R^{3/2}/M^{1/2}$ (related, as it needs to be,
 by the square root of the density).
 \end{answer}
+
 \item \label{q:deflection}
 Imagine two particles of mass $m$ passing by each other with
 speed $v$ with an impact parameter $b$, defined as their separation at
@@ -463,30 +465,98 @@ infinity normal to their relative velocity. Argue from a heuristic
 point of view why the velocity perturbation normal to the original
 velocity will scale $\propto Gm/bv$ (in detail it is $\Delta
 v_\perp \approx 2Gm/bv$).
+
 \begin{answer}
 At closest approach the relative acceleration perpendicular to the
 original velocity is $Gm/b^2$, and this closest approach lasts a time
 of order $b/v$. Multiplying these together yields the $Gm/bv$ scaling.
 \end{answer}
+
 \item Consider interactions in some range of impact parameters,
 between $b$ and $b+\dd{b}$. During one crossing time of a particle,
 what is the mean $\langle \delta v_\perp\rangle$ and mean-squared
 $\langle \delta v_\perp^2\rangle$ perturbation that these
 interactions cause on the velocity of the particle perpendicular to
 its motion?
+
+\begin{answer}
+Within $b$ and $b+\dd{b}$ over the course of one crossing, there will
+be a number of interactions:
+\begin{equation}
+n_{\rm inter} = \frac{N}{\pi R^2} 2\pi b \dd{b}
+\end{equation}
+
+The mean $\langle \delta v_\perp\rangle$ over these interactions will
+be zero, because there will be fluctuations in either direction.
+
+But $\langle \delta v_\perp^2\rangle$ adds in quadrature; the
+perpendicular velocity will execute a random walk, and the total
+perturbation in that annulus will be:
+\begin{equation}
+\langle \delta v_\perp^2\rangle n_{\rm inter}
+= \left(\frac{2Gm}{bv}\right)^2 \frac{N}{\pi R^2} 2\pi b \dd{b}
+\end{equation}
+\end{answer}
+
 \item Below $b_{\rm min} = Gm/v^2$ our assumptions break down. We will
 take the perhaps questionable route of ignoring these close
 encounters. Considering only interactions with impact parameters
 between $b_{\rm min}$ and $R$ to express the total
-$langle \delta v_\perp\rangle$ over all encounters in a crossing
+$\langle \delta v_\perp\rangle$ over all encounters in a crossing
 time. Express the result in terms of $\Lambda = R/b_{\rm min}$.
+
+\begin{answer}
+We can integrate over all interactions to get the total perturbation
+across one crossing:
+\begin{equation}
+\langle \Delta v_\perp^2\rangle = \int_{b_{\rm min}}^R  \dd{b}
+\left(\frac{2Gm}{bv}\right)^2 \frac{N}{\pi R^2} 2\pi b
+= \frac{8 N G^2 m^2}{R^2 v^2} \int_{b_{\rm min}}^R \dd{b} \frac{1}{b} 
+= v^2 \frac{8 N b_{\rm min}^2}{R^2} \int_{b_{\rm min}}^R \dd{b} \frac{1}{b} 
+\end{equation}
+where we replace $b_{\rm min} = Gm / v^2$. 
+Then dividing by $v^2$ and performing the integral:
+\begin{equation}
+\frac{\langle \Delta v_\perp^2\rangle}{v^2} =
+\frac{8 N b_{\rm min}^2}{R^2} \ln\frac{R}{b_{\rm min}} = 
+\frac{8 N}{\Lambda^2} \ln\Lambda
+\end{equation}
+using the definition of $\Lambda$.
+\end{answer}
+
 \item Define the relaxation time as the time it takes for the total
 fractional perturbation in velocity to reach unity. How many crossing
 times does it take?
+
+\begin{answer}
+Because the velocity perturbation grows in quadrature, the number of
+crossing times is
+\begin{equation}
+N_{\rm relax} = \frac{v^2}{\langle \Delta v_\perp^2\rangle}
+= \frac{\Lambda^2}{8N \ln \Lambda}
+\end{equation}
+\end{answer}
+
 \item Approximate the answer one step further, using the
 virial theorem to show $\Lambda \sim N$, and thus expressing the
 number of crossings just in terms of $N$.
+
+\begin{answer}
+The virial relation tells us that the typical velocity is set by:
+\begin{equation}
+v^2 \sim \frac{GM}{R} \sim \frac{GN m}{R}
+\end{equation}
+Rearranging:
+\begin{equation}
+N \sim \frac{R v^2}{Gm} \sim \frac{R}{b_{\rm min}} = \Lambda
+\end{equation}
+Therefore:
+\begin{equation}
+N_{\rm relax} = \frac{N}{8 \ln N}
+\end{equation}
+\end{answer}
 \end{enumerate}
+
 \item Show that Liouville's Theorem follows from the collisionless
 Boltzmann equation. 
 \item Verify the expressions for the first-order Jeans Equation. 
