@@ -807,11 +807,12 @@ We will show in a  numerical exercise that we can numerically integrate
 the equations to a better solution by imposing a zero slope at $r=0$
 (but it is still infinite mass).
 \item Tidal radius
+
 \item We will here derive Equation (\ref{eq:chandra}) for the
 Chandrasekhar Dynamical Friction. We will calculate the drag on a
 particle of mass $M$ moving at velocity $\vec{v}_M$ through a system
-of density $\rho$ with a Gaussian velocity dispersion $\sigma$ in each
-Cartesian dimension.
+of density $\rho$ with an isotropic Gaussian velocity dispersion
+$\sigma$ in each Cartesian dimension.
 \begin{enumerate}
 \item We use the same approach for calculating the relaxation
 time. Consider a two-body interaction in the frame of the particle
@@ -850,7 +851,7 @@ Conservation of momentum says it must be:
 
 \item If the particle of mass $M$ travels at velocity $\vec{v}_M$
 through a uniform sea of particles of mass $m$ with a velocity
-distribution $f(\vec{v}_m$, what is its rate of encounters with
+distribution $f(\vec{v}_m)$, what is its rate of encounters with
 particles within some differential $\dd{}^3\vec{v}_m$ around a
 particular velocity $\vec{v}_m$, and within a differential $\dd{b}$
 around impact parameter $b$?
@@ -875,15 +876,43 @@ define:
 \begin{equation}
 \Lambda = \frac{b_{\rm max}v_0^2}{GM} \sim \frac{M_{\rm total}}{M}
 \end{equation}
-where the approximation is from the virial relation. Derive the change
-in $\vec{v}_M$ per unit time from particles around velocity
-$\vec{v}_m$.
+where the approximation is from the virial relation.  As in the case
+of two-body relaxation, we need to set a reasonable lower limit of
+$b_{\rm min} \approx G M / v_0^2$.  Derive the change in
+$\vec{v}_M$ per unit time from particles around velocity $\vec{v}_m$.
 \begin{answer}
 \begin{eqnarray}
-\left.\frac{\dd\vec{v}_M}{\dd{t}} \right|_m  &=&
+\left.\frac{\dd\vec{v}_M}{\dd{t}} \right|_{\vec{v}_m}  &=&
 \vec{v}_0 f(\vec{v}_m) \dd{}^3 \vec{v}_m
-\int_0^{b_{\rm max}} \dd{b} (2\pi b) \frac{2G^2Mm}{b^2 v_0^3} \cr
+\int_{b_{\rm min}}^{b_{\rm max}} \dd{b} (2\pi b) \frac{2G^2Mm}{b^2 v_0^3} \cr
 &=&
+\frac{4 \pi G^2Mm \vec{v}_0}{v_0^3}
+f(\vec{v}_m) \dd{}^3 \vec{v}_m
+\int_{b_{\rm min}}^{b_{\rm max}} \dd{b} \frac{1}{b} \cr
+&=&
+\frac{4 \pi G^2Mm \vec{v}_0}{v_0^3}
+f(\vec{v}_m) \dd{}^3 \vec{v}_m \ln \Lambda
+\end{eqnarray}
+\end{answer}
+\item
+Now we have to integrate this over all velocities. This is easier than
+it appears, because the velocity distribution is isotropic around
+$\vec{v}_m = 0$; i.e. it has spherical symmetry in velocity
+space. Meanwhile the integral is over a kernel of the form
+$1/|\vec{v}_m - \vec{v}_M|^2$. This inverse square form has the
+property that we only need to consider the velocities $v_m < v_M$, as
+Newton showed a long time ago in the case of inverse-square
+gravity. Perform this integral to get the total drag force.
+\begin{answer}
+We have:
+\begin{eqnarray}
+\frac{\dd\vec{v}_M}{\dd{t}} &=&
+\int_0^{v_M} 4\pi \dd{v_m}
+\frac{4\pi G^2 M m}{|v_m - v_M|^2} f(v_m) \ln \Lambda 
+\left(- {\hat v}_M\right)\cr
+&=&
+\frac{4\pi G^2 M \rho \ln \Lambda}{v_M^2}
+\frac{1}{n} \int_0^{v_M} 4\pi \dd{v_m} f(v_m)
 \end{eqnarray}
 \end{answer}
 \end{enumerate}
