@@ -15,10 +15,10 @@ Please read the following documents related to this class:
 | Distance ladder | [notes](pdf/distance-ladder.pdf) | [notes with answers](pdf/distance-ladder-answers.pdf) | [Jupyter answers](notebooks/distance-ladder.ipynb) |
 | Cosmology | [notes](pdf/cosmology.pdf) | [notes with answers](pdf/cosmology-answers.pdf) | [Jupyter answers](notebooks/cosmology.ipynb) |
 | Structure | [notes](pdf/structure.pdf) | [notes with answers](pdf/structure-answers.pdf) | [Jupyter answers](notebooks/structure.ipynb) |
-| Galaxies | [notes](pdf/galaxies.pdf) | 
-| Resolved Stellar Surveys | [notes](pdf/stellar-resolved.pdf) | 
-| Stellar Evolution | [notes](pdf/stellar-evolution.pdf) | 
-| Stellar Populations | [notes](pdf/stellar-populations.pdf) | 
+| Galaxies | [notes](pdf/galaxies.pdf) | [notes with answers](pdf/galaxies-answers.pdf) | [Jupyter answers](notebooks/galaxies.ipynb) |
+| Resolved Stellar Surveys | [notes](pdf/stellar-resolved.pdf) | [notes with answers](pdf/stellar-resolved-answers.pdf) | [Jupyter answers](notebooks/stellar-resolved.ipynb) |
+| Stellar Evolution | [notes](pdf/stellar-evolution.pdf) | [notes with answers](pdf/stellar-evolution-answers.pdf) | [Jupyter answers](notebooks/stellar-evolution.ipynb) |
+| Stellar Populations | [notes](pdf/stellar-populations.pdf) | [notes with answers](pdf/stellar-populations-answers.pdf) | [Jupyter answers](notebooks/stellar-populations.ipynb) |
 | Stellar Dynamics | [notes](pdf/dynamics.pdf) | 
 | Interstellar Medium | [notes](pdf/ism.pdf) | 
 | Emission lines | [notes](pdf/emission-line.pdf) |
