@@ -46,7 +46,7 @@ Liouville's Theorem}:
 where in this case the substantive derivative is:
 \begin{equation}
 \frac{\rm d}{{\rm d}t} = \frac{\partial}{\partial t}
-+ \sum_\alpha \frac{\partial}{\partial w_\alpha}
++ \sum_\alpha \frac{\partial w_\alpha}{\partial t} \frac{\partial}{\partial w_\alpha}
 \end{equation}
 The meaning of Liouville's Theorem is that as a particle travels
 through phase space, the phase space density of particles around it
@@ -559,6 +559,37 @@ N_{\rm relax} = \frac{N}{8 \ln N}
 
 \item Show that Liouville's Theorem follows from the collisionless
 Boltzmann equation. 
+
+\begin{answer}[Author: Valentina Tardugno Poleo]
+The collisionless Boltzmann equation is:
+\begin{equation}
+ \frac{\partial f}{\partial t} + \vec{v}\cdot\vec{\nabla} f -
+\vec{\nabla}\Phi\cdot\frac{\partial f}{\partial \vec{v}} = 0
+\end{equation}
+Meanwhile:
+\begin{eqnarray}
+\label{eq:liouville_show}
+\frac{{\rm d}f}{{\rm d}t} &=& 
+\frac{\partial f}{\partial t}
++ \sum_\alpha \frac{\partial w_\alpha}{\partial t} \frac{\partial f}{\partial w_\alpha} \cr
+&=& 
+\frac{\partial f}{\partial t}
++ \sum_i \frac{\partial x_i}{\partial t} \frac{\partial f}{\partial x_i}
++ \sum_i \frac{\partial v_i}{\partial t} \frac{\partial f}{\partial v_i} \cr
+&=& 
+\frac{\partial f}{\partial t}
++ \vec{v} \cdot \frac{\partial f}{\partial \vec{x}}
+- \vec{\nabla} \Phi \cdot \frac{\partial f}{\partial v_i} \cr
+&=& 0
+\end{eqnarray}
+where we use the fact that:
+\begin{equation}
+\frac{\partial \vec{v}}{\partial t} = - \vec{\nabla} \Phi
+\end{equation}
+and the last step of Equation (\ref{eq:liouville_show} just uses the
+collisionless Boltzmann equation. 
+\end{answer}
+
 \item Verify the expressions for the first-order Jeans Equation. 
 \item Show that Equation \ref{eq:spherical} follows from
 Equation \ref{eq:steady} under spherical symmetry in configuration
