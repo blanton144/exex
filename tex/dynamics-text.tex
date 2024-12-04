@@ -561,7 +561,7 @@ N_{\rm relax} = \frac{N}{8 \ln N}
 Boltzmann equation. 
 \item Verify the expressions for the first-order Jeans Equation. 
 \item Show that Equation \ref{eq:spherical} follows from
-Equation \ref{eq:steady} under spherical symmetric in configuration
+Equation \ref{eq:steady} under spherical symmetry in configuration
 space. 
 \begin{answer}
 First we need to recognize that if there is spherical symmetry in
@@ -673,8 +673,64 @@ and the radial terms then add together and yield Equation
 \end{equation}
 \end{answer}
 \item Using the spherically symmetric first-order Jeans Equation,
-Equation (\ref{eq:spherical}), shown that
-Equation \ref{eq:sphericalmass} holds.
+Equation (\ref{eq:spherical}), show that
+Equation (\ref{eq:sphericalmass}) holds.
+
+\begin{answer}[Author: Alex Pendris]
+Equation (\ref{eq:spherical}) says:
+\begin{equation}
+\frac{\partial\left(n\sigma_{rr}^2\right)}{\partial r}
+ + \frac{n}{r} \left[2 \sigma_{rr}^2 - \left(\sigma_{\theta\theta}^2
+ + \sigma_{\phi\phi}^2\right)\right]
+ = - n \frac{\partial \Phi}{\partial r}
+\end{equation}
+In spherical symmetry:
+\begin{equation}
+ \frac{\partial \Phi}{\partial r} = \frac{G M(<r)}{r^2}
+\end{equation}
+and:
+\begin{equation}
+ \sigma_{\theta\theta}^2 + \sigma_{\phi\phi}^2 =
+ 2\sigma_{\theta\theta}^2,
+\end{equation}
+so:
+\begin{equation}
+ 2 \sigma_{rr}^2 - \left(\sigma_{\theta\theta}^2
+ + \sigma_{\phi\phi}^2\right)
+ = 2 \sigma_{rr}^2 \left(1 - \frac{\sigma_{\theta\theta}^2}{\sigma_{rr}^2}\right)
+ = 2\sigma_{rr}^2 \beta
+\end{equation}
+Then we have:
+\begin{equation}
+\frac{\partial\left(n\sigma_{rr}^2\right)}{\partial r}
+ + 2 \frac{n}{r} \sigma_{rr}^2 \beta
+ = - n \frac{G M(<r)}{r^2}
+\end{equation}
+Then we can rearrange:
+\begin{eqnarray}
+ M(<r) &=&
+ - \frac{r^2}{Gn} \frac{\partial\left(n \sigma_{rr}^2\right)}{\partial
+ r}
+  - \frac{2 r \sigma_{rr}^2}{G}\beta \cr
+ &=&
+ - \frac{r \sigma_{rr}^2}{G} \left(r
+  \frac{1}{n\sigma_{rr}^2} \frac{\partial\left(n \sigma_{rr}^2\right)}{\partial r}
+   + 2\beta \right) \cr
+ &=&
+ - \frac{r \sigma_{rr}^2}{G} \left(
+  \frac{\partial\ln \left(n \sigma_{rr}^2\right)}{\partial \ln r}
+   + 2\beta \right) \cr
+ &=&
+ - \frac{r \sigma_{rr}^2}{G} \left(
+  \frac{\partial\ln n}{\partial \ln r}
+  + \frac{\partial\ln \sigma_{rr}^2}{\partial \ln r}
+   + 2\beta \right) 
+\end{eqnarray}
+
+
+
+\end{answer}
+
 \item For a singular isothermal sphere with $n\propto r^{-2}$ and
 $\sigma_{rr}^2$ a constant, but $\beta > 0$, what choice of $\beta$
 will make the radial velocity dispersion equal to the 
