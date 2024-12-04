@@ -290,6 +290,15 @@ roughly in proportion to metallicity and approximately as $T^{1.7}$.
 \end{answer}
 \item Estimate the temperatures at which cooling due to [CII]
 158 $\mu$m and [OI] 63 $\mu$m should start to become important.
+
+\begin{answer}[Author: Valentina Tardugno Poleo]
+The temperature must be high enough to excite these fine structure
+transitions (the transitions are within the ground electron
+configuration of the ionized species). Therefore $kT \sim hc
+/ \lambda$. For 158 $\mu$m, this yields $T \sim 90$K and for 63 $\mu$m
+it yields $T\sim 230$K (see, e.g. Figure 30.1 in Draine's book).
+\end{answer}
+
 \item Estimate the optical depth due to dust through the warm-phase neutral
 medium, for 100 pc and for 8 kpc.
 \begin{answer}[Author: Nicholas Faucher]
@@ -333,10 +342,36 @@ say about the dust fraction in HII regions relative to its presence in
 the neutral and molecular gas?
 \item Dust emits a large proportion of its light around 100 $\mu$m in
 an approximately thermal distribution. What temperature is the dust?
-\item Assuming about 1\% of the interstellar medium is in the form of
-dust, that the gas is solar metallicity (i.e. $12
+\item Assuming about 1\% of the mass in the interstellar medium is in
+the form of dust, that the gas itself is solar metallicity (i.e. $12
 + \log_{10}(O/H) \sim 8.7$), and that most of the dust is in the form
 MgSiO$_4$, estimate how much of the oxygen is depleted onto dust.
+
+\begin{answer}[Author: Connor Hainje]
+Each molecule of dust will have a mass:
+\begin{equation}
+ m_{\rm d} = (24 + 28 + 4 \times 16) m_{\rm p} = 116 m_{\rm p}
+\end{equation}
+Taking the number of hydrogen atoms as $N_H$, a helium mass fraction
+of $\sim 30\%$, and the number of dust molecules as $N_{\rm d}$:
+\begin{eqnarray}
+\frac{m_{\rm d} N_{\rm d}}{1.3 m_p N_{\rm H}} &\approx& 10^{-2} \cr
+\frac{N_{\rm d}}{N_{\rm H}} &\approx& \frac{1.3 \times
+10^{-2}}{116} \sim 10^{-4}
+\end{eqnarray}
+Then the ratio of the number of oxygen atoms in dust to hydrogen atoms
+in gas will be $4\times 10^{-4}$. Meanwhile, in the gas phase the
+metallicity is $\log_{10} (O/H) \sim -3.3$, or a ratio of $5\times
+10^{-4}$.
+
+Thus, to order of magnitude precision, there is about as much oxygen
+in the dust as in the gas phase. 
+
+Note that measurements of gas-phase metallicity vary rather strongly
+in their assumptions about the pattern and degree of depletion of
+various elements, so beware of precision statements made about
+gas-phase metallicity.
+\end{answer}
 \end{enumerate}   
 
 \section{Analytic Exercises}
